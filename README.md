@@ -10,6 +10,16 @@ Turn Your **OpenAPI** (**Swagger**) spec into a **n8n node**!
 
 ---
 
+## 🚀 Help Build This Project
+
+If this project saves you time or helps in production, consider supporting its development 🙌  
+
+**Your support helps ship features faster and keep the project stable.**
+
+[![Patreon](https://img.shields.io/badge/Patreon-Support%20Development-6f42c1?logo=patreon&logoColor=white)](https://patreon.com/devlikeapro)
+
+---
+
 <!-- toc -->
 
 - [Quick Start](#quick-start)
