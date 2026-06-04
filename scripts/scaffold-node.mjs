@@ -102,8 +102,8 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   files: ['dist', 'index.js'],
   n8n: {
     n8nNodesApiVersion: 1,
-    credentials: [`dist/nodes/credentials/${nodeName}Api.credentials.js`],
-    nodes: [`dist/nodes/${nodeName}.node.js`]
+    credentials: [`dist/nodes/credentials/${nodeName}Api.credentials`],
+    nodes: [`dist/nodes/${nodeName}.node`]
   },
   keywords: ['n8n-community-node-package', 'n8n', nodeName, safeName],
   author: REPO_OWNER,
