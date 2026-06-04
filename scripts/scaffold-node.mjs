@@ -117,7 +117,7 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
     declaration: true, sourceMap: true, resolveJsonModule: true
   },
   include: ['**/*.ts', 'types/**/*.d.ts'],
-  exclude: ['node_modules', 'dist', 'lib']
+  exclude: ['node_modules', 'dist']
 }, null, 2));
 
 // .gitignore
@@ -126,15 +126,21 @@ writeFileSync(join(projectDir, '.gitignore'), 'node_modules/\ndist/\n*.js.map\n'
 // .npmignore
 writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\ntsconfig.json\n.gitignore\n');
 
-// Inline generator library (no external dependency needed)
-console.log('📦 Inlining generator library...');
-const libSrc = join(__dirname, '..', 'dist', 'src');
+// Inline generator library source (compiled together with node by tsc)
+console.log('📦 Inlining generator library source...');
+const libSrc = join(__dirname, '..', 'src');
 const libDest = join(projectDir, 'lib');
 if (existsSync(libSrc)) {
   copyDirSync(libSrc, libDest);
-  console.log('✅ Library inlined as lib/');
+  // Remove test files from lib
+  const specFile = join(libDest, 'N8NPropertiesBuilder.spec.ts');
+  if (existsSync(specFile)) {
+    const { unlinkSync } = await import('fs');
+    unlinkSync(specFile);
+  }
+  console.log('✅ Library source inlined as lib/');
 } else {
-  console.error('❌ Generator not built. Run "npm run build" first.');
+  console.error('❌ Generator source not found at src/');
   process.exit(1);
 }
 
@@ -184,7 +190,7 @@ mkdirSync(join(projectDir, 'nodes'), { recursive: true });
 const iconRef = LOGO_URL ? `file:${LOGO_URL}` : 'file:node.svg';
 writeFileSync(join(projectDir, 'nodes', `${nodeName}.node.ts`),
 `import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { N8NPropertiesBuilder } from '../../lib';
+import { N8NPropertiesBuilder } from '../lib';
 import * as doc from '../openapi.json';
 
 const parser = new N8NPropertiesBuilder(doc);
