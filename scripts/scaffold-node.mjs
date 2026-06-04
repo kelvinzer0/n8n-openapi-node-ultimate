@@ -92,7 +92,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   author: REPO_OWNER,
   license: 'MIT',
   devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' },
-  dependencies: { '@kelvinzer0/n8n-openapi-node-ultimate': 'latest' }
+  dependencies: { '@kelvinzer0/n8n-openapi-node-ultimate': 'github:kelvinzer0/n8n-openapi-node-ultimate' }
 }, null, 2));
 
 // tsconfig.json
