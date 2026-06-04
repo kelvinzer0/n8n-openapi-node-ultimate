@@ -205,12 +205,22 @@ function extractBaseUrl(spec) {
 		}
 	}
 
-	// If URL still has unresolved variables, return empty
-	if (url.includes('{')) return '';
+	// If URL still has unresolved variables, return raw template for placeholder use
+	if (url.includes('{')) return url;
 	return url;
 }
 
+/**
+ * Check if the OpenAPI spec has server variables (meaning the base URL is dynamic).
+ */
+function hasServerVariables(spec) {
+	const servers = spec.servers;
+	if (!servers || servers.length === 0) return false;
+	return !!servers[0].variables && Object.keys(servers[0].variables).length > 0;
+}
+
 const specBaseUrl = extractBaseUrl(spec);
+const specHasServerVars = hasServerVariables(spec);
 
 // ─── Extract security scheme info ────────────────────────────────────────────────
 
@@ -491,13 +501,27 @@ writeFileSync(
 mkdirSync(join(projectDir, 'credentials'), { recursive: true });
 
 // Build credential fields based on security scheme
+// ALWAYS include a Base URL field so users can override the API endpoint.
+// The OpenAPI spec's server URL is used as default/placeholder only.
 let credFields = '';
 let authConfig = '';
 
+// Determine the default URL value and placeholder from the spec
+const defaultUrlValue = specBaseUrl && !specHasServerVars ? specBaseUrl : '';
+const urlPlaceholder = specBaseUrl || 'https://api.example.com';
+
 if (secInfo && secInfo.type === 'apiKey') {
 	const headerName = secInfo.name || 'Authorization';
-	if (secInfo.in === 'header') {
-		credFields = `		{
+	credFields = `		{
+			displayName: 'Base URL',
+			name: 'url',
+			type: 'string',
+			default: '${escapeTS(defaultUrlValue)}',
+			required: true,
+			placeholder: '${escapeTS(urlPlaceholder)}',
+			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
+		},
+		{
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
@@ -505,7 +529,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '',
 			required: true,
 		},`;
-		authConfig = `	authenticate: IAuthenticateGeneric = {
+	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
 			headers: {
@@ -513,9 +537,17 @@ if (secInfo && secInfo.type === 'apiKey') {
 			},
 		},
 	};`;
-	}
 } else if (secInfo && secInfo.type === 'http') {
 	credFields = `		{
+			displayName: 'Base URL',
+			name: 'url',
+			type: 'string',
+			default: '${escapeTS(defaultUrlValue)}',
+			required: true,
+			placeholder: '${escapeTS(urlPlaceholder)}',
+			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
+		},
+		{
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
@@ -537,9 +569,10 @@ if (secInfo && secInfo.type === 'apiKey') {
 			displayName: 'Base URL',
 			name: 'url',
 			type: 'string',
-			default: '',
+			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
-			placeholder: 'https://api.example.com',
+			placeholder: '${escapeTS(urlPlaceholder)}',
+			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
 		},
 		{
 			displayName: 'API Key',
@@ -557,16 +590,6 @@ if (secInfo && secInfo.type === 'apiKey') {
 			},
 		},
 	};`;
-}
-
-// Determine if we need a URL field in credentials
-const needsUrlField = !specBaseUrl || (secInfo && secInfo.type === 'apiKey' && secInfo.in === 'header');
-if (!needsUrlField && secInfo) {
-	// Remove URL field if we have a base URL and proper auth
-	credFields = credFields.replace(
-		/\t\t{\n\t\t\tdisplayName: 'Base URL',[\s\S]*?},\n/,
-		'',
-	);
 }
 
 writeFileSync(
@@ -596,7 +619,7 @@ ${authConfig}
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: '${specBaseUrl ? escapeTS(specBaseUrl) : '={{$credentials.url}}'}',
+			baseURL: '={{$credentials.url}}',
 			url: '/',
 			method: 'GET',
 		},
@@ -695,7 +718,7 @@ export class ${nodeClassName} implements INodeType {
 			},
 		],
 		requestDefaults: {
-			${specBaseUrl ? `baseURL: '${escapeTS(specBaseUrl)}',` : "baseURL: '={{\\$credentials.url}}',"}
+			baseURL: '={{\\$credentials.url}}',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
