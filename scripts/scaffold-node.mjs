@@ -105,6 +105,13 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   keywords: ['n8n-community-node-package', 'n8n', nodeName, safeName],
   author: REPO_OWNER,
   license: 'MIT',
+  dependencies: {
+    'js-yaml': '^4.1.0',
+    'lodash': '^4.17.21',
+    'openapi-types': '^12.1.3',
+    'pino': '^9.4.0',
+    'pino-pretty': '^11.2.2'
+  },
   devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' }
 }, null, 2));
 
