@@ -116,7 +116,7 @@ jobs:
             --source=. --remote=origin --push
           echo "✅ Repo created"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Update repo (if exists)
         if: steps.check_repo.outputs.exists == 'true'
@@ -133,7 +133,7 @@ jobs:
           git push origin main
           echo "✅ Repo updated"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Create GitHub Release
         run: |
@@ -143,7 +143,7 @@ jobs:
             --notes "Auto-generated from OpenAPI spec" \
             --target main 2>/dev/null || echo "Release tag may already exist"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Publish to npm
         if: inputs.publish_npm == true
