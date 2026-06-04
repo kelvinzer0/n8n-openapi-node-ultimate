@@ -96,7 +96,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   description: defaultDesc,
   main: 'dist/index.js',
   types: 'dist/index.d.ts',
-  scripts: { build: 'tsc', test: 'echo "no tests yet"' },
+  scripts: { build: 'tsc && cp -r lib dist/lib', test: 'echo "no tests yet"' },
   n8n: {
     n8nNodesApiVersion: 1,
     credentials: [`dist/nodes/credentials/${nodeName}Api.credentials.js`],
@@ -126,21 +126,21 @@ writeFileSync(join(projectDir, '.gitignore'), 'node_modules/\ndist/\n*.js.map\n'
 // .npmignore
 writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\ntsconfig.json\n.gitignore\n');
 
-// Inline generator library source (compiled together with node by tsc)
-console.log('📦 Inlining generator library source...');
-const libSrc = join(__dirname, '..', 'src');
+// Inline generator library (pre-compiled JS, no extra deps needed)
+console.log('📦 Inlining generator library...');
+const libSrc = join(__dirname, '..', 'dist', 'src');
 const libDest = join(projectDir, 'lib');
 if (existsSync(libSrc)) {
   copyDirSync(libSrc, libDest);
-  // Remove test files from lib
-  const specFile = join(libDest, 'N8NPropertiesBuilder.spec.ts');
-  if (existsSync(specFile)) {
-    const { unlinkSync } = await import('fs');
-    unlinkSync(specFile);
-  }
-  console.log('✅ Library source inlined as lib/');
+  // Remove test files
+  const specJs = join(libDest, 'N8NPropertiesBuilder.spec.js');
+  const specDts = join(libDest, 'N8NPropertiesBuilder.spec.d.ts');
+  const specMap = join(libDest, 'N8NPropertiesBuilder.spec.js.map');
+  const { unlinkSync: rm } = await import('fs');
+  for (const f of [specJs, specDts, specMap]) { if (existsSync(f)) rm(f); }
+  console.log('✅ Library inlined as lib/');
 } else {
-  console.error('❌ Generator source not found at src/');
+  console.error('❌ Generator not built. Run "npm run build" first.');
   process.exit(1);
 }
 
