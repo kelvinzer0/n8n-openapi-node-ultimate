@@ -42,23 +42,6 @@ jobs:
       contents: write
       packages: write
     steps:
-      - name: Validate inputs
-        run: |
-          if [[ -z "${{ inputs.openapi_url }}" ]]; then
-            echo "❌ openapi_url is required"
-            exit 1
-          fi
-          if [[ -z "${{ inputs.custom_name }}" ]]; then
-            echo "❌ custom_name is required"
-            exit 1
-          fi
-          # Normalize name
-          SAFE_NAME=$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')
-          echo "NODE_NAME=n8n-nodes-${SAFE_NAME}" >> $GITHUB_ENV
-          echo "DISPLAY_NAME=${{ inputs.custom_name }}" >> $GITHUB_ENV
-          echo "PACKAGE_NAME=@${{ github.repository_owner }}/n8n-nodes-${SAFE_NAME}" >> $GITHUB_ENV
-          echo "✅ Will create/update: n8n-nodes-${SAFE_NAME}"
-
       - name: Checkout this repo (generator)
         uses: actions/checkout@v4
         with:
@@ -80,267 +63,37 @@ jobs:
           cd generator
           npm run build
 
-      - name: Fetch OpenAPI spec
+      - name: Run scaffolder
+        id: scaffold
+        env:
+          OPENAPI_URL: ${{ inputs.openapi_url }}
+          CUSTOM_NAME: ${{ inputs.custom_name }}
+          LOGO_URL: ${{ inputs.logo_url }}
+          DESCRIPTION: ${{ inputs.description }}
+          VERSION: ${{ inputs.version }}
+          REPO_OWNER: ${{ github.repository_owner }}
         run: |
-          echo "📥 Fetching OpenAPI spec from ${{ inputs.openapi_url }}"
-          curl -sfL "${{ inputs.openapi_url }}" -o openapi-raw.json
-          
-          # Check if YAML (try to convert)
-          if head -1 openapi-raw.json | grep -qE '^(openapi|swagger|info):'; then
-            echo "📄 Detected YAML format, converting to JSON..."
-            npm install -g js-yaml
-            node -e "
-              const yaml = require('js-yaml');
-              const fs = require('fs');
-              const doc = yaml.load(fs.readFileSync('openapi-raw.json', 'utf8'));
-              fs.writeFileSync('openapi.json', JSON.stringify(doc, null, 2));
-            "
-          else
-            mv openapi-raw.json openapi.json
-          fi
-          
-          echo "✅ OpenAPI spec saved"
-          cat openapi.json | head -5
-
-      - name: Generate n8n node properties
-        run: |
-          echo "🔧 Generating n8n node properties..."
-          node -e "
-            const { N8NPropertiesBuilder } = require('./generator/dist/src/index.js');
-            const { loadOpenApi } = require('./generator/dist/src/OpenApiLoader.js');
-            const fs = require('fs');
-            
-            async function main() {
-              const doc = JSON.parse(fs.readFileSync('openapi.json', 'utf8'));
-              const parser = new N8NPropertiesBuilder(doc);
-              const properties = parser.build();
-              fs.writeFileSync('properties.json', JSON.stringify(properties, null, 2));
-              console.log('✅ Generated ' + properties.length + ' properties');
-            }
-            main().catch(e => { console.error(e); process.exit(1); });
-          "
-
-      - name: Create n8n node project
-        run: |
-          echo "📦 Creating ${NODE_NAME}..."
-          mkdir -p ${NODE_NAME}
-          cd ${NODE_NAME}
-          
-          # package.json
-          cat > package.json << PKGJSON
-          {
-            "name": "${PACKAGE_NAME}",
-            "version": "${{ inputs.version }}",
-            "description": "${{ inputs.description || format('n8n community node for %s API', inputs.custom_name) }}",
-            "main": "dist/index.js",
-            "types": "dist/index.d.ts",
-            "scripts": {
-              "build": "tsc",
-              "test": "echo \"no tests yet\""
-            },
-            "n8n": {
-              "n8nNodesApiVersion": 1,
-              "credentials": [],
-              "nodes": [
-                "dist/nodes/${NODE_NAME}.node.js"
-              ]
-            },
-            "keywords": [
-              "n8n-community-node-package",
-              "n8n",
-              "${NODE_NAME}",
-              "${SAFE_NAME}"
-            ],
-            "author": "${{ github.repository_owner }}",
-            "license": "MIT",
-            "devDependencies": {
-              "n8n-workflow": "*",
-              "typescript": "^5.6.0"
-            },
-            "dependencies": {
-              "@kelvinzer0/n8n-openapi-node-ultimate": "latest"
-            }
-          }
-          PKGJSON
-          
-          # tsconfig.json
-          cat > tsconfig.json << TSCONFIG
-          {
-            "compilerOptions": {
-              "strict": true,
-              "module": "commonjs",
-              "target": "es2020",
-              "lib": ["es2020"],
-              "moduleResolution": "node",
-              "esModuleInterop": true,
-              "skipLibCheck": true,
-              "forceConsistentCasingInFileNames": true,
-              "outDir": "./dist",
-              "rootDir": ".",
-              "declaration": true,
-              "sourceMap": true
-            },
-            "include": ["**/*.ts"],
-            "exclude": ["node_modules", "dist"]
-          }
-          TSCONFIG
-          
-          # Credential file
-          mkdir -p nodes/credentials
-          cat > nodes/credentials/${NODE_NAME}Api.credentials.ts << CRED
-          import {
-            IAuthenticateGeneric,
-            ICredentialType,
-            INodePropertyDescription,
-          } from 'n8n-workflow';
-
-          export class ${NODE_NAME}Api implements ICredentialType {
-            name = '${NODE_NAME}Api';
-            displayName = '${inputs.custom_name} API';
-            documentationUrl = '';
-            properties: INodePropertyDescription[] = [
-              {
-                displayName: 'Base URL',
-                name: 'url',
-                type: 'string',
-                default: '',
-                required: true,
-              },
-              {
-                displayName: 'API Key',
-                name: 'apiKey',
-                type: 'string',
-                typeOptions: { password: true },
-                default: '',
-                required: true,
-              },
-            ];
-            authenticate: IAuthenticateGeneric = {
-              type: 'generic',
-              properties: {
-                headers: {
-                  'Authorization': '=Bearer {{$credentials.apiKey}}',
-                },
-              },
-            };
-          }
-          CRED
-          
-          # Node file
-          mkdir -p nodes
-          cat > nodes/${NODE_NAME}.node.ts << NODETS
-          import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
-          import { N8NPropertiesBuilder } from '@kelvinzer0/n8n-openapi-node-ultimate';
-          import * as doc from '../openapi.json';
-
-          const parser = new N8NPropertiesBuilder(doc);
-          const properties = parser.build();
-
-          export class ${NODE_NAME} implements INodeType {
-            description: INodeTypeDescription = {
-              displayName: '${inputs.custom_name}',
-              name: '${NODE_NAME}',
-              icon: '${ inputs.logo_url != '' && format('file:%s', inputs.logo_url) || 'file:node.svg' }',
-              group: ['transform'],
-              version: 1,
-              subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-              description: '${{ inputs.description || format('Interact with %s API', inputs.custom_name) }}',
-              defaults: {
-                name: '${inputs.custom_name}',
-              },
-              inputs: [NodeConnectionType.Main],
-              outputs: [NodeConnectionType.Main],
-              credentials: [
-                {
-                  name: '${NODE_NAME}Api',
-                  required: true,
-                },
-              ],
-              requestDefaults: {
-                headers: {
-                  Accept: 'application/json',
-                  'Content-Type': 'application/json',
-                },
-                baseURL: '={{\$credentials.url}}',
-              },
-              properties: properties,
-            };
-          }
-          NODETS
-          
-          # Copy openapi.json
-          cp ../openapi.json .
-          
-          # Download logo if provided
-          if [[ -n "${{ inputs.logo_url }}" ]]; then
-            curl -sfL "${{ inputs.logo_url }}" -o nodes/node.svg 2>/dev/null || \
-            curl -sfL "${{ inputs.logo_url }}" -o nodes/node.png 2>/dev/null || \
-            echo "⚠️ Could not download logo"
-          fi
-          
-          # Generate README
-          cat > README.md << README
-          # ${PACKAGE_NAME}
-
-          > n8n community node for **${inputs.custom_name}** API
-
-          ${ inputs.description != '' && format('\n%s\n', inputs.description) || '' }
-
-          ## Installation
-
-          \`\`\`bash
-          npm install ${PACKAGE_NAME}
-          \`\`\`
-
-          ## Usage
-
-          1. Install in n8n: Settings → Community Nodes → Install → \`${PACKAGE_NAME}\`
-          2. Add credentials: ${inputs.custom_name} API → Base URL + API Key
-          3. Use the node in your workflows
-
-          ## Generated from OpenAPI
-
-          This node was auto-generated from an OpenAPI specification using
-          [@kelvinzer0/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
-
-          ## License
-
-          MIT
-          README
-          
-          # .gitignore
-          cat > .gitignore << GITIGNORE
-          node_modules/
-          dist/
-          *.js.map
-          GITIGNORE
-          
-          # .npmignore
-          cat > .npmignore << NPMIGNORE
-          node_modules/
-          src/
-          tsconfig.json
-          .gitignore
-          NPMIGNORE
-          
-          echo "✅ Project created"
+          node generator/scripts/scaffold-node.mjs
+          echo "done=true" >> $GITHUB_OUTPUT
 
       - name: Build node project
         run: |
-          cd ${NODE_NAME}
+          cd ${{ inputs.custom_name }}
           npm install
-          npx tsc --noEmit || echo "⚠️ TypeScript check (non-blocking)"
           npm run build 2>&1 || true
           echo "✅ Build complete"
 
       - name: Check if repo exists
         id: check_repo
         run: |
-          if gh repo view "${{ github.repository_owner }}/${NODE_NAME}" --json name 2>/dev/null; then
+          REPO_NAME="n8n-nodes-$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
+          if gh repo view "${{ github.repository_owner }}/${REPO_NAME}" --json name 2>/dev/null; then
             echo "exists=true" >> $GITHUB_OUTPUT
+            echo "repo_name=${REPO_NAME}" >> $GITHUB_OUTPUT
             echo "📁 Repo exists, will update"
           else
             echo "exists=false" >> $GITHUB_OUTPUT
+            echo "repo_name=${REPO_NAME}" >> $GITHUB_OUTPUT
             echo "📁 Repo does not exist, will create"
           fi
         env:
@@ -349,11 +102,11 @@ jobs:
       - name: Create repo (if new)
         if: steps.check_repo.outputs.exists == 'false'
         run: |
-          cd ${NODE_NAME}
+          cd ${{ inputs.custom_name }}
           git init
           git add -A
           git commit -m "feat: initial n8n community node for ${{ inputs.custom_name }}"
-          gh repo create "${{ github.repository_owner }}/${NODE_NAME}" --public \
+          gh repo create "${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}" --public \
             --description "n8n community node for ${{ inputs.custom_name }} API" \
             --source=. --remote=origin --push
           echo "✅ Repo created"
@@ -363,9 +116,9 @@ jobs:
       - name: Update repo (if exists)
         if: steps.check_repo.outputs.exists == 'true'
         run: |
-          cd ${NODE_NAME}
+          cd ${{ inputs.custom_name }}
           git init
-          git remote add origin "https://github.com/${{ github.repository_owner }}/${NODE_NAME}.git"
+          git remote add origin "https://github.com/${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}.git"
           git fetch origin main || true
           git checkout -b main || git checkout main
           git add -A
@@ -377,7 +130,7 @@ jobs:
 
       - name: Create GitHub Release
         run: |
-          cd ${NODE_NAME}
+          cd ${{ inputs.custom_name }}
           gh release create "v${{ inputs.version }}" \
             --title "v${{ inputs.version }}" \
             --notes "Auto-generated from OpenAPI spec" \
@@ -388,13 +141,11 @@ jobs:
       - name: Publish to npm
         if: inputs.publish_npm == true
         run: |
-          cd ${NODE_NAME}
+          cd ${{ inputs.custom_name }}
           npm publish --access public 2>&1 || {
-            echo "⚠️ npm publish failed. Make sure:"
-            echo "  1. NPM_TOKEN is set in repo secrets"
-            echo "  2. You have access to the @${{ github.repository_owner }} scope"
+            echo "⚠️ npm publish failed. Make sure NPM_TOKEN is set in repo secrets."
             exit 1
           }
-          echo "✅ Published ${PACKAGE_NAME}@${{ inputs.version }}"
+          echo "✅ Published"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
