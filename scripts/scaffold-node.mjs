@@ -94,8 +94,8 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   name: packageName,
   version: VERSION,
   description: defaultDesc,
-  main: 'dist/index.js',
-  types: 'dist/index.d.ts',
+  main: 'dist/lib/index.js',
+  types: 'dist/lib/index.d.ts',
   scripts: { build: 'tsc && mkdir -p dist/lib && cp -r lib/. dist/lib/', test: 'echo "no tests yet"' },
   n8n: {
     n8nNodesApiVersion: 1,
