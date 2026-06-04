@@ -94,10 +94,12 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   name: packageName,
   version: VERSION,
   description: defaultDesc,
-  main: 'dist/lib/index.js',
-  types: 'dist/lib/index.d.ts',
-  scripts: { build: 'tsc && mkdir -p dist/lib && cp -r lib/. dist/lib/', test: 'echo "no tests yet"' },
-  files: ['dist'],
+  main: 'index.js',
+  scripts: {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  files: ['dist', 'index.js'],
   n8n: {
     n8nNodesApiVersion: 1,
     credentials: [`dist/nodes/credentials/${nodeName}Api.credentials.js`],
@@ -106,11 +108,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   keywords: ['n8n-community-node-package', 'n8n', nodeName, safeName],
   author: REPO_OWNER,
   license: 'MIT',
-  dependencies: {
-    'js-yaml': '^4.1.0',
-    'lodash': '^4.17.21',
-    'openapi-types': '^12.1.3'
-  },
+  dependencies: {},
   devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' }
 }, null, 2));
 
@@ -120,9 +118,9 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
     strict: true, module: 'commonjs', target: 'es2020', lib: ['es2020'],
     moduleResolution: 'node', esModuleInterop: true, skipLibCheck: true,
     forceConsistentCasingInFileNames: true, outDir: './dist', rootDir: '.',
-    declaration: true, sourceMap: true, resolveJsonModule: true
+    declaration: true, sourceMap: true
   },
-  include: ['**/*.ts', 'types/**/*.d.ts'],
+  include: ['nodes/**/*.ts'],
   exclude: ['node_modules', 'dist']
 }, null, 2));
 
@@ -130,25 +128,10 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
 writeFileSync(join(projectDir, '.gitignore'), 'node_modules/\ndist/\n*.js.map\n');
 
 // .npmignore
-writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\ntsconfig.json\n.gitignore\n');
+writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\ntsconfig.json\n.gitignore\nopenapi.json\n');
 
-// Inline generator library (pre-compiled JS, no extra deps needed)
-console.log('📦 Inlining generator library...');
-const libSrc = join(__dirname, '..', 'dist', 'src');
-const libDest = join(projectDir, 'lib');
-if (existsSync(libSrc)) {
-  copyDirSync(libSrc, libDest);
-  // Remove test files
-  const specJs = join(libDest, 'N8NPropertiesBuilder.spec.js');
-  const specDts = join(libDest, 'N8NPropertiesBuilder.spec.d.ts');
-  const specMap = join(libDest, 'N8NPropertiesBuilder.spec.js.map');
-  const { unlinkSync: rm } = await import('fs');
-  for (const f of [specJs, specDts, specMap]) { if (existsSync(f)) rm(f); }
-  console.log('✅ Library inlined as lib/');
-} else {
-  console.error('❌ Generator not built. Run "npm run build" first.');
-  process.exit(1);
-}
+// index.js (root entry point for n8n compatibility)
+writeFileSync(join(projectDir, 'index.js'), "module.exports = {};\n");
 
 // Credential file
 mkdirSync(join(projectDir, 'nodes', 'credentials'), { recursive: true });
@@ -196,11 +179,6 @@ mkdirSync(join(projectDir, 'nodes'), { recursive: true });
 const iconRef = LOGO_URL ? `file:${LOGO_URL}` : 'file:node.svg';
 writeFileSync(join(projectDir, 'nodes', `${nodeName}.node.ts`),
 `import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { N8NPropertiesBuilder } from '../lib';
-import * as doc from '../openapi.json';
-
-const parser = new N8NPropertiesBuilder(doc);
-const properties = parser.build();
 
 export class ${className} implements INodeType {
   description: INodeTypeDescription = {
@@ -219,7 +197,7 @@ export class ${className} implements INodeType {
       headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
       baseURL: '={{\$credentials.url}}',
     },
-    properties: properties,
+    properties: ${JSON.stringify(properties, null, 2)},
   };
 }
 `);
