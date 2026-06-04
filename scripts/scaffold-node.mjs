@@ -113,12 +113,19 @@ console.log(`${'='.repeat(60)}\n`);
 // ─── Fetch OpenAPI spec ──────────────────────────────────────────────────────────
 
 console.log(`📥 Fetching OpenAPI spec from ${OPENAPI_URL}...`);
-const resp = await fetch(OPENAPI_URL);
-if (!resp.ok) {
-	console.error(`❌ Failed to fetch: ${resp.status}`);
-	process.exit(1);
+let specText;
+if (OPENAPI_URL.startsWith('file://') || OPENAPI_URL.startsWith('/') || OPENAPI_URL.startsWith('./')) {
+	const filePath = OPENAPI_URL.replace('file://', '');
+	specText = readFileSync(filePath, 'utf-8');
+	console.log('📂 Source: local file');
+} else {
+	const resp = await fetch(OPENAPI_URL);
+	if (!resp.ok) {
+		console.error(`❌ Failed to fetch: ${resp.status}`);
+		process.exit(1);
+	}
+	specText = await resp.text();
 }
-let specText = await resp.text();
 let spec;
 try {
 	spec = JSON.parse(specText);

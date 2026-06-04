@@ -1,18 +1,21 @@
 import { OpenAPIVisitor, OperationContext } from "./openapi/OpenAPIVisitor";
-import pino from "pino";
 import { OpenAPIV3 } from "openapi-types";
 import { IOperationParser } from "./OperationParser";
 import { INodeProperties } from "n8n-workflow";
 import { IResourceParser } from "./ResourceParser";
+interface Logger {
+    info(obj: any, msg?: string): void;
+    warn(obj: any, msg?: string): void;
+}
 export declare class BaseOperationsCollector implements OpenAPIVisitor {
     protected operationParser: IOperationParser;
     protected resourceParser: IResourceParser;
-    protected logger: pino.Logger;
+    protected logger: Logger;
     readonly _fields: INodeProperties[];
     private optionsByResource;
     private n8nNodeProperties;
     private bindings;
-    constructor(doc: any, operationParser: IOperationParser, resourceParser: IResourceParser, logger: pino.Logger);
+    constructor(doc: any, operationParser: IOperationParser, resourceParser: IResourceParser, logger: Logger);
     get operations(): INodeProperties[];
     get fields(): INodeProperties[];
     visitOperation(operation: OpenAPIV3.OperationObject, context: OperationContext): void;
@@ -55,3 +58,4 @@ export declare class OperationsCollector extends BaseOperationsCollector {
         fields: INodeProperties[];
     };
 }
+export {};

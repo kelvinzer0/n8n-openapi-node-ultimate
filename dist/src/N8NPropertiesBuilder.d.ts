@@ -1,15 +1,18 @@
 import { INodeProperties } from 'n8n-workflow';
-import pino from 'pino';
 import { ResourceCollector as ResourcePropertiesCollector } from "./ResourceCollector";
 import { BaseOperationsCollector } from "./OperationsCollector";
 import { IOperationParser } from "./OperationParser";
 import { IResourceParser } from "./ResourceParser";
+interface Logger {
+    info(obj: any, msg?: string): void;
+    warn(obj: any, msg?: string): void;
+}
 export interface Override {
     find: any;
     replace: any;
 }
 export interface N8NPropertiesBuilderConfig {
-    logger?: pino.Logger;
+    logger?: Logger;
     OperationsCollector?: typeof BaseOperationsCollector;
     ResourcePropertiesCollector?: typeof ResourcePropertiesCollector;
     operation?: IOperationParser;
@@ -35,3 +38,4 @@ export declare class N8NPropertiesBuilder {
     build(overrides?: Override[]): INodeProperties[];
     private update;
 }
+export {};

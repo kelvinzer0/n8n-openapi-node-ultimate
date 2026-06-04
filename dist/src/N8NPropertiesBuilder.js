@@ -22,18 +22,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.N8NPropertiesBuilder = void 0;
-const pino_1 = __importDefault(require("pino"));
 const OpenAPIWalker_1 = require("./openapi/OpenAPIWalker");
 const ResourceCollector_1 = require("./ResourceCollector");
 const OperationsCollector_1 = require("./OperationsCollector");
 const lodash = __importStar(require("lodash"));
 const OperationParser_1 = require("./OperationParser");
 const ResourceParser_1 = require("./ResourceParser");
+const defaultLogger = {
+    info: (obj, msg) => {
+        if (process.env.NODE_ENV === 'development')
+            console.log(msg || 'info', obj);
+    },
+    warn: (obj, msg) => {
+        if (process.env.NODE_ENV === 'development')
+            console.warn(msg || 'warn', obj);
+    },
+};
 /**
  *
  * Builds n8n node "properties" from an OpenAPI document.
@@ -45,7 +51,7 @@ const ResourceParser_1 = require("./ResourceParser");
 class N8NPropertiesBuilder {
     constructor(doc, config) {
         this.doc = doc;
-        this.logger = (config === null || config === void 0 ? void 0 : config.logger) || (0, pino_1.default)({ transport: { target: 'pino-pretty' } });
+        this.logger = (config === null || config === void 0 ? void 0 : config.logger) || defaultLogger;
         this.walker = new OpenAPIWalker_1.OpenAPIWalker(this.doc);
         // DI
         this.operationParser = (config === null || config === void 0 ? void 0 : config.operation) || new OperationParser_1.DefaultOperationParser();
