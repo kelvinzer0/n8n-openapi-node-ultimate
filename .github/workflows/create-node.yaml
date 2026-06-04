@@ -70,14 +70,36 @@ jobs:
           CUSTOM_NAME: ${{ inputs.custom_name }}
           LOGO_URL: ${{ inputs.logo_url }}
           DESCRIPTION: ${{ inputs.description }}
-          VERSION: ${{ inputs.version }}
+          INPUT_VERSION: ${{ inputs.version }}
           REPO_OWNER: ${{ github.repository_owner }}
           NPM_SCOPE: 'n8n-dev'
         run: |
-          node generator/scripts/scaffold-node.mjs
-          # Compute directory name (same logic as scaffold script)
           DIR_NAME="n8n-nodes-$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
+
+          # Fetch latest version from npm registry
+          LATEST_VERSION=$(npm view "@n8n-dev/${DIR_NAME}" version 2>/dev/null || echo "0.0.0")
+
+          # Auto-increment patch version if INPUT_VERSION is not provided, or is '1.0.0' / '1.1.0' (default placeholder)
+          if [ -z "${INPUT_VERSION}" ] || [ "${INPUT_VERSION}" = "1.0.0" ]; then
+            if [ "${LATEST_VERSION}" != "0.0.0" ]; then
+              IFS='.' read -r major minor patch <<< "${LATEST_VERSION}"
+              patch=$((patch + 1))
+              VERSION="${major}.${minor}.${patch}"
+            else
+              VERSION="1.0.0"
+            fi
+          else
+            VERSION="${INPUT_VERSION}"
+          fi
+
+          echo "🚀 Using version: ${VERSION} (latest on npm: ${LATEST_VERSION})"
+
+          # Inject VERSION environment variable for scaffold-node script
+          export VERSION="${VERSION}"
+          node generator/scripts/scaffold-node.mjs
+
           echo "dir_name=${DIR_NAME}" >> $GITHUB_OUTPUT
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
           echo "done=true" >> $GITHUB_OUTPUT
 
       - name: Build node project
@@ -133,7 +155,7 @@ jobs:
           git fetch origin main || true
           git reset origin/main || true
           git add -A
-          git diff --cached --quiet || git commit -m "chore: update node from OpenAPI spec (${{ inputs.version }})"
+          git diff --cached --quiet || git commit -m "chore: update node from OpenAPI spec (${{ steps.scaffold.outputs.version }})"
           git push origin main
           echo "✅ Repo updated"
         env:
@@ -142,8 +164,8 @@ jobs:
       - name: Create GitHub Release
         run: |
           cd ${{ steps.scaffold.outputs.dir_name }}
-          gh release create "v${{ inputs.version }}" \
-            --title "v${{ inputs.version }}" \
+          gh release create "v${{ steps.scaffold.outputs.version }}" \
+            --title "v${{ steps.scaffold.outputs.version }}" \
             --notes "Auto-generated from OpenAPI spec" \
             --target main 2>/dev/null || echo "Release tag may already exist"
         env:
@@ -157,6 +179,6 @@ jobs:
             echo "⚠️ npm publish failed. Make sure NPM_TOKEN is set in repo secrets."
             exit 1
           }
-          echo "✅ Published"
+          echo "✅ Published @n8n-dev/${{ steps.scaffold.outputs.dir_name }}@${{ steps.scaffold.outputs.version }}"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

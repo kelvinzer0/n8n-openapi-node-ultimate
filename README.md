@@ -107,7 +107,10 @@ const properties = builder.build(overrides?);
 
 ```typescript
 interface N8NPropertiesBuilderConfig {
-    logger?: pino.Logger;                    // Custom logger
+    logger?: {                               // Custom logger (no external deps)
+        info(obj: any, msg?: string): void;
+        warn(obj: any, msg?: string): void;
+    };
     OperationsCollector?: typeof BaseOperationsCollector;  // Custom operations collector
     ResourcePropertiesCollector?: typeof ResourceCollector; // Custom resource collector
     operation?: IOperationParser;            // Custom operation parser
