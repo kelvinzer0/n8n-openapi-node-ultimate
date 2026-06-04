@@ -11,9 +11,22 @@
  *   REPO_OWNER    - GitHub repo owner
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync, readdirSync, statSync } from 'fs';
 import { join, dirname } from 'path';
 import { execSync } from 'child_process';
+
+function copyDirSync(src, dest) {
+  mkdirSync(dest, { recursive: true });
+  for (const entry of readdirSync(src)) {
+    const srcPath = join(src, entry);
+    const destPath = join(dest, entry);
+    if (statSync(srcPath).isDirectory()) {
+      copyDirSync(srcPath, destPath);
+    } else {
+      cpSync(srcPath, destPath);
+    }
+  }
+}
 
 // --- Env ---
 const OPENAPI_URL = process.env.OPENAPI_URL;
@@ -92,8 +105,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   keywords: ['n8n-community-node-package', 'n8n', nodeName, safeName],
   author: REPO_OWNER,
   license: 'MIT',
-  devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' },
-  dependencies: { '@kelvinzer0/n8n-openapi-node-ultimate': 'github:kelvinzer0/n8n-openapi-node-ultimate' }
+  devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' }
 }, null, 2));
 
 // tsconfig.json
@@ -105,25 +117,26 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
     declaration: true, sourceMap: true, resolveJsonModule: true
   },
   include: ['**/*.ts', 'types/**/*.d.ts'],
-  exclude: ['node_modules', 'dist']
+  exclude: ['node_modules', 'dist', 'lib']
 }, null, 2));
 
 // .gitignore
 writeFileSync(join(projectDir, '.gitignore'), 'node_modules/\ndist/\n*.js.map\n');
 
 // .npmignore
-writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\nsrc/\ntsconfig.json\n.gitignore\n');
+writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\ntsconfig.json\n.gitignore\n');
 
-// Type declaration for generator (GitHub dep has no built types)
-mkdirSync(join(projectDir, 'types'), { recursive: true });
-writeFileSync(join(projectDir, 'types', 'n8n-openapi-node-ultimate.d.ts'),
-`declare module '@kelvinzer0/n8n-openapi-node-ultimate' {
-  export class N8NPropertiesBuilder {
-    constructor(spec: any);
-    build(): any[];
-  }
+// Inline generator library (no external dependency needed)
+console.log('📦 Inlining generator library...');
+const libSrc = join(__dirname, '..', 'dist', 'src');
+const libDest = join(projectDir, 'lib');
+if (existsSync(libSrc)) {
+  copyDirSync(libSrc, libDest);
+  console.log('✅ Library inlined as lib/');
+} else {
+  console.error('❌ Generator not built. Run "npm run build" first.');
+  process.exit(1);
 }
-`);
 
 // Credential file
 mkdirSync(join(projectDir, 'nodes', 'credentials'), { recursive: true });
@@ -171,7 +184,7 @@ mkdirSync(join(projectDir, 'nodes'), { recursive: true });
 const iconRef = LOGO_URL ? `file:${LOGO_URL}` : 'file:node.svg';
 writeFileSync(join(projectDir, 'nodes', `${nodeName}.node.ts`),
 `import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { N8NPropertiesBuilder } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { N8NPropertiesBuilder } from '../lib';
 import * as doc from '../openapi.json';
 
 const parser = new N8NPropertiesBuilder(doc);
