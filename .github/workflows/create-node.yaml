@@ -85,7 +85,7 @@ jobs:
           cd ${{ steps.scaffold.outputs.dir_name }}
           npm install --ignore-scripts
           npm audit fix || true
-          npm run build 2>&1 || true
+          npm run build
           echo "✅ Build complete"
 
       - name: Check if repo exists

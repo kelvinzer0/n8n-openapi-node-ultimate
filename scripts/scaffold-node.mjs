@@ -96,7 +96,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   description: defaultDesc,
   main: 'dist/index.js',
   types: 'dist/index.d.ts',
-  scripts: { build: 'tsc && cp -r lib dist/lib', test: 'echo "no tests yet"' },
+  scripts: { build: 'tsc && mkdir -p dist/lib && cp -r lib/. dist/lib/', test: 'echo "no tests yet"' },
   n8n: {
     n8nNodesApiVersion: 1,
     credentials: [`dist/nodes/credentials/${nodeName}Api.credentials.js`],
