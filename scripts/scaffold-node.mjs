@@ -102,7 +102,7 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
     strict: true, module: 'commonjs', target: 'es2020', lib: ['es2020'],
     moduleResolution: 'node', esModuleInterop: true, skipLibCheck: true,
     forceConsistentCasingInFileNames: true, outDir: './dist', rootDir: '.',
-    declaration: true, sourceMap: true
+    declaration: true, sourceMap: true, resolveJsonModule: true
   },
   include: ['**/*.ts'],
   exclude: ['node_modules', 'dist']
@@ -120,14 +120,14 @@ writeFileSync(join(projectDir, 'nodes', 'credentials', `${nodeName}Api.credentia
 `import {
   IAuthenticateGeneric,
   ICredentialType,
-  INodePropertyDescription,
+  INodeProperties,
 } from 'n8n-workflow';
 
 export class ${className}Api implements ICredentialType {
   name = '${nodeName}Api';
   displayName = '${CUSTOM_NAME} API';
   documentationUrl = '';
-  properties: INodePropertyDescription[] = [
+  properties: INodeProperties[] = [
     {
       displayName: 'Base URL',
       name: 'url',
@@ -159,7 +159,7 @@ export class ${className}Api implements ICredentialType {
 mkdirSync(join(projectDir, 'nodes'), { recursive: true });
 const iconRef = LOGO_URL ? `file:${LOGO_URL}` : 'file:node.svg';
 writeFileSync(join(projectDir, 'nodes', `${nodeName}.node.ts`),
-`import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
+`import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { N8NPropertiesBuilder } from '@kelvinzer0/n8n-openapi-node-ultimate';
 import * as doc from '../openapi.json';
 
@@ -176,8 +176,8 @@ export class ${className} implements INodeType {
     subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
     description: '${defaultDesc.replace(/'/g, "\\'")}',
     defaults: { name: '${CUSTOM_NAME}' },
-    inputs: [NodeConnectionType.Main],
-    outputs: [NodeConnectionType.Main],
+    inputs: ['main'],
+    outputs: ['main'],
     credentials: [{ name: '${nodeName}Api', required: true }],
     requestDefaults: {
       headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
