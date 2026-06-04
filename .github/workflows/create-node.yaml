@@ -72,6 +72,7 @@ jobs:
           DESCRIPTION: ${{ inputs.description }}
           VERSION: ${{ inputs.version }}
           REPO_OWNER: ${{ github.repository_owner }}
+          NPM_SCOPE: 'n8n-dev'
         run: |
           node generator/scripts/scaffold-node.mjs
           # Compute directory name (same logic as scaffold script)
@@ -90,7 +91,7 @@ jobs:
         id: check_repo
         run: |
           REPO_NAME="${{ steps.scaffold.outputs.dir_name }}"
-          if gh repo view "${{ github.repository_owner }}/${REPO_NAME}" --json name 2>/dev/null; then
+          if gh repo view "n8n-dev/${REPO_NAME}" --json name 2>/dev/null; then
             echo "exists=true" >> $GITHUB_OUTPUT
             echo "repo_name=${REPO_NAME}" >> $GITHUB_OUTPUT
             echo "📁 Repo exists, will update"
@@ -112,7 +113,7 @@ jobs:
           git init -b main
           git add -A
           git commit -m "feat: initial n8n community node for ${{ inputs.custom_name }}"
-          gh repo create "${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}" --public \
+          gh repo create "n8n-dev/${{ steps.check_repo.outputs.repo_name }}" --public \
             --description "n8n community node for ${{ inputs.custom_name }} API" \
             --source=. --remote=origin --push
           echo "✅ Repo created"
@@ -127,7 +128,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           gh auth setup-git
           git init -b main
-          git remote add origin "https://github.com/${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}.git"
+          git remote add origin "https://github.com/n8n-dev/${{ steps.check_repo.outputs.repo_name }}.git"
           git fetch origin main || true
           git reset origin/main || true
           git add -A

@@ -22,6 +22,7 @@ const LOGO_URL = process.env.LOGO_URL || '';
 const DESCRIPTION = process.env.DESCRIPTION || '';
 const VERSION = process.env.VERSION || '1.0.0';
 const REPO_OWNER = process.env.REPO_OWNER || 'unknown';
+const NPM_SCOPE = process.env.NPM_SCOPE || REPO_OWNER;
 
 if (!OPENAPI_URL) { console.error('❌ OPENAPI_URL is required'); process.exit(1); }
 if (!CUSTOM_NAME) { console.error('❌ CUSTOM_NAME is required'); process.exit(1); }
@@ -30,7 +31,7 @@ if (!CUSTOM_NAME) { console.error('❌ CUSTOM_NAME is required'); process.exit(1
 const safeName = CUSTOM_NAME.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
 const nodeName = `n8n-nodes-${safeName}`;
 const className = CUSTOM_NAME.replace(/[^a-zA-Z0-9]/g, '');
-const packageName = `@${REPO_OWNER}/${nodeName}`;
+const packageName = `@${NPM_SCOPE}/${nodeName}`;
 const defaultDesc = DESCRIPTION || `n8n community node for ${CUSTOM_NAME} API`;
 
 console.log(`\n${'='.repeat(60)}`);
