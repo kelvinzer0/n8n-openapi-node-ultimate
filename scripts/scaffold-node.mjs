@@ -62,7 +62,9 @@ console.log('✅ OpenAPI spec saved\n');
 
 // --- Generate properties ---
 console.log('🔧 Generating n8n node properties...');
-const { N8NPropertiesBuilder } = await import('./generator/dist/src/index.js');
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const { N8NPropertiesBuilder } = await import(join(__dirname, '..', 'dist', 'src', 'index.js'));
 const parser = new N8NPropertiesBuilder(spec);
 const properties = parser.build();
 writeFileSync('properties.json', JSON.stringify(properties, null, 2));
