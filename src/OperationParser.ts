@@ -46,7 +46,14 @@ export class DefaultOperationParser implements IOperationParser {
         if (operation.operationId) {
             return lodash.startCase(operation.operationId)
         }
-        return context.method.toUpperCase() + " " + context.pattern
+        // Generate a clean name from method + path
+        const pathParts = context.pattern
+            .split('/')
+            .filter(p => p && !p.startsWith('{'))
+            .map(p => p.replace(/[^a-zA-Z0-9]/g, ' '));
+        const method = context.method.toUpperCase();
+        const pathName = pathParts.join(' ');
+        return lodash.startCase(`${method} ${pathName}`.trim());
     }
 
     value(operation: OpenAPIV3.OperationObject, context: OperationContext): string {

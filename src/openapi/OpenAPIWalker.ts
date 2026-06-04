@@ -37,7 +37,14 @@ export class OpenAPIWalker {
             return;
         }
         for (const path in paths) {
-            const pathItem: OpenAPIV3.PathItemObject = paths[path] as OpenAPIV3.PathItemObject;
+            let pathItem: OpenAPIV3.PathItemObject = paths[path] as OpenAPIV3.PathItemObject;
+
+            // Resolve $ref at path level
+            if ('$ref' in pathItem) {
+                const ref = (pathItem as any)['$ref'];
+                pathItem = this.resolvePathRef(ref);
+            }
+
             let method: string;
             let operation: any;
             for ([method, operation] of Object.entries(pathItem)) {
@@ -53,6 +60,18 @@ export class OpenAPIWalker {
                 }
             }
         }
+    }
+
+    private resolvePathRef(ref: string): OpenAPIV3.PathItemObject {
+        const refPath = ref.split('/').slice(1);
+        let schema: any = this.doc;
+        for (const segment of refPath) {
+            schema = schema[segment];
+            if (!schema) {
+                throw new Error(`Path $ref not found: '${ref}'`);
+            }
+        }
+        return schema as OpenAPIV3.PathItemObject;
     }
 
     private walkTags(visitor: OpenAPIVisitor, tags?: OpenAPIV3.TagObject[]) {

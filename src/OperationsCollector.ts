@@ -29,7 +29,7 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
 
     get operations(): INodeProperties[] {
         if (this.optionsByResource.size === 0) {
-            throw new Error('No operations found in OpenAPI document')
+            return []
         }
 
         const operations = []

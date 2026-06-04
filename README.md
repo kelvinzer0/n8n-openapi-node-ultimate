@@ -1,382 +1,292 @@
-# @devlikeapro/n8n-openapi-node
+# n8n-openapi-node-ultimate
 
+[![npm version](https://img.shields.io/npm/v/@kelvinzer0/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@kelvinzer0/n8n-openapi-node-ultimate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm downloads](https://img.shields.io/npm/dm/@kelvinzer0/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@kelvinzer0/n8n-openapi-node-ultimate)
+[![CI](https://github.com/kelvinzer0/n8n-openapi-node-ultimate/actions/workflows/publish.yaml/badge.svg)](https://github.com/kelvinzer0/n8n-openapi-node-ultimate/actions)
 
-![openapi logo](openapi.png)
-![n8n logo](n8n.png)
+> **Turn any OpenAPI spec into n8n node properties — instantly.**
+> Load from URL or file, generate via CLI or code, with full OpenAPI 3.0 & 3.1 support.
 
-Turn Your **OpenAPI** (**Swagger**) spec into a **n8n node**!
-
-[![npm version](https://img.shields.io/npm/v/@devlikeapro/n8n-openapi-node.svg)](https://www.npmjs.com/package/@devlikeapro/n8n-openapi-node)
+Fork of [devlikeapro/n8n-openapi-node](https://github.com/devlikeapro/n8n-openapi-node) with major enhancements: URL import, CLI tool, better schema handling, and production-ready error handling.
 
 ---
 
-<!-- toc -->
+## ✨ Features
 
-- [Quick Start](#quick-start)
-  * [Installation](#installation)
-  * [Usage](#usage)
-- [How it works](#how-it-works)
-  * [Resource](#resource)
-  * [Operation](#operation)
-  * [Query Parameters](#query-parameters)
-  * [Request Body](#request-body)
-  * [Headers](#headers)
-- [Customization](#customization)
-  * [Resource](#resource-1)
-  * [Operation](#operation-1)
-  * [Fields](#fields)
-- [Use Cases](#use-cases)
-- [FAQ](#faq)
-  * [I have only OpenAPI v2 spec, what can I do?](#i-have-only-openapi-v2-spec-what-can-i-do)
-  * [I have openapi.yaml spec, what can I do?](#i-have-openapiyaml-spec-what-can-i-do)
-  * [How to set up credentials from OpenAPI v3 spec?](#how-to-set-up-credentials-from-openapi-v3-spec)
-  * [Why it doesn't work with my OpenAPI spec?](#why-it-doesnt-work-with-my-openapi-spec)
-- [Support the project](#support-the-project)
+- 🔗 **URL Import** — Load OpenAPI specs directly from URLs (JSON & YAML)
+- 🖥️ **CLI Tool** — Generate n8n properties from the command line
+- 📄 **OpenAPI 3.0 & 3.1** — Full support including `type: ['string', 'null']` union types
+- 🔧 **allOf Composition** — Proper merging of composed schemas
+- 🛡️ **Circular Reference Protection** — Safe handling of recursive `$ref`s
+- 📁 **$ref at Path Level** — Resolves path-level `$ref` in OpenAPI specs
+- 🏷️ **Smart Naming** — Auto-generates clean names for operations without `operationId`
+- 🎛️ **Customizable** — Override parsers, collectors, and behavior via config
+- 📦 **Zero Config** — Works out of the box with sensible defaults
 
-<!-- tocstop -->
+---
 
-# Quick Start
-
-If you have OpenAPI specification - you can easily in few minutes create
-[your community node](https://docs.n8n.io/integrations/community-nodes/usage/) for n8n!
-
-It'll still require to create and publish `n8n-nodes-<yourproject>` npm package,
-but you can use this package to generate most of the code.
-
-
-👉 We recommend using one of repo for the `n8n-nodes-<yourproject>` package:
-
-- https://github.com/devlikeapro/n8n-nodes-petstore - Petstore example generated from OpenAPI v3 spec
-- https://github.com/n8n-io/n8n-nodes-starter - Official n8n nodes starter template
-
-Find more real-world examples in [Use Cases](#use-cases) section.
-
-![example](node.png)
-
-## Installation
-
-Add `@devlikeapro/n8n-openapi-node` as dependency
+## 📦 Installation
 
 ```bash
-npm install @devlikeapro/n8n-openapi-node
-# OR
-pnpm add @devlikeapro/n8n-openapi-node
-# OR
-yarn add @devlikeapro/n8n-openapi-node
+npm install @kelvinzer0/n8n-openapi-node-ultimate
 ```
 
+Or with yarn:
 
-## Usage
+```bash
+yarn add @kelvinzer0/n8n-openapi-node-ultimate
+```
 
-1. Add your `openapi.json` to `src/{NodeName}` folder
-   (use **OpenAPI v3** and **json**, see [FAQ](#faq) if you don't have it)
+---
 
-2. Get your `Node.properties` from OpenAPI v3 spec:
+## 🚀 Quick Start
+
+### Programmatic Usage
 
 ```typescript
-import {INodeType, INodeTypeDescription, NodeConnectionType} from 'n8n-workflow';
-import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
-import * as doc from './openapi.json'; // <=== Your OpenAPI v3 spec
+import { N8NPropertiesBuilder, loadOpenApi } from '@kelvinzer0/n8n-openapi-node-ultimate';
 
-const config: N8NPropertiesBuilderConfig = {}
-const parser = new N8NPropertiesBuilder(doc, config);
-const properties = parser.build()
+// Load from URL
+const doc = await loadOpenApi('https://petstore3.swagger.io/api/v3/openapi.json');
 
-export class Petstore implements INodeType {
-  description: INodeTypeDescription = {
-    displayName: 'Petstore',
-    name: 'petstore',
-    icon: 'file:petstore.svg',
-    group: ['transform'],
-    version: 1,
-    subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-    description: 'Interact with Petstore API',
-    defaults: {
-      name: 'Petstore',
+// Or load from local file
+// const doc = await loadOpenApi('./openapi.yaml');
+
+// Build n8n properties
+const builder = new N8NPropertiesBuilder(doc);
+const properties = builder.build();
+
+console.log(JSON.stringify(properties, null, 2));
+```
+
+### CLI Usage
+
+```bash
+# From URL
+npx n8n-openapi-gen --input https://petstore3.swagger.io/api/v3/openapi.json --output properties.json
+
+# From local file
+npx n8n-openapi-gen --input ./openapi.yaml --output properties.json
+
+# Pipe to stdout
+npx n8n-openapi-gen --input ./openapi.json
+```
+
+**CLI Options:**
+
+| Option | Description |
+|--------|-------------|
+| `-i, --input <source>` | OpenAPI spec source (URL or file path) — **required** |
+| `-o, --output <file>` | Output file path (defaults to stdout) |
+| `--pretty` | Pretty-print JSON (default: true) |
+| `-V, --version` | Show version |
+| `-h, --help` | Show help |
+
+---
+
+## 📖 API Reference
+
+### `N8NPropertiesBuilder`
+
+The main class for building n8n node properties from OpenAPI documents.
+
+```typescript
+const builder = new N8NPropertiesBuilder(doc, config?);
+const properties = builder.build(overrides?);
+```
+
+**Constructor Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `doc` | `any` | Parsed OpenAPI document (JSON object) |
+| `config` | `N8NPropertiesBuilderConfig` | Optional configuration |
+
+**Config Options:**
+
+```typescript
+interface N8NPropertiesBuilderConfig {
+    logger?: pino.Logger;                    // Custom logger
+    OperationsCollector?: typeof BaseOperationsCollector;  // Custom operations collector
+    ResourcePropertiesCollector?: typeof ResourceCollector; // Custom resource collector
+    operation?: IOperationParser;            // Custom operation parser
+    resource?: IResourceParser;              // Custom resource parser
+}
+```
+
+### `loadOpenApi(source: string): Promise<any>`
+
+Auto-detects whether the source is a URL or file path and loads the OpenAPI spec.
+
+```typescript
+import { loadOpenApi } from '@kelvinzer0/n8n-openapi-node-ultimate';
+
+// URL
+const doc = await loadOpenApi('https://api.example.com/openapi.json');
+
+// Local file
+const doc = await loadOpenApi('./specs/api.yaml');
+```
+
+### `loadOpenApiFromUrl(url: string): Promise<any>`
+
+Fetch an OpenAPI spec from a URL. Supports JSON and YAML formats.
+
+### `loadOpenApiFromFile(filePath: string): any`
+
+Load an OpenAPI spec from a local file. Supports JSON and YAML formats.
+
+### `Override`
+
+Customize generated properties with find-and-replace patterns:
+
+```typescript
+const overrides: Override[] = [
+    {
+        find: { name: 'apiKey' },
+        replace: { default: '={{ $credentials.apiKey }}' },
     },
-    inputs: [NodeConnectionType.Main],
-    outputs: [NodeConnectionType.Main],
-    credentials: [
-      {
-        name: 'petstoreApi',
-        required: false,
-      },
-    ],
-    requestDefaults: {
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      baseURL: '={{$credentials.url}}',
-    },
-    properties: properties, // <==== HERE
-  };
-}
-```
-
-# How it works
-
-`N8NPropertiesBuilder` extracts few entities from OpenAPI v3 to your n8n community node:
-
-1. **Resource** - a list of **Tags** from OpenAPI spec
-2. **Operation** - a list of **Operations** from OpenAPI spec (aka **Actions** in n8n)
-3. **Query Parameters** - a list of `operation.parameters` from OpenAPI spec
-4. **Request Body** - a list of `operation.requestBody.content` from OpenAPI spec (only for `application/json`)
-5. **Headers** - a list of `operation.parameters` from OpenAPI spec
-
-## Resource
-
-By default, it get **Tags** from OpenAPI spec and converts them to **Resource** in n8n.
-
-## Operation
-
-By default, it gets **Operations** from OpenAPI spec and converts them to **Actions** in n8n.
-
-## Query Parameters
-
-It gets `operation.parameters` from OpenAPI spec and converts them to **Query Parameters** in n8n.
-
-## Request Body
-
-It doesn't create the full structure of the request body, only the first level of properties.
-So if you have request body as
-
-```json
-{
-  "name": "string",
-  "config": {
-    "id": 0,
-    "name": "string"
-  }
-}
-```
-
-it creates 2 fields in n8n:
-
-- `name` - with default value `string`
-- `config` - with default value `{"id": 0, "name": "string"}`
-
-## Headers
-
-It gets `operation.parameters` from OpenAPI spec and converts them to **Headers** in n8n.
-
-# Customization
-
-## Resource
-
-You can override the way how to extract **Resource** from **OpenAPI Tag** defining your custom `IResourceParser`:
-
-```typescript
-import {IResourceParser} from '@devlikeapro/n8n-openapi-node';
-
-export class CustomResourceParser {
-  CUSTOM_DESCRIPTION = {
-    "cats": "Cats are cute",
-  }
-
-  name(tag: OpenAPIV3.TagObject): string {
-    // Your custom logic here
-    if (tag['X-Visible-Name']) {
-      return tag['X-Visible-Name'];
-    }
-    return lodash.startCase(tag.name);
-  }
-
-  value(tag: Pick<OpenAPIV3.TagObject, "name">): string {
-    // Remove all non-alphanumeric characters
-    const name = tag.name.replace(/[^a-zA-Z0-9_-]/g, '')
-    return lodash.startCase(name)
-  }
-
-  description(tag: OpenAPIV3.TagObject): string {
-    // Your custom logic here
-    return this.CUSTOM_DESCRIPTION[tag.name] || tag.description || '';
-  }
-}
-```
-
-Alternatively, you can use `DefaultResourceParser` and override only the methods you need.
-The default implementation you can find in [src/ResourceParser.ts](src/ResourceParser.ts)
-
-```typescript
-import {OpenAPIV3} from 'openapi-types';
-import * as lodash from 'lodash';
-import {DefaultResourceParser} from '@devlikeapro/n8n-openapi-node';
-
-export class CustomResourceParser extends DefaultResourceParser {
-  value(tag: OpenAPIV3.TagObject): string {
-    return lodash.startCase(tag.name.replace(/[^a-zA-Z0-9_-]/g, ''));
-  }
-}
-```
-
-Then you use it in `N8NPropertiesBuilder` in `config.resource`:
-
-```typescript
-import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
-import * as doc from './openapi.json';
-
-import {CustomResourceParser} from './CustomResourceParser';
-
-const config: N8NPropertiesBuilderConfig = {
-  resource: new CustomResourceParser()
-}
-const parser = new N8NPropertiesBuilder(doc, config);
-const properties = parser.build()
-```
-
-Find real example in [@devlikeapro/n8n-nodes-waha](https://github.com/devlikeapro/n8n-nodes-waha) repository.
-
-## Operation
-
-You can override the way how to extract **Operation** from **OpenAPI Operation** defining your custom
-`IOperationParser`:
-
-```typescript
-import {IOperationParser} from '@devlikeapro/n8n-openapi-node';
-
-export class CustomOperationParser implements IOperationParser {
-  shouldSkip(operation: OpenAPIV3.OperationObject, context: OperationContext): boolean {
-    // By default it skips operation.deprecated
-    // But we can include all operations
-    return false
-  }
-
-  name(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
-    if (operation['X-Visible-Name']) {
-      return operation['X-Visible-Name'];
-    }
-    return lodash.startCase(operation.operationId)
-  }
-
-  value(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
-    return lodash.startCase(operation.operationId)
-  }
-
-  action(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
-    // How operation is displayed in n8n when you select your node (right form)
-    return operation.summary || this.name(operation, context)
-  }
-
-  description(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
-    return operation.description || operation.summary || '';
-  }
-}
-```
-
-Alternatively, you can use `DefaultOperationParser` and override only the methods you need.
-The default implementation you can find in [src/OperationParser.ts](src/OperationParser.ts)
-
-```typescript
-import {DefaultOperationParser} from '@devlikeapro/n8n-openapi-node';
-
-export class CustomOperationParser extends DefaultOperationParser {
-  name(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
-    // NestJS add operationId in format CatController_findOne
-    let operationId: string = operation.operationId!!.split('_').slice(1).join('_');
-    if (!operationId) {
-      operationId = operation.operationId as string;
-    }
-    return lodash.startCase(operationId);
-  }
-}
-```
-
-Then you use it in `N8NPropertiesBuilder` in `config.operation`:
-
-```typescript
-import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
-import * as doc from './openapi.json';
-import {CustomOperationParser} from './CustomOperationParser';
-
-const config: N8NPropertiesBuilderConfig = {
-  operation: new CustomOperationParser()
-}
-const parser = new N8NPropertiesBuilder(doc, config);
-const properties = parser.build()
-```
-
-Find real example in [@devlikeapro/n8n-nodes-waha](https://github.com/devlikeapro/n8n-nodes-waha) repository.
-
-## Fields
-
-You can override some values for fields at the end, when full `properties` are ready.
-
-Here's example how you can override `session` field value (which has `'default'` string default value) to more n8n
-suitable `=${$json.session}}`:
-
-```typescript
-import {Override} from '@devlikeapro/n8n-openapi-node';
-
-export const customDefaults: Override[] = [
-  {
-    // Find field by fields matching
-    find: {
-      name: 'session',
-      required: true,
-      type: 'string',
-    },
-    // Replace 'default' field value
-    replace: {
-      default: '={{ $json.session }}',
-    },
-  },
 ];
+
+const properties = builder.build(overrides);
 ```
 
-Then you use it in `N8NPropertiesBuilder`:
+---
+
+## 🎛️ Customization
+
+### Custom Operation Parser
+
+Control how operations are named and described:
 
 ```typescript
+import { DefaultOperationParser, OperationContext } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { OpenAPIV3 } from 'openapi-types';
 
-import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
-import * as doc from './openapi.json';
-import {customDefaults} from './customDefaults';
+class MyOperationParser extends DefaultOperationParser {
+    name(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
+        // Custom naming logic
+        const id = operation.operationId?.split('_').pop() || 'unknown';
+        return lodash.startCase(id);
+    }
+}
 
-const parser = new N8NPropertiesBuilder(doc);
-const properties = parser.build(customDefaults);
+const builder = new N8NPropertiesBuilder(doc, {
+    operation: new MyOperationParser(),
+});
 ```
 
-Find real example in [@devlikeapro/n8n-nodes-waha](https://github.com/devlikeapro/n8n-nodes-waha) repository.
+### Custom Resource Parser
 
-# Use Cases
+Control how resources (tags) are named:
 
-Here's n8n community nodes generated from OpenAPI specifications you can use for reference:
+```typescript
+import { DefaultResourceParser } from '@kelvinzer0/n8n-openapi-node-ultimate';
 
-- [@devlikeapro/n8n-nodes-petstore](https://github.com/devlikeapro/n8n-nodes-petstore) - Petstore example generated from
-  [Petstore openapi.json](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml)
-- [@devlikeapro/n8n-nodes-chatwoot](https://github.com/devlikeapro/n8n-nodes-chatwoot) - ChatWoot n8n community node
-  from
-  [https://www.chatwoot.com/developers/api/](https://www.chatwoot.com/developers/api/). Defines credentials as well (
-  manually)
-- [@devlikeapro/n8n-nodes-waha](https://github.com/devlikeapro/n8n-nodes-waha) - **WAHA** - Self-hosted **WhatsApp HTTP
-  API** you can run in a click!
+class MyResourceParser extends DefaultResourceParser {
+    value(tag: { name: string }): string {
+        return tag.name.toLowerCase().replace(/\s+/g, '-');
+    }
+}
 
-# FAQ
+const builder = new N8NPropertiesBuilder(doc, {
+    resource: new MyResourceParser(),
+});
+```
 
-## I have only OpenAPI v2 spec, what can I do?
+---
 
-Paste your OpenAPI 2.0 definition into https://editor.swagger.io and select **Edit > Convert to OpenAPI 3** from the
-menu.
+## 💡 Use Cases
 
-https://stackoverflow.com/a/59749691
+### Building a Custom n8n Node
 
-## I have openapi.yaml spec, what can I do?
+```typescript
+import { N8NPropertiesBuilder, loadOpenApi } from '@kelvinzer0/n8n-openapi-node-ultimate';
 
-Paste your yaml spec to https://editor.swagger.io and select **File > Save as JSON** from the menu.
+async function generateNodeProperties(specUrl: string) {
+    const doc = await loadOpenApi(specUrl);
+    const builder = new N8NPropertiesBuilder(doc);
+    return builder.build();
+}
 
-## How to set up credentials from OpenAPI v3 spec?
+// Use in your n8n node definition
+const properties = await generateNodeProperties('https://api.example.com/openapi.json');
+```
 
-Right now you need to define it manually.
-Check [ChatWoot node](https://github.com/devlikeapro/n8n-nodes-chatwoot)
-for an example.
+### CI/CD Pipeline — Generate Properties on Build
 
-## Why it doesn't work with my OpenAPI spec?
+```bash
+#!/bin/bash
+# generate-props.sh
+npx n8n-openapi-gen \
+    --input https://api.example.com/openapi.json \
+    --output ./n8n-node/properties.json
+echo "Generated n8n properties"
+```
 
-Open [a new issue](https://github.com/devlikeapro/n8n-openapi-node/issues) and please attach
-your openapi.json file and describe the problem (logs are helpful too).
+### Loading YAML Specs
 
-# Support the project
+```typescript
+import { loadOpenApiFromFile, N8NPropertiesBuilder } from '@kelvinzer0/n8n-openapi-node-ultimate';
 
-You can support the project by donating a small amount to help us improve the project even more.
+const doc = loadOpenApiFromFile('./my-api.yaml');
+const builder = new N8NPropertiesBuilder(doc);
+const properties = builder.build();
+```
 
-- [https://patreon.com/devlikeapro](https://patreon.com/devlikeapro)
+---
+
+## ❓ FAQ
+
+**Q: Does it support OpenAPI 3.1?**
+A: Yes! Including `type: ['string', 'null']` union types and other 3.1 features.
+
+**Q: Can I load specs from a URL?**
+A: Yes! Use `loadOpenApi(url)` or the CLI with `--input <url>`.
+
+**Q: Does it support Swagger 2.0?**
+A: Not directly. Convert your Swagger 2.0 spec to OpenAPI 3.x first using tools like [swagger2openapi](https://github.com/Mermade/swagger2openapi).
+
+**Q: What about circular `$ref`s?**
+A: The library has built-in circular reference protection with a max depth of 50.
+
+**Q: Can I customize the output format?**
+A: Yes! Use custom parsers for operations and resources, or use `Override` patterns to modify generated properties.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feat/my-feature`
+3. **Commit** your changes: `git commit -m 'feat: add my feature'`
+4. **Push** to the branch: `git push origin feat/my-feature`
+5. **Open** a Pull Request
+
+### Development
+
+```bash
+# Clone
+git clone https://github.com/kelvinzer0/n8n-openapi-node-ultimate.git
+cd n8n-openapi-node-ultimate
+
+# Install dependencies
+npm install
+
+# Build
+npm run build
+
+# Run tests
+npm test
+```
+
+---
+
+## 📄 License
+
+MIT © [kelvinzer0](https://github.com/kelvinzer0)
+
+Based on [n8n-openapi-node](https://github.com/devlikeapro/n8n-openapi-node) by [Devlikeapro](https://github.com/devlikeapro).

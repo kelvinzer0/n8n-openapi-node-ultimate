@@ -6,6 +6,7 @@ import {OperationsCollector} from "./OperationsCollector";
 import {DefaultOperationParser, IOperationParser} from "./OperationParser";
 import {DefaultResourceParser, IResourceParser} from "./ResourceParser";
 import {ResourceCollector} from "./ResourceCollector";
+import {loadOpenApi, loadOpenApiFromUrl, loadOpenApiFromFile} from "./OpenApiLoader";
 
 
 export {
@@ -21,4 +22,7 @@ export {
     DefaultResourceParser,
     Override,
     ResourceCollector,
+    loadOpenApi,
+    loadOpenApiFromUrl,
+    loadOpenApiFromFile,
 }

@@ -39,11 +39,34 @@ export class N8NINodeProperties {
     }
 
     fromSchema(schema: Schema): FromSchemaNodeProperty {
-        schema = this.refResolver.resolve<OpenAPIV3.SchemaObject>(schema)
-        let type: NodePropertyTypes;
-        let defaultValue = this.schemaExample.extractExample(schema)
+        const resolved = this.refResolver.resolve<OpenAPIV3.SchemaObject>(schema)
+        let type: NodePropertyTypes = 'string';
+        let defaultValue = this.schemaExample.extractExample(resolved)
 
-        switch (schema.type) {
+        // Normalize OpenAPI 3.1 union types: type: ['string', 'null'] -> type: 'string'
+        const schemaType = Array.isArray(resolved.type)
+            ? resolved.type.find((t: string) => t !== 'null') || 'string'
+            : resolved.type;
+
+        // Handle allOf composition: merge properties from all schemas
+        if (resolved.allOf && Array.isArray(resolved.allOf)) {
+            const merged: any = { properties: {}, required: [] };
+            for (const sub of resolved.allOf) {
+                const subResolved = this.refResolver.resolve<OpenAPIV3.SchemaObject>(sub as any);
+                if (subResolved.properties) {
+                    Object.assign(merged.properties, subResolved.properties);
+                }
+                if (subResolved.required) {
+                    merged.required.push(...subResolved.required);
+                }
+                if (subResolved.type && !merged.type) {
+                    merged.type = subResolved.type;
+                }
+            }
+            Object.assign(resolved, merged);
+        }
+
+        switch (schemaType) {
             case 'boolean':
                 type = 'boolean';
                 defaultValue = defaultValue !== undefined ? defaultValue : true;
@@ -71,17 +94,17 @@ export class N8NINodeProperties {
         const field: FromSchemaNodeProperty = {
             type: type,
             default: defaultValue,
-            description: schema.description,
+            description: resolved.description,
         };
-        if (schema.enum && schema.enum.length > 0) {
+        if (resolved.enum && resolved.enum.length > 0) {
             field.type = 'options';
-            field.options = schema.enum.map((value: string) => {
+            field.options = resolved.enum.map((value: string) => {
                 return {
                     name: lodash.startCase(value),
                     value: value,
                 };
             });
-            field.default = field.default ? field.default : schema.enum[0];
+            field.default = field.default ? field.default : resolved.enum[0];
         }
         return field;
     }
