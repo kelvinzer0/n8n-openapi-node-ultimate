@@ -2,12 +2,17 @@
 /**
  * scaffold-node.mjs — Generate n8n community node project from OpenAPI spec
  *
- * Generates a project matching the n8n-nodes-starter standard exactly:
- *   nodes/Xxx/Xxx.node.ts
- *   nodes/Xxx/Xxx.node.json        (codex)
- *   nodes/Xxx/xxx.svg / xxx.dark.svg (icons)
+ * Generates a **declarative** n8n node project matching the n8n-nodes-starter pattern:
+ *   nodes/Xxx/
+ *     ├── Xxx.node.ts              ← Main declarative node (no execute())
+ *     ├── Xxx.node.json            ← Codex metadata
+ *     ├── resources/
+ *     │   ├── index.ts             ← Re-exports all resources
+ *     │   └── resourceName/
+ *     │       └── index.ts         ← Operation + field descriptions
+ *     └── icons/
  *   credentials/XxxApi.credentials.ts
- *   .prettierrc.js, eslint.config.mjs, .vscode/, tsconfig.json, package.json
+ *   + config files (tsconfig, prettier, eslint, etc.)
  *
  * Env vars:
  *   OPENAPI_URL     - URL to OpenAPI spec (JSON or YAML)
@@ -19,9 +24,6 @@
  *   NPM_SCOPE       - npm scope (default: REPO_OWNER)
  *   CUSTOM_CATEGORY - Codex category (default: "Development")
  *   TEMPLATE_DIR    - Optional custom template directory
- *
- * CLI args:
- *   --template-dir <path>  Custom template directory (overrides TEMPLATE_DIR env)
  */
 
 import {
@@ -34,7 +36,6 @@ import {
 	statSync,
 } from 'fs';
 import { join, dirname, basename, extname } from 'path';
-import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────────
@@ -62,6 +63,44 @@ function toPascalCase(str) {
 
 function toJSON(obj, indent = 2) {
 	return JSON.stringify(obj, null, indent) + '\n';
+}
+
+/**
+ * Serialize a JS object to a TypeScript object literal string.
+ * Handles n8n property objects with nested structures, arrays, expressions.
+ * Uses JSON.stringify since JSON syntax is valid TypeScript object literal syntax.
+ */
+function toTSLiteral(obj, indent = '\t') {
+	return JSON.stringify(obj, null, '\t')
+		.split('\n')
+		.map((line, i) => (i === 0 ? line : indent + line))
+		.join('\n');
+}
+
+/**
+ * Convert a tag/resource name to a safe directory name (lowercase, hyphenated).
+ */
+function toDirName(tagName) {
+	return tagName
+		.replace(/([a-z])([A-Z])/g, '$1-$2')
+		.replace(/[^a-zA-Z0-9]+/g, '-')
+		.replace(/^-|-$/g, '')
+		.toLowerCase();
+}
+
+/**
+ * Convert a tag/resource name to a safe TypeScript identifier (camelCase).
+ */
+function toIdentifier(tagName) {
+	const pascal = toPascalCase(tagName);
+	return pascal.charAt(0).toLowerCase() + pascal.slice(1);
+}
+
+/**
+ * Escape a string for use inside a TypeScript single-quoted string literal.
+ */
+function escapeTS(str) {
+	return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
 
 // ─── CLI args ────────────────────────────────────────────────────────────────────
@@ -107,7 +146,7 @@ const nodeClassName = className;
 const credentialClassName = `${className}Api`;
 
 console.log(`\n${'='.repeat(60)}`);
-console.log(`  Scaffolding: ${nodeName}`);
+console.log(`  Scaffolding: ${nodeName} (declarative)`);
 console.log(`${'='.repeat(60)}\n`);
 
 // ─── Fetch OpenAPI spec ──────────────────────────────────────────────────────────
@@ -143,6 +182,55 @@ try {
 writeFileSync('openapi.json', JSON.stringify(spec, null, 2));
 console.log('✅ OpenAPI spec saved\n');
 
+// ─── Extract base URL from OpenAPI servers ───────────────────────────────────────
+
+function extractBaseUrl(spec) {
+	const servers = spec.servers;
+	if (!servers || servers.length === 0) return '';
+
+	const server = servers[0];
+	let url = server.url || '';
+
+	// Replace server variables with their defaults
+	if (server.variables) {
+		for (const [varName, varDef] of Object.entries(server.variables)) {
+			const defaultVal = varDef.default || '';
+			url = url.replace(`{${varName}}`, defaultVal);
+		}
+	}
+
+	// If URL still has unresolved variables, return empty
+	if (url.includes('{')) return '';
+	return url;
+}
+
+const specBaseUrl = extractBaseUrl(spec);
+
+// ─── Extract security scheme info ────────────────────────────────────────────────
+
+function extractSecurityInfo(spec) {
+	const schemes = spec.components?.securitySchemes || {};
+	const globalSecurity = spec.security || [];
+
+	// Find the first security scheme
+	for (const secRef of globalSecurity) {
+		const schemeName = Object.keys(secRef)[0];
+		if (schemes[schemeName]) {
+			return { name: schemeName, ...schemes[schemeName] };
+		}
+	}
+
+	// If no global security, check if any scheme exists
+	const firstScheme = Object.entries(schemes)[0];
+	if (firstScheme) {
+		return { name: firstScheme[0], ...firstScheme[1] };
+	}
+
+	return null;
+}
+
+const secInfo = extractSecurityInfo(spec);
+
 // ─── Generate properties via N8NPropertiesBuilder ────────────────────────────────
 
 console.log('🔧 Generating n8n node properties...');
@@ -154,6 +242,46 @@ const parser = new N8NPropertiesBuilder(spec);
 const properties = parser.build();
 writeFileSync('properties.json', toJSON(properties));
 console.log(`✅ Generated ${properties.length} properties\n`);
+
+// ─── Group properties by resource ────────────────────────────────────────────────
+
+// The first property is the resource selector
+const resourceProperty = properties[0];
+
+// Get resource names from the selector
+const resourceNames = resourceProperty.options.map((opt) => opt.value);
+
+// Group remaining properties by resource
+const propertiesByResource = new Map();
+for (const name of resourceNames) {
+	propertiesByResource.set(name, []);
+}
+
+for (let i = 1; i < properties.length; i++) {
+	const prop = properties[i];
+	const show = prop.displayOptions?.show;
+	if (show?.resource) {
+		// Property belongs to specific resource(s)
+		for (const res of show.resource) {
+			if (propertiesByResource.has(res)) {
+				propertiesByResource.get(res).push(prop);
+			}
+		}
+	} else {
+		// Global property — add to all resources
+		for (const [name, props] of propertiesByResource) {
+			props.push(prop);
+		}
+	}
+}
+
+console.log('📊 Resources found:');
+for (const [name, props] of propertiesByResource) {
+	const operations = props.filter((p) => p.name === 'operation');
+	const fields = props.filter((p) => p.name !== 'operation');
+	console.log(`   ${name}: ${operations.length} operation(s), ${fields.length} field(s)`);
+}
+console.log('');
 
 // ─── Create project ──────────────────────────────────────────────────────────────
 
@@ -195,6 +323,9 @@ const packageJson = {
 		strict: true,
 		credentials: [`dist/credentials/${credentialClassName}.credentials.js`],
 		nodes: [`dist/nodes/${nodeClassName}/${nodeClassName}.node.js`],
+	},
+	dependencies: {
+		'n8n-workflow': '*',
 	},
 	devDependencies: {
 		'@n8n/node-cli': '*',
@@ -353,10 +484,84 @@ writeFileSync(
 
 mkdirSync(join(projectDir, 'credentials'), { recursive: true });
 
-// Determine credential icon path (relative to credentials/ folder → ../icons/ or ../nodes/Xxx/)
-const credIconPath = LOGO_URL
-	? `../nodes/${nodeClassName}/${iconLight}`
-	: `../nodes/${nodeClassName}/${iconLight}`;
+// Build credential fields based on security scheme
+let credFields = '';
+let authConfig = '';
+
+if (secInfo && secInfo.type === 'apiKey') {
+	const headerName = secInfo.name || 'Authorization';
+	if (secInfo.in === 'header') {
+		credFields = `		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			typeOptions: { password: true },
+			default: '',
+			required: true,
+		},`;
+		authConfig = `	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				${headerName === 'Authorization' ? "Authorization: '=Bearer {{$credentials.apiKey}}'" : `'${headerName}': '={{$credentials.apiKey}}'`},
+			},
+		},
+	};`;
+	}
+} else if (secInfo && secInfo.type === 'http') {
+	credFields = `		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			typeOptions: { password: true },
+			default: '',
+			required: true,
+		},`;
+	authConfig = `	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.apiKey}}',
+			},
+		},
+	};`;
+} else {
+	// Default: API key + base URL
+	credFields = `		{
+			displayName: 'Base URL',
+			name: 'url',
+			type: 'string',
+			default: '',
+			required: true,
+			placeholder: 'https://api.example.com',
+		},
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			typeOptions: { password: true },
+			default: '',
+			required: true,
+		},`;
+	authConfig = `	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.apiKey}}',
+			},
+		},
+	};`;
+}
+
+// Determine if we need a URL field in credentials
+const needsUrlField = !specBaseUrl || (secInfo && secInfo.type === 'apiKey' && secInfo.in === 'header');
+if (!needsUrlField && secInfo) {
+	// Remove URL field if we have a base URL and proper auth
+	credFields = credFields.replace(
+		/\t\t{\n\t\t\tdisplayName: 'Base URL',[\s\S]*?},\n/,
+		'',
+	);
+}
 
 writeFileSync(
 	join(projectDir, 'credentials', `${credentialClassName}.credentials.ts`),
@@ -378,35 +583,14 @@ export class ${credentialClassName} implements ICredentialType {
 	documentationUrl = '';
 
 	properties: INodeProperties[] = [
-		{
-			displayName: 'Base URL',
-			name: 'url',
-			type: 'string',
-			default: '',
-			required: true,
-		},
-		{
-			displayName: 'API Key',
-			name: 'apiKey',
-			type: 'string',
-			typeOptions: { password: true },
-			default: '',
-			required: true,
-		},
+${credFields}
 	];
 
-	authenticate: IAuthenticateGeneric = {
-		type: 'generic',
-		properties: {
-			headers: {
-				Authorization: '=Bearer {{$credentials.apiKey}}',
-			},
-		},
-	};
+${authConfig}
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: '={{$credentials.url}}',
+			baseURL: '${specBaseUrl ? escapeTS(specBaseUrl) : '={{$credentials.url}}'}',
 			url: '/',
 			method: 'GET',
 		},
@@ -420,61 +604,101 @@ export class ${credentialClassName} implements ICredentialType {
 const nodeDir = join(projectDir, 'nodes', nodeClassName);
 mkdirSync(nodeDir, { recursive: true });
 
-// ─── Xxx.node.ts ─────────────────────────────────────────────────────────────────
+// ─── Generate resource directories ───────────────────────────────────────────────
 
-const propertiesJSON = JSON.stringify(properties, null, '\t').replace(/\n/g, '\n\t\t');
+const resourcesDir = join(nodeDir, 'resources');
+mkdirSync(resourcesDir, { recursive: true });
+
+const resourceImports = [];
+const resourceSpreads = [];
+
+for (const [resourceName, resourceProps] of propertiesByResource) {
+	const dirName = toDirName(resourceName);
+	const identifier = toIdentifier(resourceName);
+	const constName = `${identifier}Description`;
+	const resourceDir = join(resourcesDir, dirName);
+	mkdirSync(resourceDir, { recursive: true });
+
+	// Serialize the resource's properties to TypeScript
+	const propsTS = resourceProps.map((p) => toTSLiteral(p, '\t\t')).join(',\n\t\t');
+
+	writeFileSync(
+		join(resourceDir, 'index.ts'),
+		`import type { INodeProperties } from 'n8n-workflow';
+
+export const ${constName}: INodeProperties[] = [
+		${propsTS},
+];
+`,
+	);
+
+	resourceImports.push(
+		`import { ${constName} } from './resources/${dirName}';`,
+	);
+	resourceSpreads.push(`...${constName}`);
+}
+
+// ─── resources/index.ts (re-export all resources) ───────────────────────────────
+
+const reExports = [];
+for (const [resourceName] of propertiesByResource) {
+	const dirName = toDirName(resourceName);
+	const identifier = toIdentifier(resourceName);
+	const constName = `${identifier}Description`;
+	reExports.push(`export { ${constName} } from './${dirName}';`);
+}
+
+writeFileSync(
+	join(resourcesDir, 'index.ts'),
+	reExports.join('\n') + '\n',
+);
+
+// ─── Xxx.node.ts (main declarative node — NO execute()) ─────────────────────────
+
+// Serialize the resource selector property
+const resourcePropTS = toTSLiteral(resourceProperty, '\t\t');
+
+// Build the properties array content: resource selector + all resource spreads
+const propertiesContent = `\t\t${resourcePropTS},\n\t\t${resourceSpreads.join(',\n\t\t')}`;
+
+// Determine credential name
+const credName = `${nodeName}Api`;
 
 writeFileSync(
 	join(nodeDir, `${nodeClassName}.node.ts`),
-	`import type {
-	IExecuteFunctions,
-	INodeExecutionData,
-	INodeType,
-	INodeTypeDescription,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+	`import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
+${resourceImports.join('\n')}
 
 export class ${nodeClassName} implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: '${CUSTOM_NAME}',
+		displayName: '${escapeTS(CUSTOM_NAME)}',
 		name: '${nodeName}',
 		icon: { light: 'file:./${iconLight}', dark: 'file:./${iconDark}' },
-		group: ['transform'],
+		group: ['input'],
 		version: 1,
 		subtitle: '={{\\$parameter["operation"] + ": " + \\$parameter["resource"]}}',
-		description: '${defaultDesc.replace(/'/g, "\\'")}',
-		defaults: { name: '${CUSTOM_NAME}' },
+		description: '${escapeTS(defaultDesc)}',
+		defaults: { name: '${escapeTS(CUSTOM_NAME)}' },
+		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: '${nodeName}Api', required: true }],
+		credentials: [
+			{
+				name: '${credName}',
+				required: true,
+			},
+		],
 		requestDefaults: {
-			headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-			baseURL: '={{\\$credentials.url}}',
+			${specBaseUrl ? `baseURL: '${escapeTS(specBaseUrl)}',` : "baseURL: '={{\\$credentials.url}}',"}
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
 		},
-		properties: ${propertiesJSON},
+		properties: [
+${propertiesContent}
+		],
 	};
-
-	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-		const items = this.getInputData();
-		const returnData: INodeExecutionData[] = [];
-
-		for (let i = 0; i < items.length; i++) {
-			try {
-				// The actual HTTP requests are handled by n8n's built-in routing
-				// via requestDefaults and the properties configuration above.
-				// This execute method provides the framework for item-by-item processing.
-				returnData.push(items[i]);
-			} catch (error) {
-				if (this.continueOnFail()) {
-					returnData.push({ json: { error: error.message }, pairedItem: i });
-				} else {
-					throw error;
-				}
-			}
-		}
-
-		return [returnData];
-	}
 }
 `,
 );
@@ -520,12 +744,10 @@ if (LOGO_URL) {
 			const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
 
 			if (ext === '.svg') {
-				// Use the same SVG for both light and dark
 				writeFileSync(join(nodeDir, iconLight), buf);
 				writeFileSync(join(nodeDir, iconDark), buf);
 				console.log('✅ Logo saved (light + dark variants)');
 			} else {
-				// For PNG/JPG, save as-is; n8n expects SVG but will accept others
 				writeFileSync(join(nodeDir, iconLight), buf);
 				writeFileSync(join(nodeDir, iconDark), buf);
 				console.log('✅ Logo saved (non-SVG format)');
@@ -541,7 +763,6 @@ if (LOGO_URL) {
 		writeFileSync(join(nodeDir, iconDark), PLACEHOLDER_DARK_SVG);
 	}
 } else {
-	// No logo URL: generate placeholder icons
 	writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
 	writeFileSync(join(nodeDir, iconDark), PLACEHOLDER_DARK_SVG);
 	console.log('🎨 Generated placeholder icons (light + dark)');
@@ -550,7 +771,6 @@ if (LOGO_URL) {
 // ─── icons/ directory (global, for credential icon fallback) ─────────────────────
 
 mkdirSync(join(projectDir, 'icons'), { recursive: true });
-// Copy the same icons to the global icons dir as well
 cpSync(join(nodeDir, iconLight), join(projectDir, 'icons', iconLight));
 cpSync(join(nodeDir, iconDark), join(projectDir, 'icons', iconDark));
 
@@ -585,7 +805,7 @@ npm install ${packageName}
 ## Usage
 
 1. In n8n: **Settings → Community Nodes → Install** → \`${packageName}\`
-2. Add credentials: **${CUSTOM_NAME} API** → Base URL + API Key
+2. Add credentials: **${CUSTOM_NAME} API** → API Key
 3. Use the node in your workflows
 
 ## Auto-generated
@@ -614,8 +834,10 @@ console.log(`${'='.repeat(60)}`);
 console.log(`   Package:     ${packageName}`);
 console.log(`   Version:     ${VERSION}`);
 console.log(`   Properties:  ${properties.length}`);
+console.log(`   Resources:   ${resourceNames.length}`);
 console.log(`   Class:       ${nodeClassName}`);
 console.log(`   Credential:  ${credentialClassName}`);
+console.log(`   Style:       declarative (no execute())`);
 console.log(`   Directory:   ${projectDir}/`);
 console.log('');
 console.log('   Structure:');
@@ -641,7 +863,14 @@ console.log(`       └── ${nodeClassName}/`);
 console.log(`           ├── ${nodeClassName}.node.ts`);
 console.log(`           ├── ${nodeClassName}.node.json`);
 console.log(`           ├── ${iconLight}`);
-console.log(`           └── ${iconDark}`);
+console.log(`           ├── ${iconDark}`);
+console.log(`           └── resources/`);
+console.log(`               ├── index.ts`);
+for (const [resourceName] of propertiesByResource) {
+	const dirName = toDirName(resourceName);
+	console.log(`               ├── ${dirName}/`);
+	console.log(`               │   └── index.ts`);
+}
 console.log('');
 console.log('   Next steps:');
 console.log(`   cd ${projectDir}`);
