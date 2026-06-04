@@ -104,7 +104,7 @@ writeFileSync(join(projectDir, 'tsconfig.json'), JSON.stringify({
     forceConsistentCasingInFileNames: true, outDir: './dist', rootDir: '.',
     declaration: true, sourceMap: true, resolveJsonModule: true
   },
-  include: ['**/*.ts'],
+  include: ['**/*.ts', 'types/**/*.d.ts'],
   exclude: ['node_modules', 'dist']
 }, null, 2));
 
@@ -113,6 +113,17 @@ writeFileSync(join(projectDir, '.gitignore'), 'node_modules/\ndist/\n*.js.map\n'
 
 // .npmignore
 writeFileSync(join(projectDir, '.npmignore'), 'node_modules/\nsrc/\ntsconfig.json\n.gitignore\n');
+
+// Type declaration for generator (GitHub dep has no built types)
+mkdirSync(join(projectDir, 'types'), { recursive: true });
+writeFileSync(join(projectDir, 'types', 'n8n-openapi-node-ultimate.d.ts'),
+`declare module '@kelvinzer0/n8n-openapi-node-ultimate' {
+  export class N8NPropertiesBuilder {
+    constructor(spec: any);
+    build(): any[];
+  }
+}
+`);
 
 // Credential file
 mkdirSync(join(projectDir, 'nodes', 'credentials'), { recursive: true });

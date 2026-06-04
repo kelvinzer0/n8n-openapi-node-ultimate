@@ -84,6 +84,7 @@ jobs:
         run: |
           cd ${{ steps.scaffold.outputs.dir_name }}
           npm install --ignore-scripts
+          npm audit fix || true
           npx tsc --noEmit 2>&1 || true
           echo "✅ Build complete (skipped native modules)"
 
