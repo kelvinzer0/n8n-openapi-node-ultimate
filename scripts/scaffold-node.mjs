@@ -145,6 +145,12 @@ const defaultDesc = DESCRIPTION || `n8n community node for ${CUSTOM_NAME} API`;
 const nodeClassName = className;
 const credentialClassName = `${className}Api`;
 
+// Unique node/credential names using scope prefix to avoid conflicts with other devs
+// e.g. scope="n8n-dev", name="Evolution" → nodeInternalName="n8nDevEvolution"
+const scopePrefix = toPascalCase(NPM_SCOPE.replace(/^@/, ''));
+const nodeInternalName = `${scopePrefix}${className}`;
+const credentialInternalName = `${nodeInternalName}Api`;
+
 console.log(`\n${'='.repeat(60)}`);
 console.log(`  Scaffolding: ${nodeName} (declarative)`);
 console.log(`${'='.repeat(60)}\n`);
@@ -574,7 +580,7 @@ writeFileSync(
 } from 'n8n-workflow';
 
 export class ${credentialClassName} implements ICredentialType {
-	name = '${nodeName}Api';
+	name = '${credentialInternalName}';
 
 	displayName = '${CUSTOM_NAME} API';
 
@@ -662,7 +668,7 @@ const resourcePropTS = toTSLiteral(resourceProperty, '\t\t');
 const propertiesContent = `\t\t${resourcePropTS},\n\t\t${resourceSpreads.join(',\n\t\t')}`;
 
 // Determine credential name
-const credName = `${nodeName}Api`;
+const credName = credentialInternalName;
 
 writeFileSync(
 	join(nodeDir, `${nodeClassName}.node.ts`),
@@ -672,7 +678,7 @@ ${resourceImports.join('\n')}
 export class ${nodeClassName} implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: '${escapeTS(CUSTOM_NAME)}',
-		name: '${nodeName}',
+		name: '${nodeInternalName}',
 		icon: { light: 'file:./${iconLight}', dark: 'file:./${iconDark}' },
 		group: ['input'],
 		version: 1,
@@ -710,7 +716,7 @@ const repoUrl = `https://github.com/${REPO_OWNER}/${nodeName}`;
 writeFileSync(
 	join(nodeDir, `${nodeClassName}.node.json`),
 	toJSON({
-		node: nodeName,
+		node: nodeInternalName,
 		nodeVersion: '1.0',
 		codexVersion: '1.0',
 		categories: [CUSTOM_CATEGORY],
