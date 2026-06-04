@@ -108,6 +108,7 @@ jobs:
           cd ${{ steps.scaffold.outputs.dir_name }}
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+          gh auth setup-git
           git init -b main
           git add -A
           git commit -m "feat: initial n8n community node for ${{ inputs.custom_name }}"
@@ -124,10 +125,11 @@ jobs:
           cd ${{ steps.scaffold.outputs.dir_name }}
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+          gh auth setup-git
           git init -b main
           git remote add origin "https://github.com/${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}.git"
           git fetch origin main || true
-          git checkout main || git checkout -b main
+          git reset origin/main || true
           git add -A
           git diff --cached --quiet || git commit -m "chore: update node from OpenAPI spec (${{ inputs.version }})"
           git push origin main
