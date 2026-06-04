@@ -1,6 +1,5 @@
 import {INodeProperties} from 'n8n-workflow';
 import {OpenAPIV3} from 'openapi-types';
-import pino from 'pino';
 import {OpenAPIWalker} from "./openapi/OpenAPIWalker";
 import {ResourceCollector as ResourcePropertiesCollector} from "./ResourceCollector";
 import {BaseOperationsCollector, OperationsCollector as OperationsCollectorImpl} from "./OperationsCollector";
@@ -8,13 +7,28 @@ import * as lodash from "lodash";
 import {DefaultOperationParser, IOperationParser} from "./OperationParser";
 import {DefaultResourceParser, IResourceParser} from "./ResourceParser";
 
+// Minimal logger interface — no external deps needed at runtime
+interface Logger {
+    info(obj: any, msg?: string): void;
+    warn(obj: any, msg?: string): void;
+}
+
+const defaultLogger: Logger = {
+    info: (obj: any, msg?: string) => {
+        if (process.env.NODE_ENV === 'development') console.log(msg || 'info', obj);
+    },
+    warn: (obj: any, msg?: string) => {
+        if (process.env.NODE_ENV === 'development') console.warn(msg || 'warn', obj);
+    },
+};
+
 export interface Override {
     find: any;
     replace: any;
 }
 
 export interface N8NPropertiesBuilderConfig {
-    logger?: pino.Logger;
+    logger?: Logger;
     OperationsCollector?: typeof BaseOperationsCollector,
     ResourcePropertiesCollector?: typeof ResourcePropertiesCollector
     operation?: IOperationParser,
@@ -31,7 +45,7 @@ export interface N8NPropertiesBuilderConfig {
  */
 export class N8NPropertiesBuilder {
     private readonly doc: OpenAPIV3.Document;
-    private readonly logger: pino.Logger
+    private readonly logger: Logger
     private readonly walker: OpenAPIWalker;
 
     // DI
@@ -42,7 +56,7 @@ export class N8NPropertiesBuilder {
 
     constructor(doc: any, config?: N8NPropertiesBuilderConfig) {
         this.doc = doc
-        this.logger = config?.logger || pino({transport: {target: 'pino-pretty'}})
+        this.logger = config?.logger || defaultLogger
         this.walker = new OpenAPIWalker(this.doc)
 
         // DI

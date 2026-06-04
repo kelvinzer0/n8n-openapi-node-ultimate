@@ -1,6 +1,5 @@
 import {OpenAPIVisitor, OperationContext} from "./openapi/OpenAPIVisitor";
 import * as lodash from "lodash";
-import pino from "pino";
 import {OpenAPIV3} from "openapi-types";
 import {N8NINodeProperties} from "./n8n/SchemaToINodeProperties";
 import {IOperationParser} from "./OperationParser";
@@ -8,6 +7,12 @@ import {OptionsByResourceMap} from "./n8n/OptionsByResourceMap";
 import {INodeProperties} from "n8n-workflow";
 import {replacePathVarsToParameter} from "./n8n/utils";
 import {IResourceParser} from "./ResourceParser";
+
+// Minimal logger interface — no external deps needed at runtime
+interface Logger {
+    info(obj: any, msg?: string): void;
+    warn(obj: any, msg?: string): void;
+}
 
 export class BaseOperationsCollector implements OpenAPIVisitor {
     public readonly _fields: INodeProperties[]
@@ -21,7 +26,7 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
         doc: any,
         protected operationParser: IOperationParser,
         protected resourceParser: IResourceParser,
-        protected logger: pino.Logger
+        protected logger: Logger
     ) {
         this._fields = []
         this.n8nNodeProperties = new N8NINodeProperties(doc)

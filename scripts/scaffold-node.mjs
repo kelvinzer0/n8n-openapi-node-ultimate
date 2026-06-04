@@ -108,9 +108,7 @@ writeFileSync(join(projectDir, 'package.json'), JSON.stringify({
   dependencies: {
     'js-yaml': '^4.1.0',
     'lodash': '^4.17.21',
-    'openapi-types': '^12.1.3',
-    'pino': '^9.4.0',
-    'pino-pretty': '^11.2.2'
+    'openapi-types': '^12.1.3'
   },
   devDependencies: { 'n8n-workflow': '*', typescript: '^5.6.0' }
 }, null, 2));
