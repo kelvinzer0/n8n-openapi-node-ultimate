@@ -74,11 +74,14 @@ jobs:
           REPO_OWNER: ${{ github.repository_owner }}
         run: |
           node generator/scripts/scaffold-node.mjs
+          # Compute directory name (same logic as scaffold script)
+          DIR_NAME="n8n-nodes-$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
+          echo "dir_name=${DIR_NAME}" >> $GITHUB_OUTPUT
           echo "done=true" >> $GITHUB_OUTPUT
 
       - name: Build node project
         run: |
-          cd ${{ inputs.custom_name }}
+          cd ${{ steps.scaffold.outputs.dir_name }}
           npm install
           npm run build 2>&1 || true
           echo "✅ Build complete"
@@ -86,7 +89,7 @@ jobs:
       - name: Check if repo exists
         id: check_repo
         run: |
-          REPO_NAME="n8n-nodes-$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
+          REPO_NAME="${{ steps.scaffold.outputs.dir_name }}"
           if gh repo view "${{ github.repository_owner }}/${REPO_NAME}" --json name 2>/dev/null; then
             echo "exists=true" >> $GITHUB_OUTPUT
             echo "repo_name=${REPO_NAME}" >> $GITHUB_OUTPUT
@@ -102,7 +105,7 @@ jobs:
       - name: Create repo (if new)
         if: steps.check_repo.outputs.exists == 'false'
         run: |
-          cd ${{ inputs.custom_name }}
+          cd ${{ steps.scaffold.outputs.dir_name }}
           git init
           git add -A
           git commit -m "feat: initial n8n community node for ${{ inputs.custom_name }}"
@@ -116,7 +119,7 @@ jobs:
       - name: Update repo (if exists)
         if: steps.check_repo.outputs.exists == 'true'
         run: |
-          cd ${{ inputs.custom_name }}
+          cd ${{ steps.scaffold.outputs.dir_name }}
           git init
           git remote add origin "https://github.com/${{ github.repository_owner }}/${{ steps.check_repo.outputs.repo_name }}.git"
           git fetch origin main || true
@@ -130,7 +133,7 @@ jobs:
 
       - name: Create GitHub Release
         run: |
-          cd ${{ inputs.custom_name }}
+          cd ${{ steps.scaffold.outputs.dir_name }}
           gh release create "v${{ inputs.version }}" \
             --title "v${{ inputs.version }}" \
             --notes "Auto-generated from OpenAPI spec" \
@@ -141,7 +144,7 @@ jobs:
       - name: Publish to npm
         if: inputs.publish_npm == true
         run: |
-          cd ${{ inputs.custom_name }}
+          cd ${{ steps.scaffold.outputs.dir_name }}
           npm publish --access public 2>&1 || {
             echo "⚠️ npm publish failed. Make sure NPM_TOKEN is set in repo secrets."
             exit 1
