@@ -345,7 +345,7 @@ const packageJson = {
 	},
 	devDependencies: {
 		'@n8n/node-cli': '*',
-		eslint: '9.39.4',
+		eslint: '*',
 		prettier: '3.8.3',
 		'release-it': '20.2.0',
 		typescript: '5.9.3',
@@ -648,8 +648,11 @@ for (const [resourceName, resourceProps] of propertiesByResource) {
 	const resourceDir = join(resourcesDir, dirName);
 	mkdirSync(resourceDir, { recursive: true });
 
-	// Serialize the resource's properties to TypeScript
-	const propsTS = resourceProps.map((p) => toTSLiteral(p, '\t\t')).join(',\n\t\t');
+	// Serialize the resource's properties to TypeScript (filter out undefined/null)
+	const propsTS = resourceProps
+		.filter((p) => p != null)
+		.map((p) => toTSLiteral(p, '\t\t'))
+		.join(',\n\t\t');
 
 	writeFileSync(
 		join(resourceDir, 'index.ts'),
@@ -688,7 +691,9 @@ writeFileSync(
 const resourcePropTS = toTSLiteral(resourceProperty, '\t\t');
 
 // Build the properties array content: resource selector + all resource spreads
-const propertiesContent = `\t\t${resourcePropTS},\n\t\t${resourceSpreads.join(',\n\t\t')}`;
+// Filter out any undefined/null spreads
+const validSpreads = resourceSpreads.filter((s) => s != null);
+const propertiesContent = `\t\t${resourcePropTS},\n\t\t${validSpreads.join(',\n\t\t')}`;
 
 // Determine credential name
 const credName = credentialInternalName;

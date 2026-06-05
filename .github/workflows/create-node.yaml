@@ -106,7 +106,6 @@ jobs:
         run: |
           cd ${{ steps.scaffold.outputs.dir_name }}
           npm install --ignore-scripts --legacy-peer-deps
-          npm audit fix || true
           npm run build
           echo "✅ Build complete"
 
