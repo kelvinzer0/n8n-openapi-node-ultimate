@@ -1,5 +1,5 @@
 name,openapi_url,logo_url,description,category
 petstore,https://petstore3.swagger.io/api/v3/openapi.json,,Swagger Petstore sample API,Development
 chatwoot,https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json,,Chatwoot customer engagement platform,Communication
-hcloud,https://docs.hetzner.cloud/spec.json,,Hetzner Cloud API,Infrastructure
-gitlab,https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml,,GitLab DevOps platform,Development
+hcloud,https://raw.githubusercontent.com/MaximilianKoestler/hcloud-openapi/main/openapi/hcloud.json,,Hetzner Cloud API,Infrastructure
+gitlab,https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi_v2.yaml,,GitLab DevOps platform,Development
