@@ -1,0 +1,156 @@
+name: Monitor Upstream OpenAPI Specs
+
+on:
+  schedule:
+    # Run every 24 hours at 02:00 UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build generator
+        run: npm run build
+
+      - name: Check for upstream changes
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          HASH_FILE=".openapi-hashes.json"
+          CHANGED_PLATFORMS=""
+
+          # Load existing hashes
+          if [ -f "$HASH_FILE" ]; then
+            OLD_HASHES=$(cat "$HASH_FILE")
+          else
+            OLD_HASHES="{}"
+          fi
+
+          # Read platforms CSV (skip header)
+          tail -n +2 platforms.csv | while IFS=',' read -r name openapi_url logo_url description category; do
+            # Skip empty lines
+            [ -z "$name" ] && continue
+
+            echo "━━━ Checking: $name ━━━"
+            echo "  URL: $openapi_url"
+
+            # Fetch and hash the spec
+            NEW_HASH=$(curl -sL "$openapi_url" | sha256sum | awk '{print $1}')
+            OLD_HASH=$(echo "$OLD_HASHES" | node -e "
+              const d = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+              console.log(d['$name']?.hash || '');
+            " 2>/dev/null || echo "")
+
+            echo "  New hash: $NEW_HASH"
+            echo "  Old hash: $OLD_HASH"
+
+            if [ "$NEW_HASH" = "$OLD_HASH" ]; then
+              echo "  ✅ No changes"
+            else
+              echo "  🔄 CHANGED — will trigger create-node"
+              # Append to changed list
+              echo "${name}:${openapi_url}:${logo_url}:${description}:${category}" >> /tmp/changed_platforms.txt
+            fi
+          done
+
+          # Check if any changes were found
+          if [ -f /tmp/changed_platforms.txt ]; then
+            COUNT=$(wc -l < /tmp/changed_platforms.txt)
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "count=$COUNT" >> $GITHUB_OUTPUT
+            echo ""
+            echo "📊 Found $COUNT platform(s) with upstream changes"
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "count=0" >> $GITHUB_OUTPUT
+            echo ""
+            echo "📊 All platforms up to date"
+          fi
+
+      - name: Trigger create-node for changed platforms
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "🚀 Triggering create-node.yaml for changed platforms..."
+          HASH_FILE=".openapi-hashes.json"
+
+          # Load existing hashes
+          if [ -f "$HASH_FILE" ]; then
+            OLD_HASHES=$(cat "$HASH_FILE")
+          else
+            OLD_HASHES="{}"
+          fi
+
+          while IFS=':' read -r name openapi_url logo_url description category; do
+            [ -z "$name" ] && continue
+
+            echo ""
+            echo "━━━ Processing: $name ━━━"
+
+            # Trigger create-node.yaml workflow
+            gh workflow run create-node.yaml \
+              -f openapi_url="$openapi_url" \
+              -f custom_name="$name" \
+              -f logo_url="$logo_url" \
+              -f description="$description" \
+              -f version="1.0.0" \
+              -f publish_npm=false
+
+            echo "  ✅ Triggered create-node for: $name"
+
+            # Update hash
+            NEW_HASH=$(curl -sL "$openapi_url" | sha256sum | awk '{print $1}')
+            OLD_HASHES=$(echo "$OLD_HASHES" | node -e "
+              const d = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+              d['$name'] = {
+                hash: '$NEW_HASH',
+                url: '$openapi_url',
+                lastChecked: new Date().toISOString()
+              };
+              console.log(JSON.stringify(d, null, 2));
+            ")
+          done < /tmp/changed_platforms.txt
+
+          # Write updated hashes
+          echo "$OLD_HASHES" > "$HASH_FILE"
+          echo ""
+          echo "✅ Hash file updated"
+
+      - name: Commit hash file
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add .openapi-hashes.json
+          git diff --cached --quiet || git commit -m "chore: update OpenAPI spec hashes (${{ steps.check.outputs.count }} changed)"
+          git push
+          echo "✅ Hashes committed"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## OpenAPI Monitor Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Platforms checked:** $(tail -n +2 platforms.csv | grep -c '[^ ]' || echo 0)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changes detected:** ${{ steps.check.outputs.count }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Date:** $(date -u)" >> $GITHUB_STEP_SUMMARY

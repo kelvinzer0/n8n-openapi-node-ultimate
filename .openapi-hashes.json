@@ -1,0 +1,22 @@
+{
+  "petstore": {
+    "hash": "00441c05add60f28da55eb4563d3fb6bbda364ba8eb7b381e2e2c98613005c82",
+    "url": "https://petstore3.swagger.io/api/v3/openapi.json",
+    "lastChecked": "2026-06-05T13:20:06.174Z"
+  },
+  "chatwoot": {
+    "hash": "e7896faca2a6a333f8c566cef19060bed0d9db915ed71e1fc500aab1f77bae64",
+    "url": "https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json",
+    "lastChecked": "2026-06-05T13:20:06.514Z"
+  },
+  "hcloud": {
+    "hash": "ea1c276de0bf4b312a8679e1528c83b91b7832f93b4fa70b05ae73dec96cbee4",
+    "url": "https://docs.hetzner.cloud/spec.json",
+    "lastChecked": "2026-06-05T13:20:07.154Z"
+  },
+  "gitlab": {
+    "hash": "160baf367fdf83115bebabe90b2b6c7b8c292a33d40b6a8c82ad00f4a5cb380c",
+    "url": "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi.yaml",
+    "lastChecked": "2026-06-05T13:20:07.648Z"
+  }
+}
