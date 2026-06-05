@@ -71,6 +71,7 @@ function toJSON(obj, indent = 2) {
  * Uses JSON.stringify since JSON syntax is valid TypeScript object literal syntax.
  */
 function toTSLiteral(obj, indent = '\t') {
+	if (obj === undefined || obj === null) return 'null';
 	return JSON.stringify(obj, null, '\t')
 		.split('\n')
 		.map((line, i) => (i === 0 ? line : indent + line))
@@ -640,6 +641,7 @@ mkdirSync(resourcesDir, { recursive: true });
 
 const resourceImports = [];
 const resourceSpreads = [];
+const generatedResources = new Set();
 
 for (const [resourceName, resourceProps] of propertiesByResource) {
 	const dirName = toDirName(resourceName);
@@ -648,9 +650,15 @@ for (const [resourceName, resourceProps] of propertiesByResource) {
 	const resourceDir = join(resourcesDir, dirName);
 	mkdirSync(resourceDir, { recursive: true });
 
-	// Serialize the resource's properties to TypeScript (filter out undefined/null)
-	const propsTS = resourceProps
-		.filter((p) => p != null)
+	// Filter out undefined/null and serialize to TypeScript
+	const validProps = resourceProps.filter((p) => p != null);
+	if (validProps.length === 0) {
+		// Skip resources with zero properties
+		continue;
+	}
+	generatedResources.add(resourceName);
+
+	const propsTS = validProps
 		.map((p) => toTSLiteral(p, '\t\t'))
 		.join(',\n\t\t');
 
@@ -673,7 +681,7 @@ export const ${constName}: INodeProperties[] = [
 // ─── resources/index.ts (re-export all resources) ───────────────────────────────
 
 const reExports = [];
-for (const [resourceName] of propertiesByResource) {
+for (const resourceName of generatedResources) {
 	const dirName = toDirName(resourceName);
 	const identifier = toIdentifier(resourceName);
 	const constName = `${identifier}Description`;
@@ -687,8 +695,12 @@ writeFileSync(
 
 // ─── Xxx.node.ts (main declarative node — NO execute()) ─────────────────────────
 
-// Serialize the resource selector property
-const resourcePropTS = toTSLiteral(resourceProperty, '\t\t');
+// Serialize the resource selector property — only include generated resources
+const filteredResourceProperty = {
+	...resourceProperty,
+	options: resourceProperty.options.filter((opt) => generatedResources.has(opt.value)),
+};
+const resourcePropTS = toTSLiteral(filteredResourceProperty, '\t\t');
 
 // Build the properties array content: resource selector + all resource spreads
 // Filter out any undefined/null spreads
