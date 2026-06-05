@@ -36,7 +36,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           HASH_FILE=".openapi-hashes.json"
-          CHANGED_PLATFORMS=""
 
           # Load existing hashes
           if [ -f "$HASH_FILE" ]; then
@@ -45,13 +44,23 @@ jobs:
             OLD_HASHES="{}"
           fi
 
-          # Read platforms CSV (skip header)
-          tail -n +2 platforms.csv | while IFS=',' read -r name openapi_url logo_url description category; do
-            # Skip empty lines
+          # Read platforms CSV (skip header) — parse with node for safe CSV handling
+          node -e "
+            const fs = require('fs');
+            const lines = fs.readFileSync('platforms.csv', 'utf8').split('\n').filter(l => l.trim());
+            const header = lines[0].split(',');
+            for (let i = 1; i < lines.length; i++) {
+              const cols = lines[i].split(',');
+              if (!cols[0]) continue;
+              // Output: name|openapi_url|logo_url|description|category|publish_npm
+              console.log([cols[0], cols[1], cols[2]||'', cols[3]||'', cols[4]||'', cols[5]||'false'].join('|'));
+            }
+          " | while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
             [ -z "$name" ] && continue
 
             echo "━━━ Checking: $name ━━━"
             echo "  URL: $openapi_url"
+            echo "  Publish npm: $publish_npm"
 
             # Fetch and hash the spec
             NEW_HASH=$(curl -sL "$openapi_url" | sha256sum | awk '{print $1}')
@@ -67,8 +76,8 @@ jobs:
               echo "  ✅ No changes"
             else
               echo "  🔄 CHANGED — will trigger create-node"
-              # Append to changed list
-              echo "${name}:${openapi_url}:${logo_url}:${description}:${category}" >> /tmp/changed_platforms.txt
+              # Append to changed list (pipe-delimited to avoid comma conflicts)
+              echo "${name}|${openapi_url}|${logo_url}|${description}|${category}|${publish_npm}" >> /tmp/changed_platforms.txt
             fi
           done
 
@@ -101,11 +110,12 @@ jobs:
             OLD_HASHES="{}"
           fi
 
-          while IFS=':' read -r name openapi_url logo_url description category; do
+          while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
             [ -z "$name" ] && continue
 
             echo ""
             echo "━━━ Processing: $name ━━━"
+            echo "  publish_npm: $publish_npm"
 
             # Trigger create-node.yaml workflow
             gh workflow run create-node.yaml \
@@ -114,7 +124,7 @@ jobs:
               -f logo_url="$logo_url" \
               -f description="$description" \
               -f version="1.0.0" \
-              -f publish_npm=false
+              -f publish_npm=$publish_npm
 
             echo "  ✅ Triggered create-node for: $name"
 
