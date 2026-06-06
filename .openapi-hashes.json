@@ -15,8 +15,8 @@
     "lastChecked": "2026-06-05T13:23:38.170Z"
   },
   "gitlab": {
-    "hash": "50fd79362507d31e4eb9a7a5c51c87703df16599670cc73699333bc870296cb6",
+    "hash": "f1dc2ea57564c1052edeb754b5acf6627ddc6e6d82abf3e9a69ae18c4defe423",
     "url": "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi_v2.yaml",
-    "lastChecked": "2026-06-05T13:23:38.616Z"
+    "lastChecked": "2026-06-06T05:44:50.477Z"
   }
 }
