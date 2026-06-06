@@ -509,9 +509,6 @@ const FUNDING_NOTICE = `		{
 			name: 'n8nCodeNotice',
 			type: 'notice',
 			default: '',
-			typeOptions: {
-				loadOptionsMethod: false,
-			},
 			displayOptions: {
 				show: {},
 			},

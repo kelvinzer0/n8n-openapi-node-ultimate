@@ -1,5 +1,5 @@
 {
-    "name": "@kelvinzer0/n8n-openapi-node-ultimate",
+    "name": "@n8n-dev/n8n-openapi-node-ultimate",
     "version": "1.0.0",
     "description": "Turn OpenAPI specs into n8n node properties — with URL import, CLI, and enhanced schema support",
     "main": "dist/src/index.js",
