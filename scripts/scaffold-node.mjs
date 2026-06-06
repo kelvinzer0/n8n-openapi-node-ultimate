@@ -862,7 +862,7 @@ This node gives you **${totalOperations}+ resources** out of the box: ${resource
 
 ## What You Get
 
-- **Zero boilerplate**: Resource, operation, dan field sudah terkonfigurasi
+- **Zero boilerplate**: Resources, operations, and fields are pre-configured and ready to use
 - **Full CRUD**: Create, Read, Update, Delete operations for every resource
 - **Typed parameters**: No more guessing field types
 - **Built-in auth**: API key authentication, ready to go
@@ -941,10 +941,7 @@ When the ${CUSTOM_NAME} API updates, this node updates too.
 
 ## Support This Project
 
-If this node saved you hours of work, consider supporting continued development — 
-new APIs, better error handling, and faster updates.
-
-Your donation funds new features, more API support, and better tooling for every developer after you.
+If this node saved you hours of work, consider supporting continued development, new APIs, better error handling, and faster updates.
 
 ${fundingBadge}
 
