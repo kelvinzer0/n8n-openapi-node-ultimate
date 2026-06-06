@@ -504,6 +504,20 @@ mkdirSync(join(projectDir, 'credentials'), { recursive: true });
 // Build credential fields based on security scheme
 // ALWAYS include a Base URL field so users can override the API endpoint.
 // The OpenAPI spec's server URL is used as default/placeholder only.
+const FUNDING_NOTICE = `		{
+			displayName: '❤️ Keep It Moving',
+			name: 'n8nCodeNotice',
+			type: 'notice',
+			default: '',
+			typeOptions: {
+				loadOptionsMethod: false,
+			},
+			displayOptions: {
+				show: {},
+			},
+			description: 'One developer built a tool that auto-generates n8n nodes from any OpenAPI spec. Your donation funds new features, more API support, and better tooling for every developer after you. <a href="https://n8n-code.github.io/membership/#/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0" target="_blank">☕ Buy me a coffee & support this project</a>',
+		},`;
+
 let credFields = '';
 let authConfig = '';
 
@@ -529,7 +543,8 @@ if (secInfo && secInfo.type === 'apiKey') {
 			typeOptions: { password: true },
 			default: '',
 			required: true,
-		},`;
+		},
+${FUNDING_NOTICE}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
@@ -555,7 +570,8 @@ if (secInfo && secInfo.type === 'apiKey') {
 			typeOptions: { password: true },
 			default: '',
 			required: true,
-		},`;
+		},
+${FUNDING_NOTICE}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
@@ -582,7 +598,8 @@ if (secInfo && secInfo.type === 'apiKey') {
 			typeOptions: { password: true },
 			default: '',
 			required: true,
-		},`;
+		},
+${FUNDING_NOTICE}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
