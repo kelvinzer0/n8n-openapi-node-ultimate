@@ -58,11 +58,40 @@ jobs:
           " | while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
             [ -z "$name" ] && continue
 
+            DIR_NAME="n8n-nodes-$(echo "$name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
+
             echo "━━━ Checking: $name ━━━"
             echo "  URL: $openapi_url"
             echo "  Publish npm: $publish_npm"
+            echo "  Repo: n8n-code/${DIR_NAME}"
 
-            # Fetch and hash the spec
+            REASON=""
+
+            # 1. Check if GitHub repo exists
+            if gh repo view "n8n-code/${DIR_NAME}" --json name 2>/dev/null >/dev/null; then
+              echo "  ✅ Repo exists: n8n-code/${DIR_NAME}"
+            else
+              echo "  ❌ Repo MISSING: n8n-code/${DIR_NAME}"
+              REASON="repo_missing"
+            fi
+
+            # 2. Check if npm package exists
+            NPM_NAME="@n8n-dev/${DIR_NAME}"
+            if [ "$publish_npm" = "true" ]; then
+              NPM_VERSION=$(npm view "$NPM_NAME" version 2>/dev/null || echo "")
+              if [ -n "$NPM_VERSION" ]; then
+                echo "  ✅ npm package exists: ${NPM_NAME}@${NPM_VERSION}"
+              else
+                echo "  ❌ npm package MISSING: ${NPM_NAME}"
+                if [ -z "$REASON" ]; then
+                  REASON="npm_missing"
+                else
+                  REASON="${REASON}+npm_missing"
+                fi
+              fi
+            fi
+
+            # 3. Check for upstream spec changes
             NEW_HASH=$(curl -sL "$openapi_url" | sha256sum | awk '{print $1}')
             OLD_HASH=$(echo "$OLD_HASHES" | node -e "
               const d = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
@@ -72,12 +101,21 @@ jobs:
             echo "  New hash: $NEW_HASH"
             echo "  Old hash: $OLD_HASH"
 
-            if [ "$NEW_HASH" = "$OLD_HASH" ]; then
-              echo "  ✅ No changes"
+            if [ "$NEW_HASH" != "$OLD_HASH" ]; then
+              echo "  🔄 Upstream spec CHANGED"
+              if [ -z "$REASON" ]; then
+                REASON="spec_changed"
+              else
+                REASON="${REASON}+spec_changed"
+              fi
             else
-              echo "  🔄 CHANGED — will trigger create-node"
-              # Append to changed list (pipe-delimited to avoid comma conflicts)
-              echo "${name}|${openapi_url}|${logo_url}|${description}|${category}|${publish_npm}" >> /tmp/changed_platforms.txt
+              echo "  ✅ Spec unchanged"
+            fi
+
+            # 4. If any reason to trigger, add to changed list
+            if [ -n "$REASON" ]; then
+              echo "  🚀 TRIGGER needed — reason: $REASON"
+              echo "${name}|${openapi_url}|${logo_url}|${description}|${category}|${publish_npm}|${REASON}" >> /tmp/changed_platforms.txt
             fi
           done
 
@@ -87,7 +125,7 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "count=$COUNT" >> $GITHUB_OUTPUT
             echo ""
-            echo "📊 Found $COUNT platform(s) with upstream changes"
+            echo "📊 Found $COUNT platform(s) needing action"
           else
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "count=0" >> $GITHUB_OUTPUT
@@ -95,12 +133,12 @@ jobs:
             echo "📊 All platforms up to date"
           fi
 
-      - name: Trigger create-node for changed platforms
+      - name: Trigger create-node for changed/missing platforms
         if: steps.check.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "🚀 Triggering create-node.yaml for changed platforms..."
+          echo "🚀 Triggering create-node.yaml for platforms needing action..."
           HASH_FILE=".openapi-hashes.json"
 
           # Load existing hashes
@@ -110,12 +148,23 @@ jobs:
             OLD_HASHES="{}"
           fi
 
-          while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
+          while IFS='|' read -r name openapi_url logo_url description category publish_npm reason; do
             [ -z "$name" ] && continue
 
             echo ""
             echo "━━━ Processing: $name ━━━"
-            echo "  publish_npm: $publish_npm"
+            echo "  Reason: $reason"
+            echo "  Publish npm: $publish_npm"
+
+            # Determine publish_npm flag:
+            # - If npm is missing → force publish
+            # - If repo is missing → use csv setting
+            # - If spec changed → use csv setting
+            SHOULD_PUBLISH="$publish_npm"
+            if echo "$reason" | grep -q "npm_missing"; then
+              SHOULD_PUBLISH="true"
+              echo "  → npm missing, forcing publish_npm=true"
+            fi
 
             # Trigger create-node.yaml workflow
             gh workflow run create-node.yaml \
@@ -124,9 +173,9 @@ jobs:
               -f logo_url="$logo_url" \
               -f description="$description" \
               -f version="1.0.0" \
-              -f publish_npm=$publish_npm
+              -f publish_npm=$SHOULD_PUBLISH
 
-            echo "  ✅ Triggered create-node for: $name"
+            echo "  ✅ Triggered create-node for: $name (reason: $reason)"
 
             # Update hash
             NEW_HASH=$(curl -sL "$openapi_url" | sha256sum | awk '{print $1}')
@@ -135,7 +184,8 @@ jobs:
               d['$name'] = {
                 hash: '$NEW_HASH',
                 url: '$openapi_url',
-                lastChecked: new Date().toISOString()
+                lastChecked: new Date().toISOString(),
+                lastTriggerReason: '$reason'
               };
               console.log(JSON.stringify(d, null, 2));
             ")
@@ -162,5 +212,10 @@ jobs:
           echo "## OpenAPI Monitor Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Platforms checked:** $(tail -n +2 platforms.csv | grep -c '[^ ]' || echo 0)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Changes detected:** ${{ steps.check.outputs.count }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Actions triggered:** ${{ steps.check.outputs.count }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Date:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### What gets checked:" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Upstream OpenAPI spec changes" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ GitHub repo existence (n8n-code org)" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ npm package existence (@n8n-dev scope)" >> $GITHUB_STEP_SUMMARY
