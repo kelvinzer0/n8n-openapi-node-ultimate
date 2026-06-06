@@ -923,7 +923,7 @@ ${resourceNames.map(r => `| ${r} | Create, Get, List, Update, Delete |`).join('\
 ## Auto-Generated
 
 This node was auto-generated from the official **${CUSTOM_NAME}** OpenAPI specification using
-[@kelvinzer0/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
+[@n8n-dev/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
 
 When the ${CUSTOM_NAME} API updates, this node updates too.
 

@@ -2,9 +2,9 @@
 
 [![Keep It Moving.](https://crypto-donate.insidexofficial.workers.dev/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0/badge)](https://n8n-code.github.io/membership/#/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0)
 
-[![npm version](https://img.shields.io/npm/v/@kelvinzer0/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@kelvinzer0/n8n-openapi-node-ultimate)
+[![npm version](https://img.shields.io/npm/v/@n8n-dev/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@n8n-dev/n8n-openapi-node-ultimate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm downloads](https://img.shields.io/npm/dm/@kelvinzer0/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@kelvinzer0/n8n-openapi-node-ultimate)
+[![npm downloads](https://img.shields.io/npm/dm/@n8n-dev/n8n-openapi-node-ultimate.svg)](https://www.npmjs.com/package/@n8n-dev/n8n-openapi-node-ultimate)
 [![CI](https://github.com/kelvinzer0/n8n-openapi-node-ultimate/actions/workflows/publish.yaml/badge.svg)](https://github.com/kelvinzer0/n8n-openapi-node-ultimate/actions)
 
 ---
@@ -74,13 +74,13 @@ Override parsers, collectors, and behavior. Make it yours.
 ### Install
 
 ```bash
-npm install @kelvinzer0/n8n-openapi-node-ultimate
+npm install @n8n-dev/n8n-openapi-node-ultimate
 ```
 
 ### 3 Lines of Code
 
 ```typescript
-import { N8NPropertiesBuilder, loadOpenApi } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { N8NPropertiesBuilder, loadOpenApi } from '@n8n-dev/n8n-openapi-node-ultimate';
 
 const doc = await loadOpenApi('https://petstore3.swagger.io/api/v3/openapi.json');
 const builder = new N8NPropertiesBuilder(doc);
@@ -116,7 +116,7 @@ npx n8n-openapi-gen --input ./openapi.json
 ### Build a Custom n8n Node
 
 ```typescript
-import { N8NPropertiesBuilder, loadOpenApi } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { N8NPropertiesBuilder, loadOpenApi } from '@n8n-dev/n8n-openapi-node-ultimate';
 
 async function generateNodeProperties(specUrl: string) {
     const doc = await loadOpenApi(specUrl);
@@ -141,7 +141,7 @@ echo "✓ Properties generated"
 ### Load YAML Specs
 
 ```typescript
-import { loadOpenApiFromFile, N8NPropertiesBuilder } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { loadOpenApiFromFile, N8NPropertiesBuilder } from '@n8n-dev/n8n-openapi-node-ultimate';
 
 const doc = loadOpenApiFromFile('./my-api.yaml');
 const builder = new N8NPropertiesBuilder(doc);
@@ -155,7 +155,7 @@ const properties = builder.build();
 ### Custom Operation Naming
 
 ```typescript
-import { DefaultOperationParser, OperationContext } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { DefaultOperationParser, OperationContext } from '@n8n-dev/n8n-openapi-node-ultimate';
 import { OpenAPIV3 } from 'openapi-types';
 
 class MyOperationParser extends DefaultOperationParser {
@@ -173,7 +173,7 @@ const builder = new N8NPropertiesBuilder(doc, {
 ### Custom Resource Naming
 
 ```typescript
-import { DefaultResourceParser } from '@kelvinzer0/n8n-openapi-node-ultimate';
+import { DefaultResourceParser } from '@n8n-dev/n8n-openapi-node-ultimate';
 
 class MyResourceParser extends DefaultResourceParser {
     value(tag: { name: string }): string {
