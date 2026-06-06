@@ -170,6 +170,30 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
 
+      - name: Set GitHub repo topics & npm link
+        run: |
+          REPO_NAME="${{ steps.scaffold.outputs.dir_name }}"
+          CUSTOM_NAME_LOWER=$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')
+          NPM_URL="https://www.npmjs.com/package/@n8n-dev/${REPO_NAME}"
+
+          echo "🏷️ Setting GitHub topics..."
+          gh repo edit "n8n-code/${REPO_NAME}" \
+            --add-topic "n8n" \
+            --add-topic "n8n-community-node" \
+            --add-topic "n8n-node" \
+            --add-topic "openapi" \
+            --add-topic "swagger" \
+            --add-topic "api" \
+            --add-topic "${CUSTOM_NAME_LOWER}" \
+            --add-topic "automation" \
+            --add-topic "workflow" \
+            --homepage "$NPM_URL" \
+            --description "n8n community node for ${{ inputs.custom_name }} API — ${NPM_URL}" 2>&1 || echo "⚠️ Could not set topics"
+
+          echo "✅ Topics and npm link set"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+
       - name: Publish to npm
         if: inputs.publish_npm == true
         run: |
