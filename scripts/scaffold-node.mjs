@@ -860,10 +860,6 @@ Every time you connect n8n to ${CUSTOM_NAME}, you waste hours mapping endpoints,
 
 This node gives you **${totalOperations}+ resources** out of the box: ${resourceList}${moreResources}: with full CRUD operations, typed parameters, and zero manual configuration.
 
-> One developer built a tool that auto-generates n8n nodes from any OpenAPI spec.
->
-> Your donation funds new features, more API support, and better tooling for every developer after you.
-
 ---
 
 ## What You Get
@@ -930,6 +926,16 @@ This node was auto-generated from the official **${CUSTOM_NAME}** OpenAPI specif
 [@kelvinzer0/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
 
 When the ${CUSTOM_NAME} API updates, this node updates too.
+
+---
+
+## Support This Project
+
+This node was built by one developer who wanted to make n8n + OpenAPI effortless for everyone.
+
+Your donation funds new features, more API support, and better tooling for every developer after you.
+
+${fundingBadge}
 
 ---
 
