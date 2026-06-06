@@ -329,7 +329,7 @@ const packageJson = {
 		'api',
 		'automation',
 		'workflow',
-		'${safeName}',
+		safeName,
 	],
 	author: { name: REPO_OWNER, email: '' },
 	repository: {

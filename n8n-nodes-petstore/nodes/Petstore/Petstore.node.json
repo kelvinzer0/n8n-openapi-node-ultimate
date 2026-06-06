@@ -1,0 +1,20 @@
+{
+  "node": "N8nDevPetstore",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": [
+    "Development"
+  ],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://github.com/test/n8n-nodes-petstore"
+      }
+    ],
+    "credentialDocumentation": [
+      {
+        "url": "https://github.com/test/n8n-nodes-petstore?tab=readme-ov-file#credentials"
+      }
+    ]
+  }
+}
