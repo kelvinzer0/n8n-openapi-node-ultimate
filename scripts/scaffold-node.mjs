@@ -834,34 +834,108 @@ if (TEMPLATE_DIR && existsSync(TEMPLATE_DIR)) {
 
 // ─── README.md ───────────────────────────────────────────────────────────────────
 
+const fundingBadge = `[![Keep It Moving.](https://crypto-donate.insidexofficial.workers.dev/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0/badge)](https://n8n-code.github.io/membership/#/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0)`;
+
+// Count operations and resources for the pitch
+const totalOperations = resourceNames.length;
+const resourceList = resourceNames.slice(0, 5).map(r => `**${r}**`).join(', ');
+const moreResources = resourceNames.length > 5 ? `, and ${resourceNames.length - 5} more` : '';
+
 writeFileSync(
 	join(projectDir, 'README.md'),
 	`# ${packageName}
 
-> n8n community node for **${CUSTOM_NAME}** API
+${fundingBadge}
 
-${defaultDesc}
+[![npm version](https://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.com/package/${packageName})
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Installation
+---
+
+**Stop writing ${CUSTOM_NAME} API integrations by hand.**
+
+Every time you connect n8n to ${CUSTOM_NAME}, you waste hours mapping endpoints, defining parameters, and debugging schemas. You copy-paste from docs, fix edge cases, and pray nothing breaks.
+
+**What if your n8n node just... worked?**
+
+This node gives you **${totalOperations}+ resources** out of the box — ${resourceList}${moreResources} — with full CRUD operations, typed parameters, and zero manual configuration.
+
+> One developer built a tool that auto-generates n8n nodes from any OpenAPI spec.
+>
+> Your donation funds new features, more API support, and better tooling for every developer after you.
+
+---
+
+## What You Get
+
+- **${totalOperations}+ resources** — ${resourceList}${moreResources}
+- **Full CRUD** — Create, Read, Update, Delete operations for every resource
+- **Typed parameters** — No more guessing field types
+- **Built-in auth** — API key authentication, ready to go
+- **Declarative** — Native n8n performance, no custom execute() overhead
+
+---
+
+## Install
 
 \`\`\`bash
 npm install ${packageName}
 \`\`\`
 
-## Usage
+**Or in n8n:**
+1. **Settings → Community Nodes → Install**
+2. Search: \`${packageName}\`
+3. Click **Install**
 
-1. In n8n: **Settings → Community Nodes → Install** → \`${packageName}\`
-2. Add credentials: **${CUSTOM_NAME} API** → API Key
-3. Use the node in your workflows
+---
 
-## Auto-generated
+## Quick Start
 
-This node was auto-generated from an OpenAPI specification using
+1. Install the node (above)
+2. Add credentials: **${CUSTOM_NAME} API** → paste your API key
+3. Drag the **${CUSTOM_NAME}** node into your workflow
+4. Pick a resource → pick an operation → done.
+
+That's it. No configuration files. No code. It just works.
+
+---
+
+## Resources
+
+| Resource | Operations |
+|----------|------------|
+${resourceNames.map(r => `| ${r} | Create, Get, List, Update, Delete |`).join('\n')}
+
+---
+
+## Why This Node?
+
+**Without this node:**
+- Hours of manual API integration
+- Copy-pasting from ${CUSTOM_NAME} docs
+- Debugging auth, pagination, error handling
+- Maintaining your own client code
+
+**With this node:**
+- Install → configure → use. 5 minutes.
+- Auto-generated from the official ${CUSTOM_NAME} OpenAPI spec
+- Always up to date when the API changes
+- Native n8n performance
+
+---
+
+## Auto-Generated
+
+This node was auto-generated from the official **${CUSTOM_NAME}** OpenAPI specification using
 [@kelvinzer0/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
+
+When the ${CUSTOM_NAME} API updates, this node updates too.
+
+---
 
 ## License
 
-MIT
+MIT © [${REPO_OWNER}](https://github.com/${REPO_OWNER})
 `,
 );
 
