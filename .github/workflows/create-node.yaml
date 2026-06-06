@@ -188,7 +188,7 @@ jobs:
             --add-topic "automation" \
             --add-topic "workflow" \
             --homepage "$NPM_URL" \
-            --description "n8n community node for ${{ inputs.custom_name }} API — ${NPM_URL}" 2>&1 || echo "⚠️ Could not set topics"
+            --description "${{ inputs.description }}" 2>&1 || echo "⚠️ Could not set topics"
 
           echo "✅ Topics and npm link set"
         env:
