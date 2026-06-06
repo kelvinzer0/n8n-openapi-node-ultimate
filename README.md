@@ -11,11 +11,11 @@
 
 **Stop writing n8n node properties by hand.**
 
-Every time you build a custom n8n node for an API, you spend hours — sometimes days — manually defining operations, parameters, and schemas. You copy-paste from Swagger docs, fix edge cases, handle nested `$ref`s, and pray nothing breaks in production.
+Every time you build a custom n8n node for an API, you spend hours: sometimes days: manually defining operations, parameters, and schemas. You copy-paste from Swagger docs, fix edge cases, handle nested `$ref`s, and pray nothing breaks in production.
 
 **What if your n8n node properties wrote themselves?**
 
-Point this library at any OpenAPI spec — a URL, a local file, YAML or JSON — and get production-ready n8n node properties in seconds. Not a rough draft. Not a skeleton. The real thing.
+Point this library at any OpenAPI spec: a URL, a local file, YAML or JSON: and get production-ready n8n node properties in seconds. Not a rough draft. Not a skeleton. The real thing.
 
 > One developer built a tool that auto-generates n8n nodes from any OpenAPI spec.
 >
@@ -25,7 +25,7 @@ Point this library at any OpenAPI spec — a URL, a local file, YAML or JSON —
 
 ## The Problem You've Faced
 
-You found an API you want to integrate with n8n. It has an OpenAPI spec — hundreds of endpoints, nested schemas, authentication flows. You look at the n8n node property format and realize:
+You found an API you want to integrate with n8n. It has an OpenAPI spec: hundreds of endpoints, nested schemas, authentication flows. You look at the n8n node property format and realize:
 
 - There are **hundreds of operations** to define
 - **Schema references** (`$ref`) go 5, 6, 7 levels deep
@@ -52,10 +52,10 @@ npx n8n-openapi-gen --input https://api.example.com/openapi.json --output proper
 ```
 
 **🔧 Real Schema Support**
-- `allOf` composition — properly merged, not concatenated
-- Union types (`type: ['string', 'null']`) — handled natively
-- Circular `$ref`s — protected with depth limiting (max 50)
-- Path-level `$ref` — resolved correctly
+- `allOf` composition: properly merged, not concatenated
+- Union types (`type: ['string', 'null']`): handled natively
+- Circular `$ref`s: protected with depth limiting (max 50)
+- Path-level `$ref`: resolved correctly
 
 **🏷️ Smart Naming**
 Operations without `operationId`? Generates clean, human-readable names automatically. No `undefined_operation_37`.
@@ -102,7 +102,7 @@ npx n8n-openapi-gen --input ./openapi.json
 
 | Option | Description |
 |--------|-------------|
-| `-i, --input <source>` | OpenAPI spec (URL or file) — **required** |
+| `-i, --input <source>` | OpenAPI spec (URL or file): **required** |
 | `-o, --output <file>` | Output file (defaults to stdout) |
 | `--pretty` | Pretty-print JSON (default: true) |
 | `-V, --version` | Show version |
@@ -127,7 +127,7 @@ async function generateNodeProperties(specUrl: string) {
 const properties = await generateNodeProperties('https://api.example.com/openapi.json');
 ```
 
-### CI/CD — Generate on Every Build
+### CI/CD: Generate on Every Build
 
 ```bash
 #!/bin/bash

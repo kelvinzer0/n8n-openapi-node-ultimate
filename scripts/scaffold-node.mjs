@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * scaffold-node.mjs — Generate n8n community node project from OpenAPI spec
+ * scaffold-node.mjs: Generate n8n community node project from OpenAPI spec
  *
  * Generates a **declarative** n8n node project matching the n8n-nodes-starter pattern:
  *   nodes/Xxx/
@@ -285,7 +285,7 @@ for (let i = 1; i < properties.length; i++) {
 			}
 		}
 	} else {
-		// Global property — add to all resources
+		// Global property: add to all resources
 		for (const [name, props] of propertiesByResource) {
 			props.push(prop);
 		}
@@ -693,9 +693,9 @@ writeFileSync(
 	reExports.join('\n') + '\n',
 );
 
-// ─── Xxx.node.ts (main declarative node — NO execute()) ─────────────────────────
+// ─── Xxx.node.ts (main declarative node: NO execute()) ─────────────────────────
 
-// Serialize the resource selector property — only include generated resources
+// Serialize the resource selector property: only include generated resources
 const filteredResourceProperty = {
 	...resourceProperty,
 	options: resourceProperty.options.filter((opt) => generatedResources.has(opt.value)),
@@ -858,7 +858,7 @@ Every time you connect n8n to ${CUSTOM_NAME}, you waste hours mapping endpoints,
 
 **What if your n8n node just... worked?**
 
-This node gives you **${totalOperations}+ resources** out of the box — ${resourceList}${moreResources} — with full CRUD operations, typed parameters, and zero manual configuration.
+This node gives you **${totalOperations}+ resources** out of the box: ${resourceList}${moreResources}: with full CRUD operations, typed parameters, and zero manual configuration.
 
 > One developer built a tool that auto-generates n8n nodes from any OpenAPI spec.
 >
@@ -868,11 +868,11 @@ This node gives you **${totalOperations}+ resources** out of the box — ${resou
 
 ## What You Get
 
-- **${totalOperations}+ resources** — ${resourceList}${moreResources}
-- **Full CRUD** — Create, Read, Update, Delete operations for every resource
-- **Typed parameters** — No more guessing field types
-- **Built-in auth** — API key authentication, ready to go
-- **Declarative** — Native n8n performance, no custom execute() overhead
+- **${totalOperations}+ resources**: ${resourceList}${moreResources}
+- **Full CRUD**: Create, Read, Update, Delete operations for every resource
+- **Typed parameters**: No more guessing field types
+- **Built-in auth**: API key authentication, ready to go
+- **Declarative**: Native n8n performance, no custom execute() overhead
 
 ---
 
