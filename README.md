@@ -11,11 +11,13 @@
 
 **Stop writing n8n node properties by hand.**
 
-Every time you build a custom n8n node for an API, you spend hours: sometimes days: manually defining operations, parameters, and schemas. You copy-paste from Swagger docs, fix edge cases, handle nested `$ref`s, and pray nothing breaks in production.
+Every time you build a custom n8n node for an API, you spend hours — sometimes days — manually defining operations, parameters, and schemas. You copy-paste from Swagger docs, fix edge cases, handle nested `$ref`s, and pray nothing breaks in production.
 
 **What if your n8n node properties wrote themselves?**
 
-Point this library at any OpenAPI spec: a URL, a local file, YAML or JSON: and get production-ready n8n node properties in seconds. Not a rough draft. Not a skeleton. The real thing.
+Point this library at any OpenAPI spec — a URL, a local file, YAML or JSON — and get n8n node properties in seconds.
+
+> ⚠️ **This tool maps operations 1:1 from your OpenAPI spec.** If your spec only defines `GET` and `POST` for a resource, the generated node will only have those operations — no `PUT`, no `DELETE`. It does **not** invent missing operations. Always verify your spec covers the CRUD operations you need before deploying.
 
 ---
 
@@ -39,7 +41,7 @@ So you do it by hand. Again. For the 47th API.
 ## What You Get
 
 **🔗 Any Source, Any Format**
-URL or file. JSON or YAML. OpenAPI 3.0 or 3.1. It just works.
+URL or file. JSON or YAML. OpenAPI 3.0 or 3.1.
 
 **🖥️ CLI for Instant Generation**
 One command. No code needed.
@@ -47,11 +49,13 @@ One command. No code needed.
 npx n8n-openapi-gen --input https://api.example.com/openapi.json --output properties.json
 ```
 
-**🔧 Real Schema Support**
+**🔧 Schema Support**
 - `allOf` composition: properly merged, not concatenated
 - Union types (`type: ['string', 'null']`): handled natively
 - Circular `$ref`s: protected with depth limiting (max 50)
 - Path-level `$ref`: resolved correctly
+
+> **Note:** The generated properties are only as complete as the source spec. Missing operations, incomplete schemas, or missing `operationId`s in the spec will result in incomplete output. Review the generated properties before deploying.
 
 **🏷️ Smart Naming**
 Operations without `operationId`? Generates clean, human-readable names automatically. No `undefined_operation_37`.
@@ -59,8 +63,9 @@ Operations without `operationId`? Generates clean, human-readable names automati
 **🎛️ Fully Customizable**
 Override parsers, collectors, and behavior. Make it yours.
 
-**📦 Zero Config**
-`npm install` → `import` → `build()`. That's it.
+**📦 Simple Setup**
+
+`npm install` → `import` → `build()`. Review the output before using it in production.
 
 ---
 
@@ -242,6 +247,9 @@ Built-in protection. Max depth of 50. Won't crash.
 
 **"Can I customize the output?"**
 Yes. Custom parsers for operations and resources, plus `Override` patterns.
+
+**"Does it generate full CRUD (Create/Read/Update/Delete) for every resource?"**
+No. It maps operations 1:1 from your OpenAPI spec. If the spec only defines `GET /users` and `POST /users`, the generated node will only have List and Create operations. It does not invent missing endpoints. Verify your spec covers the operations you need.
 
 ---
 
