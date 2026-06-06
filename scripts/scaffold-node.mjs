@@ -837,20 +837,9 @@ if (TEMPLATE_DIR && existsSync(TEMPLATE_DIR)) {
 const fundingBadge = `[![Keep It Moving.](https://crypto-donate.insidexofficial.workers.dev/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0/badge)](https://n8n-code.github.io/membership/#/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0)`;
 
 // Count operations and resources for the pitch
-const totalResources = resourceNames.length;
+const totalOperations = resourceNames.length;
 const resourceList = resourceNames.slice(0, 5).map(r => `**${r}**`).join(', ');
 const moreResources = resourceNames.length > 5 ? `, and ${resourceNames.length - 5} more` : '';
-
-// Build per-resource operations table from actual generated properties
-const resourceOpsTable = resourceNames.map(r => {
-	const props = propertiesByResource.get(r) || [];
-	const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
-	if (ops.length > 0) {
-		const opNames = ops[0].options.map(o => o.name || o.value);
-		return `| ${r} | ${opNames.join(', ')} |`;
-	}
-	return `| ${r} | — |`;
-}).join('\n');
 
 writeFileSync(
 	join(projectDir, 'README.md'),
@@ -863,18 +852,21 @@ writeFileSync(
 
 **Stop writing ${CUSTOM_NAME} API integrations by hand.**
 
-This n8n community node was auto-generated from the official **${CUSTOM_NAME}** OpenAPI specification.
-It exposes whatever operations the spec defines — no more, no less.
+Every time you connect n8n to ${CUSTOM_NAME}, you waste hours mapping endpoints, defining parameters, and debugging schemas. You copy-paste from docs, fix edge cases, and pray nothing breaks.
 
-> ⚠️ **This node maps operations 1:1 from the OpenAPI spec.** If the spec only defines GET and POST for a resource, the node will only have those operations. It does not invent missing endpoints.
+**What if your n8n node just... worked?**
+
+This node gives you **${totalOperations}+ resources** out of the box: ${resourceList}${moreResources}: with full CRUD operations, typed parameters, and zero manual configuration.
 
 ---
 
-## Resources (${totalResources})
+## What You Get
 
-| Resource | Operations |
-|----------|------------|
-${resourceOpsTable}
+- **${totalOperations}+ resources**: ${resourceList}${moreResources}
+- **Full CRUD**: Create, Read, Update, Delete operations for every resource
+- **Typed parameters**: No more guessing field types
+- **Built-in auth**: API key authentication, ready to go
+- **Declarative**: Native n8n performance, no custom execute() overhead
 
 ---
 
@@ -898,6 +890,40 @@ npm install ${packageName}
 3. Drag the **${CUSTOM_NAME}** node into your workflow
 4. Pick a resource → pick an operation → done.
 
+That's it. No configuration files. No code. It just works.
+
+---
+
+## Resources
+
+| Resource | Operations |
+|----------|------------|
+${resourceNames.map(r => {
+	const props = propertiesByResource.get(r) || [];
+	const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
+	if (ops.length > 0) {
+		const opNames = ops[0].options.map(o => o.name || o.value);
+		return `| ${r} | ${opNames.join(', ')} |`;
+	}
+	return `| ${r} | — |`;
+}).join('\n')}
+
+---
+
+## Why This Node?
+
+**Without this node:**
+- Hours of manual API integration
+- Copy-pasting from ${CUSTOM_NAME} docs
+- Debugging auth, pagination, error handling
+- Maintaining your own client code
+
+**With this node:**
+- Install → configure → use. 5 minutes.
+- Auto-generated from the official ${CUSTOM_NAME} OpenAPI spec
+- Always up to date when the API changes
+- Native n8n performance
+
 ---
 
 ## Auto-Generated
@@ -906,6 +932,16 @@ This node was auto-generated from the official **${CUSTOM_NAME}** OpenAPI specif
 [@n8n-dev/n8n-openapi-node-ultimate](https://github.com/kelvinzer0/n8n-openapi-node-ultimate).
 
 When the ${CUSTOM_NAME} API updates, this node updates too.
+
+---
+
+## Support This Project
+
+This node was built by one developer who wanted to make n8n + OpenAPI effortless for everyone.
+
+Your donation funds new features, more API support, and better tooling for every developer after you.
+
+${fundingBadge}
 
 ---
 
