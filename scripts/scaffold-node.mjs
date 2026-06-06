@@ -902,11 +902,11 @@ ${resourceNames.map(r => {
 	const props = propertiesByResource.get(r) || [];
 	const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
 	if (ops.length > 0) {
-		const opNames = ops[0].options.map(o => o.name || o.value);
+		const opNames = ops[0].options.map(o => o.action || o.name || o.value);
 		return `| ${r} | ${opNames.join(', ')} |`;
 	}
-	return `| ${r} | — |`;
-}).join('\n')}
+	return null;
+}).filter(Boolean).join('\n')}
 
 ---
 
