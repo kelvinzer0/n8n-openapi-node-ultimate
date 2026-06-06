@@ -863,7 +863,7 @@ This node gives you **${totalOperations}+ resources** out of the box: ${resource
 ## What You Get
 
 - **Zero boilerplate**: Resources, operations, and fields are pre-configured and ready to use
-- **Full CRUD**: Create, Read, Update, Delete operations for every resource
+- **Full CRUD**: Create, read, update, and delete support where the API allows it
 - **Typed parameters**: No more guessing field types
 - **Built-in auth**: API key authentication, ready to go
 - **Declarative**: Native n8n performance, no custom execute() overhead
