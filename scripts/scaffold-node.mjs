@@ -567,7 +567,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			type: 'string',
 			typeOptions: { password: true },
 			default: '',
-			required: true,
+			required: false,
 		},
 		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
@@ -594,7 +594,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			type: 'string',
 			typeOptions: { password: true },
 			default: '',
-			required: true,
+			required: false,
 		},
 		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
@@ -622,7 +622,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			type: 'string',
 			typeOptions: { password: true },
 			default: '',
-			required: true,
+			required: false,
 		},
 		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
@@ -676,7 +676,6 @@ writeFileSync(
 	`import type {
 	IAuthenticateGeneric,
 	Icon,
-	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -696,7 +695,7 @@ ${credFields}
 
 ${authConfig}
 
-	test: ICredentialTestRequest = ${credTestObj};
+
 }
 `,
 );
