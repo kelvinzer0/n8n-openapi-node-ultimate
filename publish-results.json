@@ -1,0 +1,93 @@
+{
+  "success": [
+    {
+      "name": "@n8n-dev/n8n-nodes-0x",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-0x"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-0x-cross-chain",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-0x-cross-chain"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-1inch",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-1inch"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-binance",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-binance"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-camelot-dex",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-camelot-dex"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-chatwoot",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-chatwoot"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-cow-protocol",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-cow-protocol"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-cryptal",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-cryptal"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-curve-finance",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-curve-finance"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-gitlab",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-gitlab"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-gmx",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-gmx"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-hcloud",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-hcloud"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-lifi",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-lifi"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-nonkyc-exchange",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-nonkyc-exchange"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-odos",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-odos"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-ondo-finance",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-ondo-finance"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-petstore",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-petstore"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-raydium",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-raydium"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-swapx",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-swapx"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-taostats",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-taostats"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-uniswap",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-uniswap"
+    },
+    {
+      "name": "@n8n-dev/n8n-nodes-zapper",
+      "repo": "https://github.com/kelvinzer0/n8n-nodes-zapper"
+    }
+  ],
+  "failed": []
+}
