@@ -1,0 +1,93 @@
+{
+  "success": [
+    {
+      "name": "petstore",
+      "dir": "n8n-nodes-petstore"
+    },
+    {
+      "name": "chatwoot",
+      "dir": "n8n-nodes-chatwoot"
+    },
+    {
+      "name": "hcloud",
+      "dir": "n8n-nodes-hcloud"
+    },
+    {
+      "name": "gitlab",
+      "dir": "n8n-nodes-gitlab"
+    },
+    {
+      "name": "curve-finance",
+      "dir": "n8n-nodes-curve-finance"
+    },
+    {
+      "name": "raydium",
+      "dir": "n8n-nodes-raydium"
+    },
+    {
+      "name": "gmx",
+      "dir": "n8n-nodes-gmx"
+    },
+    {
+      "name": "camelot-dex",
+      "dir": "n8n-nodes-camelot-dex"
+    },
+    {
+      "name": "zapper",
+      "dir": "n8n-nodes-zapper"
+    },
+    {
+      "name": "nonkyc-exchange",
+      "dir": "n8n-nodes-nonkyc-exchange"
+    },
+    {
+      "name": "ondo-finance",
+      "dir": "n8n-nodes-ondo-finance"
+    },
+    {
+      "name": "cryptal",
+      "dir": "n8n-nodes-cryptal"
+    },
+    {
+      "name": "taostats",
+      "dir": "n8n-nodes-taostats"
+    },
+    {
+      "name": "swapx",
+      "dir": "n8n-nodes-swapx"
+    },
+    {
+      "name": "binance",
+      "dir": "n8n-nodes-binance"
+    },
+    {
+      "name": "uniswap",
+      "dir": "n8n-nodes-uniswap"
+    },
+    {
+      "name": "cow-protocol",
+      "dir": "n8n-nodes-cow-protocol"
+    },
+    {
+      "name": "lifi",
+      "dir": "n8n-nodes-lifi"
+    },
+    {
+      "name": "odos",
+      "dir": "n8n-nodes-odos"
+    },
+    {
+      "name": "1inch",
+      "dir": "n8n-nodes-1inch"
+    },
+    {
+      "name": "0x",
+      "dir": "n8n-nodes-0x"
+    },
+    {
+      "name": "0x-cross-chain",
+      "dir": "n8n-nodes-0x-cross-chain"
+    }
+  ],
+  "failed": []
+}
