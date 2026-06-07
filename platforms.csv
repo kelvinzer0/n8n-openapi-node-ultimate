@@ -3,3 +3,13 @@ petstore,https://petstore3.swagger.io/api/v3/openapi.json,,Swagger Petstore samp
 chatwoot,https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json,,Chatwoot customer engagement platform,Communication,true
 hcloud,https://raw.githubusercontent.com/MaximilianKoestler/hcloud-openapi/main/openapi/hcloud.json,,Hetzner Cloud API,Infrastructure,true
 gitlab,https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi_v2.yaml,,GitLab DevOps platform,Development,true
+curve-finance,https://api-core.curve.finance/v1/openapi.json,,Curve Finance decentralized exchange protocol for stablecoin swaps with low slippage across multiple blockchains,DeFi,true
+raydium,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/raydium.png,Raydium automated market maker and liquidity provider on Solana powering swaps farms and token launches,DeFi,true
+gmx,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/gmx.png,GMX decentralized perpetual exchange offering spot and leverage trading with deep liquidity on Arbitrum and Avalanche,DeFi,true
+camelot-dex,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/camelot.png,Camelot DEX native Arbitrum decentralized exchange with concentrated liquidity and custom yield strategies,DeFi,true
+zapper,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/zapper.png,Zapper blockchain portfolio tracker and DeFi dashboard for managing assets across 60+ chains with real-time prices,DeFi,true
+nonkyc-exchange,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/nonkyc.png,NonKYC privacy-focused cryptocurrency exchange for trading digital assets without identity verification requirements,Exchange,true
+ondo-finance,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/ondo.png,Ondo Finance institutional-grade tokenized real-world assets platform bridging traditional finance and DeFi protocols,DeFi,true
+cryptal,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/cryptal.png,Licensed cryptocurrency exchange and wallet supporting instant buy sell with Georgian Lari and multiple payment methods,Exchange,true
+taostats,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/taostats.png,TaoStats official Bittensor block explorer and analytics platform for staking portfolio tracking and subnet discovery,Analytics,true
+swapx,,https://raw.githubusercontent.com/nicepkg/n8n-openapi-node-ultimate/main/logos/swapx.png,SwapX decentralized finance platform for token swaps and liquidity provision across multiple blockchain networks,DeFi,true
