@@ -319,7 +319,7 @@ const packageJson = {
 	version: VERSION,
 	description: defaultDesc,
 	license: 'MIT',
-	homepage: `https://${GITHUB_ORG}.github.io/${NPM_SCOPE}/#/${safeName}`,
+	homepage: `https://${GITHUB_ORG}.github.io/${NPM_SCOPE}/#/${nodeName}`,
 	keywords: [
 		'n8n',
 		'n8n-community-node',
