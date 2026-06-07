@@ -73,6 +73,7 @@ jobs:
           INPUT_VERSION: ${{ inputs.version }}
           REPO_OWNER: ${{ github.repository_owner }}
           NPM_SCOPE: 'n8n-dev'
+          GITHUB_ORG: 'n8n-code'
         run: |
           DIR_NAME="n8n-nodes-$(echo "${{ inputs.custom_name }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
 

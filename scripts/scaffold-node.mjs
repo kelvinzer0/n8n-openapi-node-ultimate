@@ -121,6 +121,7 @@ const DESCRIPTION = process.env.DESCRIPTION || '';
 const VERSION = process.env.VERSION || '1.0.0';
 const REPO_OWNER = process.env.REPO_OWNER || 'unknown';
 const NPM_SCOPE = process.env.NPM_SCOPE || REPO_OWNER;
+const GITHUB_ORG = process.env.GITHUB_ORG || NPM_SCOPE || REPO_OWNER;
 const CUSTOM_CATEGORY = process.env.CUSTOM_CATEGORY || 'Development';
 const TEMPLATE_DIR = getArg('--template-dir') || process.env.TEMPLATE_DIR || '';
 
@@ -318,7 +319,7 @@ const packageJson = {
 	version: VERSION,
 	description: defaultDesc,
 	license: 'MIT',
-	homepage: '',
+	homepage: `https://${GITHUB_ORG}.github.io/${NPM_SCOPE}/#/${safeName}`,
 	keywords: [
 		'n8n',
 		'n8n-community-node',
@@ -334,7 +335,7 @@ const packageJson = {
 	author: { name: REPO_OWNER, email: '' },
 	repository: {
 		type: 'git',
-		url: `https://github.com/${REPO_OWNER}/${nodeName}.git`,
+		url: `https://github.com/${GITHUB_ORG}/${nodeName}.git`,
 	},
 	scripts: {
 		build: 'n8n-node build',
@@ -777,7 +778,7 @@ ${propertiesContent}
 
 // ─── Xxx.node.json (codex) ──────────────────────────────────────────────────────
 
-const repoUrl = `https://github.com/${REPO_OWNER}/${nodeName}`;
+const repoUrl = `https://github.com/${GITHUB_ORG}/${nodeName}`;
 
 writeFileSync(
 	join(nodeDir, `${nodeClassName}.node.json`),
@@ -975,7 +976,7 @@ ${fundingBadge}
 
 ## License
 
-MIT © [${REPO_OWNER}](https://github.com/${REPO_OWNER})
+MIT © [${REPO_OWNER}](https://github.com/${GITHUB_ORG})
 `,
 );
 
