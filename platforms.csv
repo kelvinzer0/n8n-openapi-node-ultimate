@@ -19,3 +19,4 @@ cow-protocol,https://raw.githubusercontent.com/cowprotocol/services/main/crates/
 lifi,https://docs.li.fi/openapi.yaml,,LI.FI cross-chain swap aggregator bridging multiple DEXs and bridges for optimal routing across 28+ blockchain networks,DeFi,true
 odos,https://api.odos.xyz/openapi.json,,Odos DeFi routing protocol optimizing token swaps by searching millions of paths for the best rates and lowest fees,DeFi,true
 1inch,https://raw.githubusercontent.com/1inch/1inch-sdk/main/codegen/openapi/aggregation-openapi.json,,1inch DEX aggregator with Pathfinder routing algorithm accessing 50+ liquidity sources across 12+ blockchain networks for optimal token swaps,DeFi,true
+0x,https://docs.0x.org/api-reference/evm-ap-is/swap/allowanceholder-getprice.md,,0x DEX aggregator providing unified interface for liquidity aggregation token swap pricing and onchain trading across EVM Solana and cross-chain,DeFi,true
