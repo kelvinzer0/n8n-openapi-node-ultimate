@@ -54,6 +54,7 @@ jobs:
           fi
 
           # Read platforms CSV (skip header) — parse with node for safe CSV handling
+          FORCE_UPSERT="${{ github.event.inputs.force_upsert || 'false' }}"
           node -e "
             const fs = require('fs');
             const lines = fs.readFileSync('platforms.csv', 'utf8').split('\n').filter(l => l.trim());
@@ -64,10 +65,11 @@ jobs:
               // Output: name|openapi_url|logo_url|description|category|publish_npm
               console.log([cols[0], cols[1], cols[2]||'', cols[3]||'', cols[4]||'', cols[5]||'false'].join('|'));
             }
-          " | while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
+          " > /tmp/platforms_list.txt
+
+          while IFS='|' read -r name openapi_url logo_url description category publish_npm; do
             [ -z "$name" ] && continue
 
-            FORCE_UPSERT="${{ github.event.inputs.force_upsert || 'false' }}"
             DIR_NAME="n8n-nodes-$(echo "$name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//')"
 
             echo "━━━ Checking: $name ━━━"
@@ -76,6 +78,9 @@ jobs:
             echo "  Repo: n8n-code/${DIR_NAME}"
 
             REASON=""
+            if [ "$FORCE_UPSERT" = "true" ] && [ -z "$REASON" ]; then
+              REASON="force_upsert"
+            fi
 
             # 1. Check if GitHub repo exists
             if [ "$FORCE_UPSERT" = "true" ] || gh repo view "n8n-code/${DIR_NAME}" --json name 2>/dev/null >/dev/null; then
@@ -127,7 +132,7 @@ jobs:
               echo "  🚀 TRIGGER needed — reason: $REASON"
               echo "${name}|${openapi_url}|${logo_url}|${description}|${category}|${publish_npm}|${REASON}" >> /tmp/changed_platforms.txt
             fi
-          done
+          done < /tmp/platforms_list.txt
 
           # Check if any changes were found
           if [ -f /tmp/changed_platforms.txt ]; then
@@ -182,7 +187,6 @@ jobs:
               -f custom_name="$name" \
               -f logo_url="$logo_url" \
               -f description="$description" \
-              -f version="1.0.0" \
               -f publish_npm=$SHOULD_PUBLISH
 
             echo "  ✅ Triggered create-node for: $name (reason: $reason)"
