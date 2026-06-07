@@ -266,6 +266,16 @@ const properties = parser.build();
 writeFileSync('properties.json', toJSON(properties));
 console.log(`✅ Generated ${properties.length} properties\n`);
 
+// ─── Generate credential test request from OpenAPI spec ──────────────────────────
+
+console.log('🔑 Generating credential test request...');
+const credentialTestRequest = parser.buildCredentialTestRequest();
+if (credentialTestRequest) {
+	console.log(`✅ Credential test: ${credentialTestRequest.request.method} ${credentialTestRequest.request.url}`);
+} else {
+	console.log('⚠️  No GET endpoints found, using fallback credential test');
+}
+
 // ─── Group properties by resource ────────────────────────────────────────────────
 
 // The first property is the resource selector
@@ -625,6 +635,17 @@ if (secInfo && secInfo.type === 'apiKey') {
 	};`;
 }
 
+// Build credential test request from OpenAPI spec (auto-selects best GET endpoint)
+const credTestObj = credentialTestRequest
+	? toTSLiteral(credentialTestRequest, '\t\t')
+	: `{
+			request: {
+				baseURL: '={{$credentials.url}}',
+				url: '/',
+				method: 'GET',
+			},
+		}`;
+
 writeFileSync(
 	join(projectDir, 'credentials', `${credentialClassName}.credentials.ts`),
 	`import type {
@@ -650,13 +671,7 @@ ${credFields}
 
 ${authConfig}
 
-	test: ICredentialTestRequest = {
-		request: {
-			baseURL: '={{$credentials.url}}',
-			url: '/',
-			method: 'GET',
-		},
-	};
+	test: ICredentialTestRequest = ${credTestObj};
 }
 `,
 );
