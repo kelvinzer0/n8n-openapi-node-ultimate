@@ -2,6 +2,7 @@ import {OpenAPIVisitor, OperationContext} from "./openapi/OpenAPIVisitor";
 import * as lodash from "lodash";
 import {OpenAPIV3} from "openapi-types";
 import {N8NINodeProperties} from "./n8n/SchemaToINodeProperties";
+import {SecurityCollector} from "./SecurityCollector";
 import {IOperationParser} from "./OperationParser";
 import {OptionsByResourceMap} from "./n8n/OptionsByResourceMap";
 import {INodeProperties} from "n8n-workflow";
@@ -18,6 +19,7 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
     public readonly _fields: INodeProperties[]
     private optionsByResource: OptionsByResourceMap = new OptionsByResourceMap()
     private n8nNodeProperties: N8NINodeProperties;
+    private securityCollector: SecurityCollector;
 
     // Log context
     private bindings: any
@@ -30,6 +32,7 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
     ) {
         this._fields = []
         this.n8nNodeProperties = new N8NINodeProperties(doc)
+        this.securityCollector = new SecurityCollector(doc)
     }
 
     get operations(): INodeProperties[] {
@@ -97,7 +100,7 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
     }
 
     /**
-     * Parse fields from operation, both parameters and request body
+     * Parse fields from operation: parameters, request body, and security schemes
      */
     parseFields(operation: OpenAPIV3.OperationObject, context: OperationContext) {
         const fields = [];
@@ -120,6 +123,11 @@ export class BaseOperationsCollector implements OpenAPIVisitor {
             }
             fields.push(notice)
         }
+
+        // Collect security fields for this operation
+        const securityFields = this.securityCollector.collectForOperation(operation)
+        fields.push(...securityFields);
+
         return fields;
     }
 

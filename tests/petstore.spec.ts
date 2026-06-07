@@ -9,1945 +9,1995 @@ test('petstore.json', () => {
 
     const expected: INodeProperties[] = [
         {
-            "default": "",
-            "displayName": "Resource",
-            "name": "resource",
-            "noDataExpression": true,
-            "options": [
-                {
-                    "description": "Everything about your Pets",
-                    "name": "Pet",
-                    "value": "Pet"
-                },
-                {
-                    "description": "Access to Petstore orders",
-                    "name": "Store",
-                    "value": "Store"
-                },
-                {
-                    "description": "Operations about user",
-                    "name": "User",
-                    "value": "User"
-                }
-            ],
-            "type": "options"
-        },
-        {
-            "default": "",
-            "displayName": "Operation",
-            "displayOptions": {
-                "show": {
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "noDataExpression": true,
-            "options": [
-                {
-                    "action": "Update an existing pet",
-                    "description": "Update an existing pet by Id",
-                    "name": "Update Pet",
-                    "routing": {
-                        "request": {
-                            "method": "PUT",
-                            "url": "=/pet"
+                "displayName": "Resource",
+                "name": "resource",
+                "type": "options",
+                "noDataExpression": true,
+                "options": [
+                        {
+                                "name": "Pet",
+                                "value": "Pet",
+                                "description": "Everything about your Pets"
+                        },
+                        {
+                                "name": "Store",
+                                "value": "Store",
+                                "description": "Access to Petstore orders"
+                        },
+                        {
+                                "name": "User",
+                                "value": "User",
+                                "description": "Operations about user"
                         }
-                    },
-                    "value": "Update Pet"
-                },
-                {
-                    "action": "Add a new pet to the store",
-                    "description": "Add a new pet to the store",
-                    "name": "Add Pet",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/pet"
+                ],
+                "default": ""
+        },
+        {
+                "displayName": "Operation",
+                "name": "operation",
+                "type": "options",
+                "noDataExpression": true,
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ]
                         }
-                    },
-                    "value": "Add Pet"
                 },
-                {
-                    "action": "Finds Pets by status",
-                    "description": "Multiple status values can be provided with comma separated strings",
-                    "name": "Find Pets By Status",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/pet/findByStatus"
+                "options": [
+                        {
+                                "name": "Update Pet",
+                                "value": "Update Pet",
+                                "action": "Update an existing pet",
+                                "description": "Update an existing pet by Id",
+                                "routing": {
+                                        "request": {
+                                                "method": "PUT",
+                                                "url": "=/pet"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Add Pet",
+                                "value": "Add Pet",
+                                "action": "Add a new pet to the store",
+                                "description": "Add a new pet to the store",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/pet"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Find Pets By Status",
+                                "value": "Find Pets By Status",
+                                "action": "Finds Pets by status",
+                                "description": "Multiple status values can be provided with comma separated strings",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/pet/findByStatus"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Find Pets By Tags",
+                                "value": "Find Pets By Tags",
+                                "action": "Finds Pets by tags",
+                                "description": "Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/pet/findByTags"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Get Pet By Id",
+                                "value": "Get Pet By Id",
+                                "action": "Find pet by ID",
+                                "description": "Returns a single pet",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/pet/{{$parameter[\"petId\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Update Pet With Form",
+                                "value": "Update Pet With Form",
+                                "action": "Updates a pet in the store with form data",
+                                "description": "Updates a pet in the store with form data",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/pet/{{$parameter[\"petId\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Delete Pet",
+                                "value": "Delete Pet",
+                                "action": "Deletes a pet",
+                                "description": "Deletes a pet",
+                                "routing": {
+                                        "request": {
+                                                "method": "DELETE",
+                                                "url": "=/pet/{{$parameter[\"petId\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Upload File",
+                                "value": "Upload File",
+                                "action": "uploads an image",
+                                "description": "uploads an image",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/pet/{{$parameter[\"petId\"]}}/uploadImage"
+                                        }
+                                }
                         }
-                    },
-                    "value": "Find Pets By Status"
-                },
-                {
-                    "action": "Finds Pets by tags",
-                    "description": "Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
-                    "name": "Find Pets By Tags",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/pet/findByTags"
+                ],
+                "default": ""
+        },
+        {
+                "displayName": "Operation",
+                "name": "operation",
+                "type": "options",
+                "noDataExpression": true,
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ]
                         }
-                    },
-                    "value": "Find Pets By Tags"
                 },
-                {
-                    "action": "Find pet by ID",
-                    "description": "Returns a single pet",
-                    "name": "Get Pet By Id",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/pet/{{$parameter[\"petId\"]}}"
+                "options": [
+                        {
+                                "name": "Get Inventory",
+                                "value": "Get Inventory",
+                                "action": "Returns pet inventories by status",
+                                "description": "Returns a map of status codes to quantities",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/store/inventory"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Place Order",
+                                "value": "Place Order",
+                                "action": "Place an order for a pet",
+                                "description": "Place a new order in the store",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/store/order"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Get Order By Id",
+                                "value": "Get Order By Id",
+                                "action": "Find purchase order by ID",
+                                "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/store/order/{{$parameter[\"orderId\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Delete Order",
+                                "value": "Delete Order",
+                                "action": "Delete purchase order by ID",
+                                "description": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
+                                "routing": {
+                                        "request": {
+                                                "method": "DELETE",
+                                                "url": "=/store/order/{{$parameter[\"orderId\"]}}"
+                                        }
+                                }
                         }
-                    },
-                    "value": "Get Pet By Id"
-                },
-                {
-                    "action": "Updates a pet in the store with form data",
-                    "description": "Updates a pet in the store with form data",
-                    "name": "Update Pet With Form",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/pet/{{$parameter[\"petId\"]}}"
+                ],
+                "default": ""
+        },
+        {
+                "displayName": "Operation",
+                "name": "operation",
+                "type": "options",
+                "noDataExpression": true,
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ]
                         }
-                    },
-                    "value": "Update Pet With Form"
                 },
-                {
-                    "action": "Deletes a pet",
-                    "description": "Deletes a pet",
-                    "name": "Delete Pet",
-                    "routing": {
-                        "request": {
-                            "method": "DELETE",
-                            "url": "=/pet/{{$parameter[\"petId\"]}}"
+                "options": [
+                        {
+                                "name": "Create User",
+                                "value": "Create User",
+                                "action": "Create user",
+                                "description": "This can only be done by the logged in user.",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/user"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Create Users With List Input",
+                                "value": "Create Users With List Input",
+                                "action": "Creates list of users with given input array",
+                                "description": "Creates list of users with given input array",
+                                "routing": {
+                                        "request": {
+                                                "method": "POST",
+                                                "url": "=/user/createWithList"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Login User",
+                                "value": "Login User",
+                                "action": "Logs user into the system",
+                                "description": "Logs user into the system",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/user/login"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Logout User",
+                                "value": "Logout User",
+                                "action": "Logs out current logged in user session",
+                                "description": "Logs out current logged in user session",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/user/logout"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Get User By Name",
+                                "value": "Get User By Name",
+                                "action": "Get user by user name",
+                                "description": "Get user by user name",
+                                "routing": {
+                                        "request": {
+                                                "method": "GET",
+                                                "url": "=/user/{{$parameter[\"username\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Update User",
+                                "value": "Update User",
+                                "action": "Update user",
+                                "description": "This can only be done by the logged in user.",
+                                "routing": {
+                                        "request": {
+                                                "method": "PUT",
+                                                "url": "=/user/{{$parameter[\"username\"]}}"
+                                        }
+                                }
+                        },
+                        {
+                                "name": "Delete User",
+                                "value": "Delete User",
+                                "action": "Delete user",
+                                "description": "This can only be done by the logged in user.",
+                                "routing": {
+                                        "request": {
+                                                "method": "DELETE",
+                                                "url": "=/user/{{$parameter[\"username\"]}}"
+                                        }
+                                }
                         }
-                    },
-                    "value": "Delete Pet"
+                ],
+                "default": ""
+        },
+        {
+                "displayName": "PUT /pet",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
                 },
-                {
-                    "action": "uploads an image",
-                    "description": "uploads an image",
-                    "name": "Upload File",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/pet/{{$parameter[\"petId\"]}}/uploadImage"
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Upload File"
                 }
-            ],
-            "type": "options"
         },
         {
-            "default": "",
-            "displayName": "Operation",
-            "displayOptions": {
-                "show": {
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "operation",
-            "noDataExpression": true,
-            "options": [
-                {
-                    "action": "Returns pet inventories by status",
-                    "description": "Returns a map of status codes to quantities",
-                    "name": "Get Inventory",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/store/inventory"
+                "displayName": "Id",
+                "name": "id",
+                "type": "number",
+                "default": 10,
+                "routing": {
+                        "send": {
+                                "property": "id",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
                         }
-                    },
-                    "value": "Get Inventory"
                 },
-                {
-                    "action": "Place an order for a pet",
-                    "description": "Place a new order in the store",
-                    "name": "Place Order",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/store/order"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Place Order"
-                },
-                {
-                    "action": "Find purchase order by ID",
-                    "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.",
-                    "name": "Get Order By Id",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/store/order/{{$parameter[\"orderId\"]}}"
+                }
+        },
+        {
+                "required": true,
+                "displayName": "Name",
+                "name": "name",
+                "type": "string",
+                "default": "doggie",
+                "routing": {
+                        "send": {
+                                "property": "name",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
                         }
-                    },
-                    "value": "Get Order By Id"
                 },
-                {
-                    "action": "Delete purchase order by ID",
-                    "description": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
-                    "name": "Delete Order",
-                    "routing": {
-                        "request": {
-                            "method": "DELETE",
-                            "url": "=/store/order/{{$parameter[\"orderId\"]}}"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Delete Order"
                 }
-            ],
-            "type": "options"
         },
         {
-            "default": "",
-            "displayName": "Operation",
-            "displayOptions": {
-                "show": {
-                    "resource": [
-                        "User"
-                    ]
-                }
-            },
-            "name": "operation",
-            "noDataExpression": true,
-            "options": [
-                {
-                    "action": "Create user",
-                    "description": "This can only be done by the logged in user.",
-                    "name": "Create User",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/user"
+                "displayName": "Category",
+                "name": "category",
+                "type": "json",
+                "default": "{\n  \"id\": 1,\n  \"name\": \"Dogs\"\n}",
+                "routing": {
+                        "send": {
+                                "property": "category",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
                         }
-                    },
-                    "value": "Create User"
                 },
-                {
-                    "action": "Creates list of users with given input array",
-                    "description": "Creates list of users with given input array",
-                    "name": "Create Users With List Input",
-                    "routing": {
-                        "request": {
-                            "method": "POST",
-                            "url": "=/user/createWithList"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Create Users With List Input"
-                },
-                {
-                    "action": "Logs user into the system",
-                    "description": "Logs user into the system",
-                    "name": "Login User",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/user/login"
+                }
+        },
+        {
+                "required": true,
+                "displayName": "Photo Urls",
+                "name": "photoUrls",
+                "type": "json",
+                "default": "[\n  null\n]",
+                "routing": {
+                        "send": {
+                                "property": "photoUrls",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
                         }
-                    },
-                    "value": "Login User"
                 },
-                {
-                    "action": "Logs out current logged in user session",
-                    "description": "Logs out current logged in user session",
-                    "name": "Logout User",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/user/logout"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Logout User"
-                },
-                {
-                    "action": "Get user by user name",
-                    "description": "Get user by user name",
-                    "name": "Get User By Name",
-                    "routing": {
-                        "request": {
-                            "method": "GET",
-                            "url": "=/user/{{$parameter[\"username\"]}}"
+                }
+        },
+        {
+                "displayName": "Tags",
+                "name": "tags",
+                "type": "json",
+                "default": "[\n  {}\n]",
+                "routing": {
+                        "send": {
+                                "property": "tags",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
                         }
-                    },
-                    "value": "Get User By Name"
                 },
-                {
-                    "action": "Update user",
-                    "description": "This can only be done by the logged in user.",
-                    "name": "Update User",
-                    "routing": {
-                        "request": {
-                            "method": "PUT",
-                            "url": "=/user/{{$parameter[\"username\"]}}"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
                         }
-                    },
-                    "value": "Update User"
-                },
-                {
-                    "action": "Delete user",
-                    "description": "This can only be done by the logged in user.",
-                    "name": "Delete User",
-                    "routing": {
-                        "request": {
-                            "method": "DELETE",
-                            "url": "=/user/{{$parameter[\"username\"]}}"
+                }
+        },
+        {
+                "displayName": "Status",
+                "name": "status",
+                "type": "options",
+                "default": "available",
+                "description": "pet status in the store",
+                "options": [
+                        {
+                                "name": "Available",
+                                "value": "available"
+                        },
+                        {
+                                "name": "Pending",
+                                "value": "pending"
+                        },
+                        {
+                                "name": "Sold",
+                                "value": "sold"
                         }
-                    },
-                    "value": "Delete User"
-                }
-            ],
-            "type": "options"
-        },
-        {
-            "default": "",
-            "displayName": "PUT /pet",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 10,
-            "displayName": "Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "id",
-            "routing": {
-                "send": {
-                    "property": "id",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
-        },
-        {
-            "default": "doggie",
-            "displayName": "Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "name",
-            "required": true,
-            "routing": {
-                "send": {
-                    "property": "name",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "{\n  \"id\": 1,\n  \"name\": \"Dogs\"\n}",
-            "displayName": "Category",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "category",
-            "routing": {
-                "send": {
-                    "property": "category",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "[\n  null\n]",
-            "displayName": "Photo Urls",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "photoUrls",
-            "required": true,
-            "routing": {
-                "send": {
-                    "property": "photoUrls",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "[\n  {}\n]",
-            "displayName": "Tags",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "tags",
-            "routing": {
-                "send": {
-                    "property": "tags",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "available",
-            "description": "pet status in the store",
-            "displayName": "Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "status",
-            "options": [
-                {
-                    "name": "Available",
-                    "value": "available"
+                ],
+                "routing": {
+                        "send": {
+                                "property": "status",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
                 },
-                {
-                    "name": "Pending",
-                    "value": "pending"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "POST /pet",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
                 },
-                {
-                    "name": "Sold",
-                    "value": "sold"
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
                 }
-            ],
-            "routing": {
-                "send": {
-                    "property": "status",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "options"
         },
         {
-            "default": "",
-            "displayName": "POST /pet",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 10,
-            "displayName": "Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "id",
-            "routing": {
-                "send": {
-                    "property": "id",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
-        },
-        {
-            "default": "doggie",
-            "displayName": "Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "name",
-            "required": true,
-            "routing": {
-                "send": {
-                    "property": "name",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "{\n  \"id\": 1,\n  \"name\": \"Dogs\"\n}",
-            "displayName": "Category",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "category",
-            "routing": {
-                "send": {
-                    "property": "category",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "[\n  null\n]",
-            "displayName": "Photo Urls",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "photoUrls",
-            "required": true,
-            "routing": {
-                "send": {
-                    "property": "photoUrls",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "[\n  {}\n]",
-            "displayName": "Tags",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "tags",
-            "routing": {
-                "send": {
-                    "property": "tags",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "available",
-            "description": "pet status in the store",
-            "displayName": "Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Add Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "status",
-            "options": [
-                {
-                    "name": "Available",
-                    "value": "available"
+                "displayName": "Id",
+                "name": "id",
+                "type": "number",
+                "default": 10,
+                "routing": {
+                        "send": {
+                                "property": "id",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
                 },
-                {
-                    "name": "Pending",
-                    "value": "pending"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
+                }
+        },
+        {
+                "required": true,
+                "displayName": "Name",
+                "name": "name",
+                "type": "string",
+                "default": "doggie",
+                "routing": {
+                        "send": {
+                                "property": "name",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
                 },
-                {
-                    "name": "Sold",
-                    "value": "sold"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
                 }
-            ],
-            "routing": {
-                "send": {
-                    "property": "status",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "options"
         },
         {
-            "default": "",
-            "displayName": "GET /pet/findByStatus",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Find Pets By Status"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": "available",
-            "description": "Status values that need to be considered for filter",
-            "displayName": "Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Find Pets By Status"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "status",
-            "options": [
-                {
-                    "name": "Available",
-                    "value": "available"
+                "displayName": "Category",
+                "name": "category",
+                "type": "json",
+                "default": "{\n  \"id\": 1,\n  \"name\": \"Dogs\"\n}",
+                "routing": {
+                        "send": {
+                                "property": "category",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
+                        }
                 },
-                {
-                    "name": "Pending",
-                    "value": "pending"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
+                }
+        },
+        {
+                "required": true,
+                "displayName": "Photo Urls",
+                "name": "photoUrls",
+                "type": "json",
+                "default": "[\n  null\n]",
+                "routing": {
+                        "send": {
+                                "property": "photoUrls",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
+                        }
                 },
-                {
-                    "name": "Sold",
-                    "value": "sold"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
                 }
-            ],
-            "routing": {
-                "send": {
-                    "property": "status",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "options"
         },
         {
-            "default": "",
-            "displayName": "GET /pet/findByTags",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Find Pets By Tags"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": "[\n  null\n]",
-            "description": "Tags to filter by",
-            "displayName": "Tags",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Find Pets By Tags"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "tags",
-            "routing": {
-                "send": {
-                    "property": "tags",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "json"
-        },
-        {
-            "default": "",
-            "displayName": "GET /pet/{petId}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get Pet By Id"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 0,
-            "description": "ID of pet to return",
-            "displayName": "Pet Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get Pet By Id"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "petId",
-            "required": true,
-            "type": "number"
-        },
-        {
-            "default": "",
-            "displayName": "POST /pet/{petId}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet With Form"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 0,
-            "description": "ID of pet that needs to be updated",
-            "displayName": "Pet Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet With Form"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "petId",
-            "required": true,
-            "type": "number"
-        },
-        {
-            "default": "",
-            "description": "Name of pet that needs to be updated",
-            "displayName": "Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet With Form"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "name",
-            "routing": {
-                "send": {
-                    "property": "name",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "",
-            "description": "Status of pet that needs to be updated",
-            "displayName": "Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update Pet With Form"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "status",
-            "routing": {
-                "send": {
-                    "property": "status",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "",
-            "displayName": "DELETE /pet/{petId}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": "",
-            "description": "",
-            "displayName": "Api Key",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "api_key",
-            "routing": {
-                "request": {
-                    "headers": {
-                        "api_key": "={{ $value }}"
-                    }
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": 0,
-            "description": "Pet id to delete",
-            "displayName": "Pet Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete Pet"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "petId",
-            "required": true,
-            "type": "number"
-        },
-        {
-            "default": "",
-            "displayName": "POST /pet/{petId}/uploadImage",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Upload File"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 0,
-            "description": "ID of pet to update",
-            "displayName": "Pet Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Upload File"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "petId",
-            "required": true,
-            "type": "number"
-        },
-        {
-            "default": "",
-            "description": "Additional Metadata",
-            "displayName": "Additional Metadata",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Upload File"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "additionalMetadata",
-            "routing": {
-                "send": {
-                    "property": "additionalMetadata",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "",
-            "displayName": "POST /pet/{petId}/uploadImage<br/><br/>There's no body available for request, kindly use HTTP Request node to send body",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Upload File"
-                    ],
-                    "resource": [
-                        "Pet"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice"
-        },
-        {
-            "default": "",
-            "displayName": "GET /store/inventory",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get Inventory"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": "",
-            "displayName": "POST /store/order",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
-        },
-        {
-            "default": 10,
-            "displayName": "Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "id",
-            "routing": {
-                "send": {
-                    "property": "id",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
-        },
-        {
-            "default": 198772,
-            "displayName": "Pet Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "petId",
-            "routing": {
-                "send": {
-                    "property": "petId",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
-        },
-        {
-            "default": 7,
-            "displayName": "Quantity",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "quantity",
-            "routing": {
-                "send": {
-                    "property": "quantity",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
-        },
-        {
-            "default": "",
-            "displayName": "Ship Date",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "shipDate",
-            "routing": {
-                "send": {
-                    "property": "shipDate",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
-        },
-        {
-            "default": "approved",
-            "description": "Order Status",
-            "displayName": "Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
-                }
-            },
-            "name": "status",
-            "options": [
-                {
-                    "name": "Placed",
-                    "value": "placed"
+                "displayName": "Tags",
+                "name": "tags",
+                "type": "json",
+                "default": "[\n  {}\n]",
+                "routing": {
+                        "send": {
+                                "property": "tags",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ JSON.parse($value) }}"
+                        }
                 },
-                {
-                    "name": "Approved",
-                    "value": "approved"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Status",
+                "name": "status",
+                "type": "options",
+                "default": "available",
+                "description": "pet status in the store",
+                "options": [
+                        {
+                                "name": "Available",
+                                "value": "available"
+                        },
+                        {
+                                "name": "Pending",
+                                "value": "pending"
+                        },
+                        {
+                                "name": "Sold",
+                                "value": "sold"
+                        }
+                ],
+                "routing": {
+                        "send": {
+                                "property": "status",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
                 },
-                {
-                    "name": "Delivered",
-                    "value": "delivered"
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Add Pet"
+                                ]
+                        }
                 }
-            ],
-            "routing": {
-                "send": {
-                    "property": "status",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "options"
         },
         {
-            "default": true,
-            "displayName": "Complete",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Place Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
+                "displayName": "GET /pet/findByStatus",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Find Pets By Status"
+                                ]
+                        }
                 }
-            },
-            "name": "complete",
-            "routing": {
-                "send": {
-                    "property": "complete",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "boolean"
         },
         {
-            "default": "",
-            "displayName": "GET /store/order/{orderId}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get Order By Id"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
+                "displayName": "Status",
+                "name": "status",
+                "description": "Status values that need to be considered for filter",
+                "default": "available",
+                "type": "options",
+                "options": [
+                        {
+                                "name": "Available",
+                                "value": "available"
+                        },
+                        {
+                                "name": "Pending",
+                                "value": "pending"
+                        },
+                        {
+                                "name": "Sold",
+                                "value": "sold"
+                        }
+                ],
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "status",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Find Pets By Status"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": 0,
-            "description": "ID of order that needs to be fetched",
-            "displayName": "Order Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get Order By Id"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
+                "displayName": "GET /pet/findByTags",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Find Pets By Tags"
+                                ]
+                        }
                 }
-            },
-            "name": "orderId",
-            "required": true,
-            "type": "number"
         },
         {
-            "default": "",
-            "displayName": "DELETE /store/order/{orderId}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
+                "displayName": "Tags",
+                "name": "tags",
+                "description": "Tags to filter by",
+                "default": "[\n  null\n]",
+                "type": "json",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "tags",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Find Pets By Tags"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": 0,
-            "description": "ID of the order that needs to be deleted",
-            "displayName": "Order Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete Order"
-                    ],
-                    "resource": [
-                        "Store"
-                    ]
+                "displayName": "GET /pet/{petId}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Get Pet By Id"
+                                ]
+                        }
                 }
-            },
-            "name": "orderId",
-            "required": true,
-            "type": "number"
         },
         {
-            "default": "",
-            "displayName": "POST /user",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Pet Id",
+                "name": "petId",
+                "required": true,
+                "description": "ID of pet to return",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Get Pet By Id"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": 10,
-            "displayName": "Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Api Key",
+                "name": "security_api_key",
+                "type": "string",
+                "default": "",
+                "description": "API key for api_key (header: api_key)",
+                "required": false,
+                "routing": {
+                        "request": {
+                                "headers": {
+                                        "api_key": "={{ $value }}"
+                                }
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Get Pet By Id"
+                                ]
+                        }
                 }
-            },
-            "name": "id",
-            "routing": {
-                "send": {
-                    "property": "id",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
         },
         {
-            "default": "theUser",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "POST /pet/{petId}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet With Form"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "routing": {
-                "send": {
-                    "property": "username",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "John",
-            "displayName": "First Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Pet Id",
+                "name": "petId",
+                "required": true,
+                "description": "ID of pet that needs to be updated",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet With Form"
+                                ]
+                        }
                 }
-            },
-            "name": "firstName",
-            "routing": {
-                "send": {
-                    "property": "firstName",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "James",
-            "displayName": "Last Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Name",
+                "name": "name",
+                "description": "Name of pet that needs to be updated",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "name",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet With Form"
+                                ]
+                        }
                 }
-            },
-            "name": "lastName",
-            "routing": {
-                "send": {
-                    "property": "lastName",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "john@email.com",
-            "displayName": "Email",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Status",
+                "name": "status",
+                "description": "Status of pet that needs to be updated",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "status",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Update Pet With Form"
+                                ]
+                        }
                 }
-            },
-            "name": "email",
-            "routing": {
-                "send": {
-                    "property": "email",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "12345",
-            "displayName": "Password",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "DELETE /pet/{petId}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Delete Pet"
+                                ]
+                        }
                 }
-            },
-            "name": "password",
-            "routing": {
-                "send": {
-                    "property": "password",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "12345",
-            "displayName": "Phone",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Api Key",
+                "name": "api_key",
+                "description": "",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "request": {
+                                "headers": {
+                                        "api_key": "={{ $value }}"
+                                }
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Delete Pet"
+                                ]
+                        }
                 }
-            },
-            "name": "phone",
-            "routing": {
-                "send": {
-                    "property": "phone",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": 1,
-            "description": "User Status",
-            "displayName": "User Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Pet Id",
+                "name": "petId",
+                "required": true,
+                "description": "Pet id to delete",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Delete Pet"
+                                ]
+                        }
                 }
-            },
-            "name": "userStatus",
-            "routing": {
-                "send": {
-                    "property": "userStatus",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
         },
         {
-            "default": "",
-            "displayName": "POST /user/createWithList",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create Users With List Input"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "POST /pet/{petId}/uploadImage",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Upload File"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}",
-            "displayName": "Body",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Create Users With List Input"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Pet Id",
+                "name": "petId",
+                "required": true,
+                "description": "ID of pet to update",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Upload File"
+                                ]
+                        }
                 }
-            },
-            "name": "body",
-            "routing": {
-                "request": {
-                    "body": "={{ JSON.parse($value) }}"
-                }
-            },
-            "type": "json"
         },
         {
-            "default": "",
-            "displayName": "GET /user/login",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Login User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Additional Metadata",
+                "name": "additionalMetadata",
+                "description": "Additional Metadata",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "additionalMetadata",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Upload File"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "",
-            "description": "The user name for login",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Login User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "POST /pet/{petId}/uploadImage<br/><br/>There's no body available for request, kindly use HTTP Request node to send body",
+                "name": "operation",
+                "type": "notice",
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Pet"
+                                ],
+                                "operation": [
+                                        "Upload File"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "routing": {
-                "send": {
-                    "property": "username",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "",
-            "description": "The password for login in clear text",
-            "displayName": "Password",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Login User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "GET /store/inventory",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Get Inventory"
+                                ]
+                        }
                 }
-            },
-            "name": "password",
-            "routing": {
-                "send": {
-                    "property": "password",
-                    "propertyInDotNotation": false,
-                    "type": "query",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "",
-            "displayName": "GET /user/logout",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Logout User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Api Key",
+                "name": "security_api_key",
+                "type": "string",
+                "default": "",
+                "description": "API key for api_key (header: api_key)",
+                "required": false,
+                "routing": {
+                        "request": {
+                                "headers": {
+                                        "api_key": "={{ $value }}"
+                                }
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Get Inventory"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "",
-            "displayName": "GET /user/{username}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get User By Name"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "POST /store/order",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "",
-            "description": "The name that needs to be fetched. Use user1 for testing. ",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Get User By Name"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Id",
+                "name": "id",
+                "type": "number",
+                "default": 10,
+                "routing": {
+                        "send": {
+                                "property": "id",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "required": true,
-            "type": "string"
         },
         {
-            "default": "",
-            "displayName": "PUT /user/{username}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Pet Id",
+                "name": "petId",
+                "type": "number",
+                "default": 198772,
+                "routing": {
+                        "send": {
+                                "property": "petId",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "",
-            "description": "name that needs to be updated",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Quantity",
+                "name": "quantity",
+                "type": "number",
+                "default": 7,
+                "routing": {
+                        "send": {
+                                "property": "quantity",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "required": true,
-            "type": "string"
         },
         {
-            "default": 10,
-            "displayName": "Id",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Ship Date",
+                "name": "shipDate",
+                "type": "string",
+                "default": "",
+                "routing": {
+                        "send": {
+                                "property": "shipDate",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "id",
-            "routing": {
-                "send": {
-                    "property": "id",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
         },
         {
-            "default": "theUser",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Status",
+                "name": "status",
+                "type": "options",
+                "default": "approved",
+                "description": "Order Status",
+                "options": [
+                        {
+                                "name": "Placed",
+                                "value": "placed"
+                        },
+                        {
+                                "name": "Approved",
+                                "value": "approved"
+                        },
+                        {
+                                "name": "Delivered",
+                                "value": "delivered"
+                        }
+                ],
+                "routing": {
+                        "send": {
+                                "property": "status",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "routing": {
-                "send": {
-                    "property": "username",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "John",
-            "displayName": "First Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Complete",
+                "name": "complete",
+                "type": "boolean",
+                "default": true,
+                "routing": {
+                        "send": {
+                                "property": "complete",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Place Order"
+                                ]
+                        }
                 }
-            },
-            "name": "firstName",
-            "routing": {
-                "send": {
-                    "property": "firstName",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "James",
-            "displayName": "Last Name",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "GET /store/order/{orderId}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Get Order By Id"
+                                ]
+                        }
                 }
-            },
-            "name": "lastName",
-            "routing": {
-                "send": {
-                    "property": "lastName",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "john@email.com",
-            "displayName": "Email",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Order Id",
+                "name": "orderId",
+                "required": true,
+                "description": "ID of order that needs to be fetched",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Get Order By Id"
+                                ]
+                        }
                 }
-            },
-            "name": "email",
-            "routing": {
-                "send": {
-                    "property": "email",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "12345",
-            "displayName": "Password",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "DELETE /store/order/{orderId}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Delete Order"
+                                ]
+                        }
                 }
-            },
-            "name": "password",
-            "routing": {
-                "send": {
-                    "property": "password",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": "12345",
-            "displayName": "Phone",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Order Id",
+                "name": "orderId",
+                "required": true,
+                "description": "ID of the order that needs to be deleted",
+                "default": 0,
+                "type": "number",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "Store"
+                                ],
+                                "operation": [
+                                        "Delete Order"
+                                ]
+                        }
                 }
-            },
-            "name": "phone",
-            "routing": {
-                "send": {
-                    "property": "phone",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "string"
         },
         {
-            "default": 1,
-            "description": "User Status",
-            "displayName": "User Status",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Update User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "POST /user",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
                 }
-            },
-            "name": "userStatus",
-            "routing": {
-                "send": {
-                    "property": "userStatus",
-                    "propertyInDotNotation": false,
-                    "type": "body",
-                    "value": "={{ $value }}"
-                }
-            },
-            "type": "number"
         },
         {
-            "default": "",
-            "displayName": "DELETE /user/{username}",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Id",
+                "name": "id",
+                "type": "number",
+                "default": 10,
+                "routing": {
+                        "send": {
+                                "property": "id",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
                 }
-            },
-            "name": "operation",
-            "type": "notice",
-            "typeOptions": {
-                "theme": "info"
-            }
         },
         {
-            "default": "",
-            "description": "The name that needs to be deleted",
-            "displayName": "Username",
-            "displayOptions": {
-                "show": {
-                    "operation": [
-                        "Delete User"
-                    ],
-                    "resource": [
-                        "User"
-                    ]
+                "displayName": "Username",
+                "name": "username",
+                "type": "string",
+                "default": "theUser",
+                "routing": {
+                        "send": {
+                                "property": "username",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
                 }
-            },
-            "name": "username",
-            "required": true,
-            "type": "string"
+        },
+        {
+                "displayName": "First Name",
+                "name": "firstName",
+                "type": "string",
+                "default": "John",
+                "routing": {
+                        "send": {
+                                "property": "firstName",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Last Name",
+                "name": "lastName",
+                "type": "string",
+                "default": "James",
+                "routing": {
+                        "send": {
+                                "property": "lastName",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Email",
+                "name": "email",
+                "type": "string",
+                "default": "john@email.com",
+                "routing": {
+                        "send": {
+                                "property": "email",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Password",
+                "name": "password",
+                "type": "string",
+                "default": "12345",
+                "routing": {
+                        "send": {
+                                "property": "password",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Phone",
+                "name": "phone",
+                "type": "string",
+                "default": "12345",
+                "routing": {
+                        "send": {
+                                "property": "phone",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "User Status",
+                "name": "userStatus",
+                "type": "number",
+                "default": 1,
+                "description": "User Status",
+                "routing": {
+                        "send": {
+                                "property": "userStatus",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "POST /user/createWithList",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create Users With List Input"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Body",
+                "name": "body",
+                "type": "json",
+                "default": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}",
+                "routing": {
+                        "request": {
+                                "body": "={{ JSON.parse($value) }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Create Users With List Input"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "GET /user/login",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Login User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Username",
+                "name": "username",
+                "description": "The user name for login",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "username",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Login User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Password",
+                "name": "password",
+                "description": "The password for login in clear text",
+                "default": "",
+                "type": "string",
+                "routing": {
+                        "send": {
+                                "type": "query",
+                                "property": "password",
+                                "value": "={{ $value }}",
+                                "propertyInDotNotation": false
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Login User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "GET /user/logout",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Logout User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "GET /user/{username}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Get User By Name"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Username",
+                "name": "username",
+                "required": true,
+                "description": "The name that needs to be fetched. Use user1 for testing. ",
+                "default": "",
+                "type": "string",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Get User By Name"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "PUT /user/{username}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Username",
+                "name": "username",
+                "required": true,
+                "description": "name that needs to be updated",
+                "default": "",
+                "type": "string",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Id",
+                "name": "id",
+                "type": "number",
+                "default": 10,
+                "routing": {
+                        "send": {
+                                "property": "id",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Username",
+                "name": "username",
+                "type": "string",
+                "default": "theUser",
+                "routing": {
+                        "send": {
+                                "property": "username",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "First Name",
+                "name": "firstName",
+                "type": "string",
+                "default": "John",
+                "routing": {
+                        "send": {
+                                "property": "firstName",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Last Name",
+                "name": "lastName",
+                "type": "string",
+                "default": "James",
+                "routing": {
+                        "send": {
+                                "property": "lastName",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Email",
+                "name": "email",
+                "type": "string",
+                "default": "john@email.com",
+                "routing": {
+                        "send": {
+                                "property": "email",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Password",
+                "name": "password",
+                "type": "string",
+                "default": "12345",
+                "routing": {
+                        "send": {
+                                "property": "password",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Phone",
+                "name": "phone",
+                "type": "string",
+                "default": "12345",
+                "routing": {
+                        "send": {
+                                "property": "phone",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "User Status",
+                "name": "userStatus",
+                "type": "number",
+                "default": 1,
+                "description": "User Status",
+                "routing": {
+                        "send": {
+                                "property": "userStatus",
+                                "propertyInDotNotation": false,
+                                "type": "body",
+                                "value": "={{ $value }}"
+                        }
+                },
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Update User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "DELETE /user/{username}",
+                "name": "operation",
+                "type": "notice",
+                "typeOptions": {
+                        "theme": "info"
+                },
+                "default": "",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Delete User"
+                                ]
+                        }
+                }
+        },
+        {
+                "displayName": "Username",
+                "name": "username",
+                "required": true,
+                "description": "The name that needs to be deleted",
+                "default": "",
+                "type": "string",
+                "displayOptions": {
+                        "show": {
+                                "resource": [
+                                        "User"
+                                ],
+                                "operation": [
+                                        "Delete User"
+                                ]
+                        }
+                }
         }
-    ]
+]
     expect(result).toEqual(expected);
 })

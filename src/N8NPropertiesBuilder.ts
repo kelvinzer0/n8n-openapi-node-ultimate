@@ -3,6 +3,7 @@ import {OpenAPIV3} from 'openapi-types';
 import {OpenAPIWalker} from "./openapi/OpenAPIWalker";
 import {ResourceCollector as ResourcePropertiesCollector} from "./ResourceCollector";
 import {BaseOperationsCollector, OperationsCollector as OperationsCollectorImpl} from "./OperationsCollector";
+import {SecurityCollector} from "./SecurityCollector";
 import * as lodash from "lodash";
 import {DefaultOperationParser, IOperationParser} from "./OperationParser";
 import {DefaultResourceParser, IResourceParser} from "./ResourceParser";

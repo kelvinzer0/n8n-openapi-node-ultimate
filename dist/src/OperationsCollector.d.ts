@@ -14,6 +14,7 @@ export declare class BaseOperationsCollector implements OpenAPIVisitor {
     readonly _fields: INodeProperties[];
     private optionsByResource;
     private n8nNodeProperties;
+    private securityCollector;
     private bindings;
     constructor(doc: any, operationParser: IOperationParser, resourceParser: IResourceParser, logger: Logger);
     get operations(): INodeProperties[];
@@ -21,7 +22,7 @@ export declare class BaseOperationsCollector implements OpenAPIVisitor {
     visitOperation(operation: OpenAPIV3.OperationObject, context: OperationContext): void;
     _visitOperation(operation: OpenAPIV3.OperationObject, context: OperationContext): void;
     /**
-     * Parse fields from operation, both parameters and request body
+     * Parse fields from operation: parameters, request body, and security schemes
      */
     parseFields(operation: OpenAPIV3.OperationObject, context: OperationContext): INodeProperties[];
     private addDisplayOption;

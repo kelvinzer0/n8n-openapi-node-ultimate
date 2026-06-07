@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OperationsCollector = exports.BaseOperationsCollector = void 0;
 const lodash = __importStar(require("lodash"));
 const SchemaToINodeProperties_1 = require("./n8n/SchemaToINodeProperties");
+const SecurityCollector_1 = require("./SecurityCollector");
 const OptionsByResourceMap_1 = require("./n8n/OptionsByResourceMap");
 const utils_1 = require("./n8n/utils");
 class BaseOperationsCollector {
@@ -36,6 +37,7 @@ class BaseOperationsCollector {
         this.optionsByResource = new OptionsByResourceMap_1.OptionsByResourceMap();
         this._fields = [];
         this.n8nNodeProperties = new SchemaToINodeProperties_1.N8NINodeProperties(doc);
+        this.securityCollector = new SecurityCollector_1.SecurityCollector(doc);
     }
     get operations() {
         if (this.optionsByResource.size === 0) {
@@ -98,7 +100,7 @@ class BaseOperationsCollector {
         }
     }
     /**
-     * Parse fields from operation, both parameters and request body
+     * Parse fields from operation: parameters, request body, and security schemes
      */
     parseFields(operation, context) {
         const fields = [];
@@ -121,6 +123,9 @@ class BaseOperationsCollector {
             };
             fields.push(notice);
         }
+        // Collect security fields for this operation
+        const securityFields = this.securityCollector.collectForOperation(operation);
+        fields.push(...securityFields);
         return fields;
     }
     addDisplayOption(fields, resource, operation) {
