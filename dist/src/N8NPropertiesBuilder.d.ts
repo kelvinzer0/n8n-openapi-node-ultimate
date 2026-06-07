@@ -36,6 +36,31 @@ export declare class N8NPropertiesBuilder {
     private readonly ResourcePropertiesCollector;
     constructor(doc: any, config?: N8NPropertiesBuilderConfig);
     build(overrides?: Override[]): INodeProperties[];
+    /**
+     * Build an n8n ICredentialTestRequest from the OpenAPI spec.
+     *
+     * Auto-selects the best GET endpoint for credential testing:
+     *  - Prefers endpoints without path params
+     *  - Favors common patterns like /health, /me, /status
+     *  - Falls back to the simplest available GET endpoint
+     *
+     * Returns null if no GET endpoints exist in the spec.
+     *
+     * Usage:
+     *   const testRequest = builder.buildCredentialTestRequest();
+     *   // Use in n8n credential definition:
+     *   // { name: 'myApi', ..., testRequest: testRequest }
+     */
+    buildCredentialTestRequest(): Record<string, any> | null;
+    /**
+     * Get all GET endpoints sorted by credential-test suitability.
+     * Useful for debugging or letting users pick a specific endpoint.
+     */
+    getCredentialTestCandidates(): Array<{
+        pattern: string;
+        operationId?: string;
+        score: number;
+    }>;
     private update;
 }
 export {};

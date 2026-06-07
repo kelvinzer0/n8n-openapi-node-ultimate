@@ -27,6 +27,7 @@ exports.N8NPropertiesBuilder = void 0;
 const OpenAPIWalker_1 = require("./openapi/OpenAPIWalker");
 const ResourceCollector_1 = require("./ResourceCollector");
 const OperationsCollector_1 = require("./OperationsCollector");
+const CredentialTestCollector_1 = require("./CredentialTestCollector");
 const lodash = __importStar(require("lodash"));
 const OperationParser_1 = require("./OperationParser");
 const ResourceParser_1 = require("./ResourceParser");
@@ -69,6 +70,35 @@ class N8NPropertiesBuilder {
         const fields = operationsCollector.fields;
         const properties = [resourceNode, ...operations, ...fields];
         return this.update(properties, overrides);
+    }
+    /**
+     * Build an n8n ICredentialTestRequest from the OpenAPI spec.
+     *
+     * Auto-selects the best GET endpoint for credential testing:
+     *  - Prefers endpoints without path params
+     *  - Favors common patterns like /health, /me, /status
+     *  - Falls back to the simplest available GET endpoint
+     *
+     * Returns null if no GET endpoints exist in the spec.
+     *
+     * Usage:
+     *   const testRequest = builder.buildCredentialTestRequest();
+     *   // Use in n8n credential definition:
+     *   // { name: 'myApi', ..., testRequest: testRequest }
+     */
+    buildCredentialTestRequest() {
+        const collector = new CredentialTestCollector_1.CredentialTestCollector(this.doc);
+        this.walker.walk(collector);
+        return collector.testRequest;
+    }
+    /**
+     * Get all GET endpoints sorted by credential-test suitability.
+     * Useful for debugging or letting users pick a specific endpoint.
+     */
+    getCredentialTestCandidates() {
+        const collector = new CredentialTestCollector_1.CredentialTestCollector(this.doc);
+        this.walker.walk(collector);
+        return collector.allGetEndpoints;
     }
     update(fields, patterns) {
         for (const pattern of patterns) {

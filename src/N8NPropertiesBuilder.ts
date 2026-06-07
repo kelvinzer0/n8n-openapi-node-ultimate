@@ -4,6 +4,7 @@ import {OpenAPIWalker} from "./openapi/OpenAPIWalker";
 import {ResourceCollector as ResourcePropertiesCollector} from "./ResourceCollector";
 import {BaseOperationsCollector, OperationsCollector as OperationsCollectorImpl} from "./OperationsCollector";
 import {SecurityCollector} from "./SecurityCollector";
+import {CredentialTestCollector} from "./CredentialTestCollector";
 import * as lodash from "lodash";
 import {DefaultOperationParser, IOperationParser} from "./OperationParser";
 import {DefaultResourceParser, IResourceParser} from "./ResourceParser";
@@ -84,6 +85,37 @@ export class N8NPropertiesBuilder {
 
         const properties = [resourceNode, ...operations, ...fields]
         return this.update(properties, overrides)
+    }
+
+    /**
+     * Build an n8n ICredentialTestRequest from the OpenAPI spec.
+     *
+     * Auto-selects the best GET endpoint for credential testing:
+     *  - Prefers endpoints without path params
+     *  - Favors common patterns like /health, /me, /status
+     *  - Falls back to the simplest available GET endpoint
+     *
+     * Returns null if no GET endpoints exist in the spec.
+     *
+     * Usage:
+     *   const testRequest = builder.buildCredentialTestRequest();
+     *   // Use in n8n credential definition:
+     *   // { name: 'myApi', ..., testRequest: testRequest }
+     */
+    buildCredentialTestRequest(): Record<string, any> | null {
+        const collector = new CredentialTestCollector(this.doc);
+        this.walker.walk(collector);
+        return collector.testRequest;
+    }
+
+    /**
+     * Get all GET endpoints sorted by credential-test suitability.
+     * Useful for debugging or letting users pick a specific endpoint.
+     */
+    getCredentialTestCandidates(): Array<{ pattern: string; operationId?: string; score: number }> {
+        const collector = new CredentialTestCollector(this.doc);
+        this.walker.walk(collector);
+        return collector.allGetEndpoints;
     }
 
     private update(fields: any[], patterns: Override[]) {

@@ -4,6 +4,7 @@ import {OpenAPIWalker} from "./openapi/OpenAPIWalker";
 import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig, Override} from "./N8NPropertiesBuilder";
 import {OperationsCollector} from "./OperationsCollector";
 import {SecurityCollector} from "./SecurityCollector";
+import {CredentialTestCollector} from "./CredentialTestCollector";
 import {DefaultOperationParser, IOperationParser} from "./OperationParser";
 import {DefaultResourceParser, IResourceParser} from "./ResourceParser";
 import {ResourceCollector} from "./ResourceCollector";
@@ -20,6 +21,7 @@ export {
     DefaultOperationParser,
     OperationsCollector,
     SecurityCollector,
+    CredentialTestCollector,
     IResourceParser,
     DefaultResourceParser,
     Override,
