@@ -15,3 +15,6 @@ taostats,https://api.taostats.io/api/openapi.json,,TaoStats official Bittensor b
 swapx,https://api.swapx.fi/api/v1/openapi.json,,SwapX decentralized finance platform for token swaps and liquidity provision across multiple blockchain networks,DeFi,true
 binance,https://binance.github.io/binance-api-swagger/spot_api.yaml,,Binance global cryptocurrency exchange supporting spot futures and margin trading with deep liquidity and advanced order types,Exchange,true
 uniswap,https://trade-api.gateway.uniswap.org/v1/api.json,,Uniswap decentralized trading protocol for automated liquidity provision and token swaps across multiple blockchains,DeFi,true
+cow-protocol,https://raw.githubusercontent.com/cowprotocol/services/main/crates/orderbook/openapi.yml,,CoW Protocol batch auction DEX aggregator with MEV protection for gasless and secure token swaps across multiple chains,DeFi,true
+lifi,https://docs.li.fi/openapi.yaml,,LI.FI cross-chain swap aggregator bridging multiple DEXs and bridges for optimal routing across 28+ blockchain networks,DeFi,true
+odos,https://api.odos.xyz/openapi.json,,Odos DeFi routing protocol optimizing token swaps by searching millions of paths for the best rates and lowest fees,DeFi,true
