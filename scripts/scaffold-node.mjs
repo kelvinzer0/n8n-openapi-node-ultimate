@@ -636,15 +636,40 @@ if (secInfo && secInfo.type === 'apiKey') {
 }
 
 // Build credential test request from OpenAPI spec (auto-selects best GET endpoint)
-const credTestObj = credentialTestRequest
-	? toTSLiteral(credentialTestRequest, '\t\t')
-	: `{
+// Remap credential field names to match scaffold-generated field names:
+//   $credentials.baseUrl → $credentials.url
+//   $credentials.<anySchemeName> → $credentials.apiKey (scaffold always uses 'apiKey')
+function remapCredTestExpressions(obj) {
+	if (typeof obj === 'string') {
+		// First remap baseUrl → url, then any remaining scheme refs → apiKey
+		return obj
+			.replace(/\$credentials\.baseUrl/g, '$credentials.url')
+			.replace(/\$credentials\.(?!url\b)[a-zA-Z_][a-zA-Z0-9_]*/g, '$credentials.apiKey');
+	}
+	if (Array.isArray(obj)) return obj.map(item => remapCredTestExpressions(item));
+	if (obj && typeof obj === 'object') {
+		const result = {};
+		for (const [key, val] of Object.entries(obj)) {
+			result[key] = remapCredTestExpressions(val);
+		}
+		return result;
+	}
+	return obj;
+}
+
+let credTestObj;
+if (credentialTestRequest) {
+	const remapped = remapCredTestExpressions(credentialTestRequest);
+	credTestObj = toTSLiteral(remapped, '\t\t');
+} else {
+	credTestObj = `{
 			request: {
 				baseURL: '={{$credentials.url}}',
 				url: '/',
 				method: 'GET',
 			},
 		}`;
+}
 
 writeFileSync(
 	join(projectDir, 'credentials', `${credentialClassName}.credentials.ts`),
