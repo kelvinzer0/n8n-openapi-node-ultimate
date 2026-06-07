@@ -54,11 +54,16 @@ function copyDirSync(src, dest) {
 }
 
 function toPascalCase(str) {
-	return str
+	const result = str
 		.replace(/[^a-zA-Z0-9]+/g, ' ')
 		.split(' ')
 		.map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
 		.join('');
+	// TypeScript identifiers can't start with a digit — prefix with 'N' if needed
+	if (/^[0-9]/.test(result)) {
+		return 'N' + result;
+	}
+	return result;
 }
 
 function toJSON(obj, indent = 2) {
