@@ -13,3 +13,4 @@ ondo-finance,https://docs.ondo.finance/openapi.json,,Ondo Finance institutional-
 cryptal,https://api.cryptal.com/openapi.json,,Licensed cryptocurrency exchange and wallet supporting instant buy sell with Georgian Lari and multiple payment methods,Exchange,true
 taostats,https://api.taostats.io/api/openapi.json,,TaoStats official Bittensor block explorer and analytics platform for staking portfolio tracking and subnet discovery,Analytics,true
 swapx,https://api.swapx.fi/api/v1/openapi.json,,SwapX decentralized finance platform for token swaps and liquidity provision across multiple blockchain networks,DeFi,true
+binance,https://binance.github.io/binance-api-swagger/spot_api.yaml,,Binance global cryptocurrency exchange supporting spot futures and margin trading with deep liquidity and advanced order types,Exchange,true
