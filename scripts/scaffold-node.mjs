@@ -553,7 +553,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '',
 			required: true,
 		},
-${FUNDING_NOTICE}`;
+		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
@@ -580,7 +580,7 @@ ${FUNDING_NOTICE}`;
 			default: '',
 			required: true,
 		},
-${FUNDING_NOTICE}`;
+		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
@@ -608,7 +608,7 @@ ${FUNDING_NOTICE}`;
 			default: '',
 			required: true,
 		},
-${FUNDING_NOTICE}`;
+		${toTSLiteral(FUNDING_NOTICE, '\t\t')}`;
 	authConfig = `	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
