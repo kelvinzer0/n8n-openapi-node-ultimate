@@ -857,18 +857,33 @@ if (LOGO_URL) {
 		console.log(`🎨 Downloading logo from ${LOGO_URL}...`);
 		const logoResp = await fetch(LOGO_URL);
 		if (logoResp.ok) {
-			const buf = Buffer.from(await logoResp.arrayBuffer());
-			const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
-
-			if (ext === '.svg') {
-				writeFileSync(join(nodeDir, iconLight), buf);
-				writeFileSync(join(nodeDir, iconDark), buf);
-				console.log('✅ Logo saved (light + dark variants)');
-			} else {
-				writeFileSync(join(nodeDir, iconLight), buf);
-				writeFileSync(join(nodeDir, iconDark), buf);
-				console.log('✅ Logo saved (non-SVG format)');
-			}
+		    const buf = Buffer.from(await logoResp.arrayBuffer());
+		    const contentType = logoResp.headers.get('content-type') || '';
+		    const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
+		
+		    const isSvg = contentType.includes('svg') || ext === '.svg';
+		    const isPng = contentType.includes('png') || ext === '.png';
+		    const isJpg = contentType.includes('jpeg') || ext === '.jpg' || ext === '.jpeg';
+		
+		    if (isSvg) {
+		        // SVG: simpan langsung, buat dark variant dengan filter CSS
+		        writeFileSync(join(nodeDir, iconLight), buf);
+		        writeFileSync(join(nodeDir, iconDark), buf);
+		        console.log('✅ Logo SVG saved');
+		    } else if (isPng || isJpg) {
+		        // PNG/JPG: nama file harus pakai ekstensi yang benar
+		        const realExt = isPng ? '.png' : '.jpg';
+		        const iconLightReal = iconLight.replace('.svg', realExt);
+		        const iconDarkReal = iconDark.replace('.svg', realExt);
+		        writeFileSync(join(nodeDir, iconLightReal), buf);
+		        writeFileSync(join(nodeDir, iconDarkReal), buf);
+		        console.log(`✅ Logo ${realExt} saved`);
+		        // ⚠️ Perlu update referensi iconLight/iconDark di node.ts dan credentials.ts juga!
+		    } else {
+		        console.log(`⚠️ Format tidak dikenali (${contentType}), pakai placeholder`);
+		        writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
+		        writeFileSync(join(nodeDir, iconDark), PLACEHOLDER_DARK_SVG);
+		    }
 		} else {
 			console.log('⚠️  Could not download logo (HTTP error), using placeholder');
 			writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
