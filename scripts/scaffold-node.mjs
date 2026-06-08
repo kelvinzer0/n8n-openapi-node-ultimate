@@ -128,16 +128,9 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	const { loadFonts, wrapTextWithFont, renderTextAsPaths } = await import('./text-to-path.mjs');
 	const fonts = await loadFonts();
 
-	// Get SVG path string for text. Uses normal getPath, falls back to per-char paths.
+	// Always render each character as separate <path> — 100% reliable
 	function getTextPaths(font, text, x, y, fontSize, fill, fillOpacity) {
-		try {
-			const path = font.getPath(text, x, y, fontSize);
-			const d = path.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
-			const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
-			return `<path d="${d}" fill="${fill}"${opacity}/>`;
-		} catch {
-			return renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity);
-		}
+		return renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity);
 	}
 
 	let svg = readFileSync(templatePath, 'utf-8');

@@ -23,9 +23,9 @@ export async function loadFonts() {
 	// Try bundled subset fonts first, then fall back to system font
 	const fontDir = join(__dir, 'fonts');
 	const candidates = {
-		regular: ['JetBrainsMono-Regular-clean.ttf', 'JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
-		bold: ['JetBrainsMono-Bold-clean.ttf', 'JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
-		medium: ['JetBrainsMono-Medium-clean.ttf', 'JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
+		regular: ['JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
+		bold: ['JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
+		medium: ['JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
 	};
 
 	const fonts = {};
@@ -78,23 +78,35 @@ export function textToPathElement(font, text, fontSize, x, y, fill, fillOpacity)
 }
 
 /**
- * Render text as separate path elements, one per character.
- * Avoids fill-rule issues when glyphs are combined into a single path.
- * @returns {string} Multiple <path> elements joined with newlines
+ * Render text as separate SVG path elements, one per character.
+ * Uses raw glyph data directly, bypassing all opentype.js shaping.
+ * Each character is a completely independent <path> element.
  */
 export function renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity) {
-	let cursorX = x;
 	const scale = fontSize / font.unitsPerEm;
 	const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
 	const parts = [];
-	for (const char of text) {
-		const glyph = font.charToGlyph(char);
-		if (glyph && glyph.path && glyph.path.commands.length > 0) {
-			const gp = glyph.getPath(cursorX, y, fontSize);
-			const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
-			if (d) parts.push(`<path d="${d}" fill="${fill}"${opacity}/>`);
+	let cursorX = x;
+
+	for (let i = 0; i < text.length; i++) {
+		const code = text.charCodeAt(i);
+		// Get glyph index directly from cmap table
+		const glyphIndex = font.charToGlyphIndex(text[i]);
+		if (glyphIndex === 0) {
+			// Unknown glyph, just advance
+			cursorX += (font.glyphs.get(0).advanceWidth || 600) * scale;
+			continue;
 		}
-		cursorX += (glyph.advanceWidth || 0) * scale;
+		const glyph = font.glyphs.get(glyphIndex);
+		if (!glyph || !glyph.path || glyph.path.commands.length === 0) {
+			cursorX += (glyph.advanceWidth || 600) * scale;
+			continue;
+		}
+		// Render glyph at absolute position
+		const gp = glyph.getPath(cursorX, y, fontSize);
+		const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
+		if (d) parts.push(`<path d="${d}" fill="${fill}"${opacity}/>`);
+		cursorX += (glyph.advanceWidth || 600) * scale;
 	}
 	return parts.join('\n');
 }
