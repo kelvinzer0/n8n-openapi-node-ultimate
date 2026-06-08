@@ -136,5 +136,1169 @@
     "url": "https://docs.evoapicloud.com/openapi/viewer.json",
     "lastChecked": "2026-06-08T08:18:24.115Z",
     "lastTriggerReason": "force_upsert"
+  },
+  "spotify": {
+    "hash": "3a652300be23d23f2efc67b03738851be4f99949b05f0fc7f465504dee075594",
+    "url": "https://api.apis.guru/v2/specs/spotify.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:16.665Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "spotify-sonallux": {
+    "hash": "d71eff045735eb3304322d03d0632d2742addcd05cd676b7d61d718c2664b244",
+    "url": "https://api.apis.guru/v2/specs/spotify.com/sonallux/2023.2.27/openapi.json",
+    "lastChecked": "2026-06-08T13:13:18.827Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "squareup": {
+    "hash": "1001c992f9e5f68f71356390c160044a555afd036d0b6c5509f5ab492ad56c43",
+    "url": "https://api.apis.guru/v2/specs/squareup.com/2.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:21.125Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "stackexchange": {
+    "hash": "b10f4129a635123583ed6565c7ea31b813aa0c733114ce06d787e9a7d6c82099",
+    "url": "https://api.apis.guru/v2/specs/stackexchange.com/2.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:23.403Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "staging-ecotaco": {
+    "hash": "61bb97f22b658348476820cc175056241b8dbbbf1753ca3cf3dc55dfd8a5488f",
+    "url": "https://api.apis.guru/v2/specs/staging-ecotaco.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:25.500Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "statsocial": {
+    "hash": "9eea3bfeb891a9719f0e64b9e96e43f787d7f2739de4d748220f632055ef06a4",
+    "url": "https://api.apis.guru/v2/specs/statsocial.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:27.633Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "stellastra": {
+    "hash": "c75ec96017a319da210d725fbfd6b9336d65bd83a78d46153f67799ce7a454b1",
+    "url": "https://api.apis.guru/v2/specs/stellastra.com/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:29.697Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "storecove": {
+    "hash": "aa303153ea82fc4989fc9296b15d61082211564442692863950ffa2dd30127ee",
+    "url": "https://api.apis.guru/v2/specs/storecove.com/2.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:13:31.734Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "stormglass": {
+    "hash": "89564b17fd66fa5a434f6d5784546d7466794142eb7f0e878257042962ff1121",
+    "url": "https://api.apis.guru/v2/specs/stormglass.io/1.0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:13:33.887Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "stripe": {
+    "hash": "76e10a2395402ad46f157a39a6bfc6b2843e07251d769fdfbe7042b749d881f2",
+    "url": "https://api.apis.guru/v2/specs/stripe.com/2022-11-15/openapi.json",
+    "lastChecked": "2026-06-08T13:13:36.124Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "superset-apache-superset": {
+    "hash": "f7161279680a0d3d1ed862d7fc4398e061f9eb61d6c9fe896d3d271e6b74a377",
+    "url": "https://api.apis.guru/v2/specs/superset.apache.local/superset/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:13:38.343Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "surevoip": {
+    "hash": "b1a58166963e26b36924e5438f3c9bf69ea9c3b3d81e21bd58babb2d2c64baf1",
+    "url": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.json",
+    "lastChecked": "2026-06-08T13:13:40.410Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "surrey-open511": {
+    "hash": "b774dd31b04ca1ff55a4633f6b19eca42d599ac0bd17bb8e64f1887a30357d5c",
+    "url": "https://api.apis.guru/v2/specs/surrey.ca/open511/0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:13:42.417Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "surrey-trafficloops": {
+    "hash": "c283cb7ecf38b3f99b4091ceb12fc11047a24a5ff54922fd2f64e93ef848ccf3",
+    "url": "https://api.apis.guru/v2/specs/surrey.ca/trafficloops/0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:13:44.366Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "svix": {
+    "hash": "3113a9cdc3103acfeada8965eedd8b559dc13b1e85729c0fb3ca12344c8eb2a9",
+    "url": "https://api.apis.guru/v2/specs/svix.com/1.4/openapi.json",
+    "lastChecked": "2026-06-08T13:13:46.512Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "swagger-generator": {
+    "hash": "4a289a06fef4a03bc0cf85458434baeac300bf8cb7c44adf74fac746d4053db1",
+    "url": "https://api.apis.guru/v2/specs/swagger.io/generator/2.4.30/swagger.json",
+    "lastChecked": "2026-06-08T13:13:48.572Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "swaggerhub": {
+    "hash": "43796bc2f2d112bb085352385d6bc9a25d19cf14209a4cd13fb2902695b4450a",
+    "url": "https://api.apis.guru/v2/specs/swaggerhub.com/1.0.66/swagger.json",
+    "lastChecked": "2026-06-08T13:13:50.579Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "symanto": {
+    "hash": "719ad24fcee3ab2ff783fd0424e7b03a7d2e869026cfa3ae0138f3b5412dbe4a",
+    "url": "https://api.apis.guru/v2/specs/symanto.net/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:13:52.610Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "synq-fm": {
+    "hash": "ab8a1c9840a2287c1a63ef086f998ad27ec7093f708f5b4219f93b8999e4ecc5",
+    "url": "https://api.apis.guru/v2/specs/synq.fm/1.9.1/swagger.json",
+    "lastChecked": "2026-06-08T13:13:54.656Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tafqit": {
+    "hash": "25e515d3ec387e589a452ce70b89a7bb2c4c2fe65f8f33dfda33cd92b9546761",
+    "url": "https://api.apis.guru/v2/specs/tafqit.herokuapp.com/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:13:56.765Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "taggun": {
+    "hash": "f0b7034729812185651083a00322eed3c853a4fda6b2ae36c08ab3ccbf7a8033",
+    "url": "https://api.apis.guru/v2/specs/taggun.io/1.10.9/swagger.json",
+    "lastChecked": "2026-06-08T13:13:58.769Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "taxamo": {
+    "hash": "be6c7f6a4ffbf33427badcd2e0b2b7c8b198c271ad4a890c7243e05ba3dd6c20",
+    "url": "https://api.apis.guru/v2/specs/taxamo.com/1/swagger.json",
+    "lastChecked": "2026-06-08T13:14:00.780Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "taxrates": {
+    "hash": "0cb83bdfdc47b6efbafc23fcbc6117c4ea3b55f6874836b4da38152751ccbd05",
+    "url": "https://api.apis.guru/v2/specs/taxrates.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:02.812Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tcgdex": {
+    "hash": "029fe6c9e183a29e50cfb4d65fad1374edf59669bae36a0c1e31b23dfa87cad5",
+    "url": "https://api.apis.guru/v2/specs/tcgdex.net/2.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:04.822Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "telegram": {
+    "hash": "cebab51778f0341333daafbe124bf7944197ca8c09a6b4740f72f1ae84c6c087",
+    "url": "https://api.apis.guru/v2/specs/telegram.org/5.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:07.049Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "telematicssdk": {
+    "hash": "7e372257327045963b153de84f647c07ba587b156d1f430a5957c5c7517ddfac",
+    "url": "https://api.apis.guru/v2/specs/telematicssdk.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:09.285Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "telnyx": {
+    "hash": "6def51a3e68326861eef2054f9df2f568ff961e813adcc0409f7afc33d0f01d4",
+    "url": "https://api.apis.guru/v2/specs/telnyx.com/2.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:11.369Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "text2data": {
+    "hash": "4453e83c7530bbd51e3f3189b298ff1614295d0e30e2eb99f6e11019577e32d5",
+    "url": "https://api.apis.guru/v2/specs/text2data.org/v3.4/swagger.json",
+    "lastChecked": "2026-06-08T13:14:13.494Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tfl-gov": {
+    "hash": "8ec97a3a03307f0849135f0b69096598fd32a82770ef8cdf10992ab53c57b0b4",
+    "url": "https://api.apis.guru/v2/specs/tfl.gov.uk/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:14:15.780Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "thebluealliance": {
+    "hash": "74566c1cbd7462555112c1d2f1d4e1037f729365e8e9410d7d2dfa1d6d7e3caa",
+    "url": "https://api.apis.guru/v2/specs/thebluealliance.com/3.8.2/openapi.json",
+    "lastChecked": "2026-06-08T13:14:17.930Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "thenounproject": {
+    "hash": "eb92135936d2a480c621648dbe53a9294b4fc60901deea4e050b6a171fa8f21b",
+    "url": "https://api.apis.guru/v2/specs/thenounproject.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:20.225Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "thesmsworks": {
+    "hash": "d4bdf876c3021f8d61b0d2ad60b1cdb510e9f349b51ba8d54e548f20c0705acc",
+    "url": "https://api.apis.guru/v2/specs/thesmsworks.co.uk/1.8.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:22.299Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "thetvdb": {
+    "hash": "ea15ee031a29174428d4868a36c85c31e7fe4164349b7a09558b8cf4ed2aee7b",
+    "url": "https://api.apis.guru/v2/specs/thetvdb.com/3.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:24.452Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ticketmaster-commerce": {
+    "hash": "8ec51d5aecc8c39069f1e37f081ea4232e22692b12faf8909df8c905e7212cfb",
+    "url": "https://api.apis.guru/v2/specs/ticketmaster.com/commerce/v2/swagger.json",
+    "lastChecked": "2026-06-08T13:14:26.531Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ticketmaster-discovery": {
+    "hash": "d546f24ec8358dcb5012bb6d57ae9491e5ff708fbb8433d75fea60bb10356d7f",
+    "url": "https://api.apis.guru/v2/specs/ticketmaster.com/discovery/v2/openapi.json",
+    "lastChecked": "2026-06-08T13:14:28.712Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ticketmaster-publish": {
+    "hash": "70f3bed59c130bf6309077490dcd00e81c1b49376d7ccf09ed55d88b261a97a1",
+    "url": "https://api.apis.guru/v2/specs/ticketmaster.com/publish/v2/openapi.json",
+    "lastChecked": "2026-06-08T13:14:30.685Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tinyuid": {
+    "hash": "25f9439f99693383d1b57fae88b276dd76042e118f9beaa9d6ef4d188eed2f5b",
+    "url": "https://api.apis.guru/v2/specs/tinyuid.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:32.813Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tisane": {
+    "hash": "e2ca9b8e2f2475112253cc99339dae5769d0e532ff987482ef6e628fcb1f6c76",
+    "url": "https://api.apis.guru/v2/specs/tisane.ai/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:34.861Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tl-api-azurewebsites": {
+    "hash": "66eebc12966c294bfc80982bfd1ad674b72ca89c267415363c11bc96ef7cee98",
+    "url": "https://api.apis.guru/v2/specs/tl-api.azurewebsites.net/2020-08-10_6-22/openapi.json",
+    "lastChecked": "2026-06-08T13:14:37.115Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tokenjay": {
+    "hash": "86b496ce1950e6b3011701876ec900830c3d0a8b73677eedbf4713f3a9316fc4",
+    "url": "https://api.apis.guru/v2/specs/tokenjay.app/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:39.263Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tomtom-maps": {
+    "hash": "bf2e8b6a7a6b3e4dc46db8d4e4ef9aeb5f836d897429fb59a539142f20b5159a",
+    "url": "https://api.apis.guru/v2/specs/tomtom.com/maps/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:41.355Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tomtom-routing": {
+    "hash": "f063a949ae9619bf553104db5180a32fbf7343839531554a8fb7ae88ec70f67b",
+    "url": "https://api.apis.guru/v2/specs/tomtom.com/routing/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:43.414Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tomtom-search": {
+    "hash": "bed78f1da3acdbffa1eacce883c5c8363a158e740b17beaa59527a8ff4b1127f",
+    "url": "https://api.apis.guru/v2/specs/tomtom.com/search/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:45.598Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "traccar": {
+    "hash": "1680cfab5f3335f78c71ce383a3692fdba5747661eadfcab19b1fe19ec7090e4",
+    "url": "https://api.apis.guru/v2/specs/traccar.org/5.6/openapi.json",
+    "lastChecked": "2026-06-08T13:14:47.808Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tradematic": {
+    "hash": "53625958fbc9c9cb79e3ee212ce9a83fac27c5ddb7f0b21eb437732df4ff52af",
+    "url": "https://api.apis.guru/v2/specs/tradematic.com/1.0.2/swagger.json",
+    "lastChecked": "2026-06-08T13:14:50.016Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "trakt-tv": {
+    "hash": "db6fd46c79539eeaeaaf7ba291a47a30142aa67b0c4e0c98929ec9142f7d69b0",
+    "url": "https://api.apis.guru/v2/specs/trakt.tv/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:52.265Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "transavia": {
+    "hash": "c0ebaf52f5c12e8080e61f5d444e3a74c5801ca2dfa92fddae7c86ae8673c960",
+    "url": "https://api.apis.guru/v2/specs/transavia.com/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:54.399Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "transitfeeds": {
+    "hash": "337329b648081eb11d0d21c273ddbc867ea6612175365a9219050e82cade1e70",
+    "url": "https://api.apis.guru/v2/specs/transitfeeds.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:14:56.419Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "trapstreet": {
+    "hash": "f6ba7acd9d20f7833e4c5aee80e73398e2ad010cec84b1b9ad01c425f62b0abb",
+    "url": "https://api.apis.guru/v2/specs/trapstreet.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:14:58.500Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "trashnothing": {
+    "hash": "edbecc6159452637615fc079a6013ede1e66f7dcbae30037f824e0e0a3cea829",
+    "url": "https://api.apis.guru/v2/specs/trashnothing.com/1.3/openapi.json",
+    "lastChecked": "2026-06-08T13:15:00.610Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "trello": {
+    "hash": "a95a221416a14321bbac3a570dbabaff9ebb83c8707021a9d0496921a856f0b4",
+    "url": "https://api.apis.guru/v2/specs/trello.com/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:02.803Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "truanon": {
+    "hash": "bc7d1a6cf8362062daa4dbabe5bf659d64dc65d4ba27ec7d776a62cd16e8d561",
+    "url": "https://api.apis.guru/v2/specs/truanon.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:04.968Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "truesight": {
+    "hash": "689afa77acf2633d646052e5f00021258163e5d078744eb9dbe36e9d71eb9d9d",
+    "url": "https://api.apis.guru/v2/specs/truesight.local/11.1.00/openapi.json",
+    "lastChecked": "2026-06-08T13:15:07.005Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "truora": {
+    "hash": "1de4aaff141c1a0e469af44c7200393def6f0e42880fce5fdfad87d1050c5127",
+    "url": "https://api.apis.guru/v2/specs/truora.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:09.467Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "turbinelabs": {
+    "hash": "9f544938694c3ac0a827c2e3b411a39ed7a5ddb4e065ae72bc9774431a62999a",
+    "url": "https://api.apis.guru/v2/specs/turbinelabs.io/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:15:11.716Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "tvmaze": {
+    "hash": "59cba5276858b2fc2fcade4a3cab9feb0886e51a3fa51337c0e9655d60d1157c",
+    "url": "https://api.apis.guru/v2/specs/tvmaze.com/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:14.155Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-api": {
+    "hash": "da7415f66ddf68ca230abda171c15ad08e32c290045f9865f6a4460b0adc58aa",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/api/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:16.543Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-accounts-v1": {
+    "hash": "122c5744ed5afba1e46672d8d88836778880d2867618cb751fe5ee0f088c6e5c",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_accounts_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:19.237Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-autopilot-v1": {
+    "hash": "d0c68cf2c04972b433b7db5f0d8c43e343ff147f8439315c1c3629723952580d",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_autopilot_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:22.006Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-bulkexports-v1": {
+    "hash": "fcb5ac8f510b094cbb8e90877f07c44077a799f65926ef3a8e9c82d99e01663b",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_bulkexports_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:24.281Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-chat-v1": {
+    "hash": "415a6706e7a354a39a4b6f213e712b07904b64640391764f8c8ad9e109fd24ed",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_chat_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:26.565Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-chat-v2": {
+    "hash": "c7cbbef1b72e7e214cd846c89e2f0b968dcb4680e5cd2ae711b75f14e8b774e3",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_chat_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:28.839Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-chat-v3": {
+    "hash": "dbea39f028fd69c053caa70818a44ffded1b07607b1ab2c9311f6b138be61221",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_chat_v3/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:31.199Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-content-v1": {
+    "hash": "093d8b7433806368b3c1965ab05a00ce7976d61b558b8dd65ad79f326fe942f1",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_content_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:33.615Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-conversations-v1": {
+    "hash": "764d164266c478e61742de51c87d7ac14be43e7e32b047157dd83da5b539434e",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_conversations_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:36.045Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-events-v1": {
+    "hash": "41b463ed254e0bcfd1a25982c896e98cb4d417c69dcb6c36ca4f1d290a9ca54a",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_events_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:38.205Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-fax-v1": {
+    "hash": "9312845e5599ea1f393df99dfbca2dbf107b856081a34c0f651066950fc232f1",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_fax_v1/1.29.1/openapi.json",
+    "lastChecked": "2026-06-08T13:15:40.359Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-flex-v1": {
+    "hash": "c0f78375d5d269b96a95637bd2eaa87b8f29c430c0bc49b1499a9f1f6eb9e143",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_flex_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:42.769Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-flex-v2": {
+    "hash": "057779212a3cc4c48e47f2806c749b8f64e83a72da2799cbe8a5673a851035df",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_flex_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:45.008Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-frontline-v1": {
+    "hash": "44dc509e2ed76564287cec1f781a297f6ac0991a12b26cbbeb76743d49e0409d",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_frontline_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:47.218Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-insights-v1": {
+    "hash": "635b8dc9997a1a0ccc7f282179fdda6ef0af0a4da9291565593c5ff01c93c89a",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_insights_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:49.740Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-ip-messaging-v1": {
+    "hash": "6b09cf8cf936a505024273739ce3b4919d0e9704cae8edc22a317711f4a82bb5",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_ip_messaging_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:52.174Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-ip-messaging-v2": {
+    "hash": "a03d10cb80f859f12d46abd1e8943f27d7d23653c893cc329d81214534105d81",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_ip_messaging_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:54.734Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-lookups-v1": {
+    "hash": "08d39514354431c70187209a8e84b13e139bdc85816188465e1e4fc4f1eb6e91",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_lookups_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:56.832Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-lookups-v2": {
+    "hash": "0a97f9af67d020f265e6e9f33410e7c4500c353dcc9385d07962805039f85aa2",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_lookups_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:15:59.014Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-media-v1": {
+    "hash": "cda61da9d5511414983ae973a845d4ea109007cbc8c85bfb577aec2342dafbdd",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_media_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:01.580Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-messaging-v1": {
+    "hash": "517a7328301e55350c90eb5f5adbf588c873dd8c06e1647f662b8feecf233c0d",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_messaging_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:04.286Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-microvisor-v1": {
+    "hash": "cd7426cf07b212220d0cdff650ff779e78eab6ae49ae54486fda03732dba703c",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_microvisor_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:07.158Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-monitor-v1": {
+    "hash": "2bd5c054a8ffbef225d274af31fb8446dbab2ad8b118a5370fb6d19d3775d968",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_monitor_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:09.555Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-notify-v1": {
+    "hash": "ff48a34af92da3095f5a8033d1b9db86beefaed1eb025d76956c0747aec18f79",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_notify_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:11.981Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-numbers-v1": {
+    "hash": "f5fb4482c791738d584f68f55ad36d5b670281ccee012b123edf895513ee31bd",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_numbers_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:14.361Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-numbers-v2": {
+    "hash": "511e3a95b078eb651125ee93bdd25dae76ae804864611e3f6a4c154ebb6fc3c5",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_numbers_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:16.952Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-oauth-v1": {
+    "hash": "3ee7da843cde5157bae8c8b321c08ef1af2699c5ebf0103a2907660356393c4d",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_oauth_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:19.616Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-preview": {
+    "hash": "89b4b58655d12178be19d11bce19017941e5507719899c990b55e8081b8d1802",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_preview/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:22.230Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-pricing-v1": {
+    "hash": "2b36df3b4886bb75cc5bfb2ce9530fca13682a63a1f0a25076afe1d1af462c20",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_pricing_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:24.941Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-pricing-v2": {
+    "hash": "d58d3feafe8cf446a3d441af212e8c28a3c0837fa9dfa4049e45b5197d33e327",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_pricing_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:27.741Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-proxy-v1": {
+    "hash": "7bef2f3844446cff7e2cb69be0a312cd63a857bf72cebe85b7863fa78cf8bb1c",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_proxy_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:30.207Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-routes-v2": {
+    "hash": "65554e133c077b47fcb27f1f2e89988eea170852d03546921f4f01bb07db07a8",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_routes_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:32.817Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-serverless-v1": {
+    "hash": "3f9c4bab47532b76df5bd5e4242718bbb773e37f02faee47f26d1823ce32ca14",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_serverless_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:35.230Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-studio-v1": {
+    "hash": "75c945e152bbd760af1f939ddf651a658d56041b73a359e38017ddf88b6827a6",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_studio_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:37.960Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-studio-v2": {
+    "hash": "7998bcf0852e7584db902ce32af24fc7daa4c55e3d66c330d1560c15ed41e1c4",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_studio_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:40.338Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-supersim-v1": {
+    "hash": "bd6bcc48f68a6abf7d2d2b39ba8e0b04a4a82a7f558d1d22257a2b908b3a1861",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_supersim_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:42.730Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-sync-v1": {
+    "hash": "12953b941518ee75a97c9761f0c156731aa85bf001a1a5642d83302f6a2be2ae",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_sync_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:45.388Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-taskrouter-v1": {
+    "hash": "56b68fbebe0bece5fb614e29ba8a1ad92868f038aa8b9603f86f699cf6d24f1f",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_taskrouter_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:47.865Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-trunking-v1": {
+    "hash": "0a9671bdba89cf7a70f71299f7a4c82fd087adf7616459247e79b53bc3fddcfe",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_trunking_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:50.351Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-trusthub-v1": {
+    "hash": "ca6405327f7ac26e172a4e11d007a5261ad459cb8cf6ef718e7db92b63242646",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_trusthub_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:53.023Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-verify-v2": {
+    "hash": "3244f64094d868403c8741de6536d611e52050b062ee2a476b2ad48cea787e8f",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_verify_v2/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:55.742Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-video-v1": {
+    "hash": "d998e9e34f8f9755942c73e48de9711ec2c931f51398c3daf01df899ae113ef3",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_video_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:16:58.635Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-voice-v1": {
+    "hash": "1613fe57ce5cf38ddd29aa7ead7c2b5804bfd3e9274149b5a3392a19206b1ca5",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_voice_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:00.866Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twilio-twilio-wireless-v1": {
+    "hash": "95eab640f04c4042c0cfb495d435a4dceba885b2e2179e86f7f0704778aa7435",
+    "url": "https://api.apis.guru/v2/specs/twilio.com/twilio_wireless_v1/1.42.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:03.226Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twinehealth": {
+    "hash": "91d77fd6e1a33c4f3a25d244019ab2415ead6912410eb273dd6e44ca264f7bd4",
+    "url": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:05.558Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "twitter-current": {
+    "hash": "8e912c4f563b3bdbec0213054bf85dda4c33659cd4378527567883c8fa6ea469",
+    "url": "https://api.apis.guru/v2/specs/twitter.com/current/2.61/openapi.json",
+    "lastChecked": "2026-06-08T13:17:08.016Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "uebermaps": {
+    "hash": "8de8cb3beca9429025ce527b69ad397d2c6c9563e0b4a0586213cc065eafcd6f",
+    "url": "https://api.apis.guru/v2/specs/uebermaps.com/2.0/swagger.json",
+    "lastChecked": "2026-06-08T13:17:10.378Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "unicourt": {
+    "hash": "0e1aa16500da365a800a45a8ca93e82f5671e9cae6fc6f9fc375eda4cadde83e",
+    "url": "https://api.apis.guru/v2/specs/unicourt.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:12.966Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "up": {
+    "hash": "9365684980b91cdf1a126d09f5cf9a8220753313a0b39295290301550796516b",
+    "url": "https://api.apis.guru/v2/specs/up.com.au/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:15.294Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "urlbox": {
+    "hash": "aad17b47891d5d897fe31e8c32a6b78cd418f7fdda833190ade89d0d1fd56745",
+    "url": "https://api.apis.guru/v2/specs/urlbox.io/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:17.944Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "uscann": {
+    "hash": "47a94fb882ea55b22a9ebcfb2df7b9935f27bd268c6acaef302551d179351493",
+    "url": "https://api.apis.guru/v2/specs/uscann.net/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:17:20.560Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "uspto-gov-bdss": {
+    "hash": "2ba88a29df5ecef0368809a17d4beb8483a201b96f603c46023b064672afd214",
+    "url": "https://api.apis.guru/v2/specs/uspto.gov/bdss/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:17:22.993Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "va-gov-benefits": {
+    "hash": "df150829f1b78908ccbd3972808bdeda6dc3c765c1cdb21a75d0fe9b53788858",
+    "url": "https://api.apis.guru/v2/specs/va.gov/benefits/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:25.468Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "va-gov-confirmation": {
+    "hash": "779b5b7447c7bbaa2cbdf16a7b845889d08438653cae705ab5994941fb5bd799",
+    "url": "https://api.apis.guru/v2/specs/va.gov/confirmation/0.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:27.812Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "va-gov-facilities": {
+    "hash": "6034c88735f5a6d2afbc75cf715202c492ac5b2339a458b75f6547cfe3b87032",
+    "url": "https://api.apis.guru/v2/specs/va.gov/facilities/0.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:30.270Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "va-gov-forms": {
+    "hash": "4377cb47abe97dc99e24077c81e0621efb3a143ffc82d4cf20e7defd0a6f3682",
+    "url": "https://api.apis.guru/v2/specs/va.gov/forms/0.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:32.340Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vatapi": {
+    "hash": "5adfeb0c284c168e95ddeefda09bc2981adb42b55c8421b79720c60276835aca",
+    "url": "https://api.apis.guru/v2/specs/vatapi.com/1/swagger.json",
+    "lastChecked": "2026-06-08T13:17:34.609Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vectara": {
+    "hash": "980b683892ffc33aac56bbaf03ae9adb90b82654349bb4248c6b97f0d2d91090",
+    "url": "https://api.apis.guru/v2/specs/vectara.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:36.873Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "velopayments": {
+    "hash": "d4508fd429c7280f10390753ff7ff73d2468672d29cb018cf10c6e66bb38aa58",
+    "url": "https://api.apis.guru/v2/specs/velopayments.com/2.34.63/openapi.json",
+    "lastChecked": "2026-06-08T13:17:39.189Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vercel": {
+    "hash": "0f92aad225ff03a997b1127e7692ba2ad30a8560797945146bcc47139ca6491b",
+    "url": "https://api.apis.guru/v2/specs/vercel.com/0.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:41.421Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "versioneye": {
+    "hash": "5de841e5740c9ef629bbafe0f62684a66bbcce8e725173a8b855a670032d1bd9",
+    "url": "https://api.apis.guru/v2/specs/versioneye.com/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:43.517Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vestorly": {
+    "hash": "6e18c17743326f37dff35392490c0e34e4d0dc8d76dba983565fb718e496865c",
+    "url": "https://api.apis.guru/v2/specs/vestorly.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:17:45.675Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "viator": {
+    "hash": "c776538bc76a06a62486e6f890a28e3f3cccaf44b0ccfd5da752e920ad0746af",
+    "url": "https://api.apis.guru/v2/specs/viator.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:17:47.750Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "victorops": {
+    "hash": "47b2afa3d84ce45d05d7746c5ec7493f0f6e201698d3b98feb4805d3b8253cd8",
+    "url": "https://api.apis.guru/v2/specs/victorops.com/0.0.3/swagger.json",
+    "lastChecked": "2026-06-08T13:17:49.838Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "visagecloud": {
+    "hash": "a1168d22a08acef1693de1aee23cd4cccd5babd9cbd8a8f1b378998ad134fcae",
+    "url": "https://api.apis.guru/v2/specs/visagecloud.com/1.1/swagger.json",
+    "lastChecked": "2026-06-08T13:17:52.795Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "visiblethread": {
+    "hash": "6ed237b5dd6a52f729892b165e8286f81e9c28b46af37bb78471ad796408975e",
+    "url": "https://api.apis.guru/v2/specs/visiblethread.com/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:17:54.927Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "visualcrossing-weather": {
+    "hash": "62d7da1c15fc2af30d4ce9457d44521f2e303a1c1fd5fe39b23637f34ce4a4d4",
+    "url": "https://api.apis.guru/v2/specs/visualcrossing.com/weather/4.6/openapi.json",
+    "lastChecked": "2026-06-08T13:17:57.081Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "visualstudio": {
+    "hash": "8c1cb1da326ddbe7027b306b25c73ee819b7b8d7ec632b05aad6e7a085c27664",
+    "url": "https://api.apis.guru/v2/specs/visualstudio.com/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:17:59.297Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vmware-vrni": {
+    "hash": "6f25f81f28890a4c1f47cf9150f3e20bce22dd71cfed4b2387cdf2586541ffa5",
+    "url": "https://api.apis.guru/v2/specs/vmware.local/vrni/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:01.260Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vonage-account": {
+    "hash": "417128c16d7b3de9f68432b92544d10604c1c36f227272762213af2016c36e5a",
+    "url": "https://api.apis.guru/v2/specs/vonage.com/account/1.11.8/openapi.json",
+    "lastChecked": "2026-06-08T13:18:03.436Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vonage-extension": {
+    "hash": "4d394213404321c1a7b5eee0f5007ee267c9056c41ceae92dbe110f5e56f125c",
+    "url": "https://api.apis.guru/v2/specs/vonage.com/extension/1.11.8/openapi.json",
+    "lastChecked": "2026-06-08T13:18:05.538Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vonage-reports": {
+    "hash": "21c81df111b42fb8d95e808a3bd0909386c1410d527be10894d1323570a40f99",
+    "url": "https://api.apis.guru/v2/specs/vonage.com/reports/1.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:18:07.664Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vonage-user": {
+    "hash": "12d62342f63bb37a0f1260e256b9a959106d6b1217d50492e51fbf1bbfd107a1",
+    "url": "https://api.apis.guru/v2/specs/vonage.com/user/1.11.8/openapi.json",
+    "lastChecked": "2026-06-08T13:18:09.796Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vonage-vgis": {
+    "hash": "f818eadce81ffd50dd2f4c625be14c6cdb65b7023c2d45e68313b1ec6e16c2db",
+    "url": "https://api.apis.guru/v2/specs/vonage.com/vgis/1.0.1/openapi.json",
+    "lastChecked": "2026-06-08T13:18:11.946Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "voodoomfg": {
+    "hash": "d2c7db66e8bb68dc4b2eecfefbfa746ead272c4ba8013808156ac486a01ef725",
+    "url": "https://api.apis.guru/v2/specs/voodoomfg.com/2.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:18:14.198Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-checkout-api": {
+    "hash": "6524eb966a3b52bd80af16fbf0b2165615259fc514fdacae0b47736387380b15",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Checkout-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:16.331Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-customer-credit-api": {
+    "hash": "f904e9a4d73444408605d898132ac24c34f477782010b5c016897d2ff56a912d",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Customer-Credit-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:18.722Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-giftcard-hub-api": {
+    "hash": "48678385fc0634785d2b68da4df7ea90757fae1050c5559550cb6c1a58ae36a4",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/GiftCard-Hub-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:20.907Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-giftcard-api": {
+    "hash": "81037129ec1b99afde10785602b7c14be3e61b359378de473a1aae6c173a8206",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Giftcard-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:22.946Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-intelligent-search-api": {
+    "hash": "09a055797f55ac9e41364dc90e267b06368d01b93b3deb9494d400842f1228a9",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Intelligent-Search-API/0.1.12/openapi.json",
+    "lastChecked": "2026-06-08T13:18:25.062Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-license-manager-api": {
+    "hash": "f2eee37f328de46e2a6a94e9754231f52507bf7f169dd817939c60db1f0d2d6e",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/License-Manager-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:27.095Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-master-data-api": {
+    "hash": "4e0c2a350d8701d51ad315317a80aae5beeeec38088b7aa689e00d5a55def79a",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Master-Data-API-/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:29.198Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-orders-api-pii-version": {
+    "hash": "9b1980fbb8ec7ad1a6aea4d535f8f2bbd57f91979024e18c233fb5a455fea7be",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Orders-API-(PII-version)/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:31.309Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-payments-gateway-api": {
+    "hash": "58db29b27786c3c62c725e20aee820aaaff9255179ba75fb2db9edcba7b1eb0a",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Payments-Gateway-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:33.453Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-pricing-hub": {
+    "hash": "0925965b62ae8c2671c8a7ee61fcf06f6da17c69a7f58f9935344af0860279fc",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Pricing-Hub/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:35.507Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-profile-system": {
+    "hash": "143b4f417d688ae3046d11936a9b889a1fc06c2926b95a59c18702dfddf5adfe",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Profile-System/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:37.645Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-session-manager-api": {
+    "hash": "c458fd161125cd3e56a770c1872a6f7430bdcab15f3726dbe1b09e33297f5430",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Session-Manager-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:40.068Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-subscriptions-api-v2": {
+    "hash": "5c8eca9e61dcb2942ef32f9f746301354143e8433c150569c63143e5d177f960",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/Subscriptions-API-(v2)/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:42.257Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "vtex-vtex-do-api": {
+    "hash": "8f25970541fb95aa41a45a9dea1d9c69cfe092e17125388401bdd4c3973c0261",
+    "url": "https://api.apis.guru/v2/specs/vtex.local/VTEX-Do-API/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:44.576Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "walletobjects-pay-passes": {
+    "hash": "8b20b6dbfee5b2e5f7525a8f0a30f456a874bcfa36b7fdacd8428433463d8eb7",
+    "url": "https://api.apis.guru/v2/specs/walletobjects.googleapis.com/pay-passes/v1/openapi.json",
+    "lastChecked": "2026-06-08T13:18:46.993Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "walmart-inventory": {
+    "hash": "d988e33b4b4a24084a3acee205bd8f25e668dcadea7aa451f01439ac93b0d885",
+    "url": "https://api.apis.guru/v2/specs/walmart.com/inventory/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:49.258Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "walmart-item": {
+    "hash": "345df61cba20cbc06f1bbc7fcb9d0eaafed96f8ae15374b0c6161672153b0149",
+    "url": "https://api.apis.guru/v2/specs/walmart.com/item/3.0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:18:51.557Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "walmart-order": {
+    "hash": "81b5f076fd80e58cfbc7839e1a0a2b0a334fd4074ad6f943d5b4b96763cbb1a5",
+    "url": "https://api.apis.guru/v2/specs/walmart.com/order/3.0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:18:53.882Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "walmart-price": {
+    "hash": "7ced5652121c41b3e87b68f1811256ecce0957c8afc39825a13c66d8c288b7ef",
+    "url": "https://api.apis.guru/v2/specs/walmart.com/price/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:18:56.145Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "waterlinked": {
+    "hash": "4522848b0c0dd9a25c3e90dbe992f3d2313f3c490722155f893fb940118d3f84",
+    "url": "https://api.apis.guru/v2/specs/waterlinked.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:18:58.402Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wealthreader": {
+    "hash": "113de339a633515bdb8d04ce536655e419c097149a47bb7c91cefd5f836829f0",
+    "url": "https://api.apis.guru/v2/specs/wealthreader.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:00.596Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "weatherbit": {
+    "hash": "1caec80b548385c52e8c144db46fcd3022f83e3a84d6685f0da53f758d3d9af1",
+    "url": "https://api.apis.guru/v2/specs/weatherbit.io/2.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:03.046Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "weber-gesamtausgabe": {
+    "hash": "a9c34be31db80458598486081f842c42a39549415a5bc225b5c7864579bd2e1c",
+    "url": "https://api.apis.guru/v2/specs/weber-gesamtausgabe.de/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:05.269Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "webscraping": {
+    "hash": "d693b951ca5c30d787ca7708db7e81e920aef6525f442c114234c3cdc57b21e9",
+    "url": "https://api.apis.guru/v2/specs/webscraping.ai/2.0.7/openapi.json",
+    "lastChecked": "2026-06-08T13:19:07.653Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wellknown": {
+    "hash": "19694c7355f94f9407cdb38b286f8044693498a1efb085117e1b092eb4466d07",
+    "url": "https://api.apis.guru/v2/specs/wellknown.ai/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:10.109Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-accounts": {
+    "hash": "2dad296395a3878ab3470e177506c6c07b427a9e0bcea18e2bc6325e83c91928",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/accounts/2.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:12.639Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-bets": {
+    "hash": "f8060d74a4b99cda84cda3f00d4db3d2f68f11b2540b58af563ff3c11b9025ac",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/bets/2.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:14.937Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-locations": {
+    "hash": "b3d2c2dfecb9598ef469cf93d47aaf515caae209889777396dfbfdc619fb2d64",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/locations/2.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:17.367Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-numbers": {
+    "hash": "db1e441a9e7cace9c92a80ab6374a9db42b29fc546babaf815b5b34f052ed5d1",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:19.874Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-sessions": {
+    "hash": "5e7a82ebe603431afe8c2f6e396a5ea591a544e81560b9cabc91dbc017b6bcbb",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/sessions/2.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:22.274Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whapi-sportsdata": {
+    "hash": "f78ba34deaf8dabb16267420613a859c39ae4e8506153b036b2342320d77fd0c",
+    "url": "https://api.apis.guru/v2/specs/whapi.com/sportsdata/2/swagger.json",
+    "lastChecked": "2026-06-08T13:19:24.578Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "whatsapp": {
+    "hash": "b5cc33f0ba45330f7b2ffef063251929d6dc3a3c09b74857e97f8762ceedb222",
+    "url": "https://api.apis.guru/v2/specs/whatsapp.local/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:27.113Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wheretocredit": {
+    "hash": "fe07e467754aa356a6c6559b219c20ecf94a7d60054553c2695eabc803b81da2",
+    "url": "https://api.apis.guru/v2/specs/wheretocredit.com/1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:29.464Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "who-hosts-this": {
+    "hash": "cef741951871552ec39406a0458b882b1432160ee940ff369453c761daf4df31",
+    "url": "https://api.apis.guru/v2/specs/who-hosts-this.com/0.0.1/swagger.json",
+    "lastChecked": "2026-06-08T13:19:31.987Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wikimedia": {
+    "hash": "e9ea0bb1dc8e936c08eab2b20542189155df1934b3679563a769c6ad6cf9b333",
+    "url": "https://api.apis.guru/v2/specs/wikimedia.org/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:34.406Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "windows-batch-batchservice": {
+    "hash": "162a9697b996264abc4a4d56ae4f88fbe6608cf90b59086c312fa2a95dce49b6",
+    "url": "https://api.apis.guru/v2/specs/windows.net/batch-BatchService/2018-08-01.7.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:36.930Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "windows-graphrbac": {
+    "hash": "742c23c7aeb6988c8771e089a699cfc618894abb8b0e591958a2ec14a13c3442",
+    "url": "https://api.apis.guru/v2/specs/windows.net/graphrbac/1.6/openapi.json",
+    "lastChecked": "2026-06-08T13:19:39.280Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "winsms-za": {
+    "hash": "7f885c9c575f82a16af530c5a5cd08173eab812d5b9c919a6a951f63703aeb92",
+    "url": "https://api.apis.guru/v2/specs/winsms.co.za/1.0.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:41.694Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wmata-bus-realtime": {
+    "hash": "b9d1139c3e5c00c9422d475b7b1f181d47f663fe90bf741a49cb413f66cd0c6d",
+    "url": "https://api.apis.guru/v2/specs/wmata.com/bus-realtime/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:44.262Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wmata-bus-route": {
+    "hash": "35f65278d1a890311e304a5c7c79459510b39124d2a1b6c650cb6f0eabeb92be",
+    "url": "https://api.apis.guru/v2/specs/wmata.com/bus-route/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:46.717Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wmata-incidents": {
+    "hash": "ef00a1ef16592a891b8b3c86c3b973c12773b5ffddeacaf61091925c8247854b",
+    "url": "https://api.apis.guru/v2/specs/wmata.com/incidents/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:48.946Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wmata-rail-realtime": {
+    "hash": "ab5561bf19238ef7c4e153bf5a21d13a4d5672f961f72be1ea6990ec865027c6",
+    "url": "https://api.apis.guru/v2/specs/wmata.com/rail-realtime/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:51.278Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wmata-rail-station": {
+    "hash": "719d8b55e0ef5d7e8515700d1d7e8c1cefafaab2b5f9938dbf332977a1fa0df4",
+    "url": "https://api.apis.guru/v2/specs/wmata.com/rail-station/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:53.612Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wordassociations": {
+    "hash": "e98fa9400f145871875a7ff03278246526768dec9a2a8eedfe856b94c25af385",
+    "url": "https://api.apis.guru/v2/specs/wordassociations.net/1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:19:55.936Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wordnik": {
+    "hash": "c9cc9aed84551df2651fc830c8819a32560f3a53ff6b2afb6171da87b1e905a7",
+    "url": "https://api.apis.guru/v2/specs/wordnik.com/4.0/openapi.json",
+    "lastChecked": "2026-06-08T13:19:58.260Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "worldtimeapi": {
+    "hash": "4eda5ebcef1f9fb5aaf87e7430eb0c039d346b39b825ede236be2941d30613a9",
+    "url": "https://api.apis.guru/v2/specs/worldtimeapi.org/20210108/openapi.json",
+    "lastChecked": "2026-06-08T13:20:00.378Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "wso2apistore-transform": {
+    "hash": "f3c121308f8fc31c51d3d070e8c0e8827d4476cda6f45e002b2a020c07a7469a",
+    "url": "https://api.apis.guru/v2/specs/wso2apistore.com/transform/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:02.971Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xero-xero-identity": {
+    "hash": "feece0946fcd84f7cee2f8c77252efdc4a0e853808e6603efce71840ec1840f2",
+    "url": "https://api.apis.guru/v2/specs/xero.com/xero-identity/2.9.4/openapi.json",
+    "lastChecked": "2026-06-08T13:20:05.296Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xero-xero-payroll": {
+    "hash": "85fef9555e7253bb593137ec1640ebc8a0a792b2384b1e8ebf5c39fd2841a63c",
+    "url": "https://api.apis.guru/v2/specs/xero.com/xero-payroll-au/2.9.4/openapi.json",
+    "lastChecked": "2026-06-08T13:20:07.835Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xero-xero-assets": {
+    "hash": "6101aed6032c48a3bc72ee9c91b73872b40de4053506de5ea556759eb10d8a15",
+    "url": "https://api.apis.guru/v2/specs/xero.com/xero_assets/2.9.4/openapi.json",
+    "lastChecked": "2026-06-08T13:20:10.157Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xero-xero-bankfeeds": {
+    "hash": "c9252f68995acb7be136dccf4c4377f3b6b10769b4b30f9f9c87551411cabc71",
+    "url": "https://api.apis.guru/v2/specs/xero.com/xero_bankfeeds/2.9.4/openapi.json",
+    "lastChecked": "2026-06-08T13:20:12.470Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xero-xero-files": {
+    "hash": "704c1712373cb9cfeee8e6d9af8dbcbad4e6806f226eb817e5e0485f5c22d76d",
+    "url": "https://api.apis.guru/v2/specs/xero.com/xero_files/2.9.4/openapi.json",
+    "lastChecked": "2026-06-08T13:20:14.782Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xkcd": {
+    "hash": "7f82ca41360d184f0d72310092eac12df6d51527128c5a60b3d4fa2db43cfe7e",
+    "url": "https://api.apis.guru/v2/specs/xkcd.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:17.248Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "xtrf-eu": {
+    "hash": "7c5b866d73be36feb4b0593ea6ef6fb5725bab002ad63c975b2a96b9f91eceaa",
+    "url": "https://api.apis.guru/v2/specs/xtrf.eu/2.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:19.818Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "yodlee": {
+    "hash": "e6d775e62c99e0c4dd5599da3386f3dad6779d175d23d3c0910a0128ebdc4135",
+    "url": "https://api.apis.guru/v2/specs/yodlee.com/1.1.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:22.256Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "youneedabudget": {
+    "hash": "9e6010c383e127df9392b27eb88a13fa615812a6176f40f256fa2c2a8a13d8e1",
+    "url": "https://api.apis.guru/v2/specs/youneedabudget.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:24.400Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zalando": {
+    "hash": "ba9a120288867f87b28e5ea2da7e489501620809e626d350ab8ae9f08172ab40",
+    "url": "https://api.apis.guru/v2/specs/zalando.com/v1.0/swagger.json",
+    "lastChecked": "2026-06-08T13:20:26.979Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zapier-nla": {
+    "hash": "4e7cae2613c35e18c6028b9f8d0aeab1c9331f630cdc793e420a571a22b4bbb7",
+    "url": "https://api.apis.guru/v2/specs/zapier.com/nla/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:29.172Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zappiti": {
+    "hash": "30d346a705c6b364515794ffbb792a92300d991bdfba3fec277a8f3c449d5c30",
+    "url": "https://api.apis.guru/v2/specs/zappiti.com/4.15.174/swagger.json",
+    "lastChecked": "2026-06-08T13:20:31.461Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zeno-fm": {
+    "hash": "6bb10d38e3165189025e24c94bae4d0d5b71b78a485bd821325c3d4bceb16a86",
+    "url": "https://api.apis.guru/v2/specs/zeno.fm/0.6-99cfdac/openapi.json",
+    "lastChecked": "2026-06-08T13:20:33.905Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zenoti": {
+    "hash": "694a9972b1b66169c1171a2deb2df9a6904400fc764ebdf1c9ce38f25ab8207d",
+    "url": "https://api.apis.guru/v2/specs/zenoti.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:36.405Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zoom-us": {
+    "hash": "cdfd27047bb0e4f7038135605d9aa4e72eeb17d86f2195b5f92f09f76191ce18",
+    "url": "https://api.apis.guru/v2/specs/zoom.us/2.0.0/openapi.json",
+    "lastChecked": "2026-06-08T13:20:38.946Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "zoomconnect": {
+    "hash": "3ad3e91aee87946155010d36b7797f2c5aeec448c10f818b64eed42f4db497c8",
+    "url": "https://api.apis.guru/v2/specs/zoomconnect.com/1/swagger.json",
+    "lastChecked": "2026-06-08T13:20:41.272Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
   }
 }
