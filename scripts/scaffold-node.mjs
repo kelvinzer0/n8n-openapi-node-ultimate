@@ -149,7 +149,7 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	// 2. Replace description — wrap using font metrics, convert to paths
 	// Available width: x=70 to logo at x=1229 → ~1159px
 	// Available height: startY(197.64) to copyright(334.52) = ~137px, lineHeight 32px → max 4 lines
-	const maxDescWidth = 1150;
+	const maxDescWidth = 1100;
 	const lineHeight = 32;
 	const startY = 197.64;
 	const maxLines = 4;
