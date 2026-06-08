@@ -23,9 +23,9 @@ export async function loadFonts() {
 	// Try bundled subset fonts first, then fall back to system font
 	const fontDir = join(__dir, 'fonts');
 	const candidates = {
-		regular: ['JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
-		bold: ['JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
-		medium: ['JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
+		regular: ['JetBrainsMono-Regular-clean.ttf', 'JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
+		bold: ['JetBrainsMono-Bold-clean.ttf', 'JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
+		medium: ['JetBrainsMono-Medium-clean.ttf', 'JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
 	};
 
 	const fonts = {};
