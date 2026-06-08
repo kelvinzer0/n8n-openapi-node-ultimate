@@ -117,52 +117,73 @@ function escapeTS(str) {
  * @param {string} logoExt - Logo file extension (e.g. '.png', '.svg')
  * @param {string} outPath - Output SVG path
  */
-function generateBanner(title, description, logoBuf, logoExt, outPath) {
+async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	const templatePath = join(__dirname, 'template.svg');
 	if (!existsSync(templatePath)) {
 		console.log('⚠️  template.svg not found in scripts/, skipping banner generation');
 		return;
 	}
 
+	// Load fonts for text-to-path conversion
+	const { loadFonts, wrapTextWithFont, textToPathElement } = await import('./text-to-path.mjs');
+	const fonts = await loadFonts();
+
 	let svg = readFileSync(templatePath, 'utf-8');
 
-	// 1. Replace title — uppercase, dashes → spaces
+	// 1. Replace title — uppercase, dashes → spaces, convert to path
 	const displayTitle = title.replace(/-/g, ' ').toUpperCase();
-	svg = svg.replace(
-		/(<text[^>]*id="placeholder-name"[^>]*>[\s\S]*?<tspan[^>]*)(>)[^<]*?(<\/tspan>)/,
-		`$1$2${escapeXml(displayTitle)}$3`,
-	);
-
-	// 2. Replace description — wrap into multiple tspan lines
-	// maxChars tuned so lines fit between description startY (197.64) and copyright (334.52)
-	// Available height: ~137px, lineHeight 32px → max ~4 lines
-	// JetBrains Mono 24px ≈ 14.4px/char → ~65 chars fit in text area width (~940px: x=70 to logo at x=1229)
-	const maxChars = 65;
-	// Available height: startY(197.64) to copyright(334.52) = ~137px, lineHeight 32px → max 4 lines
-	const maxLines = 4;
-	let lines = wrapText(description, maxChars);
-	if (lines.length > maxLines) {
-		lines = lines.slice(0, maxLines);
-		// Truncate last line with '..' if it was cut short
-		const lastLine = lines[maxLines - 1];
-		if (lastLine.length > maxChars - 3) {
-			lines[maxLines - 1] = lastLine.slice(0, maxChars - 3).trimEnd() + '..';
-		} else {
-			lines[maxLines - 1] = lastLine.replace(/\.*$/, '') + '..';
-		}
+	const titlePathD = fonts.medium.getPath(displayTitle, 62, 136.06, 96, { features: [] }).toSVG(2);
+	const titlePathMatch = titlePathD.match(/d="([^"]*)"/);
+	if (titlePathMatch) {
+		svg = svg.replace(
+			/(<text[^>]*id="placeholder-name"[^>]*>)[\s\S]*?(<\/text>)/,
+			`<path d="${titlePathMatch[1]}" fill="url(#paint2_linear_0_1)"/>`,
+		);
 	}
+
+	// 2. Replace description — wrap using font metrics, convert to paths
+	// Available width: x=70 to logo at x=1229 → ~1159px
+	// Available height: startY(197.64) to copyright(334.52) = ~137px, lineHeight 32px → max 4 lines
+	const maxDescWidth = 1150;
 	const lineHeight = 32;
 	const startY = 197.64;
-	const descTspans = lines
+	const maxLines = 4;
+
+	let lines = wrapTextWithFont(fonts.regular, description, 24, maxDescWidth);
+	if (lines.length > maxLines) {
+		lines = lines.slice(0, maxLines);
+		// Truncate last line with '..' if cut short
+		const lastLine = lines[maxLines - 1];
+		lines[maxLines - 1] = lastLine.slice(0, -3).trimEnd() + '..';
+	}
+
+	const descPaths = lines
 		.map((line, i) => {
 			const y = startY + i * lineHeight;
-			return `<tspan x="70" y="${y.toFixed(2)}">${escapeXml(line)}</tspan>`;
+			const pathD = fonts.regular.getPath(line, 70, y, 24, { features: [] }).toSVG(2);
+			const m = pathD.match(/d="([^"]*)"/);
+			return m ? `<path d="${m[1]}" fill="white" fill-opacity="0.7"/>` : '';
 		})
-		.join('');
+		.filter(Boolean)
+		.join('\n');
 	svg = svg.replace(
 		/(<text[^>]*id="placeholder-description"[^>]*>)[\s\S]*?(<\/text>)/,
-		`$1${descTspans}$2`,
+		descPaths,
 	);
+
+	// 3. Replace copyright text — "N8N" (bold) + " - COMMUNITY NODES" (regular)
+	// Both at font-size 32, y=334.52
+	const n8nPath = fonts.bold.getPath('N8N', 70, 334.52, 32, { features: [] }).toSVG(2);
+	const n8nMatch = n8nPath.match(/d="([^"]*)"/);
+	const communityPath = fonts.regular.getPath(' - COMMUNITY NODES', 127.562, 334.52, 32, { features: [] }).toSVG(2);
+	const communityMatch = communityPath.match(/d="([^"]*)"/);
+
+	if (n8nMatch && communityMatch) {
+		svg = svg.replace(
+			/(<g id="copyright">)[\s\S]*?(<\/g>)/,
+			`$1\n<path d="${n8nMatch[1]}" fill="white" fill-opacity="0.9"/>\n<path d="${communityMatch[1]}" fill="white" fill-opacity="0.9"/>\n$2`,
+		);
+	}
 
 	// 3. Replace logo
 	if (logoBuf) {
@@ -1098,7 +1119,7 @@ if (TEMPLATE_DIR && existsSync(TEMPLATE_DIR)) {
 			}
 		} catch { /* ignore */ }
 	}
-	generateBanner(CUSTOM_NAME, defaultDesc, logoBuf, logoExt, join(projectDir, 'banner.svg'));
+	await generateBanner(CUSTOM_NAME, defaultDesc, logoBuf, logoExt, join(projectDir, 'banner.svg'));
 }
 
 // ─── README.md ───────────────────────────────────────────────────────────────────
