@@ -87,41 +87,55 @@ export function renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity)
 	const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
 	const parts = [];
 	let cursorX = x;
+	const normalized = normalizeText(text); //← normalize sebelum render
 
-	for (let i = 0; i < text.length; i++) {
-		const code = text.charCodeAt(i);
-		// Get glyph index directly from cmap table
-		const glyphIndex = font.charToGlyphIndex(text[i]);
+	for (let i = 0; i < normalized.length; i++) {
+		const glyphIndex = font.charToGlyphIndex(normalized[i]);
+		const fallbackAdvance = (font.glyphs.get(0)?.advanceWidth ?? font.unitsPerEm * 0.6) * scale; // ← fallback konsisten
 		if (glyphIndex === 0) {
-			// Unknown glyph, just advance
-			cursorX += (font.glyphs.get(0).advanceWidth || 600) * scale;
+			cursorX += fallbackAdvance;
 			continue;
 		}
 		const glyph = font.glyphs.get(glyphIndex);
 		if (!glyph || !glyph.path || glyph.path.commands.length === 0) {
-			cursorX += (glyph.advanceWidth || 600) * scale;
+			cursorX += (glyph?.advanceWidth ?? font.unitsPerEm * 0.6) * scale;
 			continue;
 		}
-		// Render glyph at absolute position
 		const gp = glyph.getPath(cursorX, y, fontSize);
 		const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^>]*\/>/, '$1');
 		if (d) parts.push(`<path d="${d}" fill="${fill}"${opacity}/>`);
-		cursorX += (glyph.advanceWidth || 600) * scale;
+		cursorX += (glyph.advanceWidth ?? font.unitsPerEm * 0.6) * scale;
 	}
 	return parts.join('\n');
 }
 
 /**
+ * Normalize Unicode punctuation to ASCII equivalents supported by the font subset.
+ * Curly quotes, en/em dashes, and ellipsis often missing from subset fonts.
+ */
+function normalizeText(text) {
+	return text
+		.replace(/[\u2018\u2019\u02BC]/g, "'")  // curly/modifier apostrophe → straight
+		.replace(/[\u201C\u201D]/g, '"')         // curly double quotes → straight
+		.replace(/\u2013/g, '-')                 // en-dash
+		.replace(/\u2014/g, '--')                // em-dash
+		.replace(/\u2026/g, '...')               // ellipsis character
+		.replace(/\u00A0/g, ' ');               // non-breaking space → regular space
+}
+
+
+/**
  * Measure text width using actual font metrics.
  */
 export function measureText(font, text, fontSize) {
-    const scale = fontSize / font.unitsPerEm;
-    let width = 0;
-    for (const char of text) {
-        const glyph = font.charToGlyph(char);
-        width += (glyph.advanceWidth || 0) * scale;
-    }
-    return width;
+	const scale = fontSize / font.unitsPerEm;
+	let width = 0;
+	for (const char of normalizeText(text)) {
+		const glyphIndex = font.charToGlyphIndex(char);
+		const glyph = font.glyphs.get(glyphIndex === 0 ? 0 : glyphIndex);
+		width += (glyph?.advanceWidth ?? font.unitsPerEm * 0.6) * scale;
+	}
+	return width;
 }
 
 /**
@@ -134,7 +148,7 @@ export function measureText(font, text, fontSize) {
  */
 export function wrapTextWithFont(font, text, fontSize, maxWidth) {
 	// Split on explicit newlines first, then wrap each paragraph by width
-	const paragraphs = text.split(/\n/);
+	const paragraphs = normalizeText(text).split(/\n/); 
 	const allLines = [];
 
 	for (const para of paragraphs) {
