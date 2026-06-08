@@ -101,22 +101,31 @@ export function measureText(font, text, fontSize) {
  * @returns {string[]} array of wrapped lines
  */
 export function wrapTextWithFont(font, text, fontSize, maxWidth) {
-	const words = text.split(/\s+/);
-	const lines = [];
-	let current = '';
+	// Split on explicit newlines first, then wrap each paragraph by width
+	const paragraphs = text.split(/\n/);
+	const allLines = [];
 
-	for (const word of words) {
-		const test = current ? `${current} ${word}` : word;
-		const width = measureText(font, test, fontSize);
-		if (width > maxWidth && current) {
-			lines.push(current);
-			current = word;
-		} else {
-			current = test;
+	for (const para of paragraphs) {
+		const trimmed = para.trim();
+		if (!trimmed) {
+			allLines.push('');
+			continue;
 		}
+		const words = trimmed.split(/\s+/);
+		let current = '';
+		for (const word of words) {
+			const test = current ? `${current} ${word}` : word;
+			const width = measureText(font, test, fontSize);
+			if (width > maxWidth && current) {
+				allLines.push(current);
+				current = word;
+			} else {
+				current = test;
+			}
+		}
+		if (current) allLines.push(current);
 	}
-	if (current) lines.push(current);
-	return lines;
+	return allLines;
 }
 
 // Need dirname from path
