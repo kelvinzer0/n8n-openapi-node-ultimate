@@ -104,7 +104,7 @@ export function renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity)
 		}
 		// Render glyph at absolute position
 		const gp = glyph.getPath(cursorX, y, fontSize);
-		const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
+		const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^>]*\/>/, '$1');
 		if (d) parts.push(`<path d="${d}" fill="${fill}"${opacity}/>`);
 		cursorX += (glyph.advanceWidth || 600) * scale;
 	}
@@ -115,20 +115,13 @@ export function renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity)
  * Measure text width using actual font metrics.
  */
 export function measureText(font, text, fontSize) {
-	try {
-		const path = font.getPath(text, 0, 0, fontSize);
-		const bbox = path.getBoundingBox();
-		return bbox.x2 - bbox.x1;
-	} catch {
-		// Fallback: measure char-by-char
-		let width = 0;
-		const scale = fontSize / font.unitsPerEm;
-		for (const char of text) {
-			const glyph = font.charToGlyph(char);
-			width += (glyph.advanceWidth || 0) * scale;
-		}
-		return width;
-	}
+    const scale = fontSize / font.unitsPerEm;
+    let width = 0;
+    for (const char of text) {
+        const glyph = font.charToGlyph(char);
+        width += (glyph.advanceWidth || 0) * scale;
+    }
+    return width;
 }
 
 /**
