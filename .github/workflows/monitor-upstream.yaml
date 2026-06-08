@@ -73,13 +73,31 @@ jobs:
           FORCE_UPSERT="${{ github.event.inputs.force_upsert || 'false' }}"
           node -e "
             const fs = require('fs');
-            const lines = fs.readFileSync('platforms.csv', 'utf8').split('\n').filter(l => l.trim());
-            const header = lines[0].split(',');
+            const content = fs.readFileSync('platforms.csv', 'utf8');
+            const lines = content.split('\n').filter(l => l.trim());
+            // Simple CSV parser that handles quoted fields with commas
+            function parseCSVLine(line) {
+              const cols = [];
+              let current = '';
+              let inQuotes = false;
+              for (let i = 0; i < line.length; i++) {
+                const ch = line[i];
+                if (ch === '\"') {
+                  inQuotes = !inQuotes;
+                } else if (ch === ',' && !inQuotes) {
+                  cols.push(current);
+                  current = '';
+                } else {
+                  current += ch;
+                }
+              }
+              cols.push(current);
+              return cols;
+            }
             for (let i = 1; i < lines.length; i++) {
-              const cols = lines[i].split(',');
+              const cols = parseCSVLine(lines[i]);
               if (!cols[0]) continue;
               // Output: name|openapi_url|logo_url|description|category|publish_npm
-              // Trim all values to remove trailing newlines/whitespace
               console.log([(cols[0]||'').trim(), (cols[1]||'').trim(), (cols[2]||'').trim(), (cols[3]||'').trim(), (cols[4]||'').trim(), (cols[5]||'false').trim()].join('|'));
             }
           " > /tmp/platforms_list.txt
