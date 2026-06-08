@@ -327,6 +327,31 @@ const iconSlug = safeName.replace(/^n8n-nodes-/, '');
 const iconLight = `${iconSlug}.svg`;
 const iconDark = `${iconSlug}.dark.svg`;
 
+// Actual icon filenames (may change if logo is PNG/JPG)
+let actualIconLight = iconLight;
+let actualIconDark = iconDark;
+
+// ─── Pre-detect icon format from LOGO_URL (before writing credential/node files) ──
+if (LOGO_URL) {
+	try {
+		const headResp = await fetch(LOGO_URL, { method: 'HEAD' });
+		const contentType = headResp.headers.get('content-type') || '';
+		const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
+
+		const isPng = contentType.includes('png') || ext === '.png';
+		const isJpg = contentType.includes('jpeg') || ext === '.jpg' || ext === '.jpeg';
+
+		if (isPng || isJpg) {
+			const realExt = isPng ? '.png' : '.jpg';
+			actualIconLight = iconLight.replace('.svg', realExt);
+			actualIconDark = iconDark.replace('.svg', realExt);
+			console.log(`🔍 Logo format detected: ${realExt}`);
+		}
+	} catch {
+		// Gagal HEAD request, biarkan default .svg — download block di bawah akan handle
+	}
+}
+
 // ─── package.json ────────────────────────────────────────────────────────────────
 
 const packageJson = {
@@ -685,7 +710,7 @@ export class ${credentialClassName} implements ICredentialType {
 
 	displayName = '${CUSTOM_NAME} API';
 
-	icon: Icon = { light: 'file:../nodes/${nodeClassName}/${iconLight}', dark: 'file:../nodes/${nodeClassName}/${iconDark}' };
+	icon: Icon = { light: 'file:../nodes/${nodeClassName}/${actualIconLight}', dark: 'file:../nodes/${nodeClassName}/${actualIconDark}' };
 
 	documentationUrl = '';
 
@@ -790,7 +815,7 @@ export class ${nodeClassName} implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: '${escapeTS(CUSTOM_NAME)}',
 		name: '${nodeInternalName}',
-		icon: { light: 'file:./${iconLight}', dark: 'file:./${iconDark}' },
+		icon: { light: 'file:./${actualIconLight}', dark: 'file:./${actualIconDark}' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{\\$parameter["operation"] + ": " + \\$parameter["resource"]}}',
@@ -857,33 +882,30 @@ if (LOGO_URL) {
 		console.log(`🎨 Downloading logo from ${LOGO_URL}...`);
 		const logoResp = await fetch(LOGO_URL);
 		if (logoResp.ok) {
-		    const buf = Buffer.from(await logoResp.arrayBuffer());
-		    const contentType = logoResp.headers.get('content-type') || '';
-		    const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
-		
-		    const isSvg = contentType.includes('svg') || ext === '.svg';
-		    const isPng = contentType.includes('png') || ext === '.png';
-		    const isJpg = contentType.includes('jpeg') || ext === '.jpg' || ext === '.jpeg';
-		
-		    if (isSvg) {
-		        // SVG: simpan langsung, buat dark variant dengan filter CSS
-		        writeFileSync(join(nodeDir, iconLight), buf);
-		        writeFileSync(join(nodeDir, iconDark), buf);
-		        console.log('✅ Logo SVG saved');
-		    } else if (isPng || isJpg) {
-		        // PNG/JPG: nama file harus pakai ekstensi yang benar
-		        const realExt = isPng ? '.png' : '.jpg';
-		        const iconLightReal = iconLight.replace('.svg', realExt);
-		        const iconDarkReal = iconDark.replace('.svg', realExt);
-		        writeFileSync(join(nodeDir, iconLightReal), buf);
-		        writeFileSync(join(nodeDir, iconDarkReal), buf);
-		        console.log(`✅ Logo ${realExt} saved`);
-		        // ⚠️ Perlu update referensi iconLight/iconDark di node.ts dan credentials.ts juga!
-		    } else {
-		        console.log(`⚠️ Format tidak dikenali (${contentType}), pakai placeholder`);
-		        writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
-		        writeFileSync(join(nodeDir, iconDark), PLACEHOLDER_DARK_SVG);
-		    }
+			const buf = Buffer.from(await logoResp.arrayBuffer());
+			const contentType = logoResp.headers.get('content-type') || '';
+			const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
+
+			const isSvg = contentType.includes('svg') || ext === '.svg';
+			const isPng = contentType.includes('png') || ext === '.png';
+			const isJpg = contentType.includes('jpeg') || ext === '.jpg' || ext === '.jpeg';
+
+			if (isSvg) {
+				writeFileSync(join(nodeDir, iconLight), buf);
+				writeFileSync(join(nodeDir, iconDark), buf);
+				console.log('✅ Logo SVG saved (light + dark variants)');
+			} else if (isPng || isJpg) {
+				const realExt = isPng ? '.png' : '.jpg';
+				actualIconLight = iconLight.replace('.svg', realExt);
+				actualIconDark = iconDark.replace('.svg', realExt);
+				writeFileSync(join(nodeDir, actualIconLight), buf);
+				writeFileSync(join(nodeDir, actualIconDark), buf);
+				console.log(`✅ Logo ${realExt} saved (light + dark variants)`);
+			} else {
+				console.log(`⚠️  Format tidak dikenali (${contentType}), using placeholder`);
+				writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
+				writeFileSync(join(nodeDir, iconDark), PLACEHOLDER_DARK_SVG);
+			}
 		} else {
 			console.log('⚠️  Could not download logo (HTTP error), using placeholder');
 			writeFileSync(join(nodeDir, iconLight), PLACEHOLDER_SVG);
@@ -903,8 +925,8 @@ if (LOGO_URL) {
 // ─── icons/ directory (global, for credential icon fallback) ─────────────────────
 
 mkdirSync(join(projectDir, 'icons'), { recursive: true });
-cpSync(join(nodeDir, iconLight), join(projectDir, 'icons', iconLight));
-cpSync(join(nodeDir, iconDark), join(projectDir, 'icons', iconDark));
+cpSync(join(nodeDir, actualIconLight), join(projectDir, 'icons', actualIconLight));
+cpSync(join(nodeDir, actualIconDark), join(projectDir, 'icons', actualIconDark));
 
 // ─── Copy openapi.json into project ─────────────────────────────────────────────
 
@@ -1074,16 +1096,16 @@ console.log(`   ├── .vscode/`);
 console.log(`   │   ├── extensions.json`);
 console.log(`   │   └── launch.json`);
 console.log(`   ├── icons/`);
-console.log(`   │   ├── ${iconLight}`);
-console.log(`   │   └── ${iconDark}`);
+console.log(`   │   ├── ${actualIconLight}`);
+console.log(`   │   └── ${actualIconDark}`);
 console.log(`   ├── credentials/`);
 console.log(`   │   └── ${credentialClassName}.credentials.ts`);
 console.log(`   └── nodes/`);
 console.log(`       └── ${nodeClassName}/`);
 console.log(`           ├── ${nodeClassName}.node.ts`);
 console.log(`           ├── ${nodeClassName}.node.json`);
-console.log(`           ├── ${iconLight}`);
-console.log(`           ├── ${iconDark}`);
+console.log(`           ├── ${actualIconLight}`);
+console.log(`           ├── ${actualIconDark}`);
 console.log(`           └── resources/`);
 console.log(`               ├── index.ts`);
 for (const [resourceName] of propertiesByResource) {
