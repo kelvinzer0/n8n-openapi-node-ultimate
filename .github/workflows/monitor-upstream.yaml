@@ -79,7 +79,8 @@ jobs:
               const cols = lines[i].split(',');
               if (!cols[0]) continue;
               // Output: name|openapi_url|logo_url|description|category|publish_npm
-              console.log([cols[0], cols[1], cols[2]||'', cols[3]||'', cols[4]||'', cols[5]||'false'].join('|'));
+              // Trim all values to remove trailing newlines/whitespace
+              console.log([(cols[0]||'').trim(), (cols[1]||'').trim(), (cols[2]||'').trim(), (cols[3]||'').trim(), (cols[4]||'').trim(), (cols[5]||'false').trim()].join('|'));
             }
           " > /tmp/platforms_list.txt
 
@@ -206,7 +207,7 @@ jobs:
             # - If npm is missing → force publish
             # - If repo is missing → use csv setting
             # - If spec changed → use csv setting
-            SHOULD_PUBLISH="$publish_npm"
+            SHOULD_PUBLISH=$(echo "$publish_npm" | tr -d '[:space:]')
             if echo "$reason" | grep -q "npm_missing"; then
               SHOULD_PUBLISH="true"
               echo "  → npm missing, forcing publish_npm=true"
