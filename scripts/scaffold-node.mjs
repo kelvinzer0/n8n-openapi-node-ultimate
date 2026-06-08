@@ -1155,17 +1155,24 @@ That's it. No configuration files. No code. It just works.
 | Resource | Operations |
 |----------|------------|
 ${resourceNames.map(r => {
-	const props = propertiesByResource.get(r) || [];
-	const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
-	if (ops.length > 0) {
-		const opList = ops[0].options.map(o => {
-			const method = o.routing?.request?.method || '';
-			const label = o.action || o.name || o.value;
-			return method ? `${method} ${label}` : label;
-		});
-		return `| ${r} | ${opList.join(', ')} |`;
-	}
-	return null;
+    const props = propertiesByResource.get(r) || [];
+    const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
+    if (ops.length > 0) {
+        const opList = ops[0].options.map(o => {
+            const method = (o.routing?.request?.method || '').replace(/[^0-9a-zA-Z\s]/g, '').trim();
+            const label  = (o.action || o.name || o.value || '').replace(/[^0-9a-zA-Z\s]/g, '').trim();
+
+            const combined = method
+                ? label.toLowerCase().startsWith(method.toLowerCase())
+                    ? label
+                    : `${method} ${label}`
+                : label;
+
+            return combined.charAt(0).toUpperCase() + combined.slice(1).toLowerCase();
+        });
+        return `| ${r} | ${opList.join(', ')} |`;
+    }
+    return null;
 }).filter(Boolean).join('\n')}
 
 ---
