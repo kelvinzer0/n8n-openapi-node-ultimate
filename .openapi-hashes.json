@@ -2,139 +2,139 @@
   "petstore": {
     "hash": "00441c05add60f28da55eb4563d3fb6bbda364ba8eb7b381e2e2c98613005c82",
     "url": "https://petstore3.swagger.io/api/v3/openapi.json",
-    "lastChecked": "2026-06-08T02:05:13.616Z",
+    "lastChecked": "2026-06-08T08:17:45.305Z",
     "lastTriggerReason": "force_upsert"
   },
   "chatwoot": {
     "hash": "e7896faca2a6a333f8c566cef19060bed0d9db915ed71e1fc500aab1f77bae64",
     "url": "https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json",
-    "lastChecked": "2026-06-08T02:05:15.101Z",
+    "lastChecked": "2026-06-08T08:17:47.043Z",
     "lastTriggerReason": "force_upsert"
   },
   "hcloud": {
     "hash": "e1d3211ede6d6b1d900f5d18cc3bbf4469d2993d6a92a239bdbf1e26114c0a34",
     "url": "https://raw.githubusercontent.com/MaximilianKoestler/hcloud-openapi/main/openapi/hcloud.json",
-    "lastChecked": "2026-06-08T02:05:16.674Z",
+    "lastChecked": "2026-06-08T08:17:48.675Z",
     "lastTriggerReason": "force_upsert"
   },
   "gitlab": {
     "hash": "f1dc2ea57564c1052edeb754b5acf6627ddc6e6d82abf3e9a69ae18c4defe423",
     "url": "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi_v2.yaml",
-    "lastChecked": "2026-06-08T02:05:18.236Z",
+    "lastChecked": "2026-06-08T08:17:50.458Z",
     "lastTriggerReason": "force_upsert"
   },
   "curve-finance": {
     "hash": "5989dd37b5ee3c52353db9018dd4accf8e50a846dd95e23ee51173ed5a162392",
     "url": "https://api.curve.fi/v1/openapi.json",
-    "lastChecked": "2026-06-08T02:05:19.779Z",
+    "lastChecked": "2026-06-08T08:17:52.257Z",
     "lastTriggerReason": "force_upsert"
   },
   "raydium": {
     "hash": "7687a0eaa545c7c371a8adb6dec157f5c13bbc4ca54ddc2b84ad387e2a659574",
     "url": "https://api.raydium.io/openapi.json",
-    "lastChecked": "2026-06-08T02:05:21.275Z",
+    "lastChecked": "2026-06-08T08:17:54.053Z",
     "lastTriggerReason": "force_upsert"
   },
   "gmx": {
     "hash": "fa32e322d32eae28ffa0fa7aae966e1bd0fe4cef471c40e3b0fde47a27c25fe6",
     "url": "https://docs.gmx.io/swagger.json",
-    "lastChecked": "2026-06-08T02:05:22.808Z",
+    "lastChecked": "2026-06-08T08:17:55.652Z",
     "lastTriggerReason": "force_upsert"
   },
   "camelot-dex": {
     "hash": "6991eeb2d876a8aa3a8fdaad2170184dfda47efb9223549c94123cee236cf641",
     "url": "https://api.camelot.exchange/openapi.json",
-    "lastChecked": "2026-06-08T02:05:24.509Z",
+    "lastChecked": "2026-06-08T08:17:57.514Z",
     "lastTriggerReason": "force_upsert"
   },
   "zapper": {
     "hash": "e13d67efaabc449d9070144137dcb5a1b60c2bae498e87d2a36fd78bcce32269",
     "url": "https://api.zapper.fi/openapi.json",
-    "lastChecked": "2026-06-08T02:05:26.065Z",
+    "lastChecked": "2026-06-08T08:17:59.214Z",
     "lastTriggerReason": "force_upsert"
   },
   "nonkyc-exchange": {
     "hash": "98ab1a0397401f5c50385709fd9b3e4674e581e941d17dd2ac03346e793384df",
     "url": "https://api.nonkyc.io/openapi.json",
-    "lastChecked": "2026-06-08T02:05:28.510Z",
+    "lastChecked": "2026-06-08T08:18:01.704Z",
     "lastTriggerReason": "force_upsert"
   },
   "ondo-finance": {
     "hash": "797f68f844a4cf1ea2f23eab031907098a55d16bfcef127fa52872a3df908f01",
     "url": "https://docs.ondo.finance/openapi.json",
-    "lastChecked": "2026-06-08T02:05:30.201Z",
+    "lastChecked": "2026-06-08T08:18:03.591Z",
     "lastTriggerReason": "force_upsert"
   },
   "cryptal": {
     "hash": "e0434d9fc3b278c69887f5fcc005b5fa94f96ee3b46824d49391746f5b8605eb",
     "url": "https://api.cryptal.com/openapi.json",
-    "lastChecked": "2026-06-08T02:05:31.897Z",
+    "lastChecked": "2026-06-08T08:18:05.300Z",
     "lastTriggerReason": "force_upsert"
   },
   "taostats": {
     "hash": "e026ee1703baa5d92b39ae4a734a9232b7e63c158442bd8e944fa80ddd8fcd3a",
     "url": "https://api.taostats.io/api/openapi.json",
-    "lastChecked": "2026-06-08T02:05:33.642Z",
+    "lastChecked": "2026-06-08T08:18:07.201Z",
     "lastTriggerReason": "force_upsert"
   },
   "swapx": {
     "hash": "48701e072c5245fb3cb3f05478c35906809cedb153443ca440ddfd64484bd952",
     "url": "https://api.swapx.fi/api/v1/openapi.json",
-    "lastChecked": "2026-06-08T02:05:35.177Z",
+    "lastChecked": "2026-06-08T08:18:08.803Z",
     "lastTriggerReason": "force_upsert"
   },
   "binance": {
     "hash": "0dd2f133e12dac2510cf5db1a4eb5de6e3c30c86b24c08867322030939df5e1c",
     "url": "https://binance.github.io/binance-api-swagger/spot_api.yaml",
-    "lastChecked": "2026-06-08T02:05:36.641Z",
+    "lastChecked": "2026-06-08T08:18:10.595Z",
     "lastTriggerReason": "force_upsert"
   },
   "uniswap": {
     "hash": "ac2a85e63b3039630e2d2d3a4be5a19f7eaa01c750dcaa973e65531636342dfd",
     "url": "https://trade-api.gateway.uniswap.org/v1/api.json",
-    "lastChecked": "2026-06-08T02:05:38.464Z",
+    "lastChecked": "2026-06-08T08:18:12.392Z",
     "lastTriggerReason": "force_upsert"
   },
   "cow-protocol": {
     "hash": "4fee6bf59a6a707c37e041e6ba8e0411006bd71eef4ca53d89b434eaf1c76663",
     "url": "https://raw.githubusercontent.com/cowprotocol/services/main/crates/orderbook/openapi.yml",
-    "lastChecked": "2026-06-08T02:05:39.981Z",
+    "lastChecked": "2026-06-08T08:18:14.080Z",
     "lastTriggerReason": "force_upsert"
   },
   "lifi": {
-    "hash": "83c3aac599ce6b7acc14b627e1eccd989b743944a956ed6b632b9153affa6ab4",
+    "hash": "959feabe9c87a1339aa892bc34b84b1c71b9f2d3b9b35d36f5a7a515c02bd914",
     "url": "https://docs.li.fi/openapi.yaml",
-    "lastChecked": "2026-06-08T02:05:41.724Z",
-    "lastTriggerReason": "force_upsert"
+    "lastChecked": "2026-06-08T08:18:15.913Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
   },
   "odos": {
     "hash": "326e35e349c98ba83ae47cf392f3318c9665416288b3f096ab691659e5a33e7a",
     "url": "https://api.odos.xyz/openapi.json",
-    "lastChecked": "2026-06-08T02:05:43.361Z",
+    "lastChecked": "2026-06-08T08:18:17.647Z",
     "lastTriggerReason": "force_upsert"
   },
   "1inch": {
     "hash": "dce7f761128c7f7c2cf26a968df3e77d4264359d40ec1af0130f2ea8d9f13cf1",
     "url": "https://raw.githubusercontent.com/1inch/1inch-sdk/main/codegen/openapi/aggregation-openapi.json",
-    "lastChecked": "2026-06-08T02:05:45.066Z",
+    "lastChecked": "2026-06-08T08:18:19.306Z",
     "lastTriggerReason": "force_upsert"
   },
   "0x": {
     "hash": "5ddba3cc63e7b3ccad8f54321dd476155ad181544ad1c4ccc67821f9ca18aefe",
     "url": "https://raw.githubusercontent.com/0xProject/0x-docs/main/fern/openapi.json",
-    "lastChecked": "2026-06-08T02:05:46.592Z",
+    "lastChecked": "2026-06-08T08:18:20.918Z",
     "lastTriggerReason": "force_upsert"
   },
   "0x-cross-chain": {
     "hash": "d5314dc452c69c77009ca70656923706c82b8c222806fbac1c0425ef8beebadf",
     "url": "https://raw.githubusercontent.com/0xProject/0x-docs/main/fern/openapi-cross-chain.json",
-    "lastChecked": "2026-06-08T02:05:48.087Z",
+    "lastChecked": "2026-06-08T08:18:22.466Z",
     "lastTriggerReason": "force_upsert"
   },
   "evolution": {
     "hash": "8e22a16bc92c90b9748110130d0f7bd9b88a596d8827aa42c036c5f1827d0185",
     "url": "https://docs.evoapicloud.com/openapi/viewer.json",
-    "lastChecked": "2026-06-08T02:05:49.799Z",
+    "lastChecked": "2026-06-08T08:18:24.115Z",
     "lastTriggerReason": "force_upsert"
   }
 }
