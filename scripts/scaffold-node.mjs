@@ -134,8 +134,23 @@ function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	);
 
 	// 2. Replace description — wrap into multiple tspan lines
-	const maxChars = 45;
-	const lines = wrapText(description, maxChars);
+	// maxChars tuned so lines fit between description startY (197.64) and copyright (334.52)
+	// Available height: ~137px, lineHeight 32px → max ~4 lines
+	// JetBrains Mono 24px ≈ 14.4px/char → ~65 chars fit in text area width (~940px: x=70 to logo at x=1229)
+	const maxChars = 65;
+	// Available height: startY(197.64) to copyright(334.52) = ~137px, lineHeight 32px → max 4 lines
+	const maxLines = 4;
+	let lines = wrapText(description, maxChars);
+	if (lines.length > maxLines) {
+		lines = lines.slice(0, maxLines);
+		// Truncate last line with '..' if it was cut short
+		const lastLine = lines[maxLines - 1];
+		if (lastLine.length > maxChars - 3) {
+			lines[maxLines - 1] = lastLine.slice(0, maxChars - 3).trimEnd() + '..';
+		} else {
+			lines[maxLines - 1] = lastLine.replace(/\.*$/, '') + '..';
+		}
+	}
 	const lineHeight = 32;
 	const startY = 197.64;
 	const descTspans = lines
