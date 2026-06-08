@@ -126,13 +126,34 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 
 	// Load fonts for text-to-path conversion
 	const { loadFonts, wrapTextWithFont, textToPathElement } = await import('./text-to-path.mjs');
+	const opentype = (await import('opentype.js')).default;
 	const fonts = await loadFonts();
+
+	// Safe getPath with char-by-char fallback for broken GSUB lookups
+	function safeGetPath(font, text, x, y, fontSize) {
+		try {
+			return font.getPath(text, x, y, fontSize);
+		} catch {
+			const path = new opentype.Path();
+			let cursorX = x;
+			const scale = fontSize / font.unitsPerEm;
+			for (const char of text) {
+				const glyph = font.charToGlyph(char);
+				if (glyph && glyph.path) {
+					const gp = glyph.getPath(cursorX, y, fontSize);
+					for (const cmd of gp.commands) path.commands.push(cmd);
+				}
+				cursorX += (glyph.advanceWidth || 0) * scale;
+			}
+			return path;
+		}
+	}
 
 	let svg = readFileSync(templatePath, 'utf-8');
 
 	// 1. Replace title — uppercase, dashes → spaces, convert to path
 	const displayTitle = title.replace(/-/g, ' ').toUpperCase();
-	const titlePathD = fonts.medium.getPath(displayTitle, 62, 136.06, 96, { features: [] }).toSVG(2);
+	const titlePathD = safeGetPath(fonts.medium, displayTitle, 62, 136.06, 96).toSVG(2);
 	const titlePathMatch = titlePathD.match(/d="([^"]*)"/);
 	if (titlePathMatch) {
 		svg = svg.replace(
@@ -160,7 +181,7 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	const descPaths = lines
 		.map((line, i) => {
 			const y = startY + i * lineHeight;
-			const pathD = fonts.regular.getPath(line, 70, y, 24, { features: [] }).toSVG(2);
+			const pathD = safeGetPath(fonts.regular, line, 70, y, 24).toSVG(2);
 			const m = pathD.match(/d="([^"]*)"/);
 			return m ? `<path d="${m[1]}" fill="white" fill-opacity="0.7"/>` : '';
 		})
@@ -173,9 +194,9 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 
 	// 3. Replace copyright text — "N8N" (bold) + " - COMMUNITY NODES" (regular)
 	// Both at font-size 32, y=334.52
-	const n8nPath = fonts.bold.getPath('N8N', 70, 334.52, 32, { features: [] }).toSVG(2);
+	const n8nPath = safeGetPath(fonts.bold, 'N8N', 70, 334.52, 32).toSVG(2);
 	const n8nMatch = n8nPath.match(/d="([^"]*)"/);
-	const communityPath = fonts.regular.getPath(' - COMMUNITY NODES', 127.562, 334.52, 32, { features: [] }).toSVG(2);
+	const communityPath = safeGetPath(fonts.regular, ' - COMMUNITY NODES', 127.562, 334.52, 32).toSVG(2);
 	const communityMatch = communityPath.match(/d="([^"]*)"/);
 
 	if (n8nMatch && communityMatch) {

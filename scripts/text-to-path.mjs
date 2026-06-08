@@ -23,9 +23,9 @@ export async function loadFonts() {
 	// Try bundled subset fonts first, then fall back to system font
 	const fontDir = join(__dir, 'fonts');
 	const candidates = {
-		regular: ['JetBrainsMono-Regular-stripped.ttf', 'JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
-		bold: ['JetBrainsMono-Bold-stripped.ttf', 'JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
-		medium: ['JetBrainsMono-Medium-stripped.ttf', 'JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
+		regular: ['JetBrainsMono-Regular-subset.ttf', 'JetBrainsMono-Regular.ttf'],
+		bold: ['JetBrainsMono-Bold-subset.ttf', 'JetBrainsMono-Bold.ttf'],
+		medium: ['JetBrainsMono-Medium-subset.ttf', 'JetBrainsMono-Medium.ttf'],
 	};
 
 	const fonts = {};
@@ -62,34 +62,59 @@ export function textToPathData(font, text, fontSize, x, y) {
 
 /**
  * Convert text to SVG path element string.
- * @param {opentype.Font} font
- * @param {string} text
- * @param {number} fontSize
- * @param {number} x
- * @param {number} y - baseline y
- * @param {string} fill - fill attribute (e.g. 'white' or 'url(#gradient)')
- * @param {string} fillOpacity - optional fill-opacity
- * @returns {string} SVG <path> element
+ * Wraps opentype.js getPath with fallback for unsupported GSUB lookups.
  */
 export function textToPathElement(font, text, fontSize, x, y, fill, fillOpacity) {
-	// Disable OpenType features to avoid unsupported lookup errors
-	const path = font.getPath(text, x, y, fontSize, { features: [] });
+	let path;
+	try {
+		path = font.getPath(text, x, y, fontSize);
+	} catch (e) {
+		// Fallback: render char-by-char to skip broken GSUB lookups
+		path = renderCharByChar(font, text, x, y, fontSize);
+	}
 	const d = path.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^>]*\/>/, '$1');
 	const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
 	return `<path d="${d}" fill="${fill}"${opacity}/>`;
 }
 
 /**
+ * Render text char-by-char, bypassing GSUB shaping entirely.
+ */
+function renderCharByChar(font, text, x, y, fontSize) {
+	let cursorX = x;
+	const scale = fontSize / font.unitsPerEm;
+	const path = new opentype.Path();
+	for (const char of text) {
+		const glyph = font.charToGlyph(char);
+		if (glyph && glyph.path) {
+			const glyphPath = glyph.getPath(cursorX, y, fontSize);
+			for (const cmd of glyphPath.commands) {
+				path.commands.push(cmd);
+			}
+		}
+		cursorX += (glyph.advanceWidth || 0) * scale;
+	}
+	return path;
+}
+
+/**
  * Measure text width using actual font metrics.
- * @param {opentype.Font} font
- * @param {string} text
- * @param {number} fontSize
- * @returns {number} width in SVG units
  */
 export function measureText(font, text, fontSize) {
-	const path = font.getPath(text, 0, 0, fontSize, { features: [] });
-	const bbox = path.getBoundingBox();
-	return bbox.x2 - bbox.x1;
+	try {
+		const path = font.getPath(text, 0, 0, fontSize);
+		const bbox = path.getBoundingBox();
+		return bbox.x2 - bbox.x1;
+	} catch {
+		// Fallback: measure char-by-char
+		let width = 0;
+		const scale = fontSize / font.unitsPerEm;
+		for (const char of text) {
+			const glyph = font.charToGlyph(char);
+			width += (glyph.advanceWidth || 0) * scale;
+		}
+		return width;
+	}
 }
 
 /**
