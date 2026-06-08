@@ -109,6 +109,134 @@ function escapeTS(str) {
 	return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
 
+/**
+ * Generate a banner SVG from template.svg by replacing placeholders.
+ * @param {string} title - Banner title (will be uppercased, dashes → spaces)
+ * @param {string} description - Banner description text
+ * @param {Buffer|null} logoBuf - Logo image buffer (PNG/JPG/SVG)
+ * @param {string} logoExt - Logo file extension (e.g. '.png', '.svg')
+ * @param {string} outPath - Output SVG path
+ */
+function generateBanner(title, description, logoBuf, logoExt, outPath) {
+	const templatePath = join(__dirname, 'template.svg');
+	if (!existsSync(templatePath)) {
+		console.log('⚠️  template.svg not found in scripts/, skipping banner generation');
+		return;
+	}
+
+	let svg = readFileSync(templatePath, 'utf-8');
+
+	// 1. Replace title — uppercase, dashes → spaces
+	const displayTitle = title.replace(/-/g, ' ').toUpperCase();
+	svg = svg.replace(
+		/(<text[^>]*id="placeholder-name"[^>]*>[\s\S]*?<tspan[^>]*)(>)[^<]*?(<\/tspan>)/,
+		`$1$2${escapeXml(displayTitle)}$3`,
+	);
+
+	// 2. Replace description — wrap into multiple tspan lines
+	const maxChars = 45;
+	const lines = wrapText(description, maxChars);
+	const lineHeight = 32;
+	const startY = 197.64;
+	const descTspans = lines
+		.map((line, i) => {
+			const y = startY + i * lineHeight;
+			return `<tspan x="70" y="${y.toFixed(2)}">${escapeXml(line)}</tspan>`;
+		})
+		.join('');
+	svg = svg.replace(
+		/(<text[^>]*id="placeholder-description"[^>]*>)[\s\S]*?(<\/text>)/,
+		`$1${descTspans}$2`,
+	);
+
+	// 3. Replace logo
+	if (logoBuf) {
+		const isImage = ['.png', '.jpg', '.jpeg', '.webp', '.gif'].includes(logoExt);
+		if (isImage) {
+			const mime =
+				{ '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif' }[logoExt] || 'image/png';
+			const base64 = logoBuf.toString('base64');
+			svg = replaceLogoGroup(svg, `<image href="data:${mime};base64,${base64}" x="1229" y="48" width="300" height="300" preserveAspectRatio="xMidYMid meet"/>`);
+		} else {
+			// SVG — extract inner content and embed with scaling
+			const logoSvg = logoBuf.toString('utf-8');
+			const innerMatch = logoSvg.match(/<svg[^>]*>([\s\S]*)<\/svg>/i);
+			if (innerMatch) {
+				const inner = innerMatch[1].trim();
+				let logoW = 0, logoH = 0;
+				const vbMatch = logoSvg.match(/viewBox="([^"]*)"/);
+				if (vbMatch) {
+					const parts = vbMatch[1].split(/[\s,]+/).map(Number);
+					logoW = parts[2]; logoH = parts[3];
+				}
+				if (!logoW || !logoH) {
+					const wMatch = logoSvg.match(/\bwidth="(\d[\d.]*)"/);
+					const hMatch = logoSvg.match(/\bheight="(\d[\d.]*)"/);
+					if (wMatch) logoW = parseFloat(wMatch[1]);
+					if (hMatch) logoH = parseFloat(hMatch[1]);
+				}
+				let scale = 1, offsetX = 0, offsetY = 0;
+				if (logoW && logoH) {
+					scale = Math.min(300 / logoW, 300 / logoH);
+					offsetX = (300 - logoW * scale) / 2;
+					offsetY = (300 - logoH * scale) / 2;
+				}
+				svg = replaceLogoGroup(svg, `<g transform="translate(1229,48) translate(${offsetX.toFixed(1)},${offsetY.toFixed(1)}) scale(${scale.toFixed(4)})">${inner}</g>`);
+			}
+		}
+	}
+
+	writeFileSync(outPath, svg);
+	console.log('🎨 Banner generated: banner.svg');
+}
+
+/** Replace the inner content of #placeholder-logo group (nested-group aware) */
+function replaceLogoGroup(svg, newInner) {
+	const logoOpenMatch = svg.match(/<g[^>]*id="placeholder-logo"[^>]*>/);
+	if (!logoOpenMatch) return svg;
+	const startIdx = svg.indexOf(logoOpenMatch[0]);
+	const afterOpen = startIdx + logoOpenMatch[0].length;
+	let depth = 1;
+	let pos = afterOpen;
+	while (depth > 0 && pos < svg.length) {
+		const nextOpen = svg.indexOf('<g', pos);
+		const nextClose = svg.indexOf('</g>', pos);
+		if (nextClose === -1) break;
+		if (nextOpen !== -1 && nextOpen < nextClose) {
+			const tagEnd = svg.indexOf('>', nextOpen);
+			if (svg[tagEnd - 1] !== '/') depth++;
+			pos = tagEnd + 1;
+		} else {
+			depth--;
+			if (depth === 0) {
+				return svg.slice(0, afterOpen) + newInner + svg.slice(nextClose);
+			}
+			pos = nextClose + 4;
+		}
+	}
+	return svg;
+}
+
+function escapeXml(str) {
+	return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function wrapText(text, maxLen) {
+	const words = text.split(/\s+/);
+	const lines = [];
+	let current = '';
+	for (const word of words) {
+		if (current.length + word.length + 1 > maxLen && current.length > 0) {
+			lines.push(current);
+			current = word;
+		} else {
+			current = current ? `${current} ${word}` : word;
+		}
+	}
+	if (current) lines.push(current);
+	return lines;
+}
+
 // ─── CLI args ────────────────────────────────────────────────────────────────────
 
 const args = process.argv.slice(2);
@@ -940,6 +1068,24 @@ if (TEMPLATE_DIR && existsSync(TEMPLATE_DIR)) {
 	console.log('✅ Custom templates applied');
 }
 
+// ─── Generate banner SVG ─────────────────────────────────────────────────────────
+
+{
+	let logoBuf = null;
+	let logoExt = '.png';
+	if (LOGO_URL) {
+		try {
+			const logoResp = await fetch(LOGO_URL);
+			if (logoResp.ok) {
+				logoBuf = Buffer.from(await logoResp.arrayBuffer());
+				const ext = extname(new URL(LOGO_URL).pathname).toLowerCase();
+				if (ext) logoExt = ext;
+			}
+		} catch { /* ignore */ }
+	}
+	generateBanner(CUSTOM_NAME, defaultDesc, logoBuf, logoExt, join(projectDir, 'banner.svg'));
+}
+
 // ─── README.md ───────────────────────────────────────────────────────────────────
 
 const fundingBadge = `[![Keep It Moving.](https://crypto-donate.insidexofficial.workers.dev/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0/badge)](https://n8n-code.github.io/membership/#/eyJ0aXRsZSI6IktlZXAgSXQgTW92aW5nIiwiZGVzYyI6Ik9uZSBkZXZlbG9wZXIgYnVpbHQgYSB0b29sIHRoYXQgYXV0by1nZW5lcmF0ZXNcbm44biBub2RlcyBmcm9tIGFueSBPcGVuQVBJIHNwZWMuXG5cbllvdXIgZG9uYXRpb24gZnVuZHMgbmV3IGZlYXR1cmVzLCBtb3JlIEFQSSBzdXBwb3J0LFxuYW5kIGJldHRlciB0b29saW5nIGZvciBldmVyeSBkZXZlbG9wZXIgYWZ0ZXIgeW91LiIsInRhcmdldCI6NTAwMCwiYWRkcmVzc2VzIjp7ImV0aGVyZXVtIjoiMHhmMDU1NWQ0MGRiRkI0ZTNCZjA3MDQ0MjgyQjc4RjJmRTFmNTFFZjcyIiwic29sYW5hIjoiNlpEVk5BYmpZZExEcXo4cGt3VUNHYllaNVV3QlFranB0QzU1Wk5vTFcybVUifSwiZGlzY29yZCI6Imh0dHBzOi8vZGlzY29yZC5nZy9wdERaOGU0aDkzIn0)`;
@@ -952,6 +1098,8 @@ const moreResources = resourceNames.length > 5 ? `, and ${resourceNames.length -
 writeFileSync(
 	join(projectDir, 'README.md'),
 	`# ${packageName}
+
+![${CUSTOM_NAME} Banner](banner.svg)
 
 [![npm version](https://img.shields.io/npm/v/${packageName}.svg)](https://www.npmjs.com/package/${packageName})
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -1091,6 +1239,7 @@ console.log(`   ├── eslint.config.mjs`);
 console.log(`   ├── .gitignore`);
 console.log(`   ├── .npmignore`);
 console.log(`   ├── README.md`);
+console.log(`   ├── banner.svg`);
 console.log(`   ├── openapi.json`);
 console.log(`   ├── .vscode/`);
 console.log(`   │   ├── extensions.json`);
