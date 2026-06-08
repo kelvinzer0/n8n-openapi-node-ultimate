@@ -125,27 +125,18 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	}
 
 	// Load fonts for text-to-path conversion
-	const { loadFonts, wrapTextWithFont, textToPathElement } = await import('./text-to-path.mjs');
-	const opentype = (await import('opentype.js')).default;
+	const { loadFonts, wrapTextWithFont, renderTextAsPaths } = await import('./text-to-path.mjs');
 	const fonts = await loadFonts();
 
-	// Safe getPath with char-by-char fallback for broken GSUB lookups
-	function safeGetPath(font, text, x, y, fontSize) {
+	// Get SVG path string for text. Uses normal getPath, falls back to per-char paths.
+	function getTextPaths(font, text, x, y, fontSize, fill, fillOpacity) {
 		try {
-			return font.getPath(text, x, y, fontSize);
+			const path = font.getPath(text, x, y, fontSize);
+			const d = path.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
+			const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
+			return `<path d="${d}" fill="${fill}"${opacity}/>`;
 		} catch {
-			const path = new opentype.Path();
-			let cursorX = x;
-			const scale = fontSize / font.unitsPerEm;
-			for (const char of text) {
-				const glyph = font.charToGlyph(char);
-				if (glyph && glyph.path) {
-					const gp = glyph.getPath(cursorX, y, fontSize);
-					for (const cmd of gp.commands) path.commands.push(cmd);
-				}
-				cursorX += (glyph.advanceWidth || 0) * scale;
-			}
-			return path;
+			return renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity);
 		}
 	}
 
@@ -153,14 +144,11 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 
 	// 1. Replace title — uppercase, dashes → spaces, convert to path
 	const displayTitle = title.replace(/-/g, ' ').toUpperCase();
-	const titlePathD = safeGetPath(fonts.medium, displayTitle, 62, 136.06, 96).toSVG(2);
-	const titlePathMatch = titlePathD.match(/d="([^"]*)"/);
-	if (titlePathMatch) {
-		svg = svg.replace(
-			/(<text[^>]*id="placeholder-name"[^>]*>)[\s\S]*?(<\/text>)/,
-			`<path d="${titlePathMatch[1]}" fill="url(#paint2_linear_0_1)"/>`,
-		);
-	}
+	const titleSvg = getTextPaths(fonts.medium, displayTitle, 62, 136.06, 96, 'url(#paint2_linear_0_1)');
+	svg = svg.replace(
+		/(<text[^>]*id="placeholder-name"[^>]*>)[\s\S]*?(<\/text>)/,
+		titleSvg,
+	);
 
 	// 2. Replace description — wrap using font metrics, convert to paths
 	// Available width: x=70 to logo at x=1229 → ~1159px
@@ -181,11 +169,8 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	const descPaths = lines
 		.map((line, i) => {
 			const y = startY + i * lineHeight;
-			const pathD = safeGetPath(fonts.regular, line, 70, y, 24).toSVG(2);
-			const m = pathD.match(/d="([^"]*)"/);
-			return m ? `<path d="${m[1]}" fill="white" fill-opacity="0.7"/>` : '';
+			return getTextPaths(fonts.regular, line, 70, y, 24, 'white', '0.7');
 		})
-		.filter(Boolean)
 		.join('\n');
 	svg = svg.replace(
 		/(<text[^>]*id="placeholder-description"[^>]*>)[\s\S]*?(<\/text>)/,
@@ -194,17 +179,13 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 
 	// 3. Replace copyright text — "N8N" (bold) + " - COMMUNITY NODES" (regular)
 	// Both at font-size 32, y=334.52
-	const n8nPath = safeGetPath(fonts.bold, 'N8N', 70, 334.52, 32).toSVG(2);
-	const n8nMatch = n8nPath.match(/d="([^"]*)"/);
-	const communityPath = safeGetPath(fonts.regular, ' - COMMUNITY NODES', 127.562, 334.52, 32).toSVG(2);
-	const communityMatch = communityPath.match(/d="([^"]*)"/);
+	const n8nSvg = getTextPaths(fonts.bold, 'N8N', 70, 334.52, 32, 'white', '0.9');
+	const communitySvg = getTextPaths(fonts.regular, ' - COMMUNITY NODES', 127.562, 334.52, 32, 'white', '0.9');
 
-	if (n8nMatch && communityMatch) {
-		svg = svg.replace(
-			/(<g id="copyright">)[\s\S]*?(<\/g>)/,
-			`$1\n<path d="${n8nMatch[1]}" fill="white" fill-opacity="0.9"/>\n<path d="${communityMatch[1]}" fill="white" fill-opacity="0.9"/>\n$2`,
-		);
-	}
+	svg = svg.replace(
+		/(<g id="copyright">)[\s\S]*?(<\/g>)/,
+		`$1\n${n8nSvg}\n${communitySvg}\n$2`,
+	);
 
 	// 3. Replace logo
 	if (logoBuf) {

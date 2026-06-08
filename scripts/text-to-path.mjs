@@ -78,23 +78,25 @@ export function textToPathElement(font, text, fontSize, x, y, fill, fillOpacity)
 }
 
 /**
- * Render text char-by-char, bypassing GSUB shaping entirely.
+ * Render text as separate path elements, one per character.
+ * Avoids fill-rule issues when glyphs are combined into a single path.
+ * @returns {string} Multiple <path> elements joined with newlines
  */
-function renderCharByChar(font, text, x, y, fontSize) {
+export function renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity) {
 	let cursorX = x;
 	const scale = fontSize / font.unitsPerEm;
-	const path = new opentype.Path();
+	const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
+	const parts = [];
 	for (const char of text) {
 		const glyph = font.charToGlyph(char);
-		if (glyph && glyph.path) {
-			const glyphPath = glyph.getPath(cursorX, y, fontSize);
-			for (const cmd of glyphPath.commands) {
-				path.commands.push(cmd);
-			}
+		if (glyph && glyph.path && glyph.path.commands.length > 0) {
+			const gp = glyph.getPath(cursorX, y, fontSize);
+			const d = gp.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
+			if (d) parts.push(`<path d="${d}" fill="${fill}"${opacity}/>`);
 		}
 		cursorX += (glyph.advanceWidth || 0) * scale;
 	}
-	return path;
+	return parts.join('\n');
 }
 
 /**
