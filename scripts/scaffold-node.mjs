@@ -1179,6 +1179,39 @@ const totalOperations = resourceNames.length;
 const resourceList = resourceNames.slice(0, 5).map(r => `**${r}**`).join(', ');
 const moreResources = resourceNames.length > 5 ? `, and ${resourceNames.length - 5} more` : '';
 
+// Generate the collapsible resources section for README.md
+const resourcesAccordionList = [];
+for (const r of resourceNames) {
+	const props = propertiesByResource.get(r) || [];
+	const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
+	if (ops.length > 0) {
+		const opList = ops[0].options.map(o => {
+			const method = (o.routing?.request?.method || '').replace(/[^0-9a-zA-Z\s]/g, ' ').replace(/\s+/g, ' ').trim();
+			const label  = (o.action || o.name || o.value || '').replace(/[^0-9a-zA-Z\s]/g, ' ').replace(/\s+/g, ' ').trim();
+
+			const methodTitle = method ? method.charAt(0).toUpperCase() + method.slice(1).toLowerCase() : '';
+
+			let cleanLabel = label;
+			if (method && label.toLowerCase().startsWith(method.toLowerCase())) {
+				cleanLabel = label.slice(method.length).trim();
+			}
+			const combined = methodTitle ? `${methodTitle} ${cleanLabel}` : cleanLabel;
+
+			let result = combined.replace(/\b[vV]\s+(\d+)/g, 'v$1');
+			result = result.replace(/\b(Api|Url|Http|Https|Json|Xml|Id|Ui|Db|Sql|Ssh|Ftp|Jwt|OAuth|Cors|Csrf|Dns|Ssl|Tls|Cdn|Aws|Gcp|Sdk|Cli|Crud|Rpc|Rest|Graphql|Webhook|Csv|Pdf|Html|Css)\b/gi, (m) => m.toUpperCase());
+			return result.charAt(0).toUpperCase() + result.slice(1);
+		});
+
+		resourcesAccordionList.push(`<details>
+<summary><b>${r}</b> (${opList.length} operations)</summary>
+
+${opList.map(op => `- ${op}`).join('\n')}
+
+</details>`);
+	}
+}
+const resourcesSection = resourcesAccordionList.join('\n\n');
+
 writeFileSync(
 	join(projectDir, 'README.md'),
 	`# ${packageName}
@@ -1236,46 +1269,7 @@ That's it. No configuration files. No code. It just works.
 
 ## Resources
 
-| Resource | Operations |
-|----------|------------|
-${resourceNames.map(r => {
-    const props = propertiesByResource.get(r) || [];
-    const ops = props.filter(p => p.name === 'operation' && p.type === 'options');
-    if (ops.length > 0) {
-        const opList = ops[0].options.map(o => {
-            // Replace non-alphanumeric and non-space characters with a space first to prevent word merging,
-            // e.g. "borrow/repay" -> "borrow repay", "account(USER_DATA)" -> "account USER DATA"
-            const method = (o.routing?.request?.method || '').replace(/[^0-9a-zA-Z\s]/g, ' ').replace(/\s+/g, ' ').trim();
-            const label  = (o.action || o.name || o.value || '').replace(/[^0-9a-zA-Z\s]/g, ' ').replace(/\s+/g, ' ').trim();
-
-            // Format method to Title Case (e.g. GET -> Get, POST -> Post)
-            const methodTitle = method ? method.charAt(0).toUpperCase() + method.slice(1).toLowerCase() : '';
-
-            // If label starts with the method (case-insensitive), strip it and prepend the Title Case method
-            let cleanLabel = label;
-            if (method && label.toLowerCase().startsWith(method.toLowerCase())) {
-                cleanLabel = label.slice(method.length).trim();
-            }
-            const combined = methodTitle ? `${methodTitle} ${cleanLabel}` : cleanLabel;
-
-            // Fix version patterns: "V 1" → "v1"
-            let result = combined.replace(/\\b[vV]\\s+(\\d+)/g, 'v$1');
-            // Uppercase common acronyms
-            result = result.replace(/\\b(Api|Url|Http|Https|Json|Xml|Id|Ui|Db|Sql|Ssh|Ftp|Jwt|OAuth|Cors|Csrf|Dns|Ssl|Tls|Cdn|Aws|Gcp|Sdk|Cli|Crud|Rpc|Rest|Graphql|Webhook|Csv|Pdf|Html|Css)\\b/gi, (m) => m.toUpperCase());
-            return result.charAt(0).toUpperCase() + result.slice(1);
-        });
-
-        // Use collapsible <details> tag if a resource has more than 5 operations to prevent stretching the Markdown table
-        let cellContent;
-        if (opList.length > 5) {
-            cellContent = `<details><summary><b>${opList.length} operations</b></summary><br/>` + opList.map(op => `• ${op}`).join('<br/>') + '</details>';
-        } else {
-            cellContent = opList.join(', ');
-        }
-        return `| ${r} | ${cellContent} |`;
-    }
-    return null;
-}).filter(Boolean).join('\\n')}
+${resourcesSection}
 
 ---
 
