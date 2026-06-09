@@ -66,6 +66,43 @@ function toPascalCase(str) {
 	return result;
 }
 
+/**
+ * Convert a raw name to a proper display name for n8n.
+ * - Preserves acronyms (API, URL, HTTP, JSON, ID, OAuth, GraphQL, etc.)
+ * - Fixes version format: "V 1" → "v1"
+ * - "binance" → "Binance", "walletobjects-pay-passes" → "WalletObjects Pay Passes"
+ * - "evolution api" → "Evolution API", "my cool service" → "My Cool Service"
+ */
+const DISPLAY_ACRONYMS = {
+	'api': 'API', 'url': 'URL', 'http': 'HTTP', 'https': 'HTTPS',
+	'json': 'JSON', 'xml': 'XML', 'id': 'ID', 'ui': 'UI', 'db': 'DB',
+	'sql': 'SQL', 'ssh': 'SSH', 'ftp': 'FTP', 'jwt': 'JWT',
+	'oauth': 'OAuth', 'cors': 'CORS', 'csrf': 'CSRF', 'dns': 'DNS',
+	'ssl': 'SSL', 'tls': 'TLS', 'cdn': 'CDN', 'aws': 'AWS', 'gcp': 'GCP',
+	'sdk': 'SDK', 'cli': 'CLI', 'crud': 'CRUD', 'rpc': 'RPC',
+	'graphql': 'GraphQL', 'webhook': 'Webhook', 'csv': 'CSV', 'pdf': 'PDF',
+	'html': 'HTML', 'css': 'CSS', 'pay': 'Pay', 'pass': 'Pass', 'passes': 'Passes',
+	'wallet': 'Wallet', 'objects': 'Objects', 'walletobjects': 'WalletObjects',
+	'n8n': 'n8n', 'openai': 'OpenAI', 'stripe': 'Stripe', 'github': 'GitHub',
+	'gitlab': 'GitLab', 'bitbucket': 'Bitbucket', 'cloudflare': 'Cloudflare',
+	'sendgrid': 'SendGrid', 'mailchimp': 'Mailchimp', 'twilio': 'Twilio',
+	'shopify': 'Shopify', 'woocommerce': 'WooCommerce', 'wordpress': 'WordPress',
+	'mongodb': 'MongoDB', 'postgresql': 'PostgreSQL', 'mysql': 'MySQL',
+	'redis': 'Redis', 'elasticsearch': 'Elasticsearch',
+};
+
+function toDisplayName(str) {
+	// Split on spaces, hyphens, underscores
+	const words = str.replace(/[-_]+/g, ' ').split(/\s+/).filter(Boolean);
+	return words.map(w => {
+		const lower = w.toLowerCase();
+		if (DISPLAY_ACRONYMS[lower]) return DISPLAY_ACRONYMS[lower];
+		// Check if already mixed case (e.g. "Binance") — preserve it
+		if (w !== w.toLowerCase() && w !== w.toUpperCase()) return w;
+		return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+	}).join(' ');
+}
+
 function toJSON(obj, indent = 2) {
 	return JSON.stringify(obj, null, indent) + '\n';
 }
@@ -314,7 +351,7 @@ const safeName = CUSTOM_NAME.toLowerCase()
 const nodeName = `n8n-nodes-${safeName}`;
 const className = toPascalCase(CUSTOM_NAME);
 const packageName = `@${NPM_SCOPE}/${nodeName}`;
-const defaultDesc = DESCRIPTION || `n8n community node for ${CUSTOM_NAME} API`;
+const defaultDesc = DESCRIPTION || `n8n community node for ${toDisplayName(CUSTOM_NAME)} API`;
 const nodeClassName = className;
 const credentialClassName = `${className}Api`;
 
@@ -750,7 +787,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
+			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
 		},
 		{
 			displayName: 'API Key',
@@ -777,7 +814,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
+			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
 		},
 		{
 			displayName: 'API Key',
@@ -805,7 +842,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(CUSTOM_NAME)} API server',
+			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
 		},
 		{
 			displayName: 'API Key',
@@ -874,7 +911,7 @@ writeFileSync(
 export class ${credentialClassName} implements ICredentialType {
 	name = '${credentialInternalName}';
 
-	displayName = '${CUSTOM_NAME} API';
+	displayName = '${toDisplayName(CUSTOM_NAME)} API';
 
 	icon: Icon = { light: 'file:../nodes/${nodeClassName}/${actualIconLight}', dark: 'file:../nodes/${nodeClassName}/${actualIconDark}' };
 
@@ -979,14 +1016,14 @@ ${resourceImports.join('\n')}
 
 export class ${nodeClassName} implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: '${escapeTS(CUSTOM_NAME)}',
+		displayName: '${escapeTS(toDisplayName(CUSTOM_NAME))}',
 		name: '${nodeInternalName}',
 		icon: { light: 'file:./${actualIconLight}', dark: 'file:./${actualIconDark}' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{\\$parameter["operation"] + ": " + \\$parameter["resource"]}}',
 		description: '${escapeTS(defaultDesc)}',
-		defaults: { name: '${escapeTS(CUSTOM_NAME)}' },
+		defaults: { name: '${escapeTS(toDisplayName(CUSTOM_NAME))}' },
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
