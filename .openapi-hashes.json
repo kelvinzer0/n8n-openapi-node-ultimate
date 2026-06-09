@@ -2,139 +2,139 @@
   "petstore": {
     "hash": "00441c05add60f28da55eb4563d3fb6bbda364ba8eb7b381e2e2c98613005c82",
     "url": "https://petstore3.swagger.io/api/v3/openapi.json",
-    "lastChecked": "2026-06-08T08:17:45.305Z",
+    "lastChecked": "2026-06-09T16:17:25.812Z",
     "lastTriggerReason": "force_upsert"
   },
   "chatwoot": {
     "hash": "e7896faca2a6a333f8c566cef19060bed0d9db915ed71e1fc500aab1f77bae64",
     "url": "https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json",
-    "lastChecked": "2026-06-08T08:17:47.043Z",
+    "lastChecked": "2026-06-09T16:17:27.595Z",
     "lastTriggerReason": "force_upsert"
   },
   "hcloud": {
     "hash": "e1d3211ede6d6b1d900f5d18cc3bbf4469d2993d6a92a239bdbf1e26114c0a34",
     "url": "https://raw.githubusercontent.com/MaximilianKoestler/hcloud-openapi/main/openapi/hcloud.json",
-    "lastChecked": "2026-06-08T08:17:48.675Z",
+    "lastChecked": "2026-06-09T16:17:29.281Z",
     "lastTriggerReason": "force_upsert"
   },
   "gitlab": {
-    "hash": "f1dc2ea57564c1052edeb754b5acf6627ddc6e6d82abf3e9a69ae18c4defe423",
+    "hash": "e0900174ead4da10403b4ee639603826c20227b8ac99e6b314fc42751b0356e4",
     "url": "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/api/openapi/openapi_v2.yaml",
-    "lastChecked": "2026-06-08T08:17:50.458Z",
-    "lastTriggerReason": "force_upsert"
+    "lastChecked": "2026-06-09T16:17:31.014Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
   },
   "curve-finance": {
     "hash": "5989dd37b5ee3c52353db9018dd4accf8e50a846dd95e23ee51173ed5a162392",
     "url": "https://api.curve.fi/v1/openapi.json",
-    "lastChecked": "2026-06-08T08:17:52.257Z",
+    "lastChecked": "2026-06-09T16:17:32.826Z",
     "lastTriggerReason": "force_upsert"
   },
   "raydium": {
     "hash": "7687a0eaa545c7c371a8adb6dec157f5c13bbc4ca54ddc2b84ad387e2a659574",
     "url": "https://api.raydium.io/openapi.json",
-    "lastChecked": "2026-06-08T08:17:54.053Z",
+    "lastChecked": "2026-06-09T16:17:34.507Z",
     "lastTriggerReason": "force_upsert"
   },
   "gmx": {
     "hash": "fa32e322d32eae28ffa0fa7aae966e1bd0fe4cef471c40e3b0fde47a27c25fe6",
     "url": "https://docs.gmx.io/swagger.json",
-    "lastChecked": "2026-06-08T08:17:55.652Z",
+    "lastChecked": "2026-06-09T16:17:36.161Z",
     "lastTriggerReason": "force_upsert"
   },
   "camelot-dex": {
     "hash": "6991eeb2d876a8aa3a8fdaad2170184dfda47efb9223549c94123cee236cf641",
     "url": "https://api.camelot.exchange/openapi.json",
-    "lastChecked": "2026-06-08T08:17:57.514Z",
+    "lastChecked": "2026-06-09T16:17:38.141Z",
     "lastTriggerReason": "force_upsert"
   },
   "zapper": {
     "hash": "e13d67efaabc449d9070144137dcb5a1b60c2bae498e87d2a36fd78bcce32269",
     "url": "https://api.zapper.fi/openapi.json",
-    "lastChecked": "2026-06-08T08:17:59.214Z",
+    "lastChecked": "2026-06-09T16:17:40.018Z",
     "lastTriggerReason": "force_upsert"
   },
   "nonkyc-exchange": {
     "hash": "98ab1a0397401f5c50385709fd9b3e4674e581e941d17dd2ac03346e793384df",
     "url": "https://api.nonkyc.io/openapi.json",
-    "lastChecked": "2026-06-08T08:18:01.704Z",
+    "lastChecked": "2026-06-09T16:17:42.001Z",
     "lastTriggerReason": "force_upsert"
   },
   "ondo-finance": {
     "hash": "797f68f844a4cf1ea2f23eab031907098a55d16bfcef127fa52872a3df908f01",
     "url": "https://docs.ondo.finance/openapi.json",
-    "lastChecked": "2026-06-08T08:18:03.591Z",
+    "lastChecked": "2026-06-09T16:17:43.720Z",
     "lastTriggerReason": "force_upsert"
   },
   "cryptal": {
     "hash": "e0434d9fc3b278c69887f5fcc005b5fa94f96ee3b46824d49391746f5b8605eb",
     "url": "https://api.cryptal.com/openapi.json",
-    "lastChecked": "2026-06-08T08:18:05.300Z",
+    "lastChecked": "2026-06-09T16:17:45.669Z",
     "lastTriggerReason": "force_upsert"
   },
   "taostats": {
     "hash": "e026ee1703baa5d92b39ae4a734a9232b7e63c158442bd8e944fa80ddd8fcd3a",
     "url": "https://api.taostats.io/api/openapi.json",
-    "lastChecked": "2026-06-08T08:18:07.201Z",
+    "lastChecked": "2026-06-09T16:17:47.616Z",
     "lastTriggerReason": "force_upsert"
   },
   "swapx": {
     "hash": "48701e072c5245fb3cb3f05478c35906809cedb153443ca440ddfd64484bd952",
     "url": "https://api.swapx.fi/api/v1/openapi.json",
-    "lastChecked": "2026-06-08T08:18:08.803Z",
+    "lastChecked": "2026-06-09T16:17:49.157Z",
     "lastTriggerReason": "force_upsert"
   },
   "binance": {
     "hash": "0dd2f133e12dac2510cf5db1a4eb5de6e3c30c86b24c08867322030939df5e1c",
     "url": "https://binance.github.io/binance-api-swagger/spot_api.yaml",
-    "lastChecked": "2026-06-08T08:18:10.595Z",
+    "lastChecked": "2026-06-09T16:17:50.854Z",
     "lastTriggerReason": "force_upsert"
   },
   "uniswap": {
     "hash": "ac2a85e63b3039630e2d2d3a4be5a19f7eaa01c750dcaa973e65531636342dfd",
     "url": "https://trade-api.gateway.uniswap.org/v1/api.json",
-    "lastChecked": "2026-06-08T08:18:12.392Z",
+    "lastChecked": "2026-06-09T16:17:52.678Z",
     "lastTriggerReason": "force_upsert"
   },
   "cow-protocol": {
-    "hash": "4fee6bf59a6a707c37e041e6ba8e0411006bd71eef4ca53d89b434eaf1c76663",
+    "hash": "8b04e73b3304fa8609bd05cb9b7154349aea6373d356817d8ff4f3ced9088d54",
     "url": "https://raw.githubusercontent.com/cowprotocol/services/main/crates/orderbook/openapi.yml",
-    "lastChecked": "2026-06-08T08:18:14.080Z",
-    "lastTriggerReason": "force_upsert"
+    "lastChecked": "2026-06-09T16:17:54.403Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
   },
   "lifi": {
     "hash": "959feabe9c87a1339aa892bc34b84b1c71b9f2d3b9b35d36f5a7a515c02bd914",
     "url": "https://docs.li.fi/openapi.yaml",
-    "lastChecked": "2026-06-08T08:18:15.913Z",
-    "lastTriggerReason": "force_upsert+spec_changed"
+    "lastChecked": "2026-06-09T16:17:56.428Z",
+    "lastTriggerReason": "force_upsert"
   },
   "odos": {
     "hash": "326e35e349c98ba83ae47cf392f3318c9665416288b3f096ab691659e5a33e7a",
     "url": "https://api.odos.xyz/openapi.json",
-    "lastChecked": "2026-06-08T08:18:17.647Z",
+    "lastChecked": "2026-06-09T16:17:58.106Z",
     "lastTriggerReason": "force_upsert"
   },
   "1inch": {
     "hash": "dce7f761128c7f7c2cf26a968df3e77d4264359d40ec1af0130f2ea8d9f13cf1",
     "url": "https://raw.githubusercontent.com/1inch/1inch-sdk/main/codegen/openapi/aggregation-openapi.json",
-    "lastChecked": "2026-06-08T08:18:19.306Z",
+    "lastChecked": "2026-06-09T16:17:59.585Z",
     "lastTriggerReason": "force_upsert"
   },
   "0x": {
     "hash": "5ddba3cc63e7b3ccad8f54321dd476155ad181544ad1c4ccc67821f9ca18aefe",
     "url": "https://raw.githubusercontent.com/0xProject/0x-docs/main/fern/openapi.json",
-    "lastChecked": "2026-06-08T08:18:20.918Z",
+    "lastChecked": "2026-06-09T16:18:01.209Z",
     "lastTriggerReason": "force_upsert"
   },
   "0x-cross-chain": {
     "hash": "d5314dc452c69c77009ca70656923706c82b8c222806fbac1c0425ef8beebadf",
     "url": "https://raw.githubusercontent.com/0xProject/0x-docs/main/fern/openapi-cross-chain.json",
-    "lastChecked": "2026-06-08T08:18:22.466Z",
+    "lastChecked": "2026-06-09T16:18:02.801Z",
     "lastTriggerReason": "force_upsert"
   },
   "evolution": {
     "hash": "8e22a16bc92c90b9748110130d0f7bd9b88a596d8827aa42c036c5f1827d0185",
     "url": "https://docs.evoapicloud.com/openapi/viewer.json",
-    "lastChecked": "2026-06-08T08:18:24.115Z",
+    "lastChecked": "2026-06-09T16:18:04.817Z",
     "lastTriggerReason": "force_upsert"
   },
   "spotify": {
@@ -3093,6 +3093,1368 @@
     "hash": "704c1712373cb9cfeee8e6d9af8dbcbad4e6806f226eb817e5e0485f5c22d76d",
     "url": "https://api.apis.guru/v2/specs/xero.com/xero_files/2.9.4/openapi.json",
     "lastChecked": "2026-06-09T09:51:12.976Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "1forge": {
+    "hash": "fb1f64450ecb41864d7465a9eb1b5387eb05644f52189f1af527c8d002245f4e",
+    "url": "https://api.apis.guru/v2/specs/1forge.com/0.0.1/swagger.json",
+    "lastChecked": "2026-06-09T16:18:06.603Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "1password-events": {
+    "hash": "a0b312c4d85d4bc07894225260c79e88e8a1d568218bb9c297b4fd0d78b85a22",
+    "url": "https://api.apis.guru/v2/specs/1password.com/events/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T16:18:08.833Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "1password-connect": {
+    "hash": "cf419ac953e31ab216a0450ccd1bf9105201c215d34e9860213aa03338351e43",
+    "url": "https://api.apis.guru/v2/specs/1password.local/connect/1.5.7/openapi.json",
+    "lastChecked": "2026-06-09T16:18:10.634Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "authentiqio": {
+    "hash": "c80f55a97519b0b77838e17d309a1dea17c9659a3316c17b9b084c4ed7037a82",
+    "url": "https://api.apis.guru/v2/specs/6-dot-authentiqio.appspot.com/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:12.699Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "ably-platform": {
+    "hash": "e2d7989f73b78ac62ff925692797e6c7a07e0c5423e7bb5a118174848f294d41",
+    "url": "https://api.apis.guru/v2/specs/ably.io/platform/1.1.0/openapi.json",
+    "lastChecked": "2026-06-09T16:18:14.646Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "ably-control": {
+    "hash": "d36c6c5cc58cb2556019d5a174024b6c6609f5ebc23698e1c7dcdb2c7c289e02",
+    "url": "https://api.apis.guru/v2/specs/ably.net/control/1.0.14/openapi.json",
+    "lastChecked": "2026-06-09T16:18:16.367Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "abstractapi-geolocation": {
+    "hash": "5f6e8c821cc406727963c89fcd62b5fdf145029fee58c179058ce9b8ad6196d7",
+    "url": "https://api.apis.guru/v2/specs/abstractapi.com/geolocation/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T16:18:18.386Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adafruit": {
+    "hash": "f778bda6c8cb627ca1539412d75515997288efb7b776343b561470a1481e345d",
+    "url": "https://api.apis.guru/v2/specs/adafruit.com/2.0.0/swagger.json",
+    "lastChecked": "2026-06-09T16:18:20.134Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "adobe-aem": {
+    "hash": "ec812606758838d0b58608eef3dab96a4336f08d0d765cee4a966866d685e895",
+    "url": "https://api.apis.guru/v2/specs/adobe.com/aem/3.7.1-pre.0/openapi.json",
+    "lastChecked": "2026-06-09T16:18:21.871Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "adyen-accountservice": {
+    "hash": "908d8242ca116c739c7c2b83875e50d7dcc18052ac8f4c1b31ae5d618878006e",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/AccountService/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:24.432Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balancecontrolservice": {
+    "hash": "e9b33b8b7b686c54001b31731899aa2c5355691fa3b78784ebd45e112629f635",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalanceControlService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:26.638Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balanceplatformconfigurationnotification-v1": {
+    "hash": "76984b2b006ad13199e55faac7bfecb9f2f2413ded92bdeaae7e2379831fed5d",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformConfigurationNotification-v1/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:28.503Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balanceplatformpaymentnotification-v1": {
+    "hash": "1f5a690680381218ffca7754d1fa4cfde76d14ec1c8737b1930324591df40ce7",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformPaymentNotification-v1/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:30.431Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balanceplatformreportnotification-v1": {
+    "hash": "f117cb08f9f8ca580f4169dcf6cff21d29044d754fc263ada9518961bf114329",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformReportNotification-v1/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:32.465Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balanceplatformservice": {
+    "hash": "b9b512fa0dab50c9664a49b0e28d503dfd26e05ff854a17ba81202ac6e882142",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformService/2/openapi.json",
+    "lastChecked": "2026-06-09T16:18:34.673Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-balanceplatformtransfernotification-v3": {
+    "hash": "8cb9d919480995d998e8d0d048ff09d0d34737d70e2617be12908093ee0d24ce",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BalancePlatformTransferNotification-v3/3/openapi.json",
+    "lastChecked": "2026-06-09T16:18:36.369Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-binlookupservice": {
+    "hash": "fd58b45bd7f4978caac5f4f83428d73797d986bbd4ade3f4515eae7153c694e9",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/BinLookupService/54/openapi.json",
+    "lastChecked": "2026-06-09T16:18:38.117Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-checkoutservice": {
+    "hash": "8b1a8042d8d63c3176ca378ace46d6e4b45dbc89d633b7c504a8deb678949489",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/70/openapi.json",
+    "lastChecked": "2026-06-09T16:18:40.077Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-checkoututilityservice": {
+    "hash": "a72a663f851c8e352908e2861b0b7fcddfad8a108e5dac7a1b64149b476b4ebb",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/CheckoutUtilityService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:41.955Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "adyen-dataprotectionservice": {
+    "hash": "919b94583e7c57236419ab6ec94fc4fac6a759643fef3a3aceafec6f4bd7bae8",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/DataProtectionService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:43.688Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-fundservice": {
+    "hash": "0bde9a2721d3a8fda87ad85a190e3a52d29db2fcf2c2cca8575a0819235ccc70",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/FundService/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:45.441Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-hopservice": {
+    "hash": "db76302b52ef9ed0fba596430b6a8b91467f0aa511d1bfbd39f1d1a539be833d",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/HopService/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:47.161Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-legalentityservice": {
+    "hash": "42c7a8f89663ddad422e0d8c24f00492feeaf18bfb26103c34d4a71b1943eff0",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/LegalEntityService/3/openapi.json",
+    "lastChecked": "2026-06-09T16:18:49.079Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-managementnotificationservice-v1": {
+    "hash": "e752b517145f5dee113331294fe1d2095ce04c338ce227fd84f54ec9da737503",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/ManagementNotificationService-v1/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:50.899Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-managementservice": {
+    "hash": "64581e597b39b01239da056b7b3838df544e3fc9d2c53e5b5b8188a85a7db667",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/ManagementService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:18:52.603Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-marketpaynotificationservice": {
+    "hash": "aee3a73fbb817ab8c664e5b38df16a985fb8552ff959a24aac35ee106200f391",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/MarketPayNotificationService/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:54.311Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-notificationconfigurationservice": {
+    "hash": "35e473e631da3d144a3e20b16f6e09b35dd1f0a239538458bbb84159ffa70a0e",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/NotificationConfigurationService/6/openapi.json",
+    "lastChecked": "2026-06-09T16:18:56.189Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-paymentservice": {
+    "hash": "350affd704fc16ef15304985a3aea67725baaae0c17617e3504bf7e593ced4ff",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/68/openapi.json",
+    "lastChecked": "2026-06-09T16:18:58.116Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-payoutservice": {
+    "hash": "647c4d36bccd00bb6c4e4ecba282615c3ab395a6cb93b8c16a653054e284f7ef",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/PayoutService/68/openapi.json",
+    "lastChecked": "2026-06-09T16:18:59.984Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-recurringservice": {
+    "hash": "b94b4e0f64a448083d90760a282dc86ecc1621bc5c33e0e67c160a6700763294",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/RecurringService/68/openapi.json",
+    "lastChecked": "2026-06-09T16:19:01.752Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-storedvalueservice": {
+    "hash": "a9172107c9fb1bd9db5a2291d673a125b84fb2fbb506d83d951b43f62931b3af",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/StoredValueService/46/openapi.json",
+    "lastChecked": "2026-06-09T16:19:03.485Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-testcardservice": {
+    "hash": "9bc53b6c0228ea410176d3c9ce625e82190bf9c7d826b8464a6589dca9c65ba2",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/TestCardService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:19:05.474Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-tfmapiservice": {
+    "hash": "f0af3b1ed1e14634e2be426dd09a1579dcc58d43d27e234661f6731eeb06ab8a",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/TfmAPIService/1/openapi.json",
+    "lastChecked": "2026-06-09T16:19:07.298Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "adyen-transferservice": {
+    "hash": "9e98283ab4506278d10387d64ba20177a380c3dbcf0f625f8fe7b823112a401a",
+    "url": "https://api.apis.guru/v2/specs/adyen.com/TransferService/3/openapi.json",
+    "lastChecked": "2026-06-09T16:19:09.058Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "afterbanks": {
+    "hash": "2e65e9a42a64b77c8e914093742b03d865fbf6f1c4c3db30781dc3056ecd7b20",
+    "url": "https://api.apis.guru/v2/specs/afterbanks.com/3.0.0/swagger.json",
+    "lastChecked": "2026-06-09T16:19:10.830Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "aiception": {
+    "hash": "fbbe2cd40c65f879291da010f73428f6009e6ee3b54eb0b636d35402a79e8d6c",
+    "url": "https://api.apis.guru/v2/specs/aiception.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T16:19:12.633Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "airbyte-config": {
+    "hash": "ea13f9366724dd101d7181cf78a5aa39326090c2da7bc29579080cb169796c22",
+    "url": "https://api.apis.guru/v2/specs/airbyte.local/config/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T16:19:14.638Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "airport-web": {
+    "hash": "8680a59129879e79d6bac507c3b2b63bf55b4cc36e567560a1b2fbed2cdcc867",
+    "url": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.json",
+    "lastChecked": "2026-06-09T16:19:16.540Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "alertersystem": {
+    "hash": "b519bc71012c46c30501f48686bd47872938885689e31f9d736a5cad73ea3601",
+    "url": "https://api.apis.guru/v2/specs/alertersystem.com/1.6.0/openapi.json",
+    "lastChecked": "2026-06-09T16:19:18.389Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amadeus-airport-on-time-performance": {
+    "hash": "a87ea4d758163fdb22723595e3f7a3f5a7903d81dcc993a6dc5efc12c1e95b1b",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.json",
+    "lastChecked": "2026-06-09T16:19:20.345Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-flight-create-orders": {
+    "hash": "0c2a201e557cf4f4a973b4eace60f00f0cab0b9ebc13d752f772ed98dc31e37b",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.json",
+    "lastChecked": "2026-06-09T16:19:22.095Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-flight-offers-price": {
+    "hash": "b7cf5129f4d0d72757f77734d1942cf5dd9ee5e0772107c7aaa36eecb20f8d61",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.json",
+    "lastChecked": "2026-06-09T16:19:23.837Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-flight-order-management": {
+    "hash": "c8860b5dd771526b2ff963734c1348b6ae09cc27ea198741a0b935b410e06619",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.json",
+    "lastChecked": "2026-06-09T16:19:25.789Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-flight-price-analysis": {
+    "hash": "5958cb272e4eaa44c89c68db56b90de22ac7257d8ee8cd507f5d40fb2269799f",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-price-analysis/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T16:19:27.543Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-hotel-name-autocomplete": {
+    "hash": "2877037393337eca3d35b0c6b1183ffcc596ba8d61678f0e3ad1b977c3d94ada",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.json",
+    "lastChecked": "2026-06-09T16:19:29.586Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-hotel-ratings": {
+    "hash": "a53725922c6f4333ad6b9243c7d9d35c01cde5f71d6d2750632984aef5cd2ef3",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.json",
+    "lastChecked": "2026-06-09T16:19:31.392Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-hotel-search": {
+    "hash": "ea3a1fc78c695b7d77c0d51fdd3fde79b9dfb8042891124055598e6cd613c01d",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.json",
+    "lastChecked": "2026-06-09T16:19:33.077Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-location-score": {
+    "hash": "b9ee3d77f0074ec42626055c427985dd8e44a08a0d416caa74d18d4c95b87a2a",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-location-score/1.0.2/openapi.json",
+    "lastChecked": "2026-06-09T16:19:34.953Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-seatmap-display": {
+    "hash": "e2c36eccc4d954da5b848aec22704bb7f86dd4c17365ecdec2d770aaef8938c5",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.json",
+    "lastChecked": "2026-06-09T16:19:36.995Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amadeus-travel-recommendations": {
+    "hash": "3d55e394188137707e8c2c611a512dc855ca9b471cf2e6b0abcfa18b2d608277",
+    "url": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-travel-recommendations/1.0.3/openapi.json",
+    "lastChecked": "2026-06-09T16:19:38.900Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-awsmigrationhub": {
+    "hash": "204a6298ed44299f7d716d7a338c15d1e068fed73fa67332ebaf29ea16d834cd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/AWSMigrationHub/2017-05-31/openapi.json",
+    "lastChecked": "2026-06-09T16:19:40.823Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-accessanalyzer": {
+    "hash": "1e2af482b5800f688f1aa0fd92e0356e6f4239d26694dd70eb0f3f7d76fc685a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/accessanalyzer/2019-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:19:42.883Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-acm": {
+    "hash": "4553f484f218534f697f29590ed72ad5354b572ff6201e6b296563a0450df341",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/acm/2015-12-08/openapi.json",
+    "lastChecked": "2026-06-09T16:19:44.698Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-acm-pca": {
+    "hash": "804a0ccbf0427a82c3d7a5e956568ba5b84084f1c310f0c30c0142d6bebb0ffa",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/acm-pca/2017-08-22/openapi.json",
+    "lastChecked": "2026-06-09T16:19:46.396Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-alexaforbusiness": {
+    "hash": "f4844323564533913a77ed386443208b70b8a329d7d2d91a2d92ba2e93479cbb",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/alexaforbusiness/2017-11-09/openapi.json",
+    "lastChecked": "2026-06-09T16:19:48.118Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-amp": {
+    "hash": "3aa9a31eefb9cfcaed24699fa47def4cced10808d47353b29e304a3de2b0ee50",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/amp/2020-08-01/openapi.json",
+    "lastChecked": "2026-06-09T16:19:49.769Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-amplify": {
+    "hash": "da1a936aae5f37f05e135d2aff50e89970457890c1295fd08eb36814140f5a9e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/amplify/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:19:51.518Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-amplifybackend": {
+    "hash": "bd3656107df5e5a5b9231032b31ed72474511a136d85eacbf590022029113160",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/amplifybackend/2020-08-11/openapi.json",
+    "lastChecked": "2026-06-09T16:19:53.676Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-apigateway": {
+    "hash": "975051bce590011c6249f4a9288e9971c75c197ee295e46c19b69e81c9075c8c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/apigateway/2015-07-09/openapi.json",
+    "lastChecked": "2026-06-09T16:19:55.619Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-apigatewaymanagementapi": {
+    "hash": "d48bd32bb442edf7b916cc521c91df3240555844997e55464dfc82682fe54023",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/apigatewaymanagementapi/2018-11-29/openapi.json",
+    "lastChecked": "2026-06-09T16:19:57.552Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-apigatewayv2": {
+    "hash": "5b0d5f3d62ab19766cff46e3183b878237ab20394a6f676fedf8b0fade85db50",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/apigatewayv2/2018-11-29/openapi.json",
+    "lastChecked": "2026-06-09T16:19:59.605Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appconfig": {
+    "hash": "21b9c1aec7ce2a523a19404604ee42080f5e04bf2f819c8d38b7b1037f7ecf08",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appconfig/2019-10-09/openapi.json",
+    "lastChecked": "2026-06-09T16:20:01.460Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appflow": {
+    "hash": "a59df182de630fa7944b007c7beaa20a64be2a2bcf4ec78c328f646580d72b9b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appflow/2020-08-23/openapi.json",
+    "lastChecked": "2026-06-09T16:20:03.312Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appintegrations": {
+    "hash": "47fac2d90739be2c6143df3e1021715f713a7183513c4dce33fbe6a5093660a2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appintegrations/2020-07-29/openapi.json",
+    "lastChecked": "2026-06-09T16:20:05.258Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-application-autoscaling": {
+    "hash": "2b47f49fa9f07993eb1fcd79c5fe0ff9cf292b1b02837015f86606af37cc85bb",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/application-autoscaling/2016-02-06/openapi.json",
+    "lastChecked": "2026-06-09T16:20:07.283Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-application-insights": {
+    "hash": "10cc000cd0975499a954c643bd967edf2e6edda31f7ddd735f23aceb06e77f5e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/application-insights/2018-11-25/openapi.json",
+    "lastChecked": "2026-06-09T16:20:09.078Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-applicationcostprofiler": {
+    "hash": "de8b21ebef06f6dc65359c1780604182e45a4fe9b5d5df39f14e5707a9be7ba2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/applicationcostprofiler/2020-09-10/openapi.json",
+    "lastChecked": "2026-06-09T16:20:11.096Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appmesh": {
+    "hash": "b30d71eb8a69aafe2c562eabc8f4d86a560cf6a6912151f13b2bbad46a1a41ad",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appmesh/2019-01-25/openapi.json",
+    "lastChecked": "2026-06-09T16:20:12.972Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-apprunner": {
+    "hash": "4dd5ceb0a74c2e9f2e330315e808197aad5475f8f283616ea5ac6accd1742c49",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/apprunner/2020-05-15/openapi.json",
+    "lastChecked": "2026-06-09T16:20:14.803Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appstream": {
+    "hash": "2b064b58ab982c0bb75b72ca2d7679df751213359327a20b4eba753286ade2d6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appstream/2016-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:16.806Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-appsync": {
+    "hash": "47dac553df01302f54aece5ea7e42a01a0f6b95339afe9ce55660c643def5503",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/appsync/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:20:18.733Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-athena": {
+    "hash": "18cf5e2951e8b731f8877c4cd2a708a418dcd88b3b745c1fbb50a9f6e904eb90",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/athena/2017-05-18/openapi.json",
+    "lastChecked": "2026-06-09T16:20:20.639Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-auditmanager": {
+    "hash": "efdd4e465a10936ea6fb51d881a4f2e3c1115065b3bec366df948e39a0b7a1ba",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/auditmanager/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:20:23.057Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-autoscaling": {
+    "hash": "cf7a84f315d6589a7724bdf8672b4635b8b23426258ab5ab1b76888f450738aa",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/autoscaling/2011-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:25.049Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-autoscaling-plans": {
+    "hash": "de7bb0df79beab0f5a610bcda824c423eeeb32f1bfe2aaf70d997c37f01e5bce",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/autoscaling-plans/2018-01-06/openapi.json",
+    "lastChecked": "2026-06-09T16:20:26.783Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-backup": {
+    "hash": "d76b4403ae8d08734472ef6a4f961c7580ce9a673c2872bcd48c2fbd43db33b8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/backup/2018-11-15/openapi.json",
+    "lastChecked": "2026-06-09T16:20:28.571Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-batch": {
+    "hash": "b396be900c572938b588b9586fd7c7bde3aba4c8b7c0d4c13aa011cf6573872b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/batch/2016-08-10/openapi.json",
+    "lastChecked": "2026-06-09T16:20:30.411Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-braket": {
+    "hash": "eb6f729ad5151e02d3ac419cb6ebda3a009830a2619e8f3c9d931f1c0c6e0845",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/braket/2019-09-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:32.176Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-budgets": {
+    "hash": "6c26cc587e50aa3372e3297dd50ce76bf348c587067c787568522c76d28531d7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/budgets/2016-10-20/openapi.json",
+    "lastChecked": "2026-06-09T16:20:33.935Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-ce": {
+    "hash": "273b220d2ecdf5085c1ab4c8ee384cf3c2b384903f34ae494862cb68953d905c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ce/2017-10-25/openapi.json",
+    "lastChecked": "2026-06-09T16:20:35.761Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-chime": {
+    "hash": "9f971894d5f0aca61a904ac82e3857898b2e58a70a117a899fdaca5f8fd88cf6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/chime/2018-05-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:37.675Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloud9": {
+    "hash": "50cac89881667cb185b8b4130d35fc9d268108f96811cb5aaec67b3b0cc8821b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloud9/2017-09-23/openapi.json",
+    "lastChecked": "2026-06-09T16:20:39.554Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-clouddirectory": {
+    "hash": "3889127abce86a6d179c959838ab7cfc4e6fb20408ba6119439f7c082025790e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/clouddirectory/2017-01-11/openapi.json",
+    "lastChecked": "2026-06-09T16:20:41.329Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudformation": {
+    "hash": "b1c23965bd66b02d452519e7c1e3ef9af4f6376e7852f05c48938c74d452e07e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudformation/2010-05-15/openapi.json",
+    "lastChecked": "2026-06-09T16:20:43.176Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws": {
+    "hash": "c5ef5a590dc8d4aedfabb1d3ee20a3b8dea4e394e89975d5762793b7743780df",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudfront/2020-05-31/openapi.json",
+    "lastChecked": "2026-06-09T16:20:45.079Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudhsm": {
+    "hash": "a7d570ffdd202c91630a58490702ceb891a4e469575ad94b2917434ca6f40ffa",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudhsm/2014-05-30/openapi.json",
+    "lastChecked": "2026-06-09T16:20:46.937Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudhsmv2": {
+    "hash": "5a35dd9912f421c7902d7bbe7f195199e31144a7ecb7dfe971a11fc8e3289401",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudhsmv2/2017-04-28/openapi.json",
+    "lastChecked": "2026-06-09T16:20:48.946Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudsearch": {
+    "hash": "1136456c1d2154afbcc5f26959ea9c5895e8cc2a4254afff5bf166cdb23f6b86",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudsearch/2013-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:50.829Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudsearchdomain": {
+    "hash": "ccc7f5fd7710013314f87d86619d5b21e826206b5000a27568a5f93cbde3a986",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudsearchdomain/2013-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:52.674Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cloudtrail": {
+    "hash": "f978b99694a4856404fcdd2a69f9dbb82b292809caccf49a8bcd0c26a973cc34",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cloudtrail/2013-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:20:54.478Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codeartifact": {
+    "hash": "65dc6ef91f014c23b7054acaa466627345f74d9e96100741119a1d327b9617a9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codeartifact/2018-09-22/openapi.json",
+    "lastChecked": "2026-06-09T16:20:56.345Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codebuild": {
+    "hash": "7d51ff87af0df828525646b955f65ca6d95cda38d7c414b6b1617b2796bb2cea",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codebuild/2016-10-06/openapi.json",
+    "lastChecked": "2026-06-09T16:20:58.125Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codecommit": {
+    "hash": "50af90ebc0363d9352a0139e55b0ea5fa5daa6d77f7fc57491114f6f9e1f8b2b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codecommit/2015-04-13/openapi.json",
+    "lastChecked": "2026-06-09T16:21:00.200Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codedeploy": {
+    "hash": "c067be39889b0aeb68eb948d8e561c6ba4d337b138e56ca2bf10b4b651cf42c1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codedeploy/2014-10-06/openapi.json",
+    "lastChecked": "2026-06-09T16:21:02.199Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codeguru-reviewer": {
+    "hash": "b187233156a382e2685be1f3429cfabcbce32d67b218f61d9b534794c97f2d6e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codeguru-reviewer/2019-09-19/openapi.json",
+    "lastChecked": "2026-06-09T16:21:03.986Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codeguruprofiler": {
+    "hash": "6ab7743a54cac4bd8abdcc09f04474641e626b055b92476d44e9028db658f6a9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codeguruprofiler/2019-07-18/openapi.json",
+    "lastChecked": "2026-06-09T16:21:05.816Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codepipeline": {
+    "hash": "10976c4159aa7c43274073ecf453f31c6ed53d70c6fe6a4839650ee9e7ee4da4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codepipeline/2015-07-09/openapi.json",
+    "lastChecked": "2026-06-09T16:21:07.845Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codestar": {
+    "hash": "b8bf6af84664eabd9345b22027b483368e91f39ab71ee91a6d0da7d099a58223",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codestar/2017-04-19/openapi.json",
+    "lastChecked": "2026-06-09T16:21:09.669Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codestar-connections": {
+    "hash": "8cbe7a625e105ef842659863a3a1badc7edce9dc9f6a4b72e4dc305bf77e7944",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codestar-connections/2019-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:21:11.836Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-codestar-notifications": {
+    "hash": "612f118440f2ab063f8baa088b0b3c41a2b233b7c49e4a64fd6c9de3f1762122",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/codestar-notifications/2019-10-15/openapi.json",
+    "lastChecked": "2026-06-09T16:21:13.712Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cognito-identity": {
+    "hash": "cadd010af1d2f7eb9485950224c459cbefeabf62fc63e3a9aa9ec64f81a21341",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cognito-identity/2014-06-30/openapi.json",
+    "lastChecked": "2026-06-09T16:21:15.502Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cognito-idp": {
+    "hash": "ac81a9aaa6c62f108bf60d635c40edde1ac61611a462104cba1f849fb4841ddd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cognito-idp/2016-04-18/openapi.json",
+    "lastChecked": "2026-06-09T16:21:17.516Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cognito-sync": {
+    "hash": "48b2a41f46ca8f363389210244602403c7c0371c0e6b864b669988201868d2f7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cognito-sync/2014-06-30/openapi.json",
+    "lastChecked": "2026-06-09T16:21:19.289Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-comprehend": {
+    "hash": "72ab2b57fb172012926d309b5ba57cb7ba2c44c74336f462138e510e3ac1db4b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/comprehend/2017-11-27/openapi.json",
+    "lastChecked": "2026-06-09T16:21:21.102Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-comprehendmedical": {
+    "hash": "264ff96101781d4a4e038494b719bf411d96ef4caf2f1d6292ce6c8beb46d8b8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/comprehendmedical/2018-10-30/openapi.json",
+    "lastChecked": "2026-06-09T16:21:23.014Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-compute-optimizer": {
+    "hash": "abf845c6d28283b9891a6d1ec2fdfda1cdd6889099ec999a8501a737705afd9b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/compute-optimizer/2019-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:21:24.977Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-config": {
+    "hash": "9aed32c35392ea0f3933e908da3d130423b59a59fc7f68c83cb319f944152995",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/config/2014-11-12/openapi.json",
+    "lastChecked": "2026-06-09T16:21:26.691Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-connect": {
+    "hash": "b2e087edc205de6535123190b5b6e5a025dbd2c40340932bbf947ac437cf4682",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/connect/2017-08-08/openapi.json",
+    "lastChecked": "2026-06-09T16:21:28.503Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-connect-contact-lens": {
+    "hash": "ac92c8b05ec0c91054ee0a3554e72ea05968e72a7a6aba205a4af4e3483561a1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/connect-contact-lens/2020-08-21/openapi.json",
+    "lastChecked": "2026-06-09T16:21:30.419Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-connectparticipant": {
+    "hash": "840e82014d15e1691d6966f5d64d5edffc0ce21a099841540e6284458c0e6bad",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/connectparticipant/2018-09-07/openapi.json",
+    "lastChecked": "2026-06-09T16:21:32.436Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-cur": {
+    "hash": "bcbde5faeb4017aa347ed081f7ea4f062dc09bdc9ab129fa1092f22666853d19",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cur/2017-01-06/openapi.json",
+    "lastChecked": "2026-06-09T16:21:34.213Z",
+    "lastTriggerReason": "force_upsert+spec_changed"
+  },
+  "amazonaws-customer-profiles": {
+    "hash": "02b05896c29c6fdf027c1747459e29f919dc5ee73ab22723dfb287b39e10dc88",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/customer-profiles/2020-08-15/openapi.json",
+    "lastChecked": "2026-06-09T16:21:36.011Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-databrew": {
+    "hash": "d7e0adaa1459d13200b651d6dfd07f4de44f7087f33efacf728e3517888e7c88",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/databrew/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:21:37.747Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-dataexchange": {
+    "hash": "8b4df7628d46f5b116ad47670194e2c3fcd46066413b273d2463228d9a3d50d2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/dataexchange/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:21:39.739Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-datapipeline": {
+    "hash": "1824f601a12c7ba5426b638d537b824c5a005c7ff18b3c6d7446f6f57ba77fff",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/datapipeline/2012-10-29/openapi.json",
+    "lastChecked": "2026-06-09T16:21:41.508Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-datasync": {
+    "hash": "1f439d8156537e951ef6fc0b5b372ac47dd786f6ffa81c7f36784cf80bd60bde",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/datasync/2018-11-09/openapi.json",
+    "lastChecked": "2026-06-09T16:21:43.440Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-dax": {
+    "hash": "b5f4dc7531353c45a8db3b6d9df29628e8ac1cd0afcbde2f4dda61a6d06f58ae",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/dax/2017-04-19/openapi.json",
+    "lastChecked": "2026-06-09T16:21:45.328Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-detective": {
+    "hash": "e0f2dc95d4acecebc3b2d6a4fa6466813ed3484f772cd6cd594bc998827fec5f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/detective/2018-10-26/openapi.json",
+    "lastChecked": "2026-06-09T16:21:47.253Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-devicefarm": {
+    "hash": "f44dfe81431bf59cdc26cf6f6c1e7479f87483f75c9f3b6d74eec4a1667acb51",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/devicefarm/2015-06-23/openapi.json",
+    "lastChecked": "2026-06-09T16:21:49.056Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-devops-guru": {
+    "hash": "b1e08b6177126070d4965d7c2d66d298ebf170ebc56af872ac1a299915acbb1e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/devops-guru/2020-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:21:50.847Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-directconnect": {
+    "hash": "6202421d7e115968aefea2826e008c1e61552007d76463eecfd9fa2e720893bf",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/directconnect/2012-10-25/openapi.json",
+    "lastChecked": "2026-06-09T16:21:52.672Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-discovery": {
+    "hash": "f7f492905751a6123a37646ad6b9370cc24110f7f7623422c874ec1197418500",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/discovery/2015-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:21:54.505Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-dlm": {
+    "hash": "6cab5962e3c4e915de4537ac00602945d5068c08b2adc719fdbe6ab6bb1d95a9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/dlm/2018-01-12/openapi.json",
+    "lastChecked": "2026-06-09T16:21:56.295Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-dms": {
+    "hash": "d5823ecd236f8774cbfa5e41ca15621a613da43089212100f7631652ed874e2f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/dms/2016-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:21:58.188Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-docdb": {
+    "hash": "bb05631446796bbbe49531e0eac08861d58f2e537c3eb85a996be4c61b961999",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/docdb/2014-10-31/openapi.json",
+    "lastChecked": "2026-06-09T16:22:00.023Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ds": {
+    "hash": "ff70a300bbebd07041e62cc42c6494a282ac5738dba28a9da21012e2019e420f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ds/2015-04-16/openapi.json",
+    "lastChecked": "2026-06-09T16:22:01.948Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-dynamodb": {
+    "hash": "9b4b80e4c9716e024c3077df959a328186d1dd32f5cbfbd16f14204a239e49f4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/dynamodb/2012-08-10/openapi.json",
+    "lastChecked": "2026-06-09T16:22:03.927Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ebs": {
+    "hash": "755958f6ae82b6d89eef89f895b33cbede2f002abb056779e2e355ccb5c994cb",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ebs/2019-11-02/openapi.json",
+    "lastChecked": "2026-06-09T16:22:05.811Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ec2": {
+    "hash": "1161b0e945f029950552de3582c6d3d1f2d51c9046efbb5cc6688617f9fd781d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ec2/2016-11-15/openapi.json",
+    "lastChecked": "2026-06-09T16:22:07.649Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ec2-instance-connect": {
+    "hash": "3f2695cd82e065a60d4b52459fbfbd7f8956423a17ad9b33115a0eb722121cb2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ec2-instance-connect/2018-04-02/openapi.json",
+    "lastChecked": "2026-06-09T16:22:09.530Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ecr": {
+    "hash": "5bb820b7f40319e8f5faec201735963c5f8113d2cf2037cdeb4197d88fb2e3a7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ecr/2015-09-21/openapi.json",
+    "lastChecked": "2026-06-09T16:22:11.396Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ecr-public": {
+    "hash": "e37a146315e239ab890ba86cf7bd9e7203d18c254a91eb7ddb17374d139a42ab",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ecr-public/2020-10-30/openapi.json",
+    "lastChecked": "2026-06-09T16:22:13.435Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ecs": {
+    "hash": "f089fac929e7b192a17c80ed7bf6421702659f20828f176169bda517042710a5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ecs/2014-11-13/openapi.json",
+    "lastChecked": "2026-06-09T16:22:15.326Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-eks": {
+    "hash": "5638c4ddded2dddd618e29f14c6287f6c54eab94494e2997be3da219f942516d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/eks/2017-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:17.110Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elastic-inference": {
+    "hash": "42f93d4c790827d9c3842cbe40197f68d7ed8974b320f08619f7dcfa6c0e93c4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elastic-inference/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:22:18.930Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticache": {
+    "hash": "ffee4cf57cdb355bff8b1be30ef986203eee0d7c0e47d0c4b06fdc4c9aadd930",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticache/2015-02-02/openapi.json",
+    "lastChecked": "2026-06-09T16:22:20.829Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticbeanstalk": {
+    "hash": "d00e972c77701b592848f198a71ba7815a1dc4130f8707fbf031dc07358c555a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticbeanstalk/2010-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:22.756Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticfilesystem": {
+    "hash": "6831e6792beb671e7f329d3eff6fd8d1771efe1a9bff7123046967575145ebee",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticfilesystem/2015-02-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:24.612Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticloadbalancing": {
+    "hash": "d8c75abf03edf52271123d1e3c3b267733d5456f4fe4e8574fbe6be70bdc1d6e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticloadbalancing/2012-06-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:26.481Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticloadbalancingv2": {
+    "hash": "3781e64c19b5cc0fd7ef819cf149392f2f43738e3a0cffdce3a09f8195592dd4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticloadbalancingv2/2015-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:28.300Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elasticmapreduce": {
+    "hash": "99d04a2f9ceb8f356e6dfec7fdf657df36a53babf46b45c02c21408799a83d67",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elasticmapreduce/2009-03-31/openapi.json",
+    "lastChecked": "2026-06-09T16:22:30.299Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-elastictranscoder": {
+    "hash": "6f8976a333eed739e6e72c2bab8d6acda16d5355f68413a5925632f94f36cf64",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/elastictranscoder/2012-09-25/openapi.json",
+    "lastChecked": "2026-06-09T16:22:32.549Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-email": {
+    "hash": "75e96720ecafa4bb981f316d673a01b96a6f45f385eb7dd944c9ecd4602e1a7a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/email/2010-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:34.539Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-emr-containers": {
+    "hash": "393e996cd73a3c1e720095e066500363947c92e5319e4f5232a31b61ab4b2f6b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/emr-containers/2020-10-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:36.245Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-entitlement-marketplace": {
+    "hash": "62fd7fcab54a52c1f41fd6ffbeae0979d6053c0780a67d702be83e23db339028",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/entitlement.marketplace/2017-01-11/openapi.json",
+    "lastChecked": "2026-06-09T16:22:38.055Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-api": {
+    "hash": "ccdfc039d67083f630057d2b2c64a0ba0c10c5ba7e4becef723214aad95fe8b5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/es/2015-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:39.781Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-eventbridge": {
+    "hash": "5d9e2c8abf9c8243d295491a4b19c663378fd26687f9079e2b48e5f9341c7a83",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/eventbridge/2015-10-07/openapi.json",
+    "lastChecked": "2026-06-09T16:22:41.584Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-events": {
+    "hash": "8c529563d4f81a61bb6fe9b50013d800ec238d2fb9ee74525e3364a0b6e974b5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/events/2015-10-07/openapi.json",
+    "lastChecked": "2026-06-09T16:22:43.353Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-finspace": {
+    "hash": "b9b309e55a3988cf8bae158f6cb7954f09e5c0fa43466165937e42195c7a41fd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/finspace/2021-03-12/openapi.json",
+    "lastChecked": "2026-06-09T16:22:45.357Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-finspace-data": {
+    "hash": "9cc66d64ff20d16c377304f67a389e386fc30d4c8108ff6a4fcd5afcaae13dc5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/finspace-data/2020-07-13/openapi.json",
+    "lastChecked": "2026-06-09T16:22:47.108Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-firehose": {
+    "hash": "ce55a5b7ef707b8773f50e6483fb31dbf82bb7d2ef7b6079f688bd6aa5587a21",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/firehose/2015-08-04/openapi.json",
+    "lastChecked": "2026-06-09T16:22:48.995Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-fis": {
+    "hash": "48ba8866e56458fea5c20cde9c4d91d7297e68dd38599b9ede3ef606b9bb7acd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/fis/2020-12-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:50.745Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-fms": {
+    "hash": "8124b5274f64244eb65e6961196c82496ebd48a2dde932b1c6e2ffe7951bd0e7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/fms/2018-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:52.423Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-forecast": {
+    "hash": "07490be8981650f41b6ca58f0209b281dde6002bdeb1c9d4a271c5fb2b7d2a4d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/forecast/2018-06-26/openapi.json",
+    "lastChecked": "2026-06-09T16:22:54.315Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-forecastquery": {
+    "hash": "88ab7c896738a24915318019eaf72869e58525e9b61eda510cbe94535e559e0f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/forecastquery/2018-06-26/openapi.json",
+    "lastChecked": "2026-06-09T16:22:56.132Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-frauddetector": {
+    "hash": "2594cc7b9e994666954fb1d6d376c899a69f09d33c1615e60ac299b26b098ae2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/frauddetector/2019-11-15/openapi.json",
+    "lastChecked": "2026-06-09T16:22:57.944Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-fsx": {
+    "hash": "7b5378ec32d8172f9069bc1552d0f3200433a095aec3bba8e74dd6f34d61777c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/fsx/2018-03-01/openapi.json",
+    "lastChecked": "2026-06-09T16:22:59.815Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-gamelift": {
+    "hash": "211bf904c423aadaec873ef7a3727f36f44e6988a68569601d1d8c25073169b8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/gamelift/2015-10-01/openapi.json",
+    "lastChecked": "2026-06-09T16:23:01.738Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-glacier": {
+    "hash": "d755e2a4ae74ae203ddc41ed8e299727c4acfda5a83f2116595a9b6bec99b7ec",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/glacier/2012-06-01/openapi.json",
+    "lastChecked": "2026-06-09T16:23:03.506Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-globalaccelerator": {
+    "hash": "85fae89009a59d630f21feebbdf4ff726fb36ee06887420c51ef5a8dc9b2a22c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/globalaccelerator/2018-08-08/openapi.json",
+    "lastChecked": "2026-06-09T16:23:05.662Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-glue": {
+    "hash": "d5f6abb31b9570f8a111d55ab1c8441daa35bcaff80ea6503ccb1a35f6647428",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/glue/2017-03-31/openapi.json",
+    "lastChecked": "2026-06-09T16:23:07.548Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-greengrass": {
+    "hash": "5f797afc826e16b638147d4529043708b2ea3cd7374be304a80bbc5eed204b4d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/greengrass/2017-06-07/openapi.json",
+    "lastChecked": "2026-06-09T16:23:09.483Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-greengrassv2": {
+    "hash": "5bf82404c9a5d0c1a8b055ab284610f4c0639421fd861faa27c18acc5f66f7f7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/greengrassv2/2020-11-30/openapi.json",
+    "lastChecked": "2026-06-09T16:23:11.317Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-groundstation": {
+    "hash": "9d635100ff0edb82858038945b679a3471cf66aab368f7785ceaaa9e51d41ad5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/groundstation/2019-05-23/openapi.json",
+    "lastChecked": "2026-06-09T16:23:13.072Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-guardduty": {
+    "hash": "8d1e86e62c60e78a448ccf48a40bc168720724bbfdf317796c91cc25237d1c39",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/guardduty/2017-11-28/openapi.json",
+    "lastChecked": "2026-06-09T16:23:14.936Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-health": {
+    "hash": "62cbc3c4551c9d5dfff02c62f6c196171823efedef80046fa5aa06a74e35e0a5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/health/2016-08-04/openapi.json",
+    "lastChecked": "2026-06-09T16:23:16.706Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-healthlake": {
+    "hash": "7a0ee412e3f9ecd132b3fd3ed25391c5ec23508cb5a20f56676da7220f2ff18e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/healthlake/2017-07-01/openapi.json",
+    "lastChecked": "2026-06-09T16:23:18.422Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-honeycode": {
+    "hash": "9289add1996127ee39ac18f3da3ac31793629da3fc86d5ada4781d5b827c7b59",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/honeycode/2020-03-01/openapi.json",
+    "lastChecked": "2026-06-09T16:23:20.222Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iam": {
+    "hash": "0a757164b70fe92482fd731aa28f089de4e5fdc45f1a1d66db427646d6ae43cf",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iam/2010-05-08/openapi.json",
+    "lastChecked": "2026-06-09T16:23:21.982Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-identitystore": {
+    "hash": "64e17351066e8c28f8dbed5d6a4ca62068f3098d64b3ce599b9e2b47cc71a878",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/identitystore/2020-06-15/openapi.json",
+    "lastChecked": "2026-06-09T16:23:23.860Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-imagebuilder": {
+    "hash": "1a3503cf2339b9cb7a3f9c7fe814971bb32e425b3bb343d4e937294c1c56aa9f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/imagebuilder/2019-12-02/openapi.json",
+    "lastChecked": "2026-06-09T16:23:26.043Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-importexport": {
+    "hash": "fd86f30dc8cfb4169ec7f314d15bd49f5d658930c4e9d265d0d12b4080012d81",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/importexport/2010-06-01/openapi.json",
+    "lastChecked": "2026-06-09T16:23:27.730Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-inspector": {
+    "hash": "54b4be2b439f71e74bb894ec53fb11d8c4729fb5186a70d0c9f4535e73a5af08",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/inspector/2016-02-16/openapi.json",
+    "lastChecked": "2026-06-09T16:23:29.591Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iot": {
+    "hash": "74da6eac96d97d0aa30f5d16eb3a8916d42a507f00d8de3ba86bd483f5feae36",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iot/2015-05-28/openapi.json",
+    "lastChecked": "2026-06-09T16:23:31.535Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iot-data": {
+    "hash": "db310bf6c8de96e1c5eb2ba317bea5e6967458c52657c6115553bc902fb19868",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iot-data/2015-05-28/openapi.json",
+    "lastChecked": "2026-06-09T16:23:33.291Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iot-jobs-data": {
+    "hash": "f377f6dfcea685718923b0210e655909311875baba5f92206c131a0ed69dbf2b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iot-jobs-data/2017-09-29/openapi.json",
+    "lastChecked": "2026-06-09T16:23:35.177Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iot1click-devices": {
+    "hash": "93f895fafbf8660c0a88a6dbadf0248916142611b0cc75f6cd53914a1f8c68a7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iot1click-devices/2018-05-14/openapi.json",
+    "lastChecked": "2026-06-09T16:23:37.018Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iot1click-projects": {
+    "hash": "5aa357a30b1c6a95d8fa5100465e33718c5e3dd5fe871c9b8b48ef15946705ca",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iot1click-projects/2018-05-14/openapi.json",
+    "lastChecked": "2026-06-09T16:23:38.771Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotanalytics": {
+    "hash": "a2947053c40f7aee1d9e2479adba19c2adcd8ba9e0ac43f23ff10a01d88114a6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotanalytics/2017-11-27/openapi.json",
+    "lastChecked": "2026-06-09T16:23:40.546Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotdeviceadvisor": {
+    "hash": "d8f344cf99774969b83fe6d5567fd3e75d321078d5fd4234d1f0d559fc086bb8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotdeviceadvisor/2020-09-18/openapi.json",
+    "lastChecked": "2026-06-09T16:23:42.308Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotevents": {
+    "hash": "5c0394b825e73c7bbd50d78eaedca4cf31d4ef764d425c7a6c1ad4028b32d2f7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotevents/2018-07-27/openapi.json",
+    "lastChecked": "2026-06-09T16:23:44.010Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotevents-data": {
+    "hash": "4e49fdcaabed584edcadb60f884efac55654651d2faa451f5fe461503f1f603c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotevents-data/2018-10-23/openapi.json",
+    "lastChecked": "2026-06-09T16:23:45.808Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotfleethub": {
+    "hash": "72e3da578eec223fd2e1a5c5f02e82bf7cd44fc860d43bddbeba1394e1862e41",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotfleethub/2020-11-03/openapi.json",
+    "lastChecked": "2026-06-09T16:23:47.604Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotsecuretunneling": {
+    "hash": "18e581e383156fb9d27b66b8c0d0c6a0aba117ad02c1d9d50c801e0059632411",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotsecuretunneling/2018-10-05/openapi.json",
+    "lastChecked": "2026-06-09T16:23:49.629Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotsitewise": {
+    "hash": "64d340c13e8f2e710a94b1c21734e1b00c7f1a8748f3d95bed2c8ea533fade00",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotsitewise/2019-12-02/openapi.json",
+    "lastChecked": "2026-06-09T16:23:51.577Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotthingsgraph": {
+    "hash": "4e3bd7517d940ae33b2372d3aaa42c649540a6810a6bd7791867963b8266af21",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotthingsgraph/2018-09-06/openapi.json",
+    "lastChecked": "2026-06-09T16:23:53.331Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-iotwireless": {
+    "hash": "4252e575a889fb373df086e658a546878b47f65fa7638ea5e8744cf752529668",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/iotwireless/2020-11-22/openapi.json",
+    "lastChecked": "2026-06-09T16:23:55.497Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ivs": {
+    "hash": "0e941fb39bd49c0cd84f29af7d82de66de78231a6535771423dc307cccef4926",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ivs/2020-07-14/openapi.json",
+    "lastChecked": "2026-06-09T16:23:57.539Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kendra": {
+    "hash": "cf8b470b8e580f6256bbb869b50ee7f20f4b9ee96c8ab2191258c33f95c7fd62",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kendra/2019-02-03/openapi.json",
+    "lastChecked": "2026-06-09T16:23:59.311Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesis": {
+    "hash": "82e5208e1901e0f7975cb3e99ea940cb116c44693a15a4c2875dc4c174de4134",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesis/2013-12-02/openapi.json",
+    "lastChecked": "2026-06-09T16:24:01.082Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesis-video-archived-media": {
+    "hash": "949f29be23835cf919c273f7ae1299bcd3b55f72cb5a2f700368b689611e4c1a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesis-video-archived-media/2017-09-30/openapi.json",
+    "lastChecked": "2026-06-09T16:24:02.965Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesis-video-media": {
+    "hash": "316e8563218244ca1c8f69d1fefc45e1c87a1af0613b0e149e6f8edf098c21cc",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesis-video-media/2017-09-30/openapi.json",
+    "lastChecked": "2026-06-09T16:24:04.776Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesis-video-signaling": {
+    "hash": "4aec379b7b70e8706ab6e9d9c56be20339f8df46fd1414cd3f5e1f0c5051d9a4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesis-video-signaling/2019-12-04/openapi.json",
+    "lastChecked": "2026-06-09T16:24:06.503Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesisanalytics": {
+    "hash": "bd8396be1ded438efc51e79b8fcdf69e2d7f6aee5e8662e8e32f754772917e53",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesisanalytics/2015-08-14/openapi.json",
+    "lastChecked": "2026-06-09T16:24:08.347Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesisanalyticsv2": {
+    "hash": "3a5b0bfd5598100214f25c8f7eb3156878e394f7548344d62a04835b0d50316d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesisanalyticsv2/2018-05-23/openapi.json",
+    "lastChecked": "2026-06-09T16:24:10.070Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kinesisvideo": {
+    "hash": "e2b8979247044c5de65f038840fb65d8f830126d7f501c38a296878456164601",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kinesisvideo/2017-09-30/openapi.json",
+    "lastChecked": "2026-06-09T16:24:11.813Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-kms": {
+    "hash": "76cfa4cd60546916c1d6c1a898bb72743bda1342e4844e470a728e22a9fb55a5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/kms/2014-11-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:13.701Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lakeformation": {
+    "hash": "672503878cfb8209844c05db4d684811a2562a3807c6ad0c95bcd4fc76ce93ae",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lakeformation/2017-03-31/openapi.json",
+    "lastChecked": "2026-06-09T16:24:15.607Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lambda": {
+    "hash": "6e8e7818b3f7bdfa712837492fdc4901c1a6279fa47b529d18f3e0989e493b1a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lambda/2015-03-31/openapi.json",
+    "lastChecked": "2026-06-09T16:24:17.466Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lex-models": {
+    "hash": "81d232520f988d4aa3e8691f5ab599b1f81b1592a94dec0702d766dfbbb0e566",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lex-models/2017-04-19/openapi.json",
+    "lastChecked": "2026-06-09T16:24:19.179Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-license-manager": {
+    "hash": "7319789d8313c5564393a6c05870ce1c5b1d7073ad1d8ac0e70fdf4a723cf2d4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/license-manager/2018-08-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:20.861Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lightsail": {
+    "hash": "fdcd7962e7d4d88f6e9aff5cf66ce6a481159809d2f866a3d6455fab3c2219d2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lightsail/2016-11-28/openapi.json",
+    "lastChecked": "2026-06-09T16:24:22.669Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-location": {
+    "hash": "c7406a0107649136a3ec9a2c0e3f32d401a6511d0e31bbd8a571fa3b3c85bab8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/location/2020-11-19/openapi.json",
+    "lastChecked": "2026-06-09T16:24:24.511Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-logs": {
+    "hash": "3504629364457876ef66960cabb78ae1e9147b4cfa00c0d8c1257700d2606708",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/logs/2014-03-28/openapi.json",
+    "lastChecked": "2026-06-09T16:24:26.281Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lookoutequipment": {
+    "hash": "69832503d7882f1645314c1e35c9c7714461a5d7860789fae91ad9e3ded187d8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lookoutequipment/2020-12-15/openapi.json",
+    "lastChecked": "2026-06-09T16:24:28.086Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lookoutmetrics": {
+    "hash": "8d6925625d1f26c5711ed3af821e34393f0774240b8af90be15f6c0a06832c03",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lookoutmetrics/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-09T16:24:29.978Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-lookoutvision": {
+    "hash": "9e1d53e46743a0959461be81adfeb700d78263409b07a248a485cfbf58889628",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/lookoutvision/2020-11-20/openapi.json",
+    "lastChecked": "2026-06-09T16:24:31.772Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-machinelearning": {
+    "hash": "ebaf3bc0bcd4331ef2ed8eba1bde25befa01b8b70569f79f7dfe6990dcc076e7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/machinelearning/2014-12-12/openapi.json",
+    "lastChecked": "2026-06-09T16:24:33.517Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-macie": {
+    "hash": "b7ca757bf362bb2bb4d94a459c9cc6f3ca077878f6ef96082835885c91814338",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/macie/2017-12-19/openapi.json",
+    "lastChecked": "2026-06-09T16:24:35.363Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-macie2": {
+    "hash": "671b47b6ade3f1c9e786e89b0b220bf19bca708bee2872a9626349d02cb3214e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/macie2/2020-01-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:37.280Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-managedblockchain": {
+    "hash": "fd76c9292abd0c297e32f26cc77d2728befdf298190ac11501b54902de9fbd31",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/managedblockchain/2018-09-24/openapi.json",
+    "lastChecked": "2026-06-09T16:24:39.167Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-marketplace-catalog": {
+    "hash": "13b31c35bbdcb3270c5ed20bcf2e190ed2f525cf2305c80458956df3b48a2489",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/marketplace-catalog/2018-09-17/openapi.json",
+    "lastChecked": "2026-06-09T16:24:40.809Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-marketplacecommerceanalytics": {
+    "hash": "0d352db22759ee5791ec12d9158b25d1d5f3f4d138414ee960dc1e3120918191",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/marketplacecommerceanalytics/2015-07-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:42.485Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediaconnect": {
+    "hash": "346b81c2530d8bbac235278db44d623f1eb7256cf0890c1ddc076a45a8ee6826",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediaconnect/2018-11-14/openapi.json",
+    "lastChecked": "2026-06-09T16:24:44.202Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediaconvert": {
+    "hash": "1b728cbe833bc4d0f6cdb5e8db0d44be28f427b0c9091843d06c56df1f95fdcf",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediaconvert/2017-08-29/openapi.json",
+    "lastChecked": "2026-06-09T16:24:45.887Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-medialive": {
+    "hash": "0d82bb2a578d54968598219c8a879c2ddfede4b953aeb134d481eb078d17e8a0",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/medialive/2017-10-14/openapi.json",
+    "lastChecked": "2026-06-09T16:24:47.585Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediapackage": {
+    "hash": "939f72f6537ee11aa8a2a6dcf094dc32e6085f49ad11a8227b195546e0b999b9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediapackage/2017-10-12/openapi.json",
+    "lastChecked": "2026-06-09T16:24:49.412Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediapackage-vod": {
+    "hash": "1908f2c735646c217611b7a343ddd462646acb27569ae1158f895d9aaf0c6524",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediapackage-vod/2018-11-07/openapi.json",
+    "lastChecked": "2026-06-09T16:24:51.299Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediastore": {
+    "hash": "ba0bf17e66787856daaefa8b420c0c3a9db9bd45c2b7496ab2eb28ad073d6a26",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediastore/2017-09-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:53.005Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediastore-data": {
+    "hash": "a8c667c92a6ac2b35daeef88c08d4a807e656019f36140bf2ab1fe80b555072b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediastore-data/2017-09-01/openapi.json",
+    "lastChecked": "2026-06-09T16:24:54.796Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mediatailor": {
+    "hash": "3f3c6ea1c5e3932e278b9b3c069bbd7c1d608c8f954d9e2e7411da89cb8757a6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mediatailor/2018-04-23/openapi.json",
+    "lastChecked": "2026-06-09T16:24:56.515Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-meteringmarketplace": {
+    "hash": "e350108babd6025d701b8729fea9ba38f1a3e8045c6a32507e07e6ab0fbbcf92",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/meteringmarketplace/2016-01-14/openapi.json",
+    "lastChecked": "2026-06-09T16:24:58.308Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mgn": {
+    "hash": "3d67e0b919e642b0693d3913aab5627d1ceedc0d91d6551e310f9d1653ff3d0e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mgn/2020-02-26/openapi.json",
+    "lastChecked": "2026-06-09T16:24:59.998Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-migrationhub-config": {
+    "hash": "5c24a16b45518f97e3018f22cdfce23ae358a1a012c8617d37cca431dc2c73d1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/migrationhub-config/2019-06-30/openapi.json",
+    "lastChecked": "2026-06-09T16:25:01.863Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mobile": {
+    "hash": "3da75f825442030c38704d2a5ebc58a97d35da0bf8a894a10bd673414ef052f5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mobile/2017-07-01/openapi.json",
+    "lastChecked": "2026-06-09T16:25:03.620Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mobileanalytics": {
+    "hash": "64b13567f50d843986ed346eb82cb82ee5e35ffbe75141dc540191e3463231d8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mobileanalytics/2014-06-05/openapi.json",
+    "lastChecked": "2026-06-09T16:25:05.419Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-models-lex-v2": {
+    "hash": "8314f39c5f2c055c163c0d1d98869d4472534761618340b07bdd3c2c7af1a41d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/models.lex.v2/2020-08-07/openapi.json",
+    "lastChecked": "2026-06-09T16:25:07.147Z",
     "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
   }
 }
