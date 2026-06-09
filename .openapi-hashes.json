@@ -1300,5 +1300,1505 @@
     "url": "https://api.apis.guru/v2/specs/zoomconnect.com/1/swagger.json",
     "lastChecked": "2026-06-08T13:20:41.272Z",
     "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "microsoft-cognitiveservices-videosearch": {
+    "hash": "87341f0d9a9ff66eb66cfa75fbe63ad393d7b4fa660f4a1e3e68abbdcefa5478",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-VideoSearch/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:00.160Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "microsoft-cognitiveservices-visualsearch": {
+    "hash": "067344452626f61e457455c82a943288f5c1e0ffc991620cdcb8a508984b5ae0",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-VisualSearch/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:01.600Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "microsoft-cognitiveservices-websearch": {
+    "hash": "8061f1b4a26566458f114a40ca52771a7f68978ea86289e94308920a6e09094a",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/cognitiveservices-WebSearch/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:03.112Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "microsoft-graph": {
+    "hash": "150df320f1b752f6d70737389e76bed2ca52bbfc04239fa57a3e8c0407147fdc",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/graph/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:10:04.824Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "microsoft-graph-beta": {
+    "hash": "cea2a212e14a640c02b0c5b14c698392b779cf9f417f550bd33e8e353a29825b",
+    "url": "https://api.apis.guru/v2/specs/microsoft.com/graph-beta/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:10:07.031Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "mineskin": {
+    "hash": "b59b40ec02ad8b712219b92658d36524960c1af3ebc5d441911566100fa9c3d0",
+    "url": "https://api.apis.guru/v2/specs/mineskin.org/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:08.484Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "mist": {
+    "hash": "3400d5c7b18d0e36d728b1c57a0329e212222a6a808e9b327e8e37f731975210",
+    "url": "https://api.apis.guru/v2/specs/mist.com/0.36.1/openapi.json",
+    "lastChecked": "2026-06-09T05:10:10.052Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "moderatecontent": {
+    "hash": "b6affe8e37a058f0bca181c6fd5abe8286c3e90b0ee633981804680b1ff5b00d",
+    "url": "https://api.apis.guru/v2/specs/moderatecontent.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:11.578Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "monarchinitiative": {
+    "hash": "36531673002c7f002793d864ab054d2dc17db8ed35461795ed8787ed0df0a258",
+    "url": "https://api.apis.guru/v2/specs/monarchinitiative.org/1.1.14/openapi.json",
+    "lastChecked": "2026-06-09T05:10:13.061Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "moonmoonmoonmoon": {
+    "hash": "0934bcc6f4bac5e5ae4a4525003479b8fb4a9889fd531529dcdbb45b8a23c9a1",
+    "url": "https://api.apis.guru/v2/specs/moonmoonmoonmoon.com/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:14.662Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "motaword": {
+    "hash": "85afa6258284a8618d31149c43d5bc676df01d4a1789f7d00a617e2732af490a",
+    "url": "https://api.apis.guru/v2/specs/motaword.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:16.253Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "mtaa-api": {
+    "hash": "93179afad9279bb98c36f987e45847bb31c64455e7f713b5958470fc438b062f",
+    "url": "https://api.apis.guru/v2/specs/mtaa-api.herokuapp.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:17.820Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "musixmatch": {
+    "hash": "484ab234e6ac75d3cca79afaea4f89735bebe5aac10624a4d6cecd98d5abae97",
+    "url": "https://api.apis.guru/v2/specs/musixmatch.com/1.1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:19.393Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "n-auth": {
+    "hash": "9d79941f933218d2c18a1241505f3bb5ba18ce92a2a9bdae3bd59ad4e613544e",
+    "url": "https://api.apis.guru/v2/specs/n-auth.com/2.2/swagger.json",
+    "lastChecked": "2026-06-09T05:10:22.752Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "namsor": {
+    "hash": "6276fb26bac2eaaa71b39a20ed08077e6f5ad040a23508f3ac67514ff8faab0a",
+    "url": "https://api.apis.guru/v2/specs/namsor.com/2.0.24/openapi.json",
+    "lastChecked": "2026-06-09T05:10:24.218Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nasa-gov-apod": {
+    "hash": "e082b43d8945db2345b088be41be4982f67fd116e129e7e194f156a4b4143028",
+    "url": "https://api.apis.guru/v2/specs/nasa.gov/apod/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:25.689Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nasa-gov-asteroids-neows": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "url": "https://api.apis.guru/v2/specs/nasa.gov/asteroids neows/3.4.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:27.042Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nativeads": {
+    "hash": "45f54bd223395e6ac58aad931c58fd118ac0aa8114c43fc4cb80cff6da0e0e5f",
+    "url": "https://api.apis.guru/v2/specs/nativeads.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:28.626Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "naviplancentral-factfinder": {
+    "hash": "d32510e97ac16764590feaa0a8f9233d9d6feb973d240c4137d49ab2b2eeff9e",
+    "url": "https://api.apis.guru/v2/specs/naviplancentral.com/factfinder/v1/swagger.json",
+    "lastChecked": "2026-06-09T05:10:30.342Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "naviplancentral-plan": {
+    "hash": "971830057e3fe2dc155093fa20789173f8441511130e097c41efc5e3978a2ee6",
+    "url": "https://api.apis.guru/v2/specs/naviplancentral.com/plan/v1/swagger.json",
+    "lastChecked": "2026-06-09T05:10:31.965Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nba": {
+    "hash": "6b4f993c8a56057976f2766c97b51bc4b44f4894d77378ad786cda9a0400de41",
+    "url": "https://api.apis.guru/v2/specs/nba.com/version/swagger.json",
+    "lastChecked": "2026-06-09T05:10:33.464Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nbg-gr": {
+    "hash": "62e7c2a24e66ba8cc0123d5858e104fe1d245fe9cb8759a6b3d63093375aaf0e",
+    "url": "https://api.apis.guru/v2/specs/nbg.gr/v3.1.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:34.993Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ndhm-gov-ndhm-cm": {
+    "hash": "328ca383752231d28ce99d6a321c3f8c6a0bb8773a69c4a50f44df26812fbba4",
+    "url": "https://api.apis.guru/v2/specs/ndhm.gov.in/ndhm-cm/0.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:36.709Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ndhm-gov-ndhm-gateway": {
+    "hash": "4f329473f35a36e99cc439a8a253f26388138f0eba12e4baf2463a50db282964",
+    "url": "https://api.apis.guru/v2/specs/ndhm.gov.in/ndhm-gateway/0.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:38.313Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ndhm-gov-ndhm-healthid": {
+    "hash": "a6c7576bad202881edd576dabe01827be931b2753da7c687c3ed8c59e290898f",
+    "url": "https://api.apis.guru/v2/specs/ndhm.gov.in/ndhm-healthid/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:39.824Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ndhm-gov-ndhm-hip": {
+    "hash": "3a3dbc1310d7a77f85f81eaebad6ba8e404e82545988af38e6773ec3b75f8cd4",
+    "url": "https://api.apis.guru/v2/specs/ndhm.gov.in/ndhm-hip/0.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:41.425Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ndhm-gov-ndhm-hiu": {
+    "hash": "afdcbe037bdd467f649af324016cebd2a87f5a80408ee54e3041d200ae2355de",
+    "url": "https://api.apis.guru/v2/specs/ndhm.gov.in/ndhm-hiu/0.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:42.892Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nebl": {
+    "hash": "8ad98fea931146597e57964d398eed3c120fe0efbbd47a4032ec957ed427e8dd",
+    "url": "https://api.apis.guru/v2/specs/nebl.io/1.3.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:44.598Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "neowsapp": {
+    "hash": "a91598b64d5816c5bf1f369d72779e89d18ddb6eabf0102e06f9a08a79706146",
+    "url": "https://api.apis.guru/v2/specs/neowsapp.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:10:46.051Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "netatmo": {
+    "hash": "41bec14d6e8596f360ae997fab3cf2c737279932b54137341bde58395e7b05c0",
+    "url": "https://api.apis.guru/v2/specs/netatmo.net/1.1.5/openapi.json",
+    "lastChecked": "2026-06-09T05:10:47.508Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "netbox": {
+    "hash": "1ec11a5f4126a097ec743dae2686f6cf0244dff8e79a02439f230b29c0be7b0d",
+    "url": "https://api.apis.guru/v2/specs/netbox.dev/3.4/openapi.json",
+    "lastChecked": "2026-06-09T05:10:49.146Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "netboxdemo": {
+    "hash": "d315b43b8f2cb124183dfc05ab644bb20291abb18e3a331981628f43dca99d8f",
+    "url": "https://api.apis.guru/v2/specs/netboxdemo.com/2.8/openapi.json",
+    "lastChecked": "2026-06-09T05:10:50.661Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "netlicensing": {
+    "hash": "62c7349d21be7a3bfe4d7cca69507b11e357a0ad7d3202ae3d17c799f58b0d5a",
+    "url": "https://api.apis.guru/v2/specs/netlicensing.io/2.x/openapi.json",
+    "lastChecked": "2026-06-09T05:10:52.257Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "netlify": {
+    "hash": "ab6f6264cc78efbccb5f0978c830269e579a97e993f31b3ede3f0c763582a8e0",
+    "url": "https://api.apis.guru/v2/specs/netlify.com/2.15.0/swagger.json",
+    "lastChecked": "2026-06-09T05:10:53.723Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "neutrinoapi": {
+    "hash": "ca231a952bf5bb28b42f169c78ada1d623223affe6cbdda84723f57610e0913c",
+    "url": "https://api.apis.guru/v2/specs/neutrinoapi.net/3.6.3/openapi.json",
+    "lastChecked": "2026-06-09T05:10:55.334Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-account": {
+    "hash": "239dbd96f75fbd5a96b64b061726b1ac065f3e8287e8f218ef2ab9c69593b392",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/account/1.0.4/openapi.json",
+    "lastChecked": "2026-06-09T05:10:56.890Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-application": {
+    "hash": "9a838a47526acd65d06d6bc7168fae24b438f51c99ba2bd17d53c8672229d3aa",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/application/1.0.2/openapi.json",
+    "lastChecked": "2026-06-09T05:10:58.341Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-application-v2": {
+    "hash": "743cd570e8d715abe7a31f1d71c01248aebf80bf544cda7924cf2fc5fd6e401a",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.4/openapi.json",
+    "lastChecked": "2026-06-09T05:10:59.830Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-audit": {
+    "hash": "a6fb6002b448682efc6c9ff585bf0200d75fda8465dfc6859ba68dffccee048a",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/audit/1.0.4/openapi.json",
+    "lastChecked": "2026-06-09T05:11:01.439Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-conversation": {
+    "hash": "ab57cb9aca2385417f56db6b7d4d1036fe6641301c1b8c9738164ce1c839f19e",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/conversation/2.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:11:02.986Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-conversation-v2": {
+    "hash": "2d20b6d75046975eb8411f3930f516f4528d084e19c14a18871e717588b4e8d9",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/conversation.v2/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:11:04.773Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-conversion": {
+    "hash": "384b88e8bc6b5069bde9b651054ac2f666fc1cb98cc8ad9ec73c5a1bddb48ecd",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/conversion/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:11:06.141Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-dispatch": {
+    "hash": "9a77f8fb571e2dc6d001dfbee3f839fe45c38c20fb28ef93d0fb3aed450c2125",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/dispatch/0.3.4/openapi.json",
+    "lastChecked": "2026-06-09T05:11:07.712Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-external-accounts": {
+    "hash": "a51fde16d3970909cead86d6c94f19d86504ec7a0238fdf6726a0d8d9bbe45e5",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/external-accounts/0.1.5/openapi.json",
+    "lastChecked": "2026-06-09T05:11:09.263Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-media": {
+    "hash": "65ca13ac98d711dc812ff7dc71f69529eed00eec56dc97aa93d8eafcdccceaae",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/media/1.0.2/openapi.json",
+    "lastChecked": "2026-06-09T05:11:10.814Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-messages-olympus": {
+    "hash": "728e2c7121f8053d570e2f86c2b5f80494d976da00d467f3436b872416ccca99",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/messages-olympus/1.4.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:12.325Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-number-insight": {
+    "hash": "b7f358e310e6f73c919d578bffbb2ded608d2b9ba10b1a8c00bf6ddd8cf18119",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/number-insight/1.2.1/openapi.json",
+    "lastChecked": "2026-06-09T05:11:13.869Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-numbers": {
+    "hash": "943ff9c3602cf2b17b6a7d36158283f658ee066e10be6533e61249cc1a675c68",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/numbers/1.0.20/openapi.json",
+    "lastChecked": "2026-06-09T05:11:15.490Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-pricing": {
+    "hash": "ee76d678c9eb0a8e8f276a92bb2a8569cb94e5812a765e9efad7d944bdc8197b",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/pricing/0.0.3/openapi.json",
+    "lastChecked": "2026-06-09T05:11:17.029Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-redact": {
+    "hash": "6f52708ecd7299a1ba7adea416e3c9a03d3489a8cc4a7f010b2caecc7ec3cb7f",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/redact/1.0.6/openapi.json",
+    "lastChecked": "2026-06-09T05:11:18.577Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-reports": {
+    "hash": "1c4fcd3ea1b33984908da7d4396701b5f2089de04aa01619d43235113fd94428",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/reports/2.2.2/openapi.json",
+    "lastChecked": "2026-06-09T05:11:20.202Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-sms": {
+    "hash": "7b240d4568d070889dfe45784ffff3a16e80c894dc61bf4bfcb624753d9e33a0",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/sms/1.2.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:21.659Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-subaccounts": {
+    "hash": "807b7e4378c06c4f9229722fbe2e4c9a63e37481f2ce0867eca28864d6ee08f2",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/subaccounts/1.0.8/openapi.json",
+    "lastChecked": "2026-06-09T05:11:23.059Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-verify": {
+    "hash": "e6754871056864bfbdb8b76227bb20547bd47a7207f487cf704945702f1c5f78",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/verify/1.2.4/openapi.json",
+    "lastChecked": "2026-06-09T05:11:24.472Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nexmo-voice": {
+    "hash": "b70eefab0727a7e1a7ee21b84342fcf13511e4b4c26ef2dce27a1312ed8a53d7",
+    "url": "https://api.apis.guru/v2/specs/nexmo.com/voice/1.3.10/openapi.json",
+    "lastChecked": "2026-06-09T05:11:25.965Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nfusionsolutions-biz": {
+    "hash": "84d376a5873db147e1d2007ccdd8fbd6bb1a9f877db75d24f12443bc1217839f",
+    "url": "https://api.apis.guru/v2/specs/nfusionsolutions.biz/1/openapi.json",
+    "lastChecked": "2026-06-09T05:11:27.284Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "noosh": {
+    "hash": "9387cc22927a4a01a0879e12ec2ae3b2049b9e939a79abbd4ae85fc026a7d73d",
+    "url": "https://api.apis.guru/v2/specs/noosh.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:28.751Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "notion": {
+    "hash": "6df5889eac35a3f4eb99115eac7dd9b28b9d6040c664a742368ef7b68d45d983",
+    "url": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:30.085Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nowpayments": {
+    "hash": "85581a63711cd56fc67fcfab7af68c459ab8d084777ae96bfa08d31f7aec5a15",
+    "url": "https://api.apis.guru/v2/specs/nowpayments.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:31.547Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "npr-authorization": {
+    "hash": "259acd54517219f31a5bfeeaf71856012d812a1c6fd73a2687756bcff4ff5341",
+    "url": "https://api.apis.guru/v2/specs/npr.org/authorization/2/swagger.json",
+    "lastChecked": "2026-06-09T05:11:32.909Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "npr-identity": {
+    "hash": "1becf8a1afbb7d8715dbf9499a4dc2f2984bd0ad39abd47428975344eceba168",
+    "url": "https://api.apis.guru/v2/specs/npr.org/identity/2/swagger.json",
+    "lastChecked": "2026-06-09T05:11:34.391Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "npr-listening": {
+    "hash": "df1b47b7d6cbc31f9adcb2f8afa01a2da4d4a7443a99ff84eedf9fac53aae48e",
+    "url": "https://api.apis.guru/v2/specs/npr.org/listening/2/swagger.json",
+    "lastChecked": "2026-06-09T05:11:35.672Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "npr-sponsorship": {
+    "hash": "faa4385ad13128c2c5ef4d0a4dc18483b982a0c7d3aff61a45250b1d6dedf79e",
+    "url": "https://api.apis.guru/v2/specs/npr.org/sponsorship/2/swagger.json",
+    "lastChecked": "2026-06-09T05:11:36.986Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "npr-station-finder": {
+    "hash": "2aabb998fccd1a4566199799638ae3f22bc8929ee62b1a727020a5dff62e5f31",
+    "url": "https://api.apis.guru/v2/specs/npr.org/station-finder/3/swagger.json",
+    "lastChecked": "2026-06-09T05:11:38.370Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nrel-gov-building-case-studies": {
+    "hash": "1d41529578b141eb67dc7bf9591880465cce5da29f63e38654bc8c1552e4ef93",
+    "url": "https://api.apis.guru/v2/specs/nrel.gov/building-case-studies/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:11:39.758Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nrel-gov-transportation-incentives-laws": {
+    "hash": "00bc534f6ff2bab3b9474e044261034c696b8f33c5145dbaea4aca1de5437077",
+    "url": "https://api.apis.guru/v2/specs/nrel.gov/transportation-incentives-laws/0.1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:41.269Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nsidc": {
+    "hash": "f419ed0eca489340473b11a18de5a192a37450104d2de65646a55470bfaaadd9",
+    "url": "https://api.apis.guru/v2/specs/nsidc.org/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:42.568Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ntropy-network": {
+    "hash": "30f7ce8a8fc1fc96a41a420edafa8c6796574c718390f8dcf5706af030ace7ea",
+    "url": "https://api.apis.guru/v2/specs/ntropy.network/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:43.879Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-archive": {
+    "hash": "4ff8f808f055cab9aa195d95c9e25949e2f207b6c6ab1758bd1a8286372c1720",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/archive/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:45.333Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-article-search": {
+    "hash": "c8d4afdb86ad52840ac9660f4e15fd2382f9da289cf7c54d2c65888d81b49486",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/article_search/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:46.671Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-books-api": {
+    "hash": "eafed9b94b07489d5d63ce0d73072ea610c1473bba0cc68a427769396bc6525b",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/books_api/3.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:47.995Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-community": {
+    "hash": "133ae5fb8cc666a36383ac2d817bed13db2dfce5ff788a6ac503472b09bec752",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/community/3.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:49.327Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-geo-api": {
+    "hash": "e66e1439c3cb9dc6366ea471100c6883b38e0b615eef7defb65b2ee606416fb8",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/geo_api/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:50.670Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-most-popular-api": {
+    "hash": "4146915f0c7515275ee139697861366fdeec0d33ccfe697f66c560c640cef080",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/most_popular_api/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:51.949Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-movie-reviews": {
+    "hash": "45a62156b14d24af7ea1fc9c79536f5a16c1ad43d6448ebb59005c0c9c3ca0c5",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/movie_reviews/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:53.363Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-semantic-api": {
+    "hash": "c1dfd2a36a3f69ec21d26b58101ab5e8b43dd7d947286b9daa6483b69eb4eddd",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/semantic_api/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:54.679Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-times-tags": {
+    "hash": "73f481b1de2448e017ba54383e75a654a4352ffaf57d8a6984177e4ecb8d003e",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/times_tags/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:56.015Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-timeswire": {
+    "hash": "51f9ddc79fbba9813770d0b9018a74ad7bddb80152d445ec485c2d78cddc673d",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/timeswire/3.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:57.321Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "nytimes-top-stories": {
+    "hash": "931ff562f83390a0fd57f69a6320613a24afe1660311e6c7c2aa6ae0a9d6b19c",
+    "url": "https://api.apis.guru/v2/specs/nytimes.com/top_stories/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:11:58.675Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "o2-cz-mobility": {
+    "hash": "c477eda0d146823bf9eec5e3d2538caf5a9e7a686b62c5b219173703c99b2050",
+    "url": "https://api.apis.guru/v2/specs/o2.cz/mobility/1.2.0/swagger.json",
+    "lastChecked": "2026-06-09T05:12:00.129Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "o2-cz-sociodemo": {
+    "hash": "5c5f8dcbe0a2f2bffebf83230a351e28a0847afd4a8efb5805b471a12829a867",
+    "url": "https://api.apis.guru/v2/specs/o2.cz/sociodemo/1.2.0/swagger.json",
+    "lastChecked": "2026-06-09T05:12:01.444Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "obono-at": {
+    "hash": "2aaafca63cbb1206165660fdd11fe41c00cb371dbebc249b2b8814e4866bdd06",
+    "url": "https://api.apis.guru/v2/specs/obono.at/1.4.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:02.983Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "oceandrivers": {
+    "hash": "debf0b42c876b679b4552f7712aa1816047d06398eda05633b1373403a5b11e5",
+    "url": "https://api.apis.guru/v2/specs/oceandrivers.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:04.398Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "okta": {
+    "hash": "24d758ad8e32c83bc900c60695636d02366cebc5e38187857d2c2089c14b1b06",
+    "url": "https://api.apis.guru/v2/specs/okta.local/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:05.785Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "omdbapi": {
+    "hash": "b979c7f1d740dbc255a53146eed821cf0f14ab9a4e4652712db522f9ea9b62c2",
+    "url": "https://api.apis.guru/v2/specs/omdbapi.com/1/swagger.json",
+    "lastChecked": "2026-06-09T05:12:07.279Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "onsched-consumer": {
+    "hash": "1a14d0f5404282df9fef70ae1a24279b29ca6f025baa9d316cd535566e44d7f1",
+    "url": "https://api.apis.guru/v2/specs/onsched.com/consumer/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:08.743Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "onsched-setup": {
+    "hash": "c0d98d513d7218c961bae13ad2ba3ad220dfb917988bd4c917d5c96f14b0c22a",
+    "url": "https://api.apis.guru/v2/specs/onsched.com/setup/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:10.184Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "onsched-utility": {
+    "hash": "7585e37fd5bee065ce727275b821d7e775420d3138a98ea77505a715d297dee9",
+    "url": "https://api.apis.guru/v2/specs/onsched.com/utility/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:11.844Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openai": {
+    "hash": "8ab0b2055010705b1c6f8462e742b325afaef3617503d35f6b2a67dac241517f",
+    "url": "https://api.apis.guru/v2/specs/openai.com/1.2.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:13.281Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openalpr": {
+    "hash": "6761d8ad31608b1b7fde419107341332c74a3f0f71937e84001d9204a96b30c4",
+    "url": "https://api.apis.guru/v2/specs/openalpr.com/3.0.1/swagger.json",
+    "lastChecked": "2026-06-09T05:12:15.235Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openapi-generator-tech": {
+    "hash": "af56928e9009790a80f140c4413495afb015d5588c926485241f24f084961cb6",
+    "url": "https://api.apis.guru/v2/specs/openapi-generator.tech/6.2.1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:31.142Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openapi-space": {
+    "hash": "1cf865ade8948cf225b44f1b08930d2ccd3d753c18a56ede8fbc1969d2c9daf6",
+    "url": "https://api.apis.guru/v2/specs/openapi.space/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:12:32.670Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openaq": {
+    "hash": "976c1031defc308098c8b4a330e506a160413ad7c2fff3a597cdd28c9f6cd0e9",
+    "url": "https://api.apis.guru/v2/specs/openaq.local/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:34.204Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbanking": {
+    "hash": "6e4aa434e647341e999aa13a8ae8af9da2a4360eed90275ca39decf0a5477857",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/v1.3/openapi.json",
+    "lastChecked": "2026-06-09T05:12:35.716Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbanking-account-openapi": {
+    "hash": "f8327bd38f365898a47b51d903876a1e1a7bba71219312be708865c4605e3684",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/account-info-openapi/3.1.7/openapi.json",
+    "lastChecked": "2026-06-09T05:12:37.287Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbanking-confirmation-funds-openapi": {
+    "hash": "2e37d5c3dee0492154a2abc6fb37435050ed0b8ce6f4a58e59626b077b202692",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/confirmation-funds-openapi/3.1.7/openapi.json",
+    "lastChecked": "2026-06-09T05:12:38.745Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbanking-event-notifications-openapi": {
+    "hash": "3bb8997fff4ad062debd7c86662a99c108ffee3a8c42e6dfa3a95e4e38818d84",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/event-notifications-openapi/3.1.7/openapi.json",
+    "lastChecked": "2026-06-09T05:12:40.209Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbanking-payment-initiation-openapi": {
+    "hash": "6816c18815fa568d137479f1a7b0d7eddfb263b2b7cfc15f983b671e96a5cd94",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/payment-initiation-openapi/3.1.7/openapi.json",
+    "lastChecked": "2026-06-09T05:12:41.712Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openbankingproject-ch": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "url": "https://api.apis.guru/v2/specs/openbankingproject.ch/1.3.8_2020-12-14 - Swiss edition 1.3.8.1-CH/openapi.json",
+    "lastChecked": "2026-06-09T05:12:42.957Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opencagedata": {
+    "hash": "1e67508fe2c33f7b9d37edaf5ca8dc9521e236fce36a37266ba45bafbc34fe42",
+    "url": "https://api.apis.guru/v2/specs/opencagedata.com/1/swagger.json",
+    "lastChecked": "2026-06-09T05:12:44.374Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opendatanetwork": {
+    "hash": "c4ebb2d3ae6d2d61155ba4db1049170768fd9b66ac38a7c949a8a68f5ddc8644",
+    "url": "https://api.apis.guru/v2/specs/opendatanetwork.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:46.054Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openfigi": {
+    "hash": "d449ef6331040b75366606316e93170c2a7c6921753e9afd4c5c2c3d1caf25be",
+    "url": "https://api.apis.guru/v2/specs/openfigi.com/1.4.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:47.672Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openfintech": {
+    "hash": "75b747368a5398b68b4ecc399444f40ffe6182b78f11861adf7f2a5c659f5929",
+    "url": "https://api.apis.guru/v2/specs/openfintech.io/2017-08-24/swagger.json",
+    "lastChecked": "2026-06-09T05:12:49.111Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openindex": {
+    "hash": "b77faa2191cfb7cef49578def5faac842927c9ec894dae22eb51ef2cc45056d9",
+    "url": "https://api.apis.guru/v2/specs/openindex.ai/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:50.601Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openlinksw-osdb": {
+    "hash": "3164368f02cf83938b7789938cff5077ae4700f6c7014238d4d461b8b8c23d4f",
+    "url": "https://api.apis.guru/v2/specs/openlinksw.com/osdb/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:52.250Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openpolicy": {
+    "hash": "fa631e752f368468c5d6462366984ec942d31adacbfa364a4db4603f0391a7de",
+    "url": "https://api.apis.guru/v2/specs/openpolicy.local/0.28.0/openapi.json",
+    "lastChecked": "2026-06-09T05:12:53.742Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openstf": {
+    "hash": "5a25dd3dd1931748017060cfba3fd0daef34870dceed6115439086461387c990",
+    "url": "https://api.apis.guru/v2/specs/openstf.io/2.3.0/swagger.json",
+    "lastChecked": "2026-06-09T05:12:55.242Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opensuse-obs": {
+    "hash": "85ad1dde31a66bf4f79dfe91b44608ba6dba6a2289a7d9e0040ab9abff4c7e90",
+    "url": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.json",
+    "lastChecked": "2026-06-09T05:12:56.663Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opentargets": {
+    "hash": "80c795b4097974aade99a6d11a2a4822792a7342f5ed8c9887e92c16bb156e52",
+    "url": "https://api.apis.guru/v2/specs/opentargets.io/19.02.1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:58.098Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "openuv": {
+    "hash": "0ef467bed3e9dc0bb53080911e028141874cac66f077eb0af61be6d92390e52c",
+    "url": "https://api.apis.guru/v2/specs/openuv.io/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:12:59.626Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "optimade": {
+    "hash": "6fa8a055c11759dc3c1e0b1d98b4ea01627f3460c1c16d4fb2d1da29b8095eed",
+    "url": "https://api.apis.guru/v2/specs/optimade.local/1.1.0~develop/openapi.json",
+    "lastChecked": "2026-06-09T05:13:01.034Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opto22-groov": {
+    "hash": "6f47ce308d070b915423679f50fc124e04578cdb68155584b56c4bdff9702809",
+    "url": "https://api.apis.guru/v2/specs/opto22.com/groov/R4.2a/swagger.json",
+    "lastChecked": "2026-06-09T05:13:02.558Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "opto22-pac": {
+    "hash": "1cf4736dea8fe4b443897a344753da645661d5149087957e78f8ca7e69a7849c",
+    "url": "https://api.apis.guru/v2/specs/opto22.com/pac/R1.0a/swagger.json",
+    "lastChecked": "2026-06-09T05:13:04.025Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "orbit-love": {
+    "hash": "be8a2267d9d7fb6d0be45bc5340800f7bdf60edb45970bcc39c1bfb93ba1262d",
+    "url": "https://api.apis.guru/v2/specs/orbit.love/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:05.559Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "orghunter": {
+    "hash": "f748bf7811ee9fc63cbbe593c7b7d343c30d9b86c45911d193c919a3aa4916a0",
+    "url": "https://api.apis.guru/v2/specs/orghunter.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:13:07.130Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ornl-gov-daymet": {
+    "hash": "cdfd5627f22c5f2ee09b2f95954a89cae30a2b956e304e9e0f1313fc35bce516",
+    "url": "https://api.apis.guru/v2/specs/ornl.gov/daymet/1.0.2/swagger.json",
+    "lastChecked": "2026-06-09T05:13:08.716Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "orthanc-server": {
+    "hash": "f89d96473b9588617b3a0a6a0053dd0bbac92f8308bd7c31fcb4f050e79170e8",
+    "url": "https://api.apis.guru/v2/specs/orthanc-server.com/1.11.3/openapi.json",
+    "lastChecked": "2026-06-09T05:13:10.186Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "osisoft": {
+    "hash": "dda6b163b7888a2114e6e8d897b6af9d5218a918913da1df35715a42d3815124",
+    "url": "https://api.apis.guru/v2/specs/osisoft.com/1.11.1.5383/swagger.json",
+    "lastChecked": "2026-06-09T05:13:11.664Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ote-godaddy-abuse": {
+    "hash": "02070eda62e8a76f546c8a4f81dd69f5a7f431d1bdcdb1277f4567597bb0bf7e",
+    "url": "https://api.apis.guru/v2/specs/ote-godaddy.com/abuse/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:13.368Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "owler": {
+    "hash": "1f50e09197a0d134441faba012afb44a6ae0e6fa2509910f6d23c6f34d9a2999",
+    "url": "https://api.apis.guru/v2/specs/owler.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:13:14.958Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pandorabots": {
+    "hash": "9f18087496685d119f66d52358f3baece59e26477332efac32f4270112a16804",
+    "url": "https://api.apis.guru/v2/specs/pandorabots.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:13:16.596Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "papinet-order-status": {
+    "hash": "b1f9b696c7c1b601d23727553b83a1b04885468c127d2ebf460977cec1be8944",
+    "url": "https://api.apis.guru/v2/specs/papinet.io/order_status/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:18.132Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-bills": {
+    "hash": "93a1b3f49a3d0b8a922d74a166e211a1b6360288937c631cb0c3095f1044a1ca",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/bills/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:19.746Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-commonsvotes": {
+    "hash": "764733d85e1a91eec480e1bedf45981735c40a2e4b54ebec1692fb63bb5880b0",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/commonsvotes/v1/swagger.json",
+    "lastChecked": "2026-06-09T05:13:21.325Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-erskine-may": {
+    "hash": "34502a726157508a56f7a104f15e4f575332953dbfc10fd75c99d5b9beca43a4",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/erskine-may/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:22.851Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-lordsvotes": {
+    "hash": "308c6a567cf8128eaa9ccba72f62faae6373412aa6f45b92e6b70a348c235428",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/lordsvotes/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:24.312Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-members": {
+    "hash": "0d00ec76f806799f9ffd61b761cbf5d7cdabb0591da356c68de01410ddc3432d",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/members/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:30.882Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-now": {
+    "hash": "8d878b6c0da32ffd8f27d42917484e96cebf1056615a1c2e0103d55ef7510a64",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/now/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:32.442Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-oralquestions": {
+    "hash": "3aa63e2840613eb1957e3700576dc4b2a7cc4a32aea1760d7230c56ca4975cc4",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/oralquestions/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:34.006Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-search": {
+    "hash": "ddfb3d896bac831c43f2497e5ffe1bb27a2c3018d615f62e28cc4b65c083e94e",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/search/Live/openapi.json",
+    "lastChecked": "2026-06-09T05:13:35.507Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-statutoryinstruments": {
+    "hash": "4e619fd1f9a277ae35649984a1ffbd7f7c450ce0fce8f4e20f169c57562db741",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:37.099Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-treaties": {
+    "hash": "25ebe45eeeb4e27358b95c55af3a2851837fd828d3091637ad32ed1da51bb00d",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:38.611Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "parliament-writtenquestions": {
+    "hash": "38a7195b28364c81ab9137e02368cbc9648e96fa2217da440fbba7f77e66e3ca",
+    "url": "https://api.apis.guru/v2/specs/parliament.uk/writtenquestions/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:40.167Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "passwordutility": {
+    "hash": "cb40568a494a9760d6df0f6c38235d57934711bceda9a7bb30121e654107ad39",
+    "url": "https://api.apis.guru/v2/specs/passwordutility.net/v1/swagger.json",
+    "lastChecked": "2026-06-09T05:13:41.657Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "patientview": {
+    "hash": "a47b77b83550c18b5aa75402b45c74dbbb3319e8c97e8cf5c1e56ce5cf6dc48e",
+    "url": "https://api.apis.guru/v2/specs/patientview.org/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:43.174Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "patrowl": {
+    "hash": "2fd655bead373b7c48d4cdb6ad6d098f654a6c0928fa9a3dbe4cd4161fea6d8c",
+    "url": "https://api.apis.guru/v2/specs/patrowl.local/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:44.783Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "paylocity": {
+    "hash": "b1b16d319803a3e6aa51efaf2d38f8956684f9a0fa5bd7986404685534ddbe6b",
+    "url": "https://api.apis.guru/v2/specs/paylocity.com/2/openapi.json",
+    "lastChecked": "2026-06-09T05:13:46.333Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "payments-service-gov-payments": {
+    "hash": "58255cb2720afffb01f84295111673b442a42c2ae4cb787a4cb37e62910ed754",
+    "url": "https://api.apis.guru/v2/specs/payments.service.gov.uk/payments/1.0.3/swagger.json",
+    "lastChecked": "2026-06-09T05:13:47.818Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "paypi": {
+    "hash": "d7ffafd839967db2d9ee83410cccd95deb00c88ef471f13259a34c2d9b706bbe",
+    "url": "https://api.apis.guru/v2/specs/paypi.dev/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:49.382Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "payrun": {
+    "hash": "a6adfd5b1b1446bcfe8692701c7065f6bbc472307fd22ce1d2e7aaa544ecae19",
+    "url": "https://api.apis.guru/v2/specs/payrun.io/22.23.10.42/openapi.json",
+    "lastChecked": "2026-06-09T05:13:51.135Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pdfblocks": {
+    "hash": "a409d9078c2cb48e65eba9769f06cc3860cf763f8d9ffa4cb14e7fad9d16be54",
+    "url": "https://api.apis.guru/v2/specs/pdfblocks.com/1.5.0/openapi.json",
+    "lastChecked": "2026-06-09T05:13:52.700Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pdfbroker": {
+    "hash": "3a333b5e001bb01a44dbcc2ddbe1ee52b945768bb52e442ad94ee36e48f21e20",
+    "url": "https://api.apis.guru/v2/specs/pdfbroker.io/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:54.272Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pdfgeneratorapi": {
+    "hash": "6aa4f6d91492d9948cb4af8b3704de9ae59f78e95d1562ce40f94bf94b1cd337",
+    "url": "https://api.apis.guru/v2/specs/pdfgeneratorapi.com/3.1.1/openapi.json",
+    "lastChecked": "2026-06-09T05:13:55.744Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "peel-ci": {
+    "hash": "542a2123691ac86823a9ceb7189d280d054ba0fa15b3acabe93eee97da469ca4",
+    "url": "https://api.apis.guru/v2/specs/peel-ci.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:13:57.225Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pendo": {
+    "hash": "e13f7b86c01bd276491430c5d05ac9287d99206cbf3a14d8b634e5d63c481cd8",
+    "url": "https://api.apis.guru/v2/specs/pendo.io/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:13:58.835Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "peoplefinderspro": {
+    "hash": "78cc3d3f2e498d6ae4b6942f09492fabe3889a03997811798d7f103269b0ed15",
+    "url": "https://api.apis.guru/v2/specs/peoplefinderspro.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:00.340Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "personio-authentication": {
+    "hash": "6d30a9e29ad383488382b0316f034e62173ede96fadfd5511628f7e4ab27d66e",
+    "url": "https://api.apis.guru/v2/specs/personio.de/authentication/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:01.906Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "personio-personnel": {
+    "hash": "3ae4db25e79f22b957420839ffc0d41b942a8c1d594c36898bfaeedcbf95047c",
+    "url": "https://api.apis.guru/v2/specs/personio.de/personnel/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:03.566Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "phantauth": {
+    "hash": "6432e28758b66be74218c6f3b2fd215f9b7f7780fea52f4f797a6bee1af269b9",
+    "url": "https://api.apis.guru/v2/specs/phantauth.net/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:05.024Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pinecone": {
+    "hash": "d9707c42cf0fe868aadbeaab5c8ec7b0378d3b6657cc3507292ac4d23fd88423",
+    "url": "https://api.apis.guru/v2/specs/pinecone.io/20230401.1/openapi.json",
+    "lastChecked": "2026-06-09T05:14:06.588Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "plaid": {
+    "hash": "bfdec4219280386904cf210814f4aa4e7ee98ca60b24d5a3c92a2ea87f3c23dd",
+    "url": "https://api.apis.guru/v2/specs/plaid.com/2020-09-14_1.334.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:08.313Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pocketsmith": {
+    "hash": "631fd97d3cca1371c65a14d5d3bdb29f873005021a2244e361a3b99ecba9c12c",
+    "url": "https://api.apis.guru/v2/specs/pocketsmith.com/2.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:09.789Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "polygon": {
+    "hash": "98450e2e355d55da6ad72c699d04e166e330cf8292c0d72d2804ab90acb0cffb",
+    "url": "https://api.apis.guru/v2/specs/polygon.io/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:11.414Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "portfoliooptimizer": {
+    "hash": "01a45aac0be5d97c8d562a4d95f8b04b845ee8ff6308f08fd5262a4c4c536af0",
+    "url": "https://api.apis.guru/v2/specs/portfoliooptimizer.io/1.0.9/openapi.json",
+    "lastChecked": "2026-06-09T05:14:12.928Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "postmarkapp-account": {
+    "hash": "65be564a6e00207a8d144ee1414ea2b50ed9ac8a0de05e7d7f4da98742266fb3",
+    "url": "https://api.apis.guru/v2/specs/postmarkapp.com/account/0.9.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:14.481Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "postmarkapp-server": {
+    "hash": "0471e2e9876a1f60cdf1f65c9fe69f571e96ad60c0fe54c4a6bbd0dd63a3ed6a",
+    "url": "https://api.apis.guru/v2/specs/postmarkapp.com/server/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:16.037Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "presalytics-converter": {
+    "hash": "b039204af01f07cb44d890f85074f6b400a8d934933d4ef0aa121623ebcf1eee",
+    "url": "https://api.apis.guru/v2/specs/presalytics.io/converter/0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:14:17.573Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "presalytics-ooxml": {
+    "hash": "e52dcb5d33685107c35298d2c686a295318ba61334923535b3c79b6fe23f0492",
+    "url": "https://api.apis.guru/v2/specs/presalytics.io/ooxml/0.1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:19.052Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "presalytics-story": {
+    "hash": "617f0660281fde4a82b671c4162e6eb9e59cdd9c351583a0fc8e73e1c206ee74",
+    "url": "https://api.apis.guru/v2/specs/presalytics.io/story/0.3.1/openapi.json",
+    "lastChecked": "2026-06-09T05:14:20.685Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "pressassociation": {
+    "hash": "de9bf65a05e03c0b7548aa9988313f63bb4b488f5d40df96223939cef144bb1d",
+    "url": "https://api.apis.guru/v2/specs/pressassociation.io/2.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:22.230Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "probely": {
+    "hash": "288cdfa3dd799214599747c9df67cebe1a25cc8895469ca405fc117ba7ecdc4c",
+    "url": "https://api.apis.guru/v2/specs/probely.com/1.2.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:23.677Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "prss": {
+    "hash": "dca14e40709383b855d7cbae452a084037ff6832b777d5cf3b22dee9748dcd33",
+    "url": "https://api.apis.guru/v2/specs/prss.org/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:25.182Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ptv-vic-gov": {
+    "hash": "bce384b4974f83ed4543e970b5a54288b7dd2bcffb0a5fa21dd9d17b757a570d",
+    "url": "https://api.apis.guru/v2/specs/ptv.vic.gov.au/v3/openapi.json",
+    "lastChecked": "2026-06-09T05:14:26.682Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "qualpay": {
+    "hash": "6835bf597b47068980b360b10b1ed88f6f0af869def2585a2428aea615156ade",
+    "url": "https://api.apis.guru/v2/specs/qualpay.com/1.7.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:28.237Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "qualtrics": {
+    "hash": "c54a207a0f68a899901d0d6744bbd5f7e3d76bc5093a9629e6cdb2b65d324751",
+    "url": "https://api.apis.guru/v2/specs/qualtrics.com/0.2/openapi.json",
+    "lastChecked": "2026-06-09T05:14:29.792Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "quarantine-country": {
+    "hash": "709a03f0e3dfdb7d63cc8347bf929a5c81f17dc63dd6cb1cb898119fe729370a",
+    "url": "https://api.apis.guru/v2/specs/quarantine.country/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:31.285Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "quickchart": {
+    "hash": "3e6b481ea3ba154602458d55a152d4e44a53de9b279f004a7895a76e2ffd6fa3",
+    "url": "https://api.apis.guru/v2/specs/quickchart.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:32.752Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "quotes-rest": {
+    "hash": "dc23c4f2d10b3ebd532f885662d343cd991c8fba37451e98ac68e5343720457c",
+    "url": "https://api.apis.guru/v2/specs/quotes.rest/3.1/openapi.json",
+    "lastChecked": "2026-06-09T05:14:34.234Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "randomlovecraft": {
+    "hash": "7f10001ce90b0581aac26f3932016bc4d74a07fc7d569e825c29632c3d72b38a",
+    "url": "https://api.apis.guru/v2/specs/randomlovecraft.com/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:35.751Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rapidapi-dynamicdocs": {
+    "hash": "a339ae193ca24d5072f51494d30af651e04449c98644caaccb576b30469e48b0",
+    "url": "https://api.apis.guru/v2/specs/rapidapi.com/dynamicdocs/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:37.224Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rapidapi-ecowetter": {
+    "hash": "082beacdd1be0b84e0da5b8e2aaa088afe158280e3b4fe446a3cbb79a1e719e8",
+    "url": "https://api.apis.guru/v2/specs/rapidapi.com/ecowetter/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:38.895Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rapidapi-football-prediction": {
+    "hash": "a3355a53233e3819ce43b226087d3ef3d2db0aeeedcb86b48df22fcd49d0468c",
+    "url": "https://api.apis.guru/v2/specs/rapidapi.com/football-prediction/2/openapi.json",
+    "lastChecked": "2026-06-09T05:14:40.409Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rapidapi-idealspot-geodata": {
+    "hash": "e0bdea0dd997cbad053f47dcdf3cff823f15c3fa3b3c3f845eb8a0b2264bb5fa",
+    "url": "https://api.apis.guru/v2/specs/rapidapi.com/idealspot-geodata/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:41.960Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rapidapi-language-identification": {
+    "hash": "454d99e30ab6f7585d37eacb3fc6af6001686693e76b970cbf73624cb23ef5f4",
+    "url": "https://api.apis.guru/v2/specs/rapidapi.com/language-identification/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:43.476Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rbaskets": {
+    "hash": "8d4cc96aa11b1f6e9c64cc4b1bfff3ff71282f287248c134b4b459acafe1b729",
+    "url": "https://api.apis.guru/v2/specs/rbaskets.in/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:44.889Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "readme": {
+    "hash": "cb2f30d371cdc73129a1b7bf9ab005d790d9c93a74601af6903f194685384268",
+    "url": "https://api.apis.guru/v2/specs/readme.io/2.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:46.434Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rebilly": {
+    "hash": "5ed824f29a25ab180089510731a822b76df00b90704211bf6e4ac09fb1ea45fe",
+    "url": "https://api.apis.guru/v2/specs/rebilly.com/2.1/openapi.json",
+    "lastChecked": "2026-06-09T05:14:47.925Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "redeal": {
+    "hash": "7ed9a4652b44ef9f00b55fc0e1146744c27509ccc56a24b2525b7aab262d08a6",
+    "url": "https://api.apis.guru/v2/specs/redeal.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:49.510Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "redeal-analytics": {
+    "hash": "7ed9a4652b44ef9f00b55fc0e1146744c27509ccc56a24b2525b7aab262d08a6",
+    "url": "https://api.apis.guru/v2/specs/redeal.io/analytics/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:51.010Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "redhat-catalog-inventory": {
+    "hash": "80864fec5a85396cff1961b392a58c86e5c45f1df220aa3400eb538ecaf38c19",
+    "url": "https://api.apis.guru/v2/specs/redhat.com/catalog_inventory/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:52.546Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "redhat-patchman-engine": {
+    "hash": "a17634c91e5535e712e7cd3c2ad9076b3d4bf2f329cc182ea2908dec208051d4",
+    "url": "https://api.apis.guru/v2/specs/redhat.local/patchman-engine/v1.15.3/openapi.json",
+    "lastChecked": "2026-06-09T05:14:54.157Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "redirection": {
+    "hash": "a489d184e22dde8b732cf606ee48c9a2cd906a21113d8724740da5577f429985",
+    "url": "https://api.apis.guru/v2/specs/redirection.io/1.1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:55.559Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "refugerestrooms": {
+    "hash": "12d77da5017076a893e0d8ff11e33bdf6047954371e8349eacfd8063e01e0520",
+    "url": "https://api.apis.guru/v2/specs/refugerestrooms.org/0.0.1/swagger.json",
+    "lastChecked": "2026-06-09T05:14:57.009Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "regcheck": {
+    "hash": "3e665ab097d3d576fe9e2b3f6e9aef6c90a6a681a7adbde2a308a72210d4ada2",
+    "url": "https://api.apis.guru/v2/specs/regcheck.org.uk/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:14:58.539Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "reloadly": {
+    "hash": "da682ee6289d6761568ba5b596c5896b1dbf493924f2020dfd3f69f8c6b7a701",
+    "url": "https://api.apis.guru/v2/specs/reloadly.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:14:59.991Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "remove-bg": {
+    "hash": "e1b74240c1ee4b39babb257a0715746d6141ff90ffd30ad66eb2c14c84f87ec4",
+    "url": "https://api.apis.guru/v2/specs/remove.bg/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:01.556Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "restful4up": {
+    "hash": "0a8469a7f17cadf91cbf9c03d754d1fd2536bf53d93157821ccdff34c99d1191",
+    "url": "https://api.apis.guru/v2/specs/restful4up.local/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:03.143Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rev": {
+    "hash": "2b8675b1c4fc28a6909922057d5ffbb25fd8a729329b8e2a9a9e5daa2a04c63b",
+    "url": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:04.762Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "reverb": {
+    "hash": "b195d5a6e619bdfc26bc0bad2a798773da0c0c999ca1cbbe648155d5fd4247e7",
+    "url": "https://api.apis.guru/v2/specs/reverb.com/3.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:06.293Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ritc": {
+    "hash": "49803403f740da0dbe6132ce862581d492d8ccf7000415ba724f0354eec1e6b7",
+    "url": "https://api.apis.guru/v2/specs/ritc.io/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:07.862Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "ritekit": {
+    "hash": "5d8374746b78636afa67078480cf565d2b8942c1bb50b9d38298b7fc28686592",
+    "url": "https://api.apis.guru/v2/specs/ritekit.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:09.517Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rottentomatoes": {
+    "hash": "1cdf84e12038c67b2c9117ead747e84a780f9a062762955b6a319e0465070050",
+    "url": "https://api.apis.guru/v2/specs/rottentomatoes.com/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:11.038Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "royalmail-click-and-drop": {
+    "hash": "e02e9a10a66b3b0a504b2c19d911709d7057e8b0dc63b81beb670da3757ab62c",
+    "url": "https://api.apis.guru/v2/specs/royalmail.com/click-and-drop/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:12.769Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rudder-example": {
+    "hash": "e60f851066f263278f5aae4b485baf04c73c954040da5e8bb5d005c23b935aa7",
+    "url": "https://api.apis.guru/v2/specs/rudder.example.local/16/openapi.json",
+    "lastChecked": "2026-06-09T05:15:14.371Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "rumble-run": {
+    "hash": "1bd9c8cefc09e2993ff161a3edce7fad97f8ffeb3b12c6e64074a727faca8b82",
+    "url": "https://api.apis.guru/v2/specs/rumble.run/2.15.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:15.918Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "runscope": {
+    "hash": "53fdc6ba373aac768aaa132af3bf434ebbc42635ef651494fb63a1735b0ce66b",
+    "url": "https://api.apis.guru/v2/specs/runscope.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:17.461Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sakari": {
+    "hash": "8816505b1e7b0a2c0626fe56f159342fb3db2714d4df906b982e4b8c2980e57c",
+    "url": "https://api.apis.guru/v2/specs/sakari.io/1.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:18.976Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "salesforce-einstein": {
+    "hash": "c8e89812a1f704e101df6bd17b20fc9667728db528e22ae207888c820efaaa5b",
+    "url": "https://api.apis.guru/v2/specs/salesforce.local/einstein/2.0.1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:20.502Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "salesloft": {
+    "hash": "91df97d3694f6f9eb27d93c2e5d5b25f05791161f5e17063cc9b0c7bbd92bc60",
+    "url": "https://api.apis.guru/v2/specs/salesloft.com/v2/openapi.json",
+    "lastChecked": "2026-06-09T05:15:22.018Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "schooldigger": {
+    "hash": "5ffb9937c30d01bd4915f2ae9776a764a80ac7398a86aa6ef80ef44f975bea52",
+    "url": "https://api.apis.guru/v2/specs/schooldigger.com/v1/swagger.json",
+    "lastChecked": "2026-06-09T05:15:23.510Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "scideas-perfectpdf": {
+    "hash": "a6e0b0710ef0c56c46a3aae777ff2e8f8303b957fcd89046e2b0217941217c38",
+    "url": "https://api.apis.guru/v2/specs/scideas.net/perfectpdf/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:25.064Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "scideas-regression": {
+    "hash": "7e342e665ea539629aea4623fb961e7f792ffba2b6dfd7a757d98d033b768fa4",
+    "url": "https://api.apis.guru/v2/specs/scideas.net/regression/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:26.665Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "scrapewebsite-email": {
+    "hash": "e935eedccac48be4936f896d9df234c78ac8498ffa08c4fec8914922a5e66a52",
+    "url": "https://api.apis.guru/v2/specs/scrapewebsite.email/0.1/swagger.json",
+    "lastChecked": "2026-06-09T05:15:28.102Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "selectpdf": {
+    "hash": "a097ceea96c238d95cb7ce2b61268a981d166e5e47b307e44fe4a15a472d41ee",
+    "url": "https://api.apis.guru/v2/specs/selectpdf.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:29.821Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "semantria": {
+    "hash": "afe16b5341456da82c88158c74b285d917f6f8724de37ae0492922a65a1c2d6b",
+    "url": "https://api.apis.guru/v2/specs/semantria.com/4.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:31.291Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sendgrid": {
+    "hash": "80aaf7926007ffa486bf9d2d5d8b1337ec8a361d465a0f17dbe784258f8b2a1f",
+    "url": "https://api.apis.guru/v2/specs/sendgrid.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:32.846Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "setlist-fm": {
+    "hash": "c408e8029b143c54514b7fc92ed25fd3670da2351f83ef8b733c881c21c7ea2f",
+    "url": "https://api.apis.guru/v2/specs/setlist.fm/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:34.406Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sheerseo": {
+    "hash": "b058a19c9e9a4e564ca551599001a6767d114a0d4dcc91677ebef45efd4ab9b4",
+    "url": "https://api.apis.guru/v2/specs/sheerseo.com/0.0.1/swagger.json",
+    "lastChecked": "2026-06-09T05:15:36.154Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sheetlabs-rig-veda": {
+    "hash": "f98c1ff1a2b2d1a0daaa228bfb3b349a4fde2c58411fa3d18bf2a8eb16ffd88f",
+    "url": "https://api.apis.guru/v2/specs/sheetlabs.com/rig-veda/1.2/swagger.json",
+    "lastChecked": "2026-06-09T05:15:37.697Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sheetlabs-vedic-society": {
+    "hash": "d1266e24ce7ace4189a8cdef47aa4e2f0af6b4ea891aab2d04068d114ac2ebc9",
+    "url": "https://api.apis.guru/v2/specs/sheetlabs.com/vedic-society/1.2/swagger.json",
+    "lastChecked": "2026-06-09T05:15:39.213Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shipengine": {
+    "hash": "f18bb4671b11749cc896c0234f11f5dd0db01d9068b9cff165db2101dfb08f5b",
+    "url": "https://api.apis.guru/v2/specs/shipengine.com/1.1.202303022103/openapi.json",
+    "lastChecked": "2026-06-09T05:15:40.849Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shipstation": {
+    "hash": "c9579288ee372c4f93f7772bb4d28cb1fe95433e0a65051c6b2850d4b8cd23ec",
+    "url": "https://api.apis.guru/v2/specs/shipstation.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:42.252Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shop-pro": {
+    "hash": "6e30b44887b571c3c49e85e410ff8b56e03fd90acd211f8df793aaa349654539",
+    "url": "https://api.apis.guru/v2/specs/shop-pro.jp/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:43.706Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shop": {
+    "hash": "6bb645c33c6d3ea2b781fc89a44b7c1d51cb0c50ea625a19aafa0f57983706d8",
+    "url": "https://api.apis.guru/v2/specs/shop.app/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:45.115Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shorten-rest": {
+    "hash": "7fdf7f00fa48e0461daf0a259d75150567513aed2806fac95ad5d510569442fb",
+    "url": "https://api.apis.guru/v2/specs/shorten.rest/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:46.584Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shotstack": {
+    "hash": "277767cbc837566556ab8b808dcd1c7d90df1ba2d2971f75eace4966d74342b1",
+    "url": "https://api.apis.guru/v2/specs/shotstack.io/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:48.168Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "shutterstock": {
+    "hash": "7e9575f561b399170c09d3f030575a18104efe3ab2ab3219cfd26c5cd1dac449",
+    "url": "https://api.apis.guru/v2/specs/shutterstock.com/1.1.32/openapi.json",
+    "lastChecked": "2026-06-09T05:15:49.763Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "signl4": {
+    "hash": "fa59f08d1a1b0c66d04fbaeaa840c71a7c90bd8a670e8143a9bb10cecb36a85f",
+    "url": "https://api.apis.guru/v2/specs/signl4.com/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:51.270Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "simplyrets": {
+    "hash": "94a7306df7a7a2907f4b8b4afccdd1109191bbd3ec0c3079b0a5a207c71ade5b",
+    "url": "https://api.apis.guru/v2/specs/simplyrets.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:15:52.718Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sinao": {
+    "hash": "04f24b3c6e8dcb751255b5802186a7092720a2988dd4b67845adcf8bb16fe15a",
+    "url": "https://api.apis.guru/v2/specs/sinao.app/1.1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:54.201Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "skynewz-api-fortnite": {
+    "hash": "1dd0325055f418a4a485b9bf4b8c914410b62d318e7bec5e751bbc69400436b6",
+    "url": "https://api.apis.guru/v2/specs/skynewz-api-fortnite.herokuapp.com/3.1.5/swagger.json",
+    "lastChecked": "2026-06-09T05:15:55.701Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "slack": {
+    "hash": "a623a38a3be7e3b6bc47e74401b509d4e044025b4ce8eefe611034c7bca1077a",
+    "url": "https://api.apis.guru/v2/specs/slack.com/1.7.0/openapi.json",
+    "lastChecked": "2026-06-09T05:15:57.188Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "slack-openai": {
+    "hash": "4bd450d2fe10b52fe650126a3b7ca915c96d4920319b52cfd785f8f0e9c87830",
+    "url": "https://api.apis.guru/v2/specs/slack.com/openai/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:15:58.716Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "slicebox": {
+    "hash": "e99c24bca796f473746647910309fbafa7e54908764453b3ae20bfaa781c4e3b",
+    "url": "https://api.apis.guru/v2/specs/slicebox.local/2.0/swagger.json",
+    "lastChecked": "2026-06-09T05:16:00.186Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "slideroom": {
+    "hash": "2f1b507f2673e82a1dbd6bc7acaeb321615b65f45195fc4fbcecdf2d6d551d6b",
+    "url": "https://api.apis.guru/v2/specs/slideroom.com/v2/swagger.json",
+    "lastChecked": "2026-06-09T05:16:01.730Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "smart": {
+    "hash": "16d29204fa6d12afcbe351f94b0c8a59be347d3aaf1b5e2e57b9eb0f125a3137",
+    "url": "https://api.apis.guru/v2/specs/smart-me.com/v1/openapi.json",
+    "lastChecked": "2026-06-09T05:16:03.167Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sms77": {
+    "hash": "e53f234e83774cd67e15aacef7a46f3eb4eda6643f5f83b16e1daebee7e63e57",
+    "url": "https://api.apis.guru/v2/specs/sms77.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:04.755Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "snyk": {
+    "hash": "fefa07b85a73f219b07193708faade7b191282e9f0e56da97e3b80d0b0f32fc5",
+    "url": "https://api.apis.guru/v2/specs/snyk.io/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:06.273Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "solarvps": {
+    "hash": "978dd93ee5abb439c80e5a34630e461f786428b23c9cfeaa5888264014ff5d57",
+    "url": "https://api.apis.guru/v2/specs/solarvps.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:16:07.759Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sonar-trading": {
+    "hash": "76973cdaec9058d9b66bf77497bf21f8d86ceb32f504b888df5c2779fcfca8fc",
+    "url": "https://api.apis.guru/v2/specs/sonar.trading/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:16:09.324Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "spectrocoin": {
+    "hash": "8813347843b0853393313e7a310a62655320a120a1071cddb36741c9214ed261",
+    "url": "https://api.apis.guru/v2/specs/spectrocoin.com/1.0.0/swagger.json",
+    "lastChecked": "2026-06-09T05:16:11.100Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "spinbot": {
+    "hash": "b26eaf96e12cc0d5bb4e3ea698ac5025dc1de06aeca682fd68feaff84b388ca7",
+    "url": "https://api.apis.guru/v2/specs/spinbot.net/1.0/swagger.json",
+    "lastChecked": "2026-06-09T05:16:12.549Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "spinitron": {
+    "hash": "baba9f2f3c472b484fd1ffc94d0248e17aa25838b93483c23f43f4b4eed21846",
+    "url": "https://api.apis.guru/v2/specs/spinitron.com/1.0.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:14.041Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "spoonacular": {
+    "hash": "fcfb76971f588491f409a02ed7f1d64fcb5c6a89b55de53d6d6f257bfd1edaa6",
+    "url": "https://api.apis.guru/v2/specs/spoonacular.com/1.1/openapi.json",
+    "lastChecked": "2026-06-09T05:16:15.588Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-cfb-v3-scores": {
+    "hash": "368bd09b7683ac5c5c476eb8bcdc85fe82da166cbfcb32bd013638b6f838a2b8",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/cfb-v3-scores/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:17.100Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-csgo-v3-scores": {
+    "hash": "41b7ecc4d6ea8a9af90b118e86b5948f77647f0de51e5460e432b0d10d9f4131",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/csgo-v3-scores/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:18.634Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-csgo-v3-stats": {
+    "hash": "989f9574711790673b9eb4c01dc663cc6e72916bb6ce4fc3b4eaef84f9c37dbc",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/csgo-v3-stats/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:20.100Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-lol-v3-projections": {
+    "hash": "de04fbd13bf4f4fdc5bd18b151fd12be5f8114d97e477a75a496a95fd828e4e5",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/lol-v3-projections/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:21.534Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-lol-v3-scores": {
+    "hash": "28b15042130ca590f562d2e435da05ebb9b2794a045943a7f746056e0f4dd040",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/lol-v3-scores/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:23.045Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-lol-v3-stats": {
+    "hash": "08379b6308a00c1d2b66fa63575988418cfd01a1435d8de8d212bb9348597207",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/lol-v3-stats/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:24.501Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-mlb-v3-play-by-play": {
+    "hash": "6819d9201e364b0a66c1a46699ea4b0e576487963aa9c5a5a5b7c8f97cf8d8f5",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/mlb-v3-play-by-play/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:26.152Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-mlb-v3-projections": {
+    "hash": "6dd3a4b172975f88f8625cb4fc1e8a995dd980bf213f17408c258094fec22dbd",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/mlb-v3-projections/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:27.613Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-mlb-v3-scores": {
+    "hash": "c19bdeab1c5347beacb325919e05e1f7ec9c7fd1174bef15d2154dc965ed8c34",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/mlb-v3-scores/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:29.079Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-mlb-v3-stats": {
+    "hash": "1b9a62035006fd4789337513b2ed60042ad045b4deda92ad15075891bf47907b",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/mlb-v3-stats/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:30.629Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nba-v3-play-by-play": {
+    "hash": "52c6d077d5a2cb461f84a324f95f814f3e3d2cbec8bf2cef3bdead2b78e0f8a2",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nba-v3-play-by-play/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:32.127Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nfl-v3-play-by-play": {
+    "hash": "0e65a0af2243b539733b3fb9ea4c658851c1932a9615cfee45a231382504df3e",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nfl-v3-play-by-play/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:33.675Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nfl-v3-projections": {
+    "hash": "c8df56e30428504f46e244f74e4e1bd81dea94cb7e13bb702a89adb0ba36b661",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nfl-v3-projections/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:35.177Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nfl-v3-scores": {
+    "hash": "224b5dd7035aa53d83e8424d49351041c14490ca6e7fa23c750643d3a0c30ece",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nfl-v3-scores/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:36.707Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nfl-v3-stats": {
+    "hash": "db916027bf97b2e5b62ec86e5c57f59d50ed3288b8bdc23c693e3a10f360a29c",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nfl-v3-stats/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:38.234Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
+  },
+  "sportsdata-nhl-v3-play-by-play": {
+    "hash": "8ed1136754a5ad47503fa886bbbffba15e00c85a178627e926f07831f92403bf",
+    "url": "https://api.apis.guru/v2/specs/sportsdata.io/nhl-v3-play-by-play/1.0/openapi.json",
+    "lastChecked": "2026-06-09T05:16:39.665Z",
+    "lastTriggerReason": "repo_missing+npm_missing+spec_changed"
   }
 }
