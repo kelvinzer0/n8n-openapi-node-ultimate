@@ -774,6 +774,15 @@ const FUNDING_NOTICE = {
 let credFields = '';
 let authConfig = '';
 
+// Credential display name: avoid "API API" duplication
+const displayNameStr = toDisplayName(CUSTOM_NAME);
+const credDisplayName = displayNameStr.toUpperCase().endsWith('API')
+	? displayNameStr
+	: `${displayNameStr} API`;
+const credDescPrefix = displayNameStr.toUpperCase().endsWith('API')
+	? displayNameStr
+	: `${displayNameStr} API`;
+
 // Determine the default URL value and placeholder from the spec
 const defaultUrlValue = specBaseUrl && !specHasServerVars ? specBaseUrl : '';
 const urlPlaceholder = specBaseUrl || 'https://api.example.com';
@@ -898,15 +907,6 @@ if (credentialTestRequest) {
 			},
 		}`;
 }
-
-// Credential display name: avoid "API API" duplication
-const displayNameStr = toDisplayName(CUSTOM_NAME);
-const credDisplayName = displayNameStr.toUpperCase().endsWith('API')
-	? displayNameStr
-	: `${displayNameStr} API`;
-const credDescPrefix = displayNameStr.toUpperCase().endsWith('API')
-	? displayNameStr
-	: `${displayNameStr} API`;
 
 writeFileSync(
 	join(projectDir, 'credentials', `${credentialClassName}.credentials.ts`),
