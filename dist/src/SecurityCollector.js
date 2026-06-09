@@ -1,30 +1,7 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SecurityCollector = void 0;
-const lodash = __importStar(require("lodash"));
+const utils_1 = require("./n8n/utils");
 /**
  * Resolves the effective security requirements for an operation.
  * Per-operation security overrides global security.
@@ -187,8 +164,8 @@ class SecurityCollector {
                 authPrefix = 'Basic ';
                 break;
             default:
-                displayName = `${lodash.startCase(schemeType)} Token`;
-                authPrefix = `${lodash.startCase(schemeType)} `;
+                displayName = `${(0, utils_1.smartStartCase)(schemeType)} Token`;
+                authPrefix = `${(0, utils_1.smartStartCase)(schemeType)} `;
         }
         const field = {
             displayName,
@@ -213,14 +190,14 @@ class SecurityCollector {
     buildDisplayName(paramName, schemeName) {
         // If param name looks like a header (x-api-key), startCase it
         if (paramName.toLowerCase().startsWith('x-')) {
-            return lodash.startCase(paramName.replace(/^x-/, '')) + ' (Header)';
+            return (0, utils_1.smartStartCase)(paramName.replace(/^x-/, '')) + ' (Header)';
         }
         // If it's a common pattern
         if (paramName.toLowerCase().includes('api')) {
-            return lodash.startCase(paramName);
+            return (0, utils_1.smartStartCase)(paramName);
         }
         // Fallback to scheme name
-        return lodash.startCase(schemeName) + ' API Key';
+        return (0, utils_1.smartStartCase)(schemeName) + ' API Key';
     }
     /**
      * Sanitize scheme name for use as n8n field name.

@@ -533,7 +533,7 @@ const packageJson = {
 		'n8n-community-node-package',
 		'openapi',
 		'swagger',
-		'api',
+		'API',
 		'automation',
 		'workflow',
 		safeName,
@@ -1206,12 +1206,16 @@ ${resourceNames.map(r => {
                     : `${method} ${label}`
                 : label;
 
-            return combined.charAt(0).toUpperCase() + combined.slice(1).toLowerCase();
+            // Fix version patterns: "V 1" → "v1"
+            let result = combined.replace(/\\b[vV]\\s+(\\d+)/g, 'v$1');
+            // Uppercase common acronyms
+            result = result.replace(/\\b(Api|Url|Http|Https|Json|Xml|Id|Ui|Db|Sql|Ssh|Ftp|Jwt|OAuth|Cors|Csrf|Dns|Ssl|Tls|Cdn|Aws|Gcp|Sdk|Cli|Crud|Rpc|Rest|Graphql|Webhook|Csv|Pdf|Html|Css)\\b/gi, (m) => m.toUpperCase());
+            return result.charAt(0).toUpperCase() + result.slice(1);
         });
         return `| ${r} | ${opList.join(', ')} |`;
     }
     return null;
-}).filter(Boolean).join('\n')}
+}).filter(Boolean).join('\\n')}
 
 ---
 

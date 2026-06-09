@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.N8NINodeProperties = void 0;
 const RefResolver_1 = require("../openapi/RefResolver");
 const lodash = __importStar(require("lodash"));
+const utils_1 = require("./utils");
 const SchemaExample_1 = require("../openapi/SchemaExample");
 function combine(...sources) {
     const obj = lodash.defaults({}, ...sources);
@@ -110,7 +111,7 @@ class N8NINodeProperties {
             field.type = 'options';
             field.options = resolved.enum.map((value) => {
                 return {
-                    name: lodash.startCase(value),
+                    name: (0, utils_1.smartStartCase)(value),
                     value: value,
                 };
             });
@@ -133,7 +134,7 @@ class N8NINodeProperties {
             throw new Error(`Parameter schema nor content not found`);
         }
         const fieldParameterKeys = {
-            displayName: lodash.startCase(parameter.name),
+            displayName: (0, utils_1.smartStartCase)(parameter.name),
             name: encodeURIComponent(parameter.name.replace(/\./g, "-")),
             required: parameter.required,
             description: parameter.description,
@@ -185,7 +186,7 @@ class N8NINodeProperties {
     fromSchemaProperty(name, property) {
         const fieldSchemaKeys = this.fromSchema(property);
         const fieldParameterKeys = {
-            displayName: lodash.startCase(name),
+            displayName: (0, utils_1.smartStartCase)(name),
             name: name.replace(/\./g, "-"),
         };
         const field = combine(fieldParameterKeys, fieldSchemaKeys);

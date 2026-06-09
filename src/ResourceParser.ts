@@ -1,5 +1,5 @@
 import {OpenAPIV3} from "openapi-types";
-import * as lodash from "lodash";
+import {smartStartCase} from "./n8n/utils";
 
 /**
  * Extract information for n8n node from OpenAPI resource
@@ -30,11 +30,11 @@ export interface IResourceParser {
  */
 export class DefaultResourceParser {
     name(tag: OpenAPIV3.TagObject): string {
-        return lodash.startCase(tag.name);
+        return smartStartCase(tag.name);
     }
 
     value(tag: Pick<OpenAPIV3.TagObject, "name">): string {
-        return lodash.startCase(tag.name)
+        return smartStartCase(tag.name)
     }
 
     description(tag: OpenAPIV3.TagObject): string {

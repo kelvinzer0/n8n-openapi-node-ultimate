@@ -1,6 +1,6 @@
 import {OpenAPIV3} from "openapi-types";
 import {INodeProperties} from "n8n-workflow";
-import * as lodash from "lodash";
+import {smartStartCase} from "./n8n/utils";
 
 type SecurityScheme = OpenAPIV3.SecuritySchemeObject;
 type SecurityRequirement = OpenAPIV3.SecurityRequirementObject;
@@ -197,8 +197,8 @@ export class SecurityCollector {
                 authPrefix = 'Basic ';
                 break;
             default:
-                displayName = `${lodash.startCase(schemeType)} Token`;
-                authPrefix = `${lodash.startCase(schemeType)} `;
+                displayName = `${smartStartCase(schemeType)} Token`;
+                authPrefix = `${smartStartCase(schemeType)} `;
         }
 
         const field: INodeProperties = {
@@ -226,14 +226,14 @@ export class SecurityCollector {
     private buildDisplayName(paramName: string, schemeName: string): string {
         // If param name looks like a header (x-api-key), startCase it
         if (paramName.toLowerCase().startsWith('x-')) {
-            return lodash.startCase(paramName.replace(/^x-/, '')) + ' (Header)';
+            return smartStartCase(paramName.replace(/^x-/, '')) + ' (Header)';
         }
         // If it's a common pattern
         if (paramName.toLowerCase().includes('api')) {
-            return lodash.startCase(paramName);
+            return smartStartCase(paramName);
         }
         // Fallback to scheme name
-        return lodash.startCase(schemeName) + ' API Key';
+        return smartStartCase(schemeName) + ' API Key';
     }
 
     /**

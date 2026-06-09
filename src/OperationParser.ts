@@ -1,6 +1,6 @@
 import {OpenAPIV3} from "openapi-types";
-import * as lodash from "lodash";
 import {OperationContext} from "./openapi/OpenAPIVisitor";
+import {smartStartCase} from "./n8n/utils";
 
 /**
  * Extract information for n8n node from OpenAPI operation
@@ -44,7 +44,7 @@ export class DefaultOperationParser implements IOperationParser {
 
     name(operation: OpenAPIV3.OperationObject, context: OperationContext): string {
         if (operation.operationId) {
-            return lodash.startCase(operation.operationId)
+            return smartStartCase(operation.operationId)
         }
         // Generate a clean name from method + path
         const pathParts = context.pattern
@@ -53,7 +53,7 @@ export class DefaultOperationParser implements IOperationParser {
             .map(p => p.replace(/[^a-zA-Z0-9]/g, ' '));
         const method = context.method.toUpperCase();
         const pathName = pathParts.join(' ');
-        return lodash.startCase(`${method} ${pathName}`.trim());
+        return smartStartCase(`${method} ${pathName}`.trim());
     }
 
     value(operation: OpenAPIV3.OperationObject, context: OperationContext): string {

@@ -2,6 +2,7 @@ import {OpenAPIV3} from "openapi-types";
 import {INodeProperties, NodePropertyTypes} from "n8n-workflow";
 import {RefResolver} from "../openapi/RefResolver";
 import * as lodash from "lodash";
+import {smartStartCase} from "./utils";
 import {SchemaExample} from "../openapi/SchemaExample";
 
 type Schema = OpenAPIV3.ReferenceObject | OpenAPIV3.SchemaObject;
@@ -100,7 +101,7 @@ export class N8NINodeProperties {
             field.type = 'options';
             field.options = resolved.enum.map((value: string) => {
                 return {
-                    name: lodash.startCase(value),
+                    name: smartStartCase(value),
                     value: value,
                 };
             });
@@ -124,7 +125,7 @@ export class N8NINodeProperties {
             throw new Error(`Parameter schema nor content not found`)
         }
         const fieldParameterKeys: Partial<INodeProperties> = {
-            displayName: lodash.startCase(parameter.name),
+            displayName: smartStartCase(parameter.name),
             name: encodeURIComponent(parameter.name.replace(/\./g, "-")),
             required: parameter.required,
             description: parameter.description,
@@ -179,7 +180,7 @@ export class N8NINodeProperties {
     fromSchemaProperty(name: string, property: OpenAPIV3.ReferenceObject | OpenAPIV3.SchemaObject): INodeProperties {
         const fieldSchemaKeys: FromSchemaNodeProperty = this.fromSchema(property)
         const fieldParameterKeys: Partial<INodeProperties> = {
-            displayName: lodash.startCase(name),
+            displayName: smartStartCase(name),
             name: name.replace(/\./g, "-"),
         }
         const field = combine(fieldParameterKeys, fieldSchemaKeys)
