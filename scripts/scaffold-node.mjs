@@ -351,7 +351,7 @@ const safeName = CUSTOM_NAME.toLowerCase()
 const nodeName = `n8n-nodes-${safeName}`;
 const className = toPascalCase(CUSTOM_NAME);
 const packageName = `@${NPM_SCOPE}/${nodeName}`;
-const defaultDesc = DESCRIPTION || `n8n community node for ${toDisplayName(CUSTOM_NAME)} API`;
+const defaultDesc = DESCRIPTION || `n8n community node for ${toDisplayName(CUSTOM_NAME)}${toDisplayName(CUSTOM_NAME).toUpperCase().endsWith('API') ? '' : ' API'}`;
 const nodeClassName = className;
 const credentialClassName = `${className}Api`;
 
@@ -787,7 +787,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
+			description: 'The base URL of your ${escapeTS(credDescPrefix)} server',
 		},
 		{
 			displayName: 'API Key',
@@ -814,7 +814,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
+			description: 'The base URL of your ${escapeTS(credDescPrefix)} server',
 		},
 		{
 			displayName: 'API Key',
@@ -842,7 +842,7 @@ if (secInfo && secInfo.type === 'apiKey') {
 			default: '${escapeTS(defaultUrlValue)}',
 			required: true,
 			placeholder: '${escapeTS(urlPlaceholder)}',
-			description: 'The base URL of your ${escapeTS(toDisplayName(CUSTOM_NAME))} API server',
+			description: 'The base URL of your ${escapeTS(credDescPrefix)} server',
 		},
 		{
 			displayName: 'API Key',
@@ -899,6 +899,15 @@ if (credentialTestRequest) {
 		}`;
 }
 
+// Credential display name: avoid "API API" duplication
+const displayNameStr = toDisplayName(CUSTOM_NAME);
+const credDisplayName = displayNameStr.toUpperCase().endsWith('API')
+	? displayNameStr
+	: `${displayNameStr} API`;
+const credDescPrefix = displayNameStr.toUpperCase().endsWith('API')
+	? displayNameStr
+	: `${displayNameStr} API`;
+
 writeFileSync(
 	join(projectDir, 'credentials', `${credentialClassName}.credentials.ts`),
 	`import type {
@@ -911,7 +920,7 @@ writeFileSync(
 export class ${credentialClassName} implements ICredentialType {
 	name = '${credentialInternalName}';
 
-	displayName = '${toDisplayName(CUSTOM_NAME)} API';
+	displayName = '${credDisplayName}';
 
 	icon: Icon = { light: 'file:../nodes/${nodeClassName}/${actualIconLight}', dark: 'file:../nodes/${nodeClassName}/${actualIconDark}' };
 
