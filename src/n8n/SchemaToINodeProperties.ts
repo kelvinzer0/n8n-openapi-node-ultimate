@@ -95,7 +95,7 @@ export class N8NINodeProperties {
         const field: FromSchemaNodeProperty = {
             type: type,
             default: defaultValue,
-            description: resolved.description,
+            ...(resolved.description !== undefined && { description: resolved.description }),
         };
         if (resolved.enum && resolved.enum.length > 0) {
             field.type = 'options';
@@ -128,7 +128,7 @@ export class N8NINodeProperties {
             displayName: smartStartCase(parameter.name),
             name: encodeURIComponent(parameter.name.replace(/\./g, "-")),
             required: parameter.required,
-            description: parameter.description,
+            ...(parameter.description !== undefined && { description: parameter.description }),
             default: parameter.example,
         };
         const field = combine(fieldParameterKeys, fieldSchemaKeys)

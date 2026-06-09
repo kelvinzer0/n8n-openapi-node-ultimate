@@ -94,8 +94,8 @@ test('petstore.json', () => {
                                 }
                         },
                         {
-                                "name": "Get Pet By Id",
-                                "value": "Get Pet By Id",
+                                "name": "Get Pet By ID",
+                                "value": "Get Pet By ID",
                                 "action": "Find pet by ID",
                                 "description": "Returns a single pet",
                                 "routing": {
@@ -182,8 +182,8 @@ test('petstore.json', () => {
                                 }
                         },
                         {
-                                "name": "Get Order By Id",
-                                "value": "Get Order By Id",
+                                "name": "Get Order By ID",
+                                "value": "Get Order By ID",
                                 "action": "Find purchase order by ID",
                                 "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.",
                                 "routing": {
@@ -328,7 +328,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Id",
+                "displayName": "ID",
                 "name": "id",
                 "type": "number",
                 "default": 10,
@@ -508,7 +508,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Id",
+                "displayName": "ID",
                 "name": "id",
                 "type": "number",
                 "default": 10,
@@ -784,13 +784,13 @@ test('petstore.json', () => {
                                         "Pet"
                                 ],
                                 "operation": [
-                                        "Get Pet By Id"
+                                        "Get Pet By ID"
                                 ]
                         }
                 }
         },
         {
-                "displayName": "Pet Id",
+                "displayName": "Pet ID",
                 "name": "petId",
                 "required": true,
                 "description": "ID of pet to return",
@@ -802,13 +802,13 @@ test('petstore.json', () => {
                                         "Pet"
                                 ],
                                 "operation": [
-                                        "Get Pet By Id"
+                                        "Get Pet By ID"
                                 ]
                         }
                 }
         },
         {
-                "displayName": "Api Key",
+                "displayName": "API Key",
                 "name": "security_api_key",
                 "type": "string",
                 "default": "",
@@ -827,7 +827,7 @@ test('petstore.json', () => {
                                         "Pet"
                                 ],
                                 "operation": [
-                                        "Get Pet By Id"
+                                        "Get Pet By ID"
                                 ]
                         }
                 }
@@ -852,7 +852,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Pet Id",
+                "displayName": "Pet ID",
                 "name": "petId",
                 "required": true,
                 "description": "ID of pet that needs to be updated",
@@ -939,7 +939,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Api Key",
+                "displayName": "API Key",
                 "name": "api_key",
                 "description": "",
                 "default": "",
@@ -963,7 +963,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Pet Id",
+                "displayName": "Pet ID",
                 "name": "petId",
                 "required": true,
                 "description": "Pet id to delete",
@@ -1000,7 +1000,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Pet Id",
+                "displayName": "Pet ID",
                 "name": "petId",
                 "required": true,
                 "description": "ID of pet to update",
@@ -1078,7 +1078,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Api Key",
+                "displayName": "API Key",
                 "name": "security_api_key",
                 "type": "string",
                 "default": "",
@@ -1122,7 +1122,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Id",
+                "displayName": "ID",
                 "name": "id",
                 "type": "number",
                 "default": 10,
@@ -1146,7 +1146,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Pet Id",
+                "displayName": "Pet ID",
                 "name": "petId",
                 "type": "number",
                 "default": 198772,
@@ -1294,13 +1294,13 @@ test('petstore.json', () => {
                                         "Store"
                                 ],
                                 "operation": [
-                                        "Get Order By Id"
+                                        "Get Order By ID"
                                 ]
                         }
                 }
         },
         {
-                "displayName": "Order Id",
+                "displayName": "Order ID",
                 "name": "orderId",
                 "required": true,
                 "description": "ID of order that needs to be fetched",
@@ -1312,7 +1312,7 @@ test('petstore.json', () => {
                                         "Store"
                                 ],
                                 "operation": [
-                                        "Get Order By Id"
+                                        "Get Order By ID"
                                 ]
                         }
                 }
@@ -1337,7 +1337,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Order Id",
+                "displayName": "Order ID",
                 "name": "orderId",
                 "required": true,
                 "description": "ID of the order that needs to be deleted",
@@ -1374,7 +1374,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Id",
+                "displayName": "ID",
                 "name": "id",
                 "type": "number",
                 "default": 10,
@@ -1769,7 +1769,7 @@ test('petstore.json', () => {
                 }
         },
         {
-                "displayName": "Id",
+                "displayName": "ID",
                 "name": "id",
                 "type": "number",
                 "default": 10,
