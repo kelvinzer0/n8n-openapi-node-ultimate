@@ -125,15 +125,19 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	}
 
 	// Load fonts for text-to-path conversion
-	const { loadFonts, wrapTextWithFont } = await import('./text-to-path.mjs');
+	const { loadFonts, wrapTextWithFont, renderTextAsPaths, textToPathElement } = await import('./text-to-path.mjs');
 	const fonts = await loadFonts();
 
-	// Get SVG path for text — direct font.getPath, no fallback needed
+	/**
+	 * Robust text → SVG path conversion.
+	 * Uses textToPathElement (with GSUB fallback) for short text,
+	 * renderTextAsPaths (char-by-char) for multi-line description.
+	 */
 	function getTextPaths(font, text, x, y, fontSize, fill, fillOpacity) {
-		const path = font.getPath(text, x, y, fontSize);
-		const d = path.toSVG(2).replace(/<path[^>]*d="([^"]*)"[^/]*\/>/, '$1');
-		const opacity = fillOpacity ? ` fill-opacity="${fillOpacity}"` : '';
-		return `<path d="${d}" fill="${fill}"${opacity}/>`;
+		return textToPathElement(font, text, fontSize, x, y, fill, fillOpacity);
+	}
+	function getTextPathsRobust(font, text, x, y, fontSize, fill, fillOpacity) {
+		return renderTextAsPaths(font, text, x, y, fontSize, fill, fillOpacity);
 	}
 
 	let svg = readFileSync(templatePath, 'utf-8');
@@ -165,7 +169,7 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	const descPaths = lines
 		.map((line, i) => {
 			const y = startY + i * lineHeight;
-			return getTextPaths(fonts.regular, line, 70, y, 24, 'white', '0.7');
+			return getTextPathsRobust(fonts.regular, line, 70, y, 24, 'white', '0.7');
 		})
 		.join('\n');
 	svg = svg.replace(
@@ -176,7 +180,7 @@ async function generateBanner(title, description, logoBuf, logoExt, outPath) {
 	// 3. Replace copyright text — "N8N" (bold) + " - COMMUNITY NODES" (regular)
 	// Both at font-size 32, y=334.52
 	const n8nSvg = getTextPaths(fonts.bold, 'N8N', 70, 334.52, 32, 'white', '0.9');
-	const communitySvg = getTextPaths(fonts.regular, ' - COMMUNITY NODES', 127.562, 334.52, 32, 'white', '0.9');
+	const communitySvg = getTextPathsRobust(fonts.regular, ' - COMMUNITY NODES', 127.562, 334.52, 32, 'white', '0.9');
 
 	svg = svg.replace(
 		/(<g id="copyright">)[\s\S]*?(<\/g>)/,
