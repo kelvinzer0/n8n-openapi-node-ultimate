@@ -4456,5 +4456,1505 @@
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/models.lex.v2/2020-08-07/openapi.json",
     "lastChecked": "2026-06-09T16:25:07.147Z",
     "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-monitoring": {
+    "hash": "7a42b529cc972a58366bae6b29f450bddc63aafc71f6c7158708e870361138b1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/monitoring/2010-08-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:13.107Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mq": {
+    "hash": "8e0193a540ba130e56ef9c5783b425bb399600fbc12c08f7a3faca12140fc839",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mq/2017-11-27/openapi.json",
+    "lastChecked": "2026-06-10T00:17:14.661Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mturk-requester": {
+    "hash": "cab77683a5a0a578bbaaecaad68224632a581fe4623c96398ce98a6ff15c1ec2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mturk-requester/2017-01-17/openapi.json",
+    "lastChecked": "2026-06-10T00:17:16.226Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-mwaa": {
+    "hash": "3814d3f566369b6ec63021de2df45ccd4c78dde2dacc532dcb67b3bdfb82e504",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/mwaa/2020-07-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:17.700Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-neptune": {
+    "hash": "78ae9cd32b2626b4bfb49529e0201fe6822074777d30b8bded76d776f9bb1af3",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/neptune/2014-10-31/openapi.json",
+    "lastChecked": "2026-06-10T00:17:19.290Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-network-firewall": {
+    "hash": "c50d0fdd93896a8a2fc17a650a39f45a55629948cc90e4303080b33a9131ba5b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/network-firewall/2020-11-12/openapi.json",
+    "lastChecked": "2026-06-10T00:17:20.757Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-networkmanager": {
+    "hash": "bcb7b1757aadf69ee21eb83aa093408e745ed28b3064eb2b98c42e186fe3b534",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/networkmanager/2019-07-05/openapi.json",
+    "lastChecked": "2026-06-10T00:17:22.267Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-nimble": {
+    "hash": "836e96dd3aeb83a68f8d4c62ea84daf06c4ce2c6e602d0b6f9ce78e6efae2a97",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/nimble/2020-08-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:23.712Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-opsworks": {
+    "hash": "36385397c5d5997e01171eb3acd87b4b2760501a8538448fd4e9faebb4e29110",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/opsworks/2013-02-18/openapi.json",
+    "lastChecked": "2026-06-10T00:17:25.174Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-opsworkscm": {
+    "hash": "e757ca903da0c397756cb1a394b1ed7c7e26b1dfa7353f2d094c6a90a71399e5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/opsworkscm/2016-11-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:26.756Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-organizations": {
+    "hash": "106b083308ce353a72f192c6def879536974f32576b800c9b43301a4d751f645",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/organizations/2016-11-28/openapi.json",
+    "lastChecked": "2026-06-10T00:17:28.340Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-outposts": {
+    "hash": "9f13e684b1e828631762f3fd2e2931f61e040faf5c194938796b5c4bf5799a43",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/outposts/2019-12-03/openapi.json",
+    "lastChecked": "2026-06-10T00:17:30.146Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-personalize": {
+    "hash": "2a1675325c1ba76a33b168e118d12c0c8f93f0bc1479c24b0912a6d34535708e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/personalize/2018-05-22/openapi.json",
+    "lastChecked": "2026-06-10T00:17:31.704Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-personalize-events": {
+    "hash": "2c0e949bd7806a5268a61009be52ba192904c7244d6d42affb8e39a487a6de9c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/personalize-events/2018-03-22/openapi.json",
+    "lastChecked": "2026-06-10T00:17:33.236Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-personalize-runtime": {
+    "hash": "50bfc5826554c1eb0ff705e845e6ad60ed7b05ab5ac61a16e15760c80d8ce79d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/personalize-runtime/2018-05-22/openapi.json",
+    "lastChecked": "2026-06-10T00:17:34.725Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-pi": {
+    "hash": "f04f0010a829ffbcee0f098fe8809216f18f0b15f856f2e19f02dc47a0ca1719",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/pi/2018-02-27/openapi.json",
+    "lastChecked": "2026-06-10T00:17:36.525Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-pinpoint": {
+    "hash": "23849f11a87862e8f748d2ba5d3d4543827c73dbda85cfcd07e7f64ff5450e11",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/pinpoint/2016-12-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:37.938Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-pinpoint-email": {
+    "hash": "b87a47346ca8a9cff3da3ff227dd83d67ecb2e7769e06d3487b3c068c414cbc9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/pinpoint-email/2018-07-26/openapi.json",
+    "lastChecked": "2026-06-10T00:17:39.485Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-polly": {
+    "hash": "10ca8c68ba2e83741d1b771039e9c84edda008f3eafce963261f291f508ee6e2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/polly/2016-06-10/openapi.json",
+    "lastChecked": "2026-06-10T00:17:41.032Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-pricing": {
+    "hash": "c25ccb30d677773fe7d673762484fee06799e349994355e8d8b96f620bdeef95",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/pricing/2017-10-15/openapi.json",
+    "lastChecked": "2026-06-10T00:17:42.604Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-proton": {
+    "hash": "de6f706c1971dbe28f9331d39ffe1a63eacc591c85d1057641c2c8c857fdeba5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/proton/2020-07-20/openapi.json",
+    "lastChecked": "2026-06-10T00:17:44.154Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-qldb": {
+    "hash": "003541949fe881ef2594ef87c61b7f6cf168ea4c251539a483045af6619d5311",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/qldb/2019-01-02/openapi.json",
+    "lastChecked": "2026-06-10T00:17:45.678Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-qldb-session": {
+    "hash": "72f30e3cfb1aa0807e7dc4179c1bc9f4eb105cc5ea72d2a307d225a702a757b6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/qldb-session/2019-07-11/openapi.json",
+    "lastChecked": "2026-06-10T00:17:47.183Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-quicksight": {
+    "hash": "8932853fdbe6dacdebf58e8c40e18e2536cb386fb5bb603ab4fc068da0b2c35d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/quicksight/2018-04-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:48.722Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ram": {
+    "hash": "cd22671344662c9c467524b0bb2875b12e94e55a5ab1ec06cb3be45524862297",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ram/2018-01-04/openapi.json",
+    "lastChecked": "2026-06-10T00:17:50.238Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-rds": {
+    "hash": "ce6022e5f3faaf499e881633f8f9b1ed52a63b8470577b8bb86bb7c2823e313c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/rds/2014-10-31/openapi.json",
+    "lastChecked": "2026-06-10T00:17:51.830Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-rds-data": {
+    "hash": "5082e3a3e4fa9140b3e2570b7bece3f2829ed46f754cbf60c922c3441c72949e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/rds-data/2018-08-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:53.314Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-redshift": {
+    "hash": "7a73ea8cb3e1fe13973f2dffcbdf21aca0b268928a79cc299ca5eb08ab5aab8b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/redshift/2012-12-01/openapi.json",
+    "lastChecked": "2026-06-10T00:17:54.814Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-redshift-data": {
+    "hash": "d67e12ff048af3da3abbea2bd7e692717d41526468eddf97fb2b096c2a4bede6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/redshift-data/2019-12-20/openapi.json",
+    "lastChecked": "2026-06-10T00:17:56.450Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-rekognition": {
+    "hash": "a19a1112896d81c80026c21d24e52f7a481e65648122638a1b61203a73501b97",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/rekognition/2016-06-27/openapi.json",
+    "lastChecked": "2026-06-10T00:17:58.013Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-resource-groups": {
+    "hash": "66f2756ff03f84737d1ee3b86372a35488db0ea7c8fc78fc5f6e72a24ccc317c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/resource-groups/2017-11-27/openapi.json",
+    "lastChecked": "2026-06-10T00:17:59.766Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-resourcegroupstaggingapi": {
+    "hash": "04a528e260f78c5fcb2310536e99fc2e1087477758a87ac682a159841ac924ce",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/resourcegroupstaggingapi/2017-01-26/openapi.json",
+    "lastChecked": "2026-06-10T00:18:01.365Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-robomaker": {
+    "hash": "1a4c6e571c66ff371c5bb707fb5934dbbafc27482470b67cd327d57bf1404bfd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/robomaker/2018-06-29/openapi.json",
+    "lastChecked": "2026-06-10T00:18:02.873Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-route53": {
+    "hash": "c13c6b2c39136d0f8b40d13a29fc625713e9e74bdd1ab050e506e421ea36cdf7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/route53/2013-04-01/openapi.json",
+    "lastChecked": "2026-06-10T00:18:04.492Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-route53domains": {
+    "hash": "84ab2360686426113e7d05ff26d9e2c6b85098def16c0e4863273eadb3296226",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/route53domains/2014-05-15/openapi.json",
+    "lastChecked": "2026-06-10T00:18:06.058Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-route53resolver": {
+    "hash": "93994fc4c053b7e2fc9e409b3614fb9af728d3a9314b3f500b0d0d4deea7c81d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/route53resolver/2018-04-01/openapi.json",
+    "lastChecked": "2026-06-10T00:18:07.484Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-runtime-lex": {
+    "hash": "5f139a39cd318c51c350a1dfd65d6171ee0b3a10b08585de556984e8699b11c6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/runtime.lex/2016-11-28/openapi.json",
+    "lastChecked": "2026-06-10T00:18:09.028Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-runtime-lex-v2": {
+    "hash": "b3c8dd83162d64d5fa53fa5a64611d63aebc8af0fe754001f9ee775e0d7b7108",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/runtime.lex.v2/2020-08-07/openapi.json",
+    "lastChecked": "2026-06-10T00:18:10.801Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-runtime-sagemaker": {
+    "hash": "91430d6cb2047c5560a1779818bf76b994c844ba4c6c1687715c82c1684ca16e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/runtime.sagemaker/2017-05-13/openapi.json",
+    "lastChecked": "2026-06-10T00:18:12.286Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-s3": {
+    "hash": "1503e59f693ab475b165ab210a3f330fbeceff42e6edf5e9eda02eefa3a23e8c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/s3/2006-03-01/openapi.json",
+    "lastChecked": "2026-06-10T00:18:13.722Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-s3control": {
+    "hash": "2b7c4737cfed8e2747631ef40c5da3f24a5be4fac11e4fc4e80232d501585ae6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/s3control/2018-08-20/openapi.json",
+    "lastChecked": "2026-06-10T00:18:15.280Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-s3outposts": {
+    "hash": "1eff1d2a1d43cd72a45f41a29a097aa95e9dfa461ae96c78ae766b93ec8e84d0",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/s3outposts/2017-07-25/openapi.json",
+    "lastChecked": "2026-06-10T00:18:16.744Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sagemaker": {
+    "hash": "e73a5464793dcce45abf9b403427d024b433f01adb8597fba0eabc70bf8be36c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sagemaker/2017-07-24/openapi.json",
+    "lastChecked": "2026-06-10T00:18:18.421Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sagemaker-a2i-runtime": {
+    "hash": "4da402a95dcd5b71837a0eca88982a72649be6416260d2ea49ceedd4b9868c3b",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sagemaker-a2i-runtime/2019-11-07/openapi.json",
+    "lastChecked": "2026-06-10T00:18:19.910Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sagemaker-edge": {
+    "hash": "41a7092bc2756c47bbe13fc42067a053e120033be44040f7ab4b20be35aaae54",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sagemaker-edge/2020-09-23/openapi.json",
+    "lastChecked": "2026-06-10T00:18:21.324Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sagemaker-featurestore-runtime": {
+    "hash": "fdf5a1d0da1bcf8e32f7881faa9c012204a730831ebc775f6bf33a8fe98fa568",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sagemaker-featurestore-runtime/2020-07-01/openapi.json",
+    "lastChecked": "2026-06-10T00:18:22.714Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-savingsplans": {
+    "hash": "83be340f24db826de08affa649573c9a0a1226a585f4d7320288445d6faa0fd2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/savingsplans/2019-06-28/openapi.json",
+    "lastChecked": "2026-06-10T00:18:24.255Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-schemas": {
+    "hash": "a0364073f24bdd98971f13c5291f683495b7d45284ea77468756d6bee030fcd3",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/schemas/2019-12-02/openapi.json",
+    "lastChecked": "2026-06-10T00:18:25.686Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sdb": {
+    "hash": "451ce9153a766ef7769e55e37caa0cd4c9faa47480d9018060c0e128927d0883",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sdb/2009-04-15/openapi.json",
+    "lastChecked": "2026-06-10T00:18:27.404Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-secretsmanager": {
+    "hash": "2ca8b81884f008b61ec6c8d39a133f7ecb51b25e54d5c84e34cebe1b26d409d7",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/secretsmanager/2017-10-17/openapi.json",
+    "lastChecked": "2026-06-10T00:18:28.802Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-securityhub": {
+    "hash": "1b7828a94da237db3946c4ec12e62b1efe76a50f21de3b7a6570878cfd1b0b68",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/securityhub/2018-10-26/openapi.json",
+    "lastChecked": "2026-06-10T00:18:30.299Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-serverlessrepo": {
+    "hash": "d620eaf5b1bdfeebf8fe9b427629e152d989d5cb44710970673eddbc586b804d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/serverlessrepo/2017-09-08/openapi.json",
+    "lastChecked": "2026-06-10T00:18:31.761Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-service-quotas": {
+    "hash": "94ee2c5895a72533a0bc05f697f32aac82457a34f1baf6851c8cc0a0fa6e88f0",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/service-quotas/2019-06-24/openapi.json",
+    "lastChecked": "2026-06-10T00:18:33.174Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-servicecatalog": {
+    "hash": "0beb3872e15c984e76322d8791275043ec72066349ebba9697e0669c5b970d08",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/servicecatalog/2015-12-10/openapi.json",
+    "lastChecked": "2026-06-10T00:18:34.576Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-servicecatalog-appregistry": {
+    "hash": "b0f13d13aac29ccb65b5311099e44ec735ad929e69451ea17a4771a40a9fffc1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/servicecatalog-appregistry/2020-06-24/openapi.json",
+    "lastChecked": "2026-06-10T00:18:35.924Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-servicediscovery": {
+    "hash": "93c51157892beff5ce890241302a61bce2eb037fa90f5a7885e411e41676c589",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/servicediscovery/2017-03-14/openapi.json",
+    "lastChecked": "2026-06-10T00:18:37.413Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sesv2": {
+    "hash": "6f2c6a41be2657251c2bf165e09aa7a6f4041eefb15b7e3ccbf489bd953ad467",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sesv2/2019-09-27/openapi.json",
+    "lastChecked": "2026-06-10T00:18:38.839Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-shield": {
+    "hash": "694c7de4eed67fd65dd97991575eb69bce3fe9cfec1904069892c593bae1345a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/shield/2016-06-02/openapi.json",
+    "lastChecked": "2026-06-10T00:18:40.221Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-signer": {
+    "hash": "083abf854f35d8ff9f08fdc56559ea4680f8d58827f1858dae6e3c7adb3f48a3",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/signer/2017-08-25/openapi.json",
+    "lastChecked": "2026-06-10T00:18:41.574Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sms": {
+    "hash": "74642671c51ad25fd436463575cf79bd0472dac4a4046bd98a1cb30b9137a078",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sms/2016-10-24/openapi.json",
+    "lastChecked": "2026-06-10T00:18:43.039Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sms-voice": {
+    "hash": "709045312d22b886c18975ad7ecf217a38a0b3ea757dbaefdf3e33b48ba2f369",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sms-voice/2018-09-05/openapi.json",
+    "lastChecked": "2026-06-10T00:18:44.393Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-snowball": {
+    "hash": "b5734197090a5f94d2e71256dc215a2933902c37c140a14c6b6b1e7de386beb2",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/snowball/2016-06-30/openapi.json",
+    "lastChecked": "2026-06-10T00:18:45.868Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sns": {
+    "hash": "9b88acc1454d5145509cf3a88684300670e8f4440a43a5732fbf292d8eeacbfa",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sns/2010-03-31/openapi.json",
+    "lastChecked": "2026-06-10T00:18:47.293Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sqs": {
+    "hash": "41d7c860c6e52c0854913270019c3a14afacbe513613a06b67de65f09a4dc2e9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sqs/2012-11-05/openapi.json",
+    "lastChecked": "2026-06-10T00:18:48.720Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ssm": {
+    "hash": "12574a5bd9490c824e09aba0751c3a674d1012e1e8fb4e2b8a4a1abc4a2eab3c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ssm/2014-11-06/openapi.json",
+    "lastChecked": "2026-06-10T00:18:50.145Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ssm-contacts": {
+    "hash": "c0c137c37e656209ccfadfee5c80a6d3a70133f2e3569bf38e0686e6496cc0cd",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ssm-contacts/2021-05-03/openapi.json",
+    "lastChecked": "2026-06-10T00:18:51.643Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-ssm-incidents": {
+    "hash": "c443a44c443dc15472c7ad568af052023a5ecbf8d3d2b9d96cd8fe9ea6620ef1",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/ssm-incidents/2018-05-10/openapi.json",
+    "lastChecked": "2026-06-10T00:18:53.051Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sso": {
+    "hash": "21693199b5913bbb69aba465c5a26c4a4288392a783f0485865610a2400734e8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sso/2019-06-10/openapi.json",
+    "lastChecked": "2026-06-10T00:18:54.470Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sso-admin": {
+    "hash": "072e8a029692e6c8668663fa802dc336967ab0b70e2e2f0405f40b835c62d3fc",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sso-admin/2020-07-20/openapi.json",
+    "lastChecked": "2026-06-10T00:18:55.846Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sso-oidc": {
+    "hash": "7afcf213df745c87198cc62245f179ef46473b68838ca84b48ce9ff37f427fe0",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sso-oidc/2019-06-10/openapi.json",
+    "lastChecked": "2026-06-10T00:18:57.358Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-states": {
+    "hash": "d8310777009ae06359d9a2cb9c3145c3b8f41e9fadac2405541e24b50d2ee8d4",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/states/2016-11-23/openapi.json",
+    "lastChecked": "2026-06-10T00:18:58.755Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-storagegateway": {
+    "hash": "c65b405623895bc548e7bb3e839fa958bcd2f182b76227592ec73a8d2a8d820a",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/storagegateway/2013-06-30/openapi.json",
+    "lastChecked": "2026-06-10T00:19:00.271Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-streams-dynamodb": {
+    "hash": "341583cc0ca1ad0e391744555b0849dcfe3746a9b5bfe5053c689e353047ff6e",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/streams.dynamodb/2012-08-10/openapi.json",
+    "lastChecked": "2026-06-10T00:19:01.766Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-sts": {
+    "hash": "1dbeffb5f35dae8f3a8c8453cbcbe68cf1851bbbb76f89fdb084dd235f95dd0d",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/sts/2011-06-15/openapi.json",
+    "lastChecked": "2026-06-10T00:19:03.261Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-support": {
+    "hash": "56fbd3e379e727fead9b6225840f2b80a1d6a20ce749c986bdc65f126700e4a8",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/support/2013-04-15/openapi.json",
+    "lastChecked": "2026-06-10T00:19:04.729Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-swf": {
+    "hash": "c2962640fcf119d041551f464d33e86ae1e5e5933c27e33c96e3dd7ebdc077e5",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/swf/2012-01-25/openapi.json",
+    "lastChecked": "2026-06-10T00:19:06.131Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-synthetics": {
+    "hash": "0d23b5bb00c11bba03fe8dfbae8997f741117d0de25ed591552a52dea6c43592",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/synthetics/2017-10-11/openapi.json",
+    "lastChecked": "2026-06-10T00:19:07.496Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-textract": {
+    "hash": "d672d725f70920b171d4629df53f086ae823e33a38c6abcc4d2ea10368dfac38",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/textract/2018-06-27/openapi.json",
+    "lastChecked": "2026-06-10T00:19:08.946Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-timestream-query": {
+    "hash": "0f433f74df383f784d598f1613d1d9f89d97f4e2c5631f3e44aeccc80909031f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/timestream-query/2018-11-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:10.392Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-timestream-write": {
+    "hash": "94a6640007b8f1b0197a7c2ad38dbc362319ab0a9e2affe5809215f54cf8a875",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/timestream-write/2018-11-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:11.913Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-transcribe": {
+    "hash": "dbc73dc45d1745b2abf70ccacec2516895614c70ef296e8f8d33e2df750c789c",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/transcribe/2017-10-26/openapi.json",
+    "lastChecked": "2026-06-10T00:19:13.440Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-transfer": {
+    "hash": "c876291c57556d499a3f64793e60a9f0f1bd90306bcbf74db71f572f1f8998a6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/transfer/2018-11-05/openapi.json",
+    "lastChecked": "2026-06-10T00:19:14.941Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-translate": {
+    "hash": "303aa7017482bf345e6ab98d0ddd7f4abd8abe2ce06404e2250c43b76403d4ed",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/translate/2017-07-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:16.518Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-waf": {
+    "hash": "d90dbb545110efaaa5996f7d94627156afa345c4da3aee8057742683e8ebcbbc",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/waf/2015-08-24/openapi.json",
+    "lastChecked": "2026-06-10T00:19:17.969Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-waf-regional": {
+    "hash": "d1ad1f0701e6443474d631d8f41c18d826b135bdfe5ef889e1b895e9edfcf489",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/waf-regional/2016-11-28/openapi.json",
+    "lastChecked": "2026-06-10T00:19:19.459Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-wafv2": {
+    "hash": "d2f6b7514cbce0ed27f26ecea41af57d0900f55a1ce8fb2114a59f4d2130d4f9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/wafv2/2019-07-29/openapi.json",
+    "lastChecked": "2026-06-10T00:19:20.889Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-wellarchitected": {
+    "hash": "ac761583ebf81fbfe7126e518563238810f992d72bf5bbee2b18cadeffd06792",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/wellarchitected/2020-03-31/openapi.json",
+    "lastChecked": "2026-06-10T00:19:22.306Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-workdocs": {
+    "hash": "2d4aa9f0296a4cd5c37a6521b9939d7e06e776466f2f9a04250bfc2fb914fdd6",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/workdocs/2016-05-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:23.773Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-worklink": {
+    "hash": "65a074adaf2b2597fa564aa53ddec1ac81b0c7a656a454a20723ce29f2532ad9",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/worklink/2018-09-25/openapi.json",
+    "lastChecked": "2026-06-10T00:19:25.278Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-workmail": {
+    "hash": "1422638ea70b18397efa4710a4055c4f6bd64fcde10ef60c3b5fb748ef8f66ba",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/workmail/2017-10-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:26.677Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-workmailmessageflow": {
+    "hash": "50b2f7dfe2b1cbd265a2572d5a3c844646d5f0b6d76f688fd06434556be5389f",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/workmailmessageflow/2019-05-01/openapi.json",
+    "lastChecked": "2026-06-10T00:19:28.222Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-workspaces": {
+    "hash": "8b8568bbda9f3a497379b2de49044bddb7858bfdbec8cfdf1ef13c9d4e4281ec",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/workspaces/2015-04-08/openapi.json",
+    "lastChecked": "2026-06-10T00:19:29.669Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amazonaws-xray": {
+    "hash": "e55c9e3b8db6ad85a0f63694eb5d583e147d3bf43be83917abe27dcdc1206d95",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/xray/2016-04-12/openapi.json",
+    "lastChecked": "2026-06-10T00:19:31.128Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amentum-space-atmosphere": {
+    "hash": "e056ad4a39a3248a199e908defc3af214d3ce8f8a910654ebfc29179a475af83",
+    "url": "https://api.apis.guru/v2/specs/amentum.space/atmosphere/1.1.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:32.622Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amentum-space-aviation-radiation": {
+    "hash": "d792217f657a517367a96a7c25106c22a1200db5178d0e988ef46141e69df6af",
+    "url": "https://api.apis.guru/v2/specs/amentum.space/aviation_radiation/1.5.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:34.084Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amentum-space-gravity": {
+    "hash": "c265a82568ec2ad9f9a63a2ca5b6101f4a81a7a33ceb3550c2694badff635e13",
+    "url": "https://api.apis.guru/v2/specs/amentum.space/gravity/1.1.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:35.521Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "amentum-space-space-radiation": {
+    "hash": "56a5c8e2f25275aa214c3021e858cf8af695c321fa7b5dadb6df91ef2e08e2dd",
+    "url": "https://api.apis.guru/v2/specs/amentum.space/space_radiation/1.1.2/openapi.json",
+    "lastChecked": "2026-06-10T00:19:36.955Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "anchore": {
+    "hash": "664fde9931941ae811ff98d087e40306553024928ed206547173704029a932ae",
+    "url": "https://api.apis.guru/v2/specs/anchore.io/0.1.20/openapi.json",
+    "lastChecked": "2026-06-10T00:19:38.455Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apache": {
+    "hash": "d64b718d898f5f0d3da615e61a9491e31f603dff4dbd64ba6365b472026b1b87",
+    "url": "https://api.apis.guru/v2/specs/apache.org/2.5.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:39.940Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apache-airflow": {
+    "hash": "d64b718d898f5f0d3da615e61a9491e31f603dff4dbd64ba6365b472026b1b87",
+    "url": "https://api.apis.guru/v2/specs/apache.org/airflow/2.5.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:41.504Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apache-qakka": {
+    "hash": "a44e69094051de548be0fed37e9dba7cae73eec32d8f1561e20e06102946bbe1",
+    "url": "https://api.apis.guru/v2/specs/apache.org/qakka/v1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:43.061Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apacta": {
+    "hash": "b33e191699b0af460274782a4cef0ddc5dbea468840bae5ef7aa366cb05703fe",
+    "url": "https://api.apis.guru/v2/specs/apacta.com/0.0.42/openapi.json",
+    "lastChecked": "2026-06-10T00:19:44.628Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api-ebay-sell-account": {
+    "hash": "e6fc413676effa99a2ff4b3acfcbe1d8230556eed188f9b503e6b820fccc1eed",
+    "url": "https://api.apis.guru/v2/specs/api.ebay.com/sell-account/v1.9.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:46.154Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api-ebay-sell-analytics": {
+    "hash": "78ac9eb1a976a3024ef24d3d43916d41e2c252e9410356d0325010b74fd3d038",
+    "url": "https://api.apis.guru/v2/specs/api.ebay.com/sell-analytics/1.2.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:47.710Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api-ebay-sell-compliance": {
+    "hash": "cb6b842c7c89d004f25047c08c580cb875c1f8117b30ed60c7559e67d9987aa7",
+    "url": "https://api.apis.guru/v2/specs/api.ebay.com/sell-compliance/1.4.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:49.224Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api-gov-vehicle-enquiry": {
+    "hash": "34e6330d017214f3ec26e522324bf08d3cebab3d582f13bc820f6344a45f3be6",
+    "url": "https://api.apis.guru/v2/specs/api.gov.uk/vehicle-enquiry/1.1.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:50.734Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api-video": {
+    "hash": "55aea415ca88ec377c3dc8f795618f1462e068866ccc9e6c22e5eac8e37f8963",
+    "url": "https://api.apis.guru/v2/specs/api.video/1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:52.207Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "api2cart": {
+    "hash": "78997cdda157e3673aa71c4957562fd246a0368ffa88d74309bb7127db984f97",
+    "url": "https://api.apis.guru/v2/specs/api2cart.com/1.1/openapi.json",
+    "lastChecked": "2026-06-10T00:19:53.691Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apicurio-registry": {
+    "hash": "66b1813fe1ad392bb874532dfa880795ea768a8300416b5e8445009d6139349a",
+    "url": "https://api.apis.guru/v2/specs/apicurio.local/registry/2.4.x/openapi.json",
+    "lastChecked": "2026-06-10T00:19:55.260Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-accounting": {
+    "hash": "c44f6890e394847a68ec7290d345adb0f2b2d2a8ffc787a6ff743add857e9a39",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/accounting/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:56.763Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-ats": {
+    "hash": "917f83ef9741061f13e199175bd2288956076bee398d7b19ca6b7cc472c47803",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/ats/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:58.323Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-connector": {
+    "hash": "b4c3a19b7799301a903254db0712162d99a82f51778146e6a7e599d864ca398d",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/connector/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:19:59.800Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-crm": {
+    "hash": "46fda394dc20741d3f40f0d52d56718cc91138b2e5de14cf9fb671ba3d47d9bf",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/crm/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:01.410Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-customer-support": {
+    "hash": "7c34ccfd9488ff313a5385ecdd967162179c0f2b4ea65bff6865c8959cdc71f1",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/customer-support/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:02.947Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-ecommerce": {
+    "hash": "ef6e859855789c3c341d166b79dc75e668dbb55acab013eba93a0762cfde4d01",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/ecommerce/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:04.391Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-ecosystem": {
+    "hash": "8879107c4fe22377e697ba980c2ac439abb6fc9bf3e08fe9356f208baad71a3c",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/ecosystem/0.0.6/openapi.json",
+    "lastChecked": "2026-06-10T00:20:05.872Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-file-storage": {
+    "hash": "e0eed6a98a5f5b053ede63bea1fead80ad9e85a2fa04ff1179f4fd00f836fc73",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/file-storage/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:07.388Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-hris": {
+    "hash": "f0a76c7ad4c4a20ded5218e0c5f31e9e65de0dc7234347333c24893248484325",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/hris/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:08.879Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-issue-tracking": {
+    "hash": "f6c2531dd4b835f62945841fda5ed6f608f98dc0e70dfdbd4db13c6d003c5228",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/issue-tracking/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:10.481Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-lead": {
+    "hash": "6a8502f662a6b7bb480dc95ee22d2a20d77403d5866236d64ec6f7a3ccd0a46e",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/lead/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:12.012Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-pos": {
+    "hash": "fa194cf86d373e8bb6dc1af3730f230626723fe9cb9884b2b947e3c1a8e099b0",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/pos/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:13.458Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-proxy": {
+    "hash": "a9b7cab137492d4d7991b0957534ca2bbe80e047e59734bfb9048550b774b61d",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/proxy/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:14.943Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-sms": {
+    "hash": "ca982120b2e91acbe503151b9387949b5c7656d086740c5aee2d8baad7c68c10",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/sms/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:16.474Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-vault": {
+    "hash": "fc21528ed7fbe0819e45f5158c3dd85ed0828d6d7c3fd8490a5c8e57e09478fc",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/vault/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:18.063Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apideck-webhook": {
+    "hash": "0fa7612b0767106ae5d3e4d812be54e13d33593d94187e51a1289986c71a94e4",
+    "url": "https://api.apis.guru/v2/specs/apideck.com/webhook/9.3.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:19.534Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apigee-registry": {
+    "hash": "d1b9f5e864a39d9ff655dfe5a282ff856722ade8c68345ae43e976c696e78fda",
+    "url": "https://api.apis.guru/v2/specs/apigee.local/registry/0.0.1/openapi.json",
+    "lastChecked": "2026-06-10T00:20:20.980Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apigee-marketcheck-cars": {
+    "hash": "01735c3964b66a27eb9e53bda8b1384e871271ebdf8900ed162d23b476dfb27f",
+    "url": "https://api.apis.guru/v2/specs/apigee.net/marketcheck-cars/2.01/openapi.json",
+    "lastChecked": "2026-06-10T00:20:22.396Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apimatic": {
+    "hash": "9b2060fac09b4bed40aaed4fc2cbc147bbcbdce30706dc627f27314c29b7403d",
+    "url": "https://api.apis.guru/v2/specs/apimatic.io/1.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:23.949Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apis-guru": {
+    "hash": "23a8f7c4e3084ec7f0a62ac9d08ecf9b5874a0dc0eb45b7064d2e689390fae1d",
+    "url": "https://api.apis.guru/v2/specs/apis.guru/2.2.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:25.431Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aaharjh": {
+    "hash": "72fef894db78ea4a68374dc7992e8304156114ea8f66e5ffc96e290f960d00e7",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aaharjh/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:26.904Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-acko": {
+    "hash": "24f614f6b1d715756a973b2d01b46c4d888ee0eacaf6d67357cf11c94357f016",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/acko/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:28.393Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-agtripura": {
+    "hash": "a20e29afa7d513bf1472d5cc20a304fea0edd5336e7ca95be8d34f3e34a4f350",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/agtripura/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:29.945Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aharakar": {
+    "hash": "417f71f0ea4193fec2d563a6332a82b1f4a212ad4a9022aeff84873181f9b2a2",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aharakar/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:31.443Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aiimsmangalagiri": {
+    "hash": "f7b569ae1c471eb7a158f2c2c292dcc6941933e237e7adc0240afc5f457e32a1",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aiimsmangalagiri/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:32.879Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aiimspatna": {
+    "hash": "7242f728023d39a18eb23f423bca9d73121fe4d91dcb44853ec49ebf1c9b5e66",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aiimspatna/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:34.375Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aiimsrishikesh": {
+    "hash": "db2bb1bf0af5d9f67386190a8b29d178ca8049b27383cc7c80db123bc24a7e10",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aiimsrishikesh/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:35.931Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-aktu": {
+    "hash": "a513817fb8d75c68c3047e116a65df4e515290d801a1e87d623216cb2951b901",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/aktu/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:37.467Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-apmcservices": {
+    "hash": "7a7903018f94c73b7db9e96ad63ffb7a392cfc6f0d44b1de08abdd1b9443c471",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/apmcservices/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:38.855Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-asrb": {
+    "hash": "49576889cf113d9320bfa960070756d311b44191bb93d42ffeca7dae0f73ea96",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/asrb/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:40.344Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bajajallianz": {
+    "hash": "5ec628e922f7cf6b913d81f52c92217bc3441e2f12c21ce42bb69708955a5a78",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bajajallianz/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:41.861Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bajajallianzlife": {
+    "hash": "63fb52fea5ae51c0753d3f09b244e52e37e8c7cf9f5dacb207ff72f71021ea88",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bajajallianzlife/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:43.417Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-barti": {
+    "hash": "313d9779cc749e6d2d540a32e99902c31e7c1d0027e798516102287f94abcc0f",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/barti/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:44.973Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bharatpetroleum": {
+    "hash": "95a347f9e0c1dada0afec63ab40fe1731751da247defbeab2cc1bcaef57c4b28",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bharatpetroleum/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:46.455Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bhartiaxagi": {
+    "hash": "9b246e83d6a9556a0b197cafd5c2ac6d12ecd7d96c58511296fce31264a2c313",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bhartiaxagi/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:47.963Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bhavishya": {
+    "hash": "a32dea5d85fd4a3544830b44fc1d8f643f83e4c502de6d4d2d31fb203e189292",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bhavishya/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:49.582Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-biharboard": {
+    "hash": "9be3c3ba876e69957d0d6e89ed8a1ecc992989dbf7f44b6fe3d15d45a5bf7627",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/biharboard/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:51.028Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bput": {
+    "hash": "fbf6636b20b7493b718546f3b84143f1ff4bcc612cc74dea6e84e4fa5d63b6f3",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bput/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:52.520Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-bsehr": {
+    "hash": "398cd9acefad122944a401963a1bdd9c2b6805875cafdb4c3066e2fa08e2671b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/bsehr/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:53.909Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-cbse": {
+    "hash": "8d039fd1ac0e1f067148c60be750d3dfe3cba7ae651469fa551c72ec16ea3213",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cbse/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:55.375Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-cgbse": {
+    "hash": "e24031292ecc0b13349a60444047340d8e0bb8d46f102304c91a5d3b79a61268",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cgbse/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:56.924Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-chennaicorp": {
+    "hash": "ba01c26acae6ee7f2eb40a002cd3635e53d6580482db78f53e144e0263992172",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/chennaicorp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:58.406Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-chitkarauniversity": {
+    "hash": "01c6dce1a3e6ea6a6cd9165cf4146eaa768dcf8a000fee4f33bae4b0c6fba517",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/chitkarauniversity/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:20:59.930Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-cholainsurance": {
+    "hash": "097734b5ca8428f097b148090400263cd07094fcc85b469ccae9f04499973210",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cholainsurance/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:01.374Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-cisce": {
+    "hash": "dec6b468fefd119f5635056e0c224a4eb3fc1eb43aec45d93e1860c16c9413ef",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cisce/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:02.844Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-civilsupplieskerala": {
+    "hash": "6dd68883912b2098eaf4bbe903696259b8f236fcb505561b99034acafe1077fc",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/civilsupplieskerala/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:04.415Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-cpctmp": {
+    "hash": "65a4157e20ecf57e44bb7343aca53e0e3d4bcc4e051602bfc8e63813e107bada",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/cpctmp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:06.077Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-csc": {
+    "hash": "3566683cf96638e8f0b4f6bec9c41708b60aa61bdcc4b1553ce5d2445d882849",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/csc/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:07.550Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-dbraitandaman": {
+    "hash": "d15f1c7603fc73c62870b57f2891ee557b28e15325d0aa09fd31814a76ea6912",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dbraitandaman/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:09.058Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-dgecerttn": {
+    "hash": "364fd5f907cb3b2dbc6ea4a9c6332a57bd9e76cc6a535c49e8dd44c3775344b2",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dgecerttn/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:10.542Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-dgft": {
+    "hash": "914f82ce52a3966151f0552ef964f7e945833e629f4e7b874585d1d16b3e0d7b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dgft/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:12.212Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-dhsekerala": {
+    "hash": "8acf72df20aeeabd4896b7db5cc7769be828ed14a59632ab11ed239e2ba64093",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dhsekerala/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:13.796Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-ditarunachal": {
+    "hash": "5517b6ed0ebf8c16b71dc0405f75e822ab4c755a095818ebd173eeeb153adc7a",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/ditarunachal/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:15.279Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-ditch": {
+    "hash": "5f1a08ab5fc6d785ab9dc2ea3496cd8525d35da2f2e1334ec4a1e4c2268be619",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/ditch/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:16.741Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-dittripura": {
+    "hash": "1cfeb36167fd839aa2c69a0c759d9dc1630b2a02528230d51e001f64d1aa0b8e",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/dittripura/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:18.329Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-duexam": {
+    "hash": "88748a6d666283190fd6303b05cb63cbb896aeae5fba02f2eacdf1d6419db961",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/duexam/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:19.850Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictandaman": {
+    "hash": "36d01b139699c280b789e5ffebe5ccb822c85401d8382f301de69cdec6378085",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictandaman/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:21.278Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistricthp": {
+    "hash": "a4be29c83ccb4cdce7888ff5eec49d25b336918104a0e310843da40d1e1cbffe",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistricthp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:22.766Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictkerala": {
+    "hash": "da57cadaebddc437e12e523325abc6311b718c352356aacbbc36af73f8e1fa18",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictkerala/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:24.263Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictodisha": {
+    "hash": "f461ac2c877a221b2de541863a30b827a8ce2dcb797da9d30d3f6c4bb4f26427",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictodisha/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:25.699Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictodishasp": {
+    "hash": "1428c3bf72938ac649600b4c385a99c105dd84a7344c149d548acdc5dbba1454",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictodishasp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:27.286Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictpb": {
+    "hash": "21806d2b3343f4063728a5cb249e061b58dd3095f30525012f2cafb85a4a2140",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictpb/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:28.745Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-edistrictup": {
+    "hash": "c87d40f011631cbb6bc97eda07731ea30914896b06b0f690a67c4914f2c412c3",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/edistrictup/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:30.187Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-ehimapurtihp": {
+    "hash": "a35b2de32cbcbb1af3ea0bc9e2f810789142f9967a103ee3d108d6f48336203b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/ehimapurtihp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:31.600Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-enibandhanjh": {
+    "hash": "b39e4d24025514b3fe432e247401da1fa157450139c7941d5ecc37cc744aa429",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/enibandhanjh/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:33.096Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-epfindia": {
+    "hash": "62dca52e4858fc351493fce349747f2248165c49355846246affb8216ff6aaf0",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/epfindia/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:34.554Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-epramanhp": {
+    "hash": "88baabd7eb5a99de25edb7e6c44738201f18891aace9230a7ee9c407cac9832b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/epramanhp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:36.111Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-eservicearunachal": {
+    "hash": "67f3e69b1bb72403d077f40d1e69504826af3699d24a358ec4ce3ee76448dd5a",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/eservicearunachal/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:37.649Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-fsdhr": {
+    "hash": "7dfa8f3bc736821c73900df18be1efe7365a71d1a4f3ce880e945f837c567fd5",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/fsdhr/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:39.058Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-futuregenerali": {
+    "hash": "5b45aa65c9c95faff27a2d6f1a1a4d5cde5b3595031c5112e526fb63c678c7ff",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/futuregenerali/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:40.574Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-gadbih": {
+    "hash": "643b1b8db26f8931a2673c609ba3742ac368daa95a2100ce1e99775e242a3ecb",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gadbih/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:42.048Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-gauhati": {
+    "hash": "741f898ec9667a6ec471aa3b62ff4641855a286c465a28d26937cb718402e247",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gauhati/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:43.526Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-gbshse": {
+    "hash": "4ea6945cff80c15ba110746f1d505176add4305ef8538c132deb71251cb113ae",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gbshse/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:45.001Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-geetanjaliuniv": {
+    "hash": "6f5aad697dcac04032eda1a9f34e377a43516d8a63263c3991efa9a9608ea229",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/geetanjaliuniv/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:46.649Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-gmch": {
+    "hash": "5f787c27f4807a88cd67d4dbec85a09ac4746db29a50a1b7820303d96c393de5",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gmch/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:48.118Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-goawrd": {
+    "hash": "39bc2d64db867b48ae6c16e70383124c1657dabebff8229216381a39c7fa4f9a",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/goawrd/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:49.610Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-godigit": {
+    "hash": "e20d7a21b9151b73b9c2881bda768b7100135f924dc6e64e6cd9bf317eb7fc7a",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/godigit/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:51.118Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-gujaratvidyapith": {
+    "hash": "360d2e92cd594dd7a2b3fae33baa2df9db57b39041283a917fbfcdd3f3ef856f",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/gujaratvidyapith/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:52.563Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hindustanpetroleum": {
+    "hash": "80de601ba5d3f17944d762a484756264763f385400de8c21e802b63e560fd82e",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hindustanpetroleum/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:54.019Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hpayushboard": {
+    "hash": "2494b7492cc0a2150aeb71e57aadfac7930624fb0edf59a17ae15f9a9cb3e79e",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hpayushboard/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:55.462Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hpbose": {
+    "hash": "c21a909ba2f37cbf10c88d2ec4608514142c00e9a5cc1fd49eae5f9ab12e1f1f",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hpbose/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:57.098Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hppanchayat": {
+    "hash": "2535707951efd3ed7a153a81a81da6f3a4df885f19e8897e8e56a54e2445e6fe",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hppanchayat/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:58.516Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hpsbys": {
+    "hash": "f3b884c304c8ac238a2d35a2956fc1a9fbe9ae96666b7da6e97f719cc0981bb5",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hpsbys/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:21:59.964Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hpsssb": {
+    "hash": "11a2c066d329a105183abc60ac77bc437e785995262bf01f5b7e56cf905e3218",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hpsssb/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:01.529Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hptechboard": {
+    "hash": "3482a012825c0e5504f550caac791bcaf9a41df76407848b84caac4a6fe84ac4",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hptechboard/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:02.960Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hsbte": {
+    "hash": "06426424308f2c1860a244ff77187d83e71d3e3d676913223706d04632b3dc02",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hsbte/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:04.489Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-hsscboardmh": {
+    "hash": "3a7d1597f7d5f80ad0138e5d15a5672c36c49c42cdb8b92b6ffac30001a7dbdb",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/hsscboardmh/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:06.004Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-icicilombard": {
+    "hash": "a5726d9bf65f40015e8331d34c8f41c1deae9e1241fef4db2a2759b83d398af2",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/icicilombard/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:07.443Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-iciciprulife": {
+    "hash": "26d1d8a44d3a3d762ba234645baa2f02cd2511a2792a783ea1e06f2085d1faf6",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/iciciprulife/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:08.954Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-icsi": {
+    "hash": "790101f5439ed45a2a46b4726b324dd8c28577e4d1397d5ae11a411ae981ccda",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/icsi/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:10.493Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-igrmaharashtra": {
+    "hash": "9d58c4d1d33b423c748c9d89c4be687e1950418f1ca75a53f4a65116b3da426a",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/igrmaharashtra/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:11.964Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-insvalsura": {
+    "hash": "a8f4ff47a9e3417d180fcd6a272249db16c74fa1a85c47da981f9ef66314d122",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/insvalsura/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:13.379Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-iocl": {
+    "hash": "e6647dc071c4d63dc905b625f9f1ada01b36710e570157f7f572ca137fed74be",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/iocl/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:14.913Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-issuer": {
+    "hash": "8fa37beb243c4d9de69b273f302b6af4f7374a7aeb9c1a16c3825d0bda9de6c3",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/issuer/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:16.412Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-jac": {
+    "hash": "31e45394613822b0f96eaa398d381613daa4c430ed718e7560ea9c34da247126",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/jac/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:17.894Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-jeecup": {
+    "hash": "93e3e270c7c5f1e3fab63721bd9fc0431f66416c360a03896e4eee09a4f64b62",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/jeecup/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:19.412Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-jharsewa": {
+    "hash": "1dfb2818570885f4ff464794d1853fef76210ef977bf89ed2615fc9107ff086b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/jharsewa/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:20.957Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-jnrmand": {
+    "hash": "0f83f989975a2a20f9652aa488217db975663fd396ef0fa88edd96e25d950892",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/jnrmand/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:22.541Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-juit": {
+    "hash": "4f31a082892f7cc88b1cf7e55afb6ba1dd2c8b4744fdac85451e7fb5521e2b84",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/juit/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:23.957Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-keralapsc": {
+    "hash": "bc8d45f287d128945c0fd9a9b6b8b0518b24159e6492f02734ee2d2c1ab01375",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/keralapsc/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:25.451Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-kiadb": {
+    "hash": "58355721697c32811be26f943f57d6f244694bc8fce33c15e24409b6f0de8fe5",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/kiadb/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:26.920Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-kkhsou": {
+    "hash": "957fec5343b991703dc6369930e66b12972e5c3881faa174e23f05e031b0fea5",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/kkhsou/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:28.317Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-kotakgeneralinsurance": {
+    "hash": "6e0804a9ed8224216ce907b8390dbc47ed9a69addfd0c28c6f01fd5efbb22d45",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/kotakgeneralinsurance/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:29.711Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-kseebkr": {
+    "hash": "aec6abdc6dda0f9575e23a0d0a859afc0340956558cf7b56833081aacb27df63",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/kseebkr/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:31.144Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-ktech": {
+    "hash": "5f7b0239786a8acd539c2c1ae21ddcb55fb731cfaec65b557eb7c7db605a879b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/ktech/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:32.545Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-labourbih": {
+    "hash": "27b695f4c6dc9b4d6c6bd6c883cf0cd5469f61a68448b23a8c33920000f566a0",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/labourbih/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:33.894Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-landrecordskar": {
+    "hash": "fa8d07252567e83df0c3702e1cb8d7aef7c6784a6c2409e61acc68c6daf33828",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/landrecordskar/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:35.307Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-lawcollegeandaman": {
+    "hash": "82e671baf9ff32f2ec0159862d5c9a2a8294c68daf0594271b6409262e450ce9",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/lawcollegeandaman/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:36.626Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-legalmetrologyup": {
+    "hash": "f6cc88dd9a8d491247bab3e29f81ebbcbfed09afbcc88280f5cf0bf952afc235",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/legalmetrologyup/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:37.970Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-licindia": {
+    "hash": "b2dc829b2968350a4587ca2125523e4a1bb783dd39880fd18c85c726eab3b0a2",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/licindia/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:39.274Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-maxlifeinsurance": {
+    "hash": "d62ee21b76295791e3539b5c90ae1467dd6b2aece53feb2b48a94a285f948834",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/maxlifeinsurance/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:40.562Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mbose": {
+    "hash": "67a03e99c8d8d573c415269d59d4b156fe88867837f0642c0a6219ba7d60f634",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mbose/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:41.982Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mbse": {
+    "hash": "ed83364021e84e669edfa2c6ab78bc35b50cfcdffd517ee127793297c8a9ca2b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mbse/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:43.411Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mcimindia": {
+    "hash": "daed9b06cb36a77ad60b33f5e0e90921ba020440662ea1850922c705bd61d9f8",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mcimindia/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:44.898Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-meark": {
+    "hash": "fba2cc739b79e9f9a2008b3f969fe058e4afd991e601af36011b1a6455e21214",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/meark/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:46.341Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mizoramlesde": {
+    "hash": "33911ca7bee3d9bcf46f5101ce1200de15f56deb66af24e894f06606889d8f3b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mizoramlesde/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:47.878Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mizorampolice": {
+    "hash": "bfb07b1dae3d3de568b4b5511c62fe625246392122607fc38165a094c1f47152",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mizorampolice/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:49.469Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mpmsu": {
+    "hash": "69434d55338b007590eb11b3dae5748fc2bdedee11cc4891901f534ecc492658",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mpmsu/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:50.900Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mppmc": {
+    "hash": "109408e24566b6722f65aec20cc65e01eb94ecfe6bd87767ce27da716c48debe",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mppmc/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:52.374Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-mriu": {
+    "hash": "1e0a5ebff271c417f60de3e3c4dd3de088c86f8014905466a93068ea26d92d4e",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/mriu/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:53.973Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-msde": {
+    "hash": "f6ed1298f4de2ccc2ca486ca6ea4d701951b264ac0ea4b25c8257e2055aeb941",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/msde/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:55.458Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-municipaladmin": {
+    "hash": "eebae8eca94940d448188743a19cc023d18a25e72eb57ba9580ebbbcf0976edd",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/municipaladmin/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:56.981Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-nationalinsurance": {
+    "hash": "d37355fb007d29719e024502e1d3978f62c2123512f43aeefa143c62b882b562",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/nationalinsurance/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:58.422Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-ncert": {
+    "hash": "bb7d94b80edc8294fc065910dfe7a70ad84e16fe3686c179db57b0c1b13cd44c",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/ncert/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:22:59.981Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-negd": {
+    "hash": "2988532347772fcc2ae0a0cad856ba6dc130f8296cddfe8343754ba068ec1b6b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/negd/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:01.430Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-neilit": {
+    "hash": "5e3271bb02bee9f0d777d06ea02748869ad8f151834de451cd5d8da0940aa281",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/neilit/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:02.884Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-newindia": {
+    "hash": "cf1f72b34ae132545e5f5347aa7a944ec90aba20828c411efb1a260bc1d9209f",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/newindia/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:04.496Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-niesbud": {
+    "hash": "2134e1f913b949865427afc24771267c648dff26044c48267e0516afc7990725",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/niesbud/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:05.932Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-nios": {
+    "hash": "a68f7c3ba39e80d509ceb456f7acd27ea0194022f58ab555be93ec4ae3dd10f8",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/nios/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:07.425Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-nitap": {
+    "hash": "4272e92201e2288ee422251cb5870e4112496b2804d24e13cd35299ecd1e2400",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/nitap/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:08.912Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-nitp": {
+    "hash": "750f2c91315c436456f7a2290511a173e7daddb92cd823fe3002db264c3ba048",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/nitp/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:10.413Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-npsailu": {
+    "hash": "b8fc62f9a7b10f120ea387e51ca7aa68abbf45db2bade4b9ad0369cf71ab2ecc",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/npsailu/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:11.946Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-nsdcindia": {
+    "hash": "cbb91dec56c602d641af8f38bd480ce31c5e5696210306cce7426a8c7b7975c6",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/nsdcindia/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:13.413Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-orientalinsurance": {
+    "hash": "b142cf9bc0cd0188a2921a2b26840735de090b8149d06577551a47b2d0aafe13",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/orientalinsurance/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:14.887Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pan": {
+    "hash": "8cbe5c9d8bc0594482597726aa4b2538a06ce67b6d433a768620bce2a8896b8d",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pan/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:16.405Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pareekshabhavanker": {
+    "hash": "b247689eacadb8cb12bed2f76f7e68d6e941f9fc8711266514135c4751d10efa",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pareekshabhavanker/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:17.961Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pblabour": {
+    "hash": "9a16359111d84a0671b547bc0ba9f83d24ad743bc0d9db5b416e26ad2cbbf358",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pblabour/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:19.526Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pgimer": {
+    "hash": "0ab319f11ac916b673dd6ca91575160aa2e07daa2bc96aa8e6f675d7b5c0972b",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pgimer/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:20.971Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-phedharyana": {
+    "hash": "60f3671671d73a7ce916eeef216b0265e10b5169ec65ce03e0f96e98777e11c0",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/phedharyana/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:22.458Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pmjay": {
+    "hash": "f267b98c2194b3fa229e02d2dae9ef3e553fde33daa797a5ccf0f595730e6f4c",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pmjay/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:24.077Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
+  },
+  "apisetu-gov-pramericalife": {
+    "hash": "2396948577664d1f86f52b3fa38264c319e727639e276289622c0c2d934994ff",
+    "url": "https://api.apis.guru/v2/specs/apisetu.gov.in/pramericalife/3.0.0/openapi.json",
+    "lastChecked": "2026-06-10T00:23:25.566Z",
+    "lastTriggerReason": "force_upsert+npm_missing+spec_changed"
   }
 }
