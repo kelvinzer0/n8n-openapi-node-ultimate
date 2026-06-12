@@ -1,0 +1,2126 @@
+{
+  "patched": [
+    {
+      "name": "amazonaws-awsmigrationhub",
+      "dir": "n8n-nodes-amazonaws-awsmigrationhub"
+    },
+    {
+      "name": "amazonaws-accessanalyzer",
+      "dir": "n8n-nodes-amazonaws-accessanalyzer"
+    },
+    {
+      "name": "amazonaws-acm",
+      "dir": "n8n-nodes-amazonaws-acm"
+    },
+    {
+      "name": "amazonaws-acm-pca",
+      "dir": "n8n-nodes-amazonaws-acm-pca"
+    },
+    {
+      "name": "amazonaws-alexaforbusiness",
+      "dir": "n8n-nodes-amazonaws-alexaforbusiness"
+    },
+    {
+      "name": "amazonaws-amp",
+      "dir": "n8n-nodes-amazonaws-amp"
+    },
+    {
+      "name": "amazonaws-amplify",
+      "dir": "n8n-nodes-amazonaws-amplify"
+    },
+    {
+      "name": "amazonaws-amplifybackend",
+      "dir": "n8n-nodes-amazonaws-amplifybackend"
+    },
+    {
+      "name": "amazonaws-apigateway",
+      "dir": "n8n-nodes-amazonaws-apigateway"
+    },
+    {
+      "name": "amazonaws-apigatewaymanagementapi",
+      "dir": "n8n-nodes-amazonaws-apigatewaymanagementapi"
+    },
+    {
+      "name": "amazonaws-apigatewayv2",
+      "dir": "n8n-nodes-amazonaws-apigatewayv2"
+    },
+    {
+      "name": "amazonaws-appconfig",
+      "dir": "n8n-nodes-amazonaws-appconfig"
+    },
+    {
+      "name": "amazonaws-appflow",
+      "dir": "n8n-nodes-amazonaws-appflow"
+    },
+    {
+      "name": "amazonaws-appintegrations",
+      "dir": "n8n-nodes-amazonaws-appintegrations"
+    },
+    {
+      "name": "amazonaws-application-autoscaling",
+      "dir": "n8n-nodes-amazonaws-application-autoscaling"
+    },
+    {
+      "name": "amazonaws-application-insights",
+      "dir": "n8n-nodes-amazonaws-application-insights"
+    },
+    {
+      "name": "amazonaws-applicationcostprofiler",
+      "dir": "n8n-nodes-amazonaws-applicationcostprofiler"
+    },
+    {
+      "name": "amazonaws-appmesh",
+      "dir": "n8n-nodes-amazonaws-appmesh"
+    },
+    {
+      "name": "amazonaws-apprunner",
+      "dir": "n8n-nodes-amazonaws-apprunner"
+    },
+    {
+      "name": "amazonaws-appstream",
+      "dir": "n8n-nodes-amazonaws-appstream"
+    },
+    {
+      "name": "amazonaws-appsync",
+      "dir": "n8n-nodes-amazonaws-appsync"
+    },
+    {
+      "name": "amazonaws-athena",
+      "dir": "n8n-nodes-amazonaws-athena"
+    },
+    {
+      "name": "amazonaws-auditmanager",
+      "dir": "n8n-nodes-amazonaws-auditmanager"
+    },
+    {
+      "name": "amazonaws-autoscaling",
+      "dir": "n8n-nodes-amazonaws-autoscaling"
+    },
+    {
+      "name": "amazonaws-autoscaling-plans",
+      "dir": "n8n-nodes-amazonaws-autoscaling-plans"
+    },
+    {
+      "name": "amazonaws-backup",
+      "dir": "n8n-nodes-amazonaws-backup"
+    },
+    {
+      "name": "amazonaws-batch",
+      "dir": "n8n-nodes-amazonaws-batch"
+    },
+    {
+      "name": "amazonaws-braket",
+      "dir": "n8n-nodes-amazonaws-braket"
+    },
+    {
+      "name": "amazonaws-budgets",
+      "dir": "n8n-nodes-amazonaws-budgets"
+    },
+    {
+      "name": "amazonaws-ce",
+      "dir": "n8n-nodes-amazonaws-ce"
+    },
+    {
+      "name": "amazonaws-chime",
+      "dir": "n8n-nodes-amazonaws-chime"
+    },
+    {
+      "name": "amazonaws-cloud9",
+      "dir": "n8n-nodes-amazonaws-cloud9"
+    },
+    {
+      "name": "amazonaws-clouddirectory",
+      "dir": "n8n-nodes-amazonaws-clouddirectory"
+    },
+    {
+      "name": "amazonaws-cloudformation",
+      "dir": "n8n-nodes-amazonaws-cloudformation"
+    },
+    {
+      "name": "amazonaws",
+      "dir": "n8n-nodes-amazonaws"
+    },
+    {
+      "name": "amazonaws-cloudhsm",
+      "dir": "n8n-nodes-amazonaws-cloudhsm"
+    },
+    {
+      "name": "amazonaws-cloudhsmv2",
+      "dir": "n8n-nodes-amazonaws-cloudhsmv2"
+    },
+    {
+      "name": "amazonaws-cloudsearch",
+      "dir": "n8n-nodes-amazonaws-cloudsearch"
+    },
+    {
+      "name": "amazonaws-cloudsearchdomain",
+      "dir": "n8n-nodes-amazonaws-cloudsearchdomain"
+    },
+    {
+      "name": "amazonaws-cloudtrail",
+      "dir": "n8n-nodes-amazonaws-cloudtrail"
+    },
+    {
+      "name": "amazonaws-codeartifact",
+      "dir": "n8n-nodes-amazonaws-codeartifact"
+    },
+    {
+      "name": "amazonaws-codebuild",
+      "dir": "n8n-nodes-amazonaws-codebuild"
+    },
+    {
+      "name": "amazonaws-codecommit",
+      "dir": "n8n-nodes-amazonaws-codecommit"
+    },
+    {
+      "name": "amazonaws-codedeploy",
+      "dir": "n8n-nodes-amazonaws-codedeploy"
+    },
+    {
+      "name": "amazonaws-codeguru-reviewer",
+      "dir": "n8n-nodes-amazonaws-codeguru-reviewer"
+    },
+    {
+      "name": "amazonaws-codeguruprofiler",
+      "dir": "n8n-nodes-amazonaws-codeguruprofiler"
+    },
+    {
+      "name": "amazonaws-codepipeline",
+      "dir": "n8n-nodes-amazonaws-codepipeline"
+    },
+    {
+      "name": "amazonaws-codestar",
+      "dir": "n8n-nodes-amazonaws-codestar"
+    },
+    {
+      "name": "amazonaws-codestar-connections",
+      "dir": "n8n-nodes-amazonaws-codestar-connections"
+    },
+    {
+      "name": "amazonaws-codestar-notifications",
+      "dir": "n8n-nodes-amazonaws-codestar-notifications"
+    },
+    {
+      "name": "amazonaws-cognito-identity",
+      "dir": "n8n-nodes-amazonaws-cognito-identity"
+    },
+    {
+      "name": "amazonaws-cognito-idp",
+      "dir": "n8n-nodes-amazonaws-cognito-idp"
+    },
+    {
+      "name": "amazonaws-cognito-sync",
+      "dir": "n8n-nodes-amazonaws-cognito-sync"
+    },
+    {
+      "name": "amazonaws-comprehend",
+      "dir": "n8n-nodes-amazonaws-comprehend"
+    },
+    {
+      "name": "amazonaws-comprehendmedical",
+      "dir": "n8n-nodes-amazonaws-comprehendmedical"
+    },
+    {
+      "name": "amazonaws-compute-optimizer",
+      "dir": "n8n-nodes-amazonaws-compute-optimizer"
+    },
+    {
+      "name": "amazonaws-config",
+      "dir": "n8n-nodes-amazonaws-config"
+    },
+    {
+      "name": "amazonaws-connect",
+      "dir": "n8n-nodes-amazonaws-connect"
+    },
+    {
+      "name": "amazonaws-connect-contact-lens",
+      "dir": "n8n-nodes-amazonaws-connect-contact-lens"
+    },
+    {
+      "name": "amazonaws-connectparticipant",
+      "dir": "n8n-nodes-amazonaws-connectparticipant"
+    },
+    {
+      "name": "amazonaws-cur",
+      "dir": "n8n-nodes-amazonaws-cur"
+    },
+    {
+      "name": "amazonaws-customer-profiles",
+      "dir": "n8n-nodes-amazonaws-customer-profiles"
+    },
+    {
+      "name": "amazonaws-databrew",
+      "dir": "n8n-nodes-amazonaws-databrew"
+    },
+    {
+      "name": "amazonaws-dataexchange",
+      "dir": "n8n-nodes-amazonaws-dataexchange"
+    },
+    {
+      "name": "amazonaws-datapipeline",
+      "dir": "n8n-nodes-amazonaws-datapipeline"
+    },
+    {
+      "name": "amazonaws-datasync",
+      "dir": "n8n-nodes-amazonaws-datasync"
+    },
+    {
+      "name": "amazonaws-dax",
+      "dir": "n8n-nodes-amazonaws-dax"
+    },
+    {
+      "name": "amazonaws-detective",
+      "dir": "n8n-nodes-amazonaws-detective"
+    },
+    {
+      "name": "amazonaws-devicefarm",
+      "dir": "n8n-nodes-amazonaws-devicefarm"
+    },
+    {
+      "name": "amazonaws-devops-guru",
+      "dir": "n8n-nodes-amazonaws-devops-guru"
+    },
+    {
+      "name": "amazonaws-directconnect",
+      "dir": "n8n-nodes-amazonaws-directconnect"
+    },
+    {
+      "name": "amazonaws-discovery",
+      "dir": "n8n-nodes-amazonaws-discovery"
+    },
+    {
+      "name": "amazonaws-dlm",
+      "dir": "n8n-nodes-amazonaws-dlm"
+    },
+    {
+      "name": "amazonaws-dms",
+      "dir": "n8n-nodes-amazonaws-dms"
+    },
+    {
+      "name": "amazonaws-docdb",
+      "dir": "n8n-nodes-amazonaws-docdb"
+    },
+    {
+      "name": "amazonaws-ds",
+      "dir": "n8n-nodes-amazonaws-ds"
+    },
+    {
+      "name": "amazonaws-dynamodb",
+      "dir": "n8n-nodes-amazonaws-dynamodb"
+    },
+    {
+      "name": "amazonaws-ebs",
+      "dir": "n8n-nodes-amazonaws-ebs"
+    },
+    {
+      "name": "amazonaws-ec2",
+      "dir": "n8n-nodes-amazonaws-ec2"
+    },
+    {
+      "name": "amazonaws-ec2-instance-connect",
+      "dir": "n8n-nodes-amazonaws-ec2-instance-connect"
+    },
+    {
+      "name": "amazonaws-ecr",
+      "dir": "n8n-nodes-amazonaws-ecr"
+    },
+    {
+      "name": "amazonaws-ecr-public",
+      "dir": "n8n-nodes-amazonaws-ecr-public"
+    },
+    {
+      "name": "amazonaws-ecs",
+      "dir": "n8n-nodes-amazonaws-ecs"
+    },
+    {
+      "name": "amazonaws-eks",
+      "dir": "n8n-nodes-amazonaws-eks"
+    },
+    {
+      "name": "amazonaws-elastic-inference",
+      "dir": "n8n-nodes-amazonaws-elastic-inference"
+    },
+    {
+      "name": "amazonaws-elasticache",
+      "dir": "n8n-nodes-amazonaws-elasticache"
+    },
+    {
+      "name": "amazonaws-elasticbeanstalk",
+      "dir": "n8n-nodes-amazonaws-elasticbeanstalk"
+    },
+    {
+      "name": "amazonaws-elasticfilesystem",
+      "dir": "n8n-nodes-amazonaws-elasticfilesystem"
+    },
+    {
+      "name": "amazonaws-elasticloadbalancing",
+      "dir": "n8n-nodes-amazonaws-elasticloadbalancing"
+    },
+    {
+      "name": "amazonaws-elasticloadbalancingv2",
+      "dir": "n8n-nodes-amazonaws-elasticloadbalancingv2"
+    },
+    {
+      "name": "amazonaws-elasticmapreduce",
+      "dir": "n8n-nodes-amazonaws-elasticmapreduce"
+    },
+    {
+      "name": "amazonaws-elastictranscoder",
+      "dir": "n8n-nodes-amazonaws-elastictranscoder"
+    },
+    {
+      "name": "amazonaws-email",
+      "dir": "n8n-nodes-amazonaws-email"
+    },
+    {
+      "name": "amazonaws-emr-containers",
+      "dir": "n8n-nodes-amazonaws-emr-containers"
+    },
+    {
+      "name": "amazonaws-entitlement-marketplace",
+      "dir": "n8n-nodes-amazonaws-entitlement-marketplace"
+    },
+    {
+      "name": "amazonaws-api",
+      "dir": "n8n-nodes-amazonaws-api"
+    },
+    {
+      "name": "amazonaws-eventbridge",
+      "dir": "n8n-nodes-amazonaws-eventbridge"
+    },
+    {
+      "name": "amazonaws-events",
+      "dir": "n8n-nodes-amazonaws-events"
+    },
+    {
+      "name": "amazonaws-finspace",
+      "dir": "n8n-nodes-amazonaws-finspace"
+    },
+    {
+      "name": "amazonaws-finspace-data",
+      "dir": "n8n-nodes-amazonaws-finspace-data"
+    },
+    {
+      "name": "amazonaws-firehose",
+      "dir": "n8n-nodes-amazonaws-firehose"
+    },
+    {
+      "name": "amazonaws-fis",
+      "dir": "n8n-nodes-amazonaws-fis"
+    },
+    {
+      "name": "amazonaws-fms",
+      "dir": "n8n-nodes-amazonaws-fms"
+    },
+    {
+      "name": "amazonaws-forecast",
+      "dir": "n8n-nodes-amazonaws-forecast"
+    },
+    {
+      "name": "amazonaws-forecastquery",
+      "dir": "n8n-nodes-amazonaws-forecastquery"
+    },
+    {
+      "name": "amazonaws-frauddetector",
+      "dir": "n8n-nodes-amazonaws-frauddetector"
+    },
+    {
+      "name": "amazonaws-fsx",
+      "dir": "n8n-nodes-amazonaws-fsx"
+    },
+    {
+      "name": "amazonaws-gamelift",
+      "dir": "n8n-nodes-amazonaws-gamelift"
+    },
+    {
+      "name": "amazonaws-glacier",
+      "dir": "n8n-nodes-amazonaws-glacier"
+    },
+    {
+      "name": "amazonaws-globalaccelerator",
+      "dir": "n8n-nodes-amazonaws-globalaccelerator"
+    },
+    {
+      "name": "amazonaws-glue",
+      "dir": "n8n-nodes-amazonaws-glue"
+    },
+    {
+      "name": "amazonaws-greengrass",
+      "dir": "n8n-nodes-amazonaws-greengrass"
+    },
+    {
+      "name": "amazonaws-greengrassv2",
+      "dir": "n8n-nodes-amazonaws-greengrassv2"
+    },
+    {
+      "name": "amazonaws-groundstation",
+      "dir": "n8n-nodes-amazonaws-groundstation"
+    },
+    {
+      "name": "amazonaws-guardduty",
+      "dir": "n8n-nodes-amazonaws-guardduty"
+    },
+    {
+      "name": "amazonaws-health",
+      "dir": "n8n-nodes-amazonaws-health"
+    },
+    {
+      "name": "amazonaws-healthlake",
+      "dir": "n8n-nodes-amazonaws-healthlake"
+    },
+    {
+      "name": "amazonaws-honeycode",
+      "dir": "n8n-nodes-amazonaws-honeycode"
+    },
+    {
+      "name": "amazonaws-iam",
+      "dir": "n8n-nodes-amazonaws-iam"
+    },
+    {
+      "name": "amazonaws-identitystore",
+      "dir": "n8n-nodes-amazonaws-identitystore"
+    },
+    {
+      "name": "amazonaws-imagebuilder",
+      "dir": "n8n-nodes-amazonaws-imagebuilder"
+    },
+    {
+      "name": "amazonaws-importexport",
+      "dir": "n8n-nodes-amazonaws-importexport"
+    },
+    {
+      "name": "amazonaws-inspector",
+      "dir": "n8n-nodes-amazonaws-inspector"
+    },
+    {
+      "name": "amazonaws-iot",
+      "dir": "n8n-nodes-amazonaws-iot"
+    },
+    {
+      "name": "amazonaws-iot-data",
+      "dir": "n8n-nodes-amazonaws-iot-data"
+    },
+    {
+      "name": "amazonaws-iot-jobs-data",
+      "dir": "n8n-nodes-amazonaws-iot-jobs-data"
+    },
+    {
+      "name": "amazonaws-iot1click-devices",
+      "dir": "n8n-nodes-amazonaws-iot1click-devices"
+    },
+    {
+      "name": "amazonaws-iot1click-projects",
+      "dir": "n8n-nodes-amazonaws-iot1click-projects"
+    },
+    {
+      "name": "amazonaws-iotanalytics",
+      "dir": "n8n-nodes-amazonaws-iotanalytics"
+    },
+    {
+      "name": "amazonaws-iotdeviceadvisor",
+      "dir": "n8n-nodes-amazonaws-iotdeviceadvisor"
+    },
+    {
+      "name": "amazonaws-iotevents",
+      "dir": "n8n-nodes-amazonaws-iotevents"
+    },
+    {
+      "name": "amazonaws-iotevents-data",
+      "dir": "n8n-nodes-amazonaws-iotevents-data"
+    },
+    {
+      "name": "amazonaws-iotfleethub",
+      "dir": "n8n-nodes-amazonaws-iotfleethub"
+    },
+    {
+      "name": "amazonaws-iotsecuretunneling",
+      "dir": "n8n-nodes-amazonaws-iotsecuretunneling"
+    },
+    {
+      "name": "amazonaws-iotsitewise",
+      "dir": "n8n-nodes-amazonaws-iotsitewise"
+    },
+    {
+      "name": "amazonaws-iotthingsgraph",
+      "dir": "n8n-nodes-amazonaws-iotthingsgraph"
+    },
+    {
+      "name": "amazonaws-iotwireless",
+      "dir": "n8n-nodes-amazonaws-iotwireless"
+    },
+    {
+      "name": "amazonaws-ivs",
+      "dir": "n8n-nodes-amazonaws-ivs"
+    },
+    {
+      "name": "amazonaws-kendra",
+      "dir": "n8n-nodes-amazonaws-kendra"
+    },
+    {
+      "name": "amazonaws-kinesis",
+      "dir": "n8n-nodes-amazonaws-kinesis"
+    },
+    {
+      "name": "amazonaws-kinesis-video-archived-media",
+      "dir": "n8n-nodes-amazonaws-kinesis-video-archived-media"
+    },
+    {
+      "name": "amazonaws-kinesis-video-media",
+      "dir": "n8n-nodes-amazonaws-kinesis-video-media"
+    },
+    {
+      "name": "amazonaws-kinesis-video-signaling",
+      "dir": "n8n-nodes-amazonaws-kinesis-video-signaling"
+    },
+    {
+      "name": "amazonaws-kinesisanalytics",
+      "dir": "n8n-nodes-amazonaws-kinesisanalytics"
+    },
+    {
+      "name": "amazonaws-kinesisanalyticsv2",
+      "dir": "n8n-nodes-amazonaws-kinesisanalyticsv2"
+    },
+    {
+      "name": "amazonaws-kinesisvideo",
+      "dir": "n8n-nodes-amazonaws-kinesisvideo"
+    },
+    {
+      "name": "amazonaws-kms",
+      "dir": "n8n-nodes-amazonaws-kms"
+    },
+    {
+      "name": "amazonaws-lakeformation",
+      "dir": "n8n-nodes-amazonaws-lakeformation"
+    },
+    {
+      "name": "amazonaws-lambda",
+      "dir": "n8n-nodes-amazonaws-lambda"
+    },
+    {
+      "name": "amazonaws-lex-models",
+      "dir": "n8n-nodes-amazonaws-lex-models"
+    },
+    {
+      "name": "amazonaws-license-manager",
+      "dir": "n8n-nodes-amazonaws-license-manager"
+    },
+    {
+      "name": "amazonaws-lightsail",
+      "dir": "n8n-nodes-amazonaws-lightsail"
+    },
+    {
+      "name": "amazonaws-location",
+      "dir": "n8n-nodes-amazonaws-location"
+    },
+    {
+      "name": "amazonaws-logs",
+      "dir": "n8n-nodes-amazonaws-logs"
+    },
+    {
+      "name": "amazonaws-lookoutequipment",
+      "dir": "n8n-nodes-amazonaws-lookoutequipment"
+    },
+    {
+      "name": "amazonaws-lookoutmetrics",
+      "dir": "n8n-nodes-amazonaws-lookoutmetrics"
+    },
+    {
+      "name": "amazonaws-lookoutvision",
+      "dir": "n8n-nodes-amazonaws-lookoutvision"
+    },
+    {
+      "name": "amazonaws-machinelearning",
+      "dir": "n8n-nodes-amazonaws-machinelearning"
+    },
+    {
+      "name": "amazonaws-macie",
+      "dir": "n8n-nodes-amazonaws-macie"
+    },
+    {
+      "name": "amazonaws-macie2",
+      "dir": "n8n-nodes-amazonaws-macie2"
+    },
+    {
+      "name": "amazonaws-managedblockchain",
+      "dir": "n8n-nodes-amazonaws-managedblockchain"
+    },
+    {
+      "name": "amazonaws-marketplace-catalog",
+      "dir": "n8n-nodes-amazonaws-marketplace-catalog"
+    },
+    {
+      "name": "amazonaws-marketplacecommerceanalytics",
+      "dir": "n8n-nodes-amazonaws-marketplacecommerceanalytics"
+    },
+    {
+      "name": "amazonaws-mediaconnect",
+      "dir": "n8n-nodes-amazonaws-mediaconnect"
+    },
+    {
+      "name": "amazonaws-mediaconvert",
+      "dir": "n8n-nodes-amazonaws-mediaconvert"
+    },
+    {
+      "name": "amazonaws-medialive",
+      "dir": "n8n-nodes-amazonaws-medialive"
+    },
+    {
+      "name": "amazonaws-mediapackage",
+      "dir": "n8n-nodes-amazonaws-mediapackage"
+    },
+    {
+      "name": "amazonaws-mediapackage-vod",
+      "dir": "n8n-nodes-amazonaws-mediapackage-vod"
+    },
+    {
+      "name": "amazonaws-mediastore",
+      "dir": "n8n-nodes-amazonaws-mediastore"
+    },
+    {
+      "name": "amazonaws-mediastore-data",
+      "dir": "n8n-nodes-amazonaws-mediastore-data"
+    },
+    {
+      "name": "amazonaws-mediatailor",
+      "dir": "n8n-nodes-amazonaws-mediatailor"
+    },
+    {
+      "name": "amazonaws-meteringmarketplace",
+      "dir": "n8n-nodes-amazonaws-meteringmarketplace"
+    },
+    {
+      "name": "amazonaws-mgn",
+      "dir": "n8n-nodes-amazonaws-mgn"
+    },
+    {
+      "name": "amazonaws-migrationhub-config",
+      "dir": "n8n-nodes-amazonaws-migrationhub-config"
+    },
+    {
+      "name": "amazonaws-mobile",
+      "dir": "n8n-nodes-amazonaws-mobile"
+    },
+    {
+      "name": "amazonaws-mobileanalytics",
+      "dir": "n8n-nodes-amazonaws-mobileanalytics"
+    },
+    {
+      "name": "amazonaws-models-lex-v2",
+      "dir": "n8n-nodes-amazonaws-models-lex-v2"
+    },
+    {
+      "name": "amazonaws-monitoring",
+      "dir": "n8n-nodes-amazonaws-monitoring"
+    },
+    {
+      "name": "amazonaws-mq",
+      "dir": "n8n-nodes-amazonaws-mq"
+    },
+    {
+      "name": "amazonaws-mturk-requester",
+      "dir": "n8n-nodes-amazonaws-mturk-requester"
+    },
+    {
+      "name": "amazonaws-mwaa",
+      "dir": "n8n-nodes-amazonaws-mwaa"
+    },
+    {
+      "name": "amazonaws-neptune",
+      "dir": "n8n-nodes-amazonaws-neptune"
+    },
+    {
+      "name": "amazonaws-network-firewall",
+      "dir": "n8n-nodes-amazonaws-network-firewall"
+    },
+    {
+      "name": "amazonaws-networkmanager",
+      "dir": "n8n-nodes-amazonaws-networkmanager"
+    },
+    {
+      "name": "amazonaws-nimble",
+      "dir": "n8n-nodes-amazonaws-nimble"
+    },
+    {
+      "name": "amazonaws-opsworks",
+      "dir": "n8n-nodes-amazonaws-opsworks"
+    },
+    {
+      "name": "amazonaws-opsworkscm",
+      "dir": "n8n-nodes-amazonaws-opsworkscm"
+    },
+    {
+      "name": "amazonaws-organizations",
+      "dir": "n8n-nodes-amazonaws-organizations"
+    },
+    {
+      "name": "amazonaws-outposts",
+      "dir": "n8n-nodes-amazonaws-outposts"
+    },
+    {
+      "name": "amazonaws-personalize",
+      "dir": "n8n-nodes-amazonaws-personalize"
+    },
+    {
+      "name": "amazonaws-personalize-events",
+      "dir": "n8n-nodes-amazonaws-personalize-events"
+    },
+    {
+      "name": "amazonaws-personalize-runtime",
+      "dir": "n8n-nodes-amazonaws-personalize-runtime"
+    },
+    {
+      "name": "amazonaws-pi",
+      "dir": "n8n-nodes-amazonaws-pi"
+    },
+    {
+      "name": "amazonaws-pinpoint",
+      "dir": "n8n-nodes-amazonaws-pinpoint"
+    },
+    {
+      "name": "amazonaws-pinpoint-email",
+      "dir": "n8n-nodes-amazonaws-pinpoint-email"
+    },
+    {
+      "name": "amazonaws-polly",
+      "dir": "n8n-nodes-amazonaws-polly"
+    },
+    {
+      "name": "amazonaws-pricing",
+      "dir": "n8n-nodes-amazonaws-pricing"
+    },
+    {
+      "name": "amazonaws-proton",
+      "dir": "n8n-nodes-amazonaws-proton"
+    },
+    {
+      "name": "amazonaws-qldb",
+      "dir": "n8n-nodes-amazonaws-qldb"
+    },
+    {
+      "name": "amazonaws-qldb-session",
+      "dir": "n8n-nodes-amazonaws-qldb-session"
+    },
+    {
+      "name": "amazonaws-quicksight",
+      "dir": "n8n-nodes-amazonaws-quicksight"
+    },
+    {
+      "name": "amazonaws-ram",
+      "dir": "n8n-nodes-amazonaws-ram"
+    },
+    {
+      "name": "amazonaws-rds",
+      "dir": "n8n-nodes-amazonaws-rds"
+    },
+    {
+      "name": "amazonaws-rds-data",
+      "dir": "n8n-nodes-amazonaws-rds-data"
+    },
+    {
+      "name": "amazonaws-redshift",
+      "dir": "n8n-nodes-amazonaws-redshift"
+    },
+    {
+      "name": "amazonaws-redshift-data",
+      "dir": "n8n-nodes-amazonaws-redshift-data"
+    },
+    {
+      "name": "amazonaws-rekognition",
+      "dir": "n8n-nodes-amazonaws-rekognition"
+    },
+    {
+      "name": "amazonaws-resource-groups",
+      "dir": "n8n-nodes-amazonaws-resource-groups"
+    },
+    {
+      "name": "amazonaws-resourcegroupstaggingapi",
+      "dir": "n8n-nodes-amazonaws-resourcegroupstaggingapi"
+    },
+    {
+      "name": "amazonaws-robomaker",
+      "dir": "n8n-nodes-amazonaws-robomaker"
+    },
+    {
+      "name": "amazonaws-route53",
+      "dir": "n8n-nodes-amazonaws-route53"
+    },
+    {
+      "name": "amazonaws-route53domains",
+      "dir": "n8n-nodes-amazonaws-route53domains"
+    },
+    {
+      "name": "amazonaws-route53resolver",
+      "dir": "n8n-nodes-amazonaws-route53resolver"
+    },
+    {
+      "name": "amazonaws-runtime-lex",
+      "dir": "n8n-nodes-amazonaws-runtime-lex"
+    },
+    {
+      "name": "amazonaws-runtime-lex-v2",
+      "dir": "n8n-nodes-amazonaws-runtime-lex-v2"
+    },
+    {
+      "name": "amazonaws-runtime-sagemaker",
+      "dir": "n8n-nodes-amazonaws-runtime-sagemaker"
+    },
+    {
+      "name": "amazonaws-s3",
+      "dir": "n8n-nodes-amazonaws-s3"
+    },
+    {
+      "name": "amazonaws-s3control",
+      "dir": "n8n-nodes-amazonaws-s3control"
+    },
+    {
+      "name": "amazonaws-s3outposts",
+      "dir": "n8n-nodes-amazonaws-s3outposts"
+    },
+    {
+      "name": "amazonaws-sagemaker",
+      "dir": "n8n-nodes-amazonaws-sagemaker"
+    },
+    {
+      "name": "amazonaws-sagemaker-a2i-runtime",
+      "dir": "n8n-nodes-amazonaws-sagemaker-a2i-runtime"
+    },
+    {
+      "name": "amazonaws-sagemaker-edge",
+      "dir": "n8n-nodes-amazonaws-sagemaker-edge"
+    },
+    {
+      "name": "amazonaws-sagemaker-featurestore-runtime",
+      "dir": "n8n-nodes-amazonaws-sagemaker-featurestore-runtime"
+    },
+    {
+      "name": "amazonaws-savingsplans",
+      "dir": "n8n-nodes-amazonaws-savingsplans"
+    },
+    {
+      "name": "amazonaws-schemas",
+      "dir": "n8n-nodes-amazonaws-schemas"
+    },
+    {
+      "name": "amazonaws-sdb",
+      "dir": "n8n-nodes-amazonaws-sdb"
+    },
+    {
+      "name": "amazonaws-secretsmanager",
+      "dir": "n8n-nodes-amazonaws-secretsmanager"
+    },
+    {
+      "name": "amazonaws-securityhub",
+      "dir": "n8n-nodes-amazonaws-securityhub"
+    },
+    {
+      "name": "amazonaws-serverlessrepo",
+      "dir": "n8n-nodes-amazonaws-serverlessrepo"
+    },
+    {
+      "name": "amazonaws-service-quotas",
+      "dir": "n8n-nodes-amazonaws-service-quotas"
+    },
+    {
+      "name": "amazonaws-servicecatalog",
+      "dir": "n8n-nodes-amazonaws-servicecatalog"
+    },
+    {
+      "name": "amazonaws-servicecatalog-appregistry",
+      "dir": "n8n-nodes-amazonaws-servicecatalog-appregistry"
+    },
+    {
+      "name": "amazonaws-servicediscovery",
+      "dir": "n8n-nodes-amazonaws-servicediscovery"
+    },
+    {
+      "name": "amazonaws-sesv2",
+      "dir": "n8n-nodes-amazonaws-sesv2"
+    },
+    {
+      "name": "amazonaws-shield",
+      "dir": "n8n-nodes-amazonaws-shield"
+    },
+    {
+      "name": "amazonaws-signer",
+      "dir": "n8n-nodes-amazonaws-signer"
+    },
+    {
+      "name": "amazonaws-sms",
+      "dir": "n8n-nodes-amazonaws-sms"
+    },
+    {
+      "name": "amazonaws-sms-voice",
+      "dir": "n8n-nodes-amazonaws-sms-voice"
+    },
+    {
+      "name": "amazonaws-snowball",
+      "dir": "n8n-nodes-amazonaws-snowball"
+    },
+    {
+      "name": "amazonaws-sns",
+      "dir": "n8n-nodes-amazonaws-sns"
+    },
+    {
+      "name": "amazonaws-sqs",
+      "dir": "n8n-nodes-amazonaws-sqs"
+    },
+    {
+      "name": "amazonaws-ssm",
+      "dir": "n8n-nodes-amazonaws-ssm"
+    },
+    {
+      "name": "amazonaws-ssm-contacts",
+      "dir": "n8n-nodes-amazonaws-ssm-contacts"
+    },
+    {
+      "name": "amazonaws-ssm-incidents",
+      "dir": "n8n-nodes-amazonaws-ssm-incidents"
+    },
+    {
+      "name": "amazonaws-sso",
+      "dir": "n8n-nodes-amazonaws-sso"
+    },
+    {
+      "name": "amazonaws-sso-admin",
+      "dir": "n8n-nodes-amazonaws-sso-admin"
+    },
+    {
+      "name": "amazonaws-sso-oidc",
+      "dir": "n8n-nodes-amazonaws-sso-oidc"
+    },
+    {
+      "name": "amazonaws-states",
+      "dir": "n8n-nodes-amazonaws-states"
+    },
+    {
+      "name": "amazonaws-storagegateway",
+      "dir": "n8n-nodes-amazonaws-storagegateway"
+    },
+    {
+      "name": "amazonaws-streams-dynamodb",
+      "dir": "n8n-nodes-amazonaws-streams-dynamodb"
+    },
+    {
+      "name": "amazonaws-sts",
+      "dir": "n8n-nodes-amazonaws-sts"
+    },
+    {
+      "name": "amazonaws-support",
+      "dir": "n8n-nodes-amazonaws-support"
+    },
+    {
+      "name": "amazonaws-swf",
+      "dir": "n8n-nodes-amazonaws-swf"
+    },
+    {
+      "name": "amazonaws-synthetics",
+      "dir": "n8n-nodes-amazonaws-synthetics"
+    },
+    {
+      "name": "amazonaws-textract",
+      "dir": "n8n-nodes-amazonaws-textract"
+    },
+    {
+      "name": "amazonaws-timestream-query",
+      "dir": "n8n-nodes-amazonaws-timestream-query"
+    },
+    {
+      "name": "amazonaws-timestream-write",
+      "dir": "n8n-nodes-amazonaws-timestream-write"
+    },
+    {
+      "name": "amazonaws-transcribe",
+      "dir": "n8n-nodes-amazonaws-transcribe"
+    },
+    {
+      "name": "amazonaws-transfer",
+      "dir": "n8n-nodes-amazonaws-transfer"
+    },
+    {
+      "name": "amazonaws-translate",
+      "dir": "n8n-nodes-amazonaws-translate"
+    },
+    {
+      "name": "amazonaws-waf",
+      "dir": "n8n-nodes-amazonaws-waf"
+    },
+    {
+      "name": "amazonaws-waf-regional",
+      "dir": "n8n-nodes-amazonaws-waf-regional"
+    },
+    {
+      "name": "amazonaws-wafv2",
+      "dir": "n8n-nodes-amazonaws-wafv2"
+    },
+    {
+      "name": "amazonaws-wellarchitected",
+      "dir": "n8n-nodes-amazonaws-wellarchitected"
+    },
+    {
+      "name": "amazonaws-workdocs",
+      "dir": "n8n-nodes-amazonaws-workdocs"
+    },
+    {
+      "name": "amazonaws-worklink",
+      "dir": "n8n-nodes-amazonaws-worklink"
+    },
+    {
+      "name": "amazonaws-workmail",
+      "dir": "n8n-nodes-amazonaws-workmail"
+    },
+    {
+      "name": "amazonaws-workmailmessageflow",
+      "dir": "n8n-nodes-amazonaws-workmailmessageflow"
+    },
+    {
+      "name": "amazonaws-workspaces",
+      "dir": "n8n-nodes-amazonaws-workspaces"
+    },
+    {
+      "name": "amazonaws-xray",
+      "dir": "n8n-nodes-amazonaws-xray"
+    },
+    {
+      "name": "google",
+      "dir": "n8n-nodes-google"
+    },
+    {
+      "name": "google-home",
+      "dir": "n8n-nodes-google-home"
+    },
+    {
+      "name": "googleapis-abusiveexperiencereport",
+      "dir": "n8n-nodes-googleapis-abusiveexperiencereport"
+    },
+    {
+      "name": "googleapis-acceleratedmobilepageurl",
+      "dir": "n8n-nodes-googleapis-acceleratedmobilepageurl"
+    },
+    {
+      "name": "googleapis-accessapproval",
+      "dir": "n8n-nodes-googleapis-accessapproval"
+    },
+    {
+      "name": "googleapis-accesscontextmanager",
+      "dir": "n8n-nodes-googleapis-accesscontextmanager"
+    },
+    {
+      "name": "googleapis-acmedns",
+      "dir": "n8n-nodes-googleapis-acmedns"
+    },
+    {
+      "name": "googleapis-adexchangebuyer",
+      "dir": "n8n-nodes-googleapis-adexchangebuyer"
+    },
+    {
+      "name": "googleapis-adexchangebuyer2",
+      "dir": "n8n-nodes-googleapis-adexchangebuyer2"
+    },
+    {
+      "name": "googleapis-adexperiencereport",
+      "dir": "n8n-nodes-googleapis-adexperiencereport"
+    },
+    {
+      "name": "googleapis-admin",
+      "dir": "n8n-nodes-googleapis-admin"
+    },
+    {
+      "name": "googleapis-admob",
+      "dir": "n8n-nodes-googleapis-admob"
+    },
+    {
+      "name": "googleapis-adsense",
+      "dir": "n8n-nodes-googleapis-adsense"
+    },
+    {
+      "name": "googleapis-adsensehost",
+      "dir": "n8n-nodes-googleapis-adsensehost"
+    },
+    {
+      "name": "googleapis-advisorynotifications",
+      "dir": "n8n-nodes-googleapis-advisorynotifications"
+    },
+    {
+      "name": "googleapis-alertcenter",
+      "dir": "n8n-nodes-googleapis-alertcenter"
+    },
+    {
+      "name": "googleapis-analytics",
+      "dir": "n8n-nodes-googleapis-analytics"
+    },
+    {
+      "name": "googleapis-analyticsdata",
+      "dir": "n8n-nodes-googleapis-analyticsdata"
+    },
+    {
+      "name": "googleapis-analyticshub",
+      "dir": "n8n-nodes-googleapis-analyticshub"
+    },
+    {
+      "name": "googleapis-analyticsreporting",
+      "dir": "n8n-nodes-googleapis-analyticsreporting"
+    },
+    {
+      "name": "googleapis-androiddeviceprovisioning",
+      "dir": "n8n-nodes-googleapis-androiddeviceprovisioning"
+    },
+    {
+      "name": "googleapis-androidenterprise",
+      "dir": "n8n-nodes-googleapis-androidenterprise"
+    },
+    {
+      "name": "googleapis-androidmanagement",
+      "dir": "n8n-nodes-googleapis-androidmanagement"
+    },
+    {
+      "name": "googleapis-androidpublisher",
+      "dir": "n8n-nodes-googleapis-androidpublisher"
+    },
+    {
+      "name": "googleapis-apigee",
+      "dir": "n8n-nodes-googleapis-apigee"
+    },
+    {
+      "name": "googleapis-apikeys",
+      "dir": "n8n-nodes-googleapis-apikeys"
+    },
+    {
+      "name": "googleapis-appengine",
+      "dir": "n8n-nodes-googleapis-appengine"
+    },
+    {
+      "name": "googleapis-appsactivity",
+      "dir": "n8n-nodes-googleapis-appsactivity"
+    },
+    {
+      "name": "googleapis-artifactregistry",
+      "dir": "n8n-nodes-googleapis-artifactregistry"
+    },
+    {
+      "name": "googleapis-authorizedbuyersmarketplace",
+      "dir": "n8n-nodes-googleapis-authorizedbuyersmarketplace"
+    },
+    {
+      "name": "googleapis-automl",
+      "dir": "n8n-nodes-googleapis-automl"
+    },
+    {
+      "name": "googleapis-baremetalsolution",
+      "dir": "n8n-nodes-googleapis-baremetalsolution"
+    },
+    {
+      "name": "googleapis-batch",
+      "dir": "n8n-nodes-googleapis-batch"
+    },
+    {
+      "name": "googleapis-beyondcorp",
+      "dir": "n8n-nodes-googleapis-beyondcorp"
+    },
+    {
+      "name": "googleapis-bigquery",
+      "dir": "n8n-nodes-googleapis-bigquery"
+    },
+    {
+      "name": "googleapis-bigqueryconnection",
+      "dir": "n8n-nodes-googleapis-bigqueryconnection"
+    },
+    {
+      "name": "googleapis-bigquerydatatransfer",
+      "dir": "n8n-nodes-googleapis-bigquerydatatransfer"
+    },
+    {
+      "name": "googleapis-bigqueryreservation",
+      "dir": "n8n-nodes-googleapis-bigqueryreservation"
+    },
+    {
+      "name": "googleapis-bigtableadmin",
+      "dir": "n8n-nodes-googleapis-bigtableadmin"
+    },
+    {
+      "name": "googleapis-billingbudgets",
+      "dir": "n8n-nodes-googleapis-billingbudgets"
+    },
+    {
+      "name": "googleapis-binaryauthorization",
+      "dir": "n8n-nodes-googleapis-binaryauthorization"
+    },
+    {
+      "name": "googleapis-blogger",
+      "dir": "n8n-nodes-googleapis-blogger"
+    },
+    {
+      "name": "googleapis-books",
+      "dir": "n8n-nodes-googleapis-books"
+    },
+    {
+      "name": "googleapis-businessprofileperformance",
+      "dir": "n8n-nodes-googleapis-businessprofileperformance"
+    },
+    {
+      "name": "googleapis-calendar",
+      "dir": "n8n-nodes-googleapis-calendar"
+    },
+    {
+      "name": "googleapis-chat",
+      "dir": "n8n-nodes-googleapis-chat"
+    },
+    {
+      "name": "googleapis-chromemanagement",
+      "dir": "n8n-nodes-googleapis-chromemanagement"
+    },
+    {
+      "name": "googleapis-chromepolicy",
+      "dir": "n8n-nodes-googleapis-chromepolicy"
+    },
+    {
+      "name": "googleapis-chromeuxreport",
+      "dir": "n8n-nodes-googleapis-chromeuxreport"
+    },
+    {
+      "name": "googleapis-civicinfo",
+      "dir": "n8n-nodes-googleapis-civicinfo"
+    },
+    {
+      "name": "googleapis-classroom",
+      "dir": "n8n-nodes-googleapis-classroom"
+    },
+    {
+      "name": "googleapis-cloudasset",
+      "dir": "n8n-nodes-googleapis-cloudasset"
+    },
+    {
+      "name": "googleapis-cloudbilling",
+      "dir": "n8n-nodes-googleapis-cloudbilling"
+    },
+    {
+      "name": "googleapis-cloudbuild",
+      "dir": "n8n-nodes-googleapis-cloudbuild"
+    },
+    {
+      "name": "googleapis-cloudchannel",
+      "dir": "n8n-nodes-googleapis-cloudchannel"
+    },
+    {
+      "name": "googleapis-clouddebugger",
+      "dir": "n8n-nodes-googleapis-clouddebugger"
+    },
+    {
+      "name": "googleapis-clouderrorreporting",
+      "dir": "n8n-nodes-googleapis-clouderrorreporting"
+    },
+    {
+      "name": "googleapis-cloudfunctions",
+      "dir": "n8n-nodes-googleapis-cloudfunctions"
+    },
+    {
+      "name": "googleapis-cloudidentity",
+      "dir": "n8n-nodes-googleapis-cloudidentity"
+    },
+    {
+      "name": "googleapis-cloudiot",
+      "dir": "n8n-nodes-googleapis-cloudiot"
+    },
+    {
+      "name": "googleapis-cloudkms",
+      "dir": "n8n-nodes-googleapis-cloudkms"
+    },
+    {
+      "name": "googleapis-cloudprivatecatalog",
+      "dir": "n8n-nodes-googleapis-cloudprivatecatalog"
+    },
+    {
+      "name": "googleapis-cloudprivatecatalogproducer",
+      "dir": "n8n-nodes-googleapis-cloudprivatecatalogproducer"
+    },
+    {
+      "name": "googleapis-cloudprofiler",
+      "dir": "n8n-nodes-googleapis-cloudprofiler"
+    },
+    {
+      "name": "googleapis-cloudresourcemanager",
+      "dir": "n8n-nodes-googleapis-cloudresourcemanager"
+    },
+    {
+      "name": "googleapis-cloudscheduler",
+      "dir": "n8n-nodes-googleapis-cloudscheduler"
+    },
+    {
+      "name": "googleapis-cloudsearch",
+      "dir": "n8n-nodes-googleapis-cloudsearch"
+    },
+    {
+      "name": "googleapis-cloudshell",
+      "dir": "n8n-nodes-googleapis-cloudshell"
+    },
+    {
+      "name": "googleapis-cloudsupport",
+      "dir": "n8n-nodes-googleapis-cloudsupport"
+    },
+    {
+      "name": "googleapis-cloudtasks",
+      "dir": "n8n-nodes-googleapis-cloudtasks"
+    },
+    {
+      "name": "googleapis-cloudtrace",
+      "dir": "n8n-nodes-googleapis-cloudtrace"
+    },
+    {
+      "name": "googleapis-commentanalyzer",
+      "dir": "n8n-nodes-googleapis-commentanalyzer"
+    },
+    {
+      "name": "googleapis-composer",
+      "dir": "n8n-nodes-googleapis-composer"
+    },
+    {
+      "name": "googleapis-compute",
+      "dir": "n8n-nodes-googleapis-compute"
+    },
+    {
+      "name": "googleapis-connectors",
+      "dir": "n8n-nodes-googleapis-connectors"
+    },
+    {
+      "name": "googleapis-container",
+      "dir": "n8n-nodes-googleapis-container"
+    },
+    {
+      "name": "googleapis-containeranalysis",
+      "dir": "n8n-nodes-googleapis-containeranalysis"
+    },
+    {
+      "name": "googleapis-content",
+      "dir": "n8n-nodes-googleapis-content"
+    },
+    {
+      "name": "googleapis-customsearch",
+      "dir": "n8n-nodes-googleapis-customsearch"
+    },
+    {
+      "name": "googleapis-datacatalog",
+      "dir": "n8n-nodes-googleapis-datacatalog"
+    },
+    {
+      "name": "googleapis-dataflow",
+      "dir": "n8n-nodes-googleapis-dataflow"
+    },
+    {
+      "name": "googleapis-datafusion",
+      "dir": "n8n-nodes-googleapis-datafusion"
+    },
+    {
+      "name": "googleapis-datalabeling",
+      "dir": "n8n-nodes-googleapis-datalabeling"
+    },
+    {
+      "name": "googleapis-datamigration",
+      "dir": "n8n-nodes-googleapis-datamigration"
+    },
+    {
+      "name": "googleapis-datapipelines",
+      "dir": "n8n-nodes-googleapis-datapipelines"
+    },
+    {
+      "name": "googleapis-dataplex",
+      "dir": "n8n-nodes-googleapis-dataplex"
+    },
+    {
+      "name": "googleapis-dataproc",
+      "dir": "n8n-nodes-googleapis-dataproc"
+    },
+    {
+      "name": "googleapis-datastore",
+      "dir": "n8n-nodes-googleapis-datastore"
+    },
+    {
+      "name": "googleapis-deploymentmanager",
+      "dir": "n8n-nodes-googleapis-deploymentmanager"
+    },
+    {
+      "name": "googleapis-dfareporting",
+      "dir": "n8n-nodes-googleapis-dfareporting"
+    },
+    {
+      "name": "googleapis-dialogflow",
+      "dir": "n8n-nodes-googleapis-dialogflow"
+    },
+    {
+      "name": "googleapis-digitalassetlinks",
+      "dir": "n8n-nodes-googleapis-digitalassetlinks"
+    },
+    {
+      "name": "googleapis-discovery",
+      "dir": "n8n-nodes-googleapis-discovery"
+    },
+    {
+      "name": "googleapis-discoveryengine",
+      "dir": "n8n-nodes-googleapis-discoveryengine"
+    },
+    {
+      "name": "googleapis-displayvideo",
+      "dir": "n8n-nodes-googleapis-displayvideo"
+    },
+    {
+      "name": "googleapis-dlp",
+      "dir": "n8n-nodes-googleapis-dlp"
+    },
+    {
+      "name": "googleapis-docs",
+      "dir": "n8n-nodes-googleapis-docs"
+    },
+    {
+      "name": "googleapis-documentai",
+      "dir": "n8n-nodes-googleapis-documentai"
+    },
+    {
+      "name": "googleapis-domains",
+      "dir": "n8n-nodes-googleapis-domains"
+    },
+    {
+      "name": "googleapis-domainsrdap",
+      "dir": "n8n-nodes-googleapis-domainsrdap"
+    },
+    {
+      "name": "googleapis-doubleclickbidmanager",
+      "dir": "n8n-nodes-googleapis-doubleclickbidmanager"
+    },
+    {
+      "name": "googleapis-doubleclicksearch",
+      "dir": "n8n-nodes-googleapis-doubleclicksearch"
+    },
+    {
+      "name": "googleapis-drive",
+      "dir": "n8n-nodes-googleapis-drive"
+    },
+    {
+      "name": "googleapis-driveactivity",
+      "dir": "n8n-nodes-googleapis-driveactivity"
+    },
+    {
+      "name": "googleapis-drivelabels",
+      "dir": "n8n-nodes-googleapis-drivelabels"
+    },
+    {
+      "name": "googleapis-eventarc",
+      "dir": "n8n-nodes-googleapis-eventarc"
+    },
+    {
+      "name": "googleapis-fcm",
+      "dir": "n8n-nodes-googleapis-fcm"
+    },
+    {
+      "name": "googleapis-fcmdata",
+      "dir": "n8n-nodes-googleapis-fcmdata"
+    },
+    {
+      "name": "googleapis-file",
+      "dir": "n8n-nodes-googleapis-file"
+    },
+    {
+      "name": "googleapis-firebase",
+      "dir": "n8n-nodes-googleapis-firebase"
+    },
+    {
+      "name": "googleapis-firebaseappcheck",
+      "dir": "n8n-nodes-googleapis-firebaseappcheck"
+    },
+    {
+      "name": "googleapis-firebasedatabase",
+      "dir": "n8n-nodes-googleapis-firebasedatabase"
+    },
+    {
+      "name": "googleapis-firebasedynamiclinks",
+      "dir": "n8n-nodes-googleapis-firebasedynamiclinks"
+    },
+    {
+      "name": "googleapis-firebasehosting",
+      "dir": "n8n-nodes-googleapis-firebasehosting"
+    },
+    {
+      "name": "googleapis-firebaseml",
+      "dir": "n8n-nodes-googleapis-firebaseml"
+    },
+    {
+      "name": "googleapis-firebaserules",
+      "dir": "n8n-nodes-googleapis-firebaserules"
+    },
+    {
+      "name": "googleapis-firebasestorage",
+      "dir": "n8n-nodes-googleapis-firebasestorage"
+    },
+    {
+      "name": "googleapis-firestore",
+      "dir": "n8n-nodes-googleapis-firestore"
+    },
+    {
+      "name": "googleapis-fitness",
+      "dir": "n8n-nodes-googleapis-fitness"
+    },
+    {
+      "name": "googleapis-forms",
+      "dir": "n8n-nodes-googleapis-forms"
+    },
+    {
+      "name": "googleapis-games",
+      "dir": "n8n-nodes-googleapis-games"
+    },
+    {
+      "name": "googleapis-gamesconfiguration",
+      "dir": "n8n-nodes-googleapis-gamesconfiguration"
+    },
+    {
+      "name": "googleapis-gamesmanagement",
+      "dir": "n8n-nodes-googleapis-gamesmanagement"
+    },
+    {
+      "name": "googleapis-gameservices",
+      "dir": "n8n-nodes-googleapis-gameservices"
+    },
+    {
+      "name": "googleapis-genomics",
+      "dir": "n8n-nodes-googleapis-genomics"
+    },
+    {
+      "name": "googleapis-gkebackup",
+      "dir": "n8n-nodes-googleapis-gkebackup"
+    },
+    {
+      "name": "googleapis-gmail",
+      "dir": "n8n-nodes-googleapis-gmail"
+    },
+    {
+      "name": "googleapis-gmailpostmastertools",
+      "dir": "n8n-nodes-googleapis-gmailpostmastertools"
+    },
+    {
+      "name": "googleapis-groupsmigration",
+      "dir": "n8n-nodes-googleapis-groupsmigration"
+    },
+    {
+      "name": "googleapis-groupssettings",
+      "dir": "n8n-nodes-googleapis-groupssettings"
+    },
+    {
+      "name": "googleapis-healthcare",
+      "dir": "n8n-nodes-googleapis-healthcare"
+    },
+    {
+      "name": "googleapis-iam",
+      "dir": "n8n-nodes-googleapis-iam"
+    },
+    {
+      "name": "googleapis-iamcredentials",
+      "dir": "n8n-nodes-googleapis-iamcredentials"
+    },
+    {
+      "name": "googleapis-iap",
+      "dir": "n8n-nodes-googleapis-iap"
+    },
+    {
+      "name": "googleapis-ideahub",
+      "dir": "n8n-nodes-googleapis-ideahub"
+    },
+    {
+      "name": "googleapis-identitytoolkit",
+      "dir": "n8n-nodes-googleapis-identitytoolkit"
+    },
+    {
+      "name": "googleapis-ids",
+      "dir": "n8n-nodes-googleapis-ids"
+    },
+    {
+      "name": "googleapis-indexing",
+      "dir": "n8n-nodes-googleapis-indexing"
+    },
+    {
+      "name": "googleapis-jobs",
+      "dir": "n8n-nodes-googleapis-jobs"
+    },
+    {
+      "name": "googleapis-keep",
+      "dir": "n8n-nodes-googleapis-keep"
+    },
+    {
+      "name": "googleapis-kgsearch",
+      "dir": "n8n-nodes-googleapis-kgsearch"
+    },
+    {
+      "name": "googleapis-language",
+      "dir": "n8n-nodes-googleapis-language"
+    },
+    {
+      "name": "googleapis-libraryagent",
+      "dir": "n8n-nodes-googleapis-libraryagent"
+    },
+    {
+      "name": "googleapis-licensing",
+      "dir": "n8n-nodes-googleapis-licensing"
+    },
+    {
+      "name": "googleapis-lifesciences",
+      "dir": "n8n-nodes-googleapis-lifesciences"
+    },
+    {
+      "name": "googleapis-logging",
+      "dir": "n8n-nodes-googleapis-logging"
+    },
+    {
+      "name": "googleapis-managedidentities",
+      "dir": "n8n-nodes-googleapis-managedidentities"
+    },
+    {
+      "name": "googleapis-manufacturers",
+      "dir": "n8n-nodes-googleapis-manufacturers"
+    },
+    {
+      "name": "googleapis-memcache",
+      "dir": "n8n-nodes-googleapis-memcache"
+    },
+    {
+      "name": "googleapis-metastore",
+      "dir": "n8n-nodes-googleapis-metastore"
+    },
+    {
+      "name": "googleapis-mirror",
+      "dir": "n8n-nodes-googleapis-mirror"
+    },
+    {
+      "name": "googleapis-ml",
+      "dir": "n8n-nodes-googleapis-ml"
+    },
+    {
+      "name": "googleapis-monitoring",
+      "dir": "n8n-nodes-googleapis-monitoring"
+    },
+    {
+      "name": "googleapis-my-business",
+      "dir": "n8n-nodes-googleapis-my-business"
+    },
+    {
+      "name": "googleapis-mybusinessaccountmanagement",
+      "dir": "n8n-nodes-googleapis-mybusinessaccountmanagement"
+    },
+    {
+      "name": "googleapis-mybusinessbusinesscalls",
+      "dir": "n8n-nodes-googleapis-mybusinessbusinesscalls"
+    },
+    {
+      "name": "googleapis-mybusinessbusinessinformation",
+      "dir": "n8n-nodes-googleapis-mybusinessbusinessinformation"
+    },
+    {
+      "name": "googleapis-mybusinesslodging",
+      "dir": "n8n-nodes-googleapis-mybusinesslodging"
+    },
+    {
+      "name": "googleapis-mybusinessnotifications",
+      "dir": "n8n-nodes-googleapis-mybusinessnotifications"
+    },
+    {
+      "name": "googleapis-mybusinessplaceactions",
+      "dir": "n8n-nodes-googleapis-mybusinessplaceactions"
+    },
+    {
+      "name": "googleapis-mybusinessqanda",
+      "dir": "n8n-nodes-googleapis-mybusinessqanda"
+    },
+    {
+      "name": "googleapis-mybusinessverifications",
+      "dir": "n8n-nodes-googleapis-mybusinessverifications"
+    },
+    {
+      "name": "googleapis-networkconnectivity",
+      "dir": "n8n-nodes-googleapis-networkconnectivity"
+    },
+    {
+      "name": "googleapis-networkmanagement",
+      "dir": "n8n-nodes-googleapis-networkmanagement"
+    },
+    {
+      "name": "googleapis-notebooks",
+      "dir": "n8n-nodes-googleapis-notebooks"
+    },
+    {
+      "name": "googleapis-oauth2",
+      "dir": "n8n-nodes-googleapis-oauth2"
+    },
+    {
+      "name": "googleapis-ondemandscanning",
+      "dir": "n8n-nodes-googleapis-ondemandscanning"
+    },
+    {
+      "name": "googleapis-orgpolicy",
+      "dir": "n8n-nodes-googleapis-orgpolicy"
+    },
+    {
+      "name": "googleapis-osconfig",
+      "dir": "n8n-nodes-googleapis-osconfig"
+    },
+    {
+      "name": "googleapis-oslogin",
+      "dir": "n8n-nodes-googleapis-oslogin"
+    },
+    {
+      "name": "googleapis-pagespeedonline",
+      "dir": "n8n-nodes-googleapis-pagespeedonline"
+    },
+    {
+      "name": "googleapis-people",
+      "dir": "n8n-nodes-googleapis-people"
+    },
+    {
+      "name": "googleapis-playcustomapp",
+      "dir": "n8n-nodes-googleapis-playcustomapp"
+    },
+    {
+      "name": "googleapis-playintegrity",
+      "dir": "n8n-nodes-googleapis-playintegrity"
+    },
+    {
+      "name": "googleapis-plus",
+      "dir": "n8n-nodes-googleapis-plus"
+    },
+    {
+      "name": "googleapis-policysimulator",
+      "dir": "n8n-nodes-googleapis-policysimulator"
+    },
+    {
+      "name": "googleapis-poly",
+      "dir": "n8n-nodes-googleapis-poly"
+    },
+    {
+      "name": "googleapis-privateca",
+      "dir": "n8n-nodes-googleapis-privateca"
+    },
+    {
+      "name": "googleapis-proximitybeacon",
+      "dir": "n8n-nodes-googleapis-proximitybeacon"
+    },
+    {
+      "name": "googleapis-publicca",
+      "dir": "n8n-nodes-googleapis-publicca"
+    },
+    {
+      "name": "googleapis-pubsub",
+      "dir": "n8n-nodes-googleapis-pubsub"
+    },
+    {
+      "name": "googleapis-readerrevenuesubscriptionlinking",
+      "dir": "n8n-nodes-googleapis-readerrevenuesubscriptionlinking"
+    },
+    {
+      "name": "googleapis-realtimebidding",
+      "dir": "n8n-nodes-googleapis-realtimebidding"
+    },
+    {
+      "name": "googleapis-recaptchaenterprise",
+      "dir": "n8n-nodes-googleapis-recaptchaenterprise"
+    },
+    {
+      "name": "googleapis-recommendationengine",
+      "dir": "n8n-nodes-googleapis-recommendationengine"
+    },
+    {
+      "name": "googleapis-redis",
+      "dir": "n8n-nodes-googleapis-redis"
+    },
+    {
+      "name": "googleapis-remotebuildexecution",
+      "dir": "n8n-nodes-googleapis-remotebuildexecution"
+    },
+    {
+      "name": "googleapis-replicapool",
+      "dir": "n8n-nodes-googleapis-replicapool"
+    },
+    {
+      "name": "googleapis-reseller",
+      "dir": "n8n-nodes-googleapis-reseller"
+    },
+    {
+      "name": "googleapis-resourcesettings",
+      "dir": "n8n-nodes-googleapis-resourcesettings"
+    },
+    {
+      "name": "googleapis-retail",
+      "dir": "n8n-nodes-googleapis-retail"
+    },
+    {
+      "name": "googleapis-run",
+      "dir": "n8n-nodes-googleapis-run"
+    },
+    {
+      "name": "googleapis-runtimeconfig",
+      "dir": "n8n-nodes-googleapis-runtimeconfig"
+    },
+    {
+      "name": "googleapis-safebrowsing",
+      "dir": "n8n-nodes-googleapis-safebrowsing"
+    },
+    {
+      "name": "googleapis-script",
+      "dir": "n8n-nodes-googleapis-script"
+    },
+    {
+      "name": "googleapis-searchads360",
+      "dir": "n8n-nodes-googleapis-searchads360"
+    },
+    {
+      "name": "googleapis-searchconsole",
+      "dir": "n8n-nodes-googleapis-searchconsole"
+    },
+    {
+      "name": "googleapis-secretmanager",
+      "dir": "n8n-nodes-googleapis-secretmanager"
+    },
+    {
+      "name": "googleapis-securitycenter",
+      "dir": "n8n-nodes-googleapis-securitycenter"
+    },
+    {
+      "name": "googleapis-servicebroker",
+      "dir": "n8n-nodes-googleapis-servicebroker"
+    },
+    {
+      "name": "googleapis-serviceconsumermanagement",
+      "dir": "n8n-nodes-googleapis-serviceconsumermanagement"
+    },
+    {
+      "name": "googleapis-servicecontrol",
+      "dir": "n8n-nodes-googleapis-servicecontrol"
+    },
+    {
+      "name": "googleapis-servicedirectory",
+      "dir": "n8n-nodes-googleapis-servicedirectory"
+    },
+    {
+      "name": "googleapis-servicemanagement",
+      "dir": "n8n-nodes-googleapis-servicemanagement"
+    },
+    {
+      "name": "googleapis-servicenetworking",
+      "dir": "n8n-nodes-googleapis-servicenetworking"
+    },
+    {
+      "name": "googleapis-serviceusage",
+      "dir": "n8n-nodes-googleapis-serviceusage"
+    },
+    {
+      "name": "googleapis-sheets",
+      "dir": "n8n-nodes-googleapis-sheets"
+    },
+    {
+      "name": "googleapis-shoppingcontent",
+      "dir": "n8n-nodes-googleapis-shoppingcontent"
+    },
+    {
+      "name": "googleapis-siteverification",
+      "dir": "n8n-nodes-googleapis-siteverification"
+    },
+    {
+      "name": "googleapis-slides",
+      "dir": "n8n-nodes-googleapis-slides"
+    },
+    {
+      "name": "googleapis-smartdevicemanagement",
+      "dir": "n8n-nodes-googleapis-smartdevicemanagement"
+    },
+    {
+      "name": "googleapis-sourcerepo",
+      "dir": "n8n-nodes-googleapis-sourcerepo"
+    },
+    {
+      "name": "googleapis-spanner",
+      "dir": "n8n-nodes-googleapis-spanner"
+    },
+    {
+      "name": "googleapis-speech",
+      "dir": "n8n-nodes-googleapis-speech"
+    },
+    {
+      "name": "googleapis-sql",
+      "dir": "n8n-nodes-googleapis-sql"
+    },
+    {
+      "name": "googleapis-sqladmin",
+      "dir": "n8n-nodes-googleapis-sqladmin"
+    },
+    {
+      "name": "googleapis-storage",
+      "dir": "n8n-nodes-googleapis-storage"
+    },
+    {
+      "name": "googleapis-storagetransfer",
+      "dir": "n8n-nodes-googleapis-storagetransfer"
+    },
+    {
+      "name": "googleapis-streetviewpublish",
+      "dir": "n8n-nodes-googleapis-streetviewpublish"
+    },
+    {
+      "name": "googleapis-sts",
+      "dir": "n8n-nodes-googleapis-sts"
+    },
+    {
+      "name": "googleapis-tagmanager",
+      "dir": "n8n-nodes-googleapis-tagmanager"
+    },
+    {
+      "name": "googleapis-tasks",
+      "dir": "n8n-nodes-googleapis-tasks"
+    },
+    {
+      "name": "googleapis-testing",
+      "dir": "n8n-nodes-googleapis-testing"
+    },
+    {
+      "name": "googleapis-texttospeech",
+      "dir": "n8n-nodes-googleapis-texttospeech"
+    },
+    {
+      "name": "googleapis-toolresults",
+      "dir": "n8n-nodes-googleapis-toolresults"
+    },
+    {
+      "name": "googleapis-tpu",
+      "dir": "n8n-nodes-googleapis-tpu"
+    },
+    {
+      "name": "googleapis-transcoder",
+      "dir": "n8n-nodes-googleapis-transcoder"
+    },
+    {
+      "name": "googleapis-translate",
+      "dir": "n8n-nodes-googleapis-translate"
+    },
+    {
+      "name": "googleapis-travelimpactmodel",
+      "dir": "n8n-nodes-googleapis-travelimpactmodel"
+    },
+    {
+      "name": "googleapis-vault",
+      "dir": "n8n-nodes-googleapis-vault"
+    },
+    {
+      "name": "googleapis-vectortile",
+      "dir": "n8n-nodes-googleapis-vectortile"
+    },
+    {
+      "name": "googleapis-verifiedaccess",
+      "dir": "n8n-nodes-googleapis-verifiedaccess"
+    },
+    {
+      "name": "googleapis-versionhistory",
+      "dir": "n8n-nodes-googleapis-versionhistory"
+    },
+    {
+      "name": "googleapis-videointelligence",
+      "dir": "n8n-nodes-googleapis-videointelligence"
+    },
+    {
+      "name": "googleapis-vision",
+      "dir": "n8n-nodes-googleapis-vision"
+    },
+    {
+      "name": "googleapis-vmmigration",
+      "dir": "n8n-nodes-googleapis-vmmigration"
+    },
+    {
+      "name": "googleapis-vpcaccess",
+      "dir": "n8n-nodes-googleapis-vpcaccess"
+    },
+    {
+      "name": "googleapis-webfonts",
+      "dir": "n8n-nodes-googleapis-webfonts"
+    },
+    {
+      "name": "googleapis-webmasters",
+      "dir": "n8n-nodes-googleapis-webmasters"
+    },
+    {
+      "name": "googleapis-websecurityscanner",
+      "dir": "n8n-nodes-googleapis-websecurityscanner"
+    },
+    {
+      "name": "googleapis-workflowexecutions",
+      "dir": "n8n-nodes-googleapis-workflowexecutions"
+    },
+    {
+      "name": "googleapis-workflows",
+      "dir": "n8n-nodes-googleapis-workflows"
+    },
+    {
+      "name": "googleapis-youtube",
+      "dir": "n8n-nodes-googleapis-youtube"
+    },
+    {
+      "name": "googleapis-youtubeanalytics",
+      "dir": "n8n-nodes-googleapis-youtubeanalytics"
+    },
+    {
+      "name": "googleapis-youtubereporting",
+      "dir": "n8n-nodes-googleapis-youtubereporting"
+    },
+    {
+      "name": "microsoft-cognitiveservices-autosuggest",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-autosuggest"
+    },
+    {
+      "name": "microsoft-cognitiveservices-computervision",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-computervision"
+    },
+    {
+      "name": "microsoft-cognitiveservices-customimagesearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-customimagesearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-customsearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-customsearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-entitysearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-entitysearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-imagesearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-imagesearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-localsearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-localsearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-newssearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-newssearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-ocr",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-ocr"
+    },
+    {
+      "name": "microsoft-cognitiveservices-spellcheck",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-spellcheck"
+    },
+    {
+      "name": "microsoft-cognitiveservices-videosearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-videosearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-visualsearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-visualsearch"
+    },
+    {
+      "name": "microsoft-cognitiveservices-websearch",
+      "dir": "n8n-nodes-microsoft-cognitiveservices-websearch"
+    },
+    {
+      "name": "microsoft-graph",
+      "dir": "n8n-nodes-microsoft-graph"
+    },
+    {
+      "name": "microsoft-graph-beta",
+      "dir": "n8n-nodes-microsoft-graph-beta"
+    }
+  ],
+  "skipped": [],
+  "failed": []
+}
