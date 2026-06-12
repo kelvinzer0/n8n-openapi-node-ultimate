@@ -333,7 +333,7 @@ const GITHUB_ORG = process.env.GITHUB_ORG || NPM_SCOPE || REPO_OWNER;
 const CUSTOM_CATEGORY = process.env.CUSTOM_CATEGORY || 'Development';
 const TEMPLATE_DIR = getArg('--template-dir') || process.env.TEMPLATE_DIR || '';
 
-// ─── Deprecated platforms detection ──────────────────────────────────────────────
+// ─── Deprecated platforms config ──────────────────────────────────────────────
 // n8n has built-in/verified nodes for Amazon, Google, Microsoft.
 // Auto-generated community nodes for these platforms should be deprecated
 // and users should be directed to the official n8n nodes instead.
@@ -342,8 +342,6 @@ const DEPRECATED_PREFIXES = [
         { prefix: 'google', platform: 'Google', officialNode: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.google/' },
         { prefix: 'microsoft', platform: 'Microsoft', officialNode: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoft/' },
 ];
-
-const deprecatedInfo = DEPRECATED_PREFIXES.find(d => safeName.startsWith(d.prefix));
 
 if (!OPENAPI_URL) {
         console.error('❌ OPENAPI_URL is required');
@@ -372,6 +370,9 @@ const credentialClassName = `${className}Api`;
 const scopePrefix = toPascalCase(NPM_SCOPE.replace(/^@/, ''));
 const nodeInternalName = `${scopePrefix}${className}`;
 const credentialInternalName = `${nodeInternalName}Api`;
+
+// ─── Detect deprecated platform ────────────────────────────────────────────────
+const deprecatedInfo = DEPRECATED_PREFIXES.find(d => safeName.startsWith(d.prefix));
 
 console.log(`\n${'='.repeat(60)}`);
 console.log(`  Scaffolding: ${nodeName} (declarative)`);
