@@ -1,4 +1,5 @@
 name,openapi_url,logo_url,description,category,publish_npm
+odoo-v17,https://github.com/kelvinzer0/odoo-openapi-spec/raw/refs/heads/main/odoo-openapi-compact.json,https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo.png,Odoo v17 is an all-in-one open-source ERP for managing all aspects of business in a single platform,true
 petstore,https://petstore3.swagger.io/api/v3/openapi.json,https://avatars.githubusercontent.com/u/7658037?s=200&v=4,Swagger Petstore sample API,Development,true
 chatwoot,https://raw.githubusercontent.com/chatwoot/chatwoot/develop/swagger/swagger.json,https://avatars.githubusercontent.com/u/23416667?s=200&v=4,Chatwoot customer engagement platform,Communication,true
 hcloud,https://raw.githubusercontent.com/MaximilianKoestler/hcloud-openapi/main/openapi/hcloud.json,https://avatars.githubusercontent.com/u/30047064?s=200&v=4,Hetzner Cloud API,Infrastructure,true
