@@ -14,7 +14,60 @@ function combine(...sources: Partial<INodeProperties>[]): INodeProperties {
         // n8n does want to have required: false|null|undefined
         delete obj.required
     }
+    // Ensure the default value is compatible with the property type.
+    // OpenAPI specs sometimes declare schema type as "string" but provide
+    // an array or object as the example/default (e.g. Odoo domain filters).
+    // Without coercion, the generated TypeScript would contain
+    //   default: [["name","ilike","test"]]
+    // on a `type: "string"` field, which fails TS2322 because
+    // [string, string, string] is not assignable to ResourceMapperValue.
+    if (obj.type && obj.default !== undefined && obj.default !== null) {
+        obj.default = coerceDefault(obj.type, obj.default);
+    }
     return obj
+}
+
+/**
+ * Coerce a default value so it is compatible with the n8n property type.
+ *
+ * The key problem: OpenAPI `example` values sometimes do not match the declared
+ * schema type. For instance, the Odoo ERP spec declares `domain` as
+ * `type: string` but the example is `[["name","ilike","test"]]` (an array).
+ * When this mismatched default reaches the generated TypeScript, the tuple
+ * type `[string, string, string]` cannot be assigned to `ResourceMapperValue`
+ * (a member of the `NodeParameterValueType` union), producing TS2322.
+ *
+ * Strategy: Only coerce when the value is a non-primitive (array or plain
+ * object) that would cause a TypeScript type error. Primitives (string,
+ * number, boolean, null) are always valid `NodeParameterValue` members and
+ * do not need coercion.
+ */
+function coerceDefault(type: string, value: any): any {
+    const isNonPrimitive = Array.isArray(value) || (typeof value === 'object' && value !== null);
+
+    if (!isNonPrimitive) {
+        // Primitives (string, number, boolean, null, undefined) are already
+        // valid NodeParameterValue members — no coercion needed.
+        return value;
+    }
+
+    // Non-primitive values (arrays, objects) must be stringified for all
+    // property types that expect a primitive default, because TypeScript
+    // infers array literals as tuple types (e.g. [string, string, string])
+    // which do not match any member of NodeParameterValueType.
+    switch (type) {
+        case 'string':
+        case 'options':
+        case 'notice':
+            return JSON.stringify(value);
+        case 'json':
+            return JSON.stringify(value, null, 2);
+        case 'number':
+        case 'boolean':
+            return JSON.stringify(value);
+        default:
+            return value;
+    }
 }
 
 /**
